@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-organization" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Course Organization</title>
+
+  <introduction>
+    <p>
+      A layout of the course.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="section-structure.ptx" />
+  <xi:include href="section-outcomes.ptx" />
+
+</chapter>

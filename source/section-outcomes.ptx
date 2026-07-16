@@ -1,0 +1,169 @@
+<section xml:id="section-organization">
+  <title>Course Learning Outomes</title>
+  <p>
+    This course is organized into learning outcomes, and each
+    section of the notes (and each video) reflection one of the
+    learning outcomes. There are three
+    types of these: core learning outcomes (CLOs), stretch learning
+    outcomes (SLOs) and holistic learning outcomes (HLOs). The main
+    content of the course is organized by the CLOs and the SLOs: you
+    will see each section of the course labelled by one of these.
+    The HLOs are major ideas, themes and skills that run throughout
+    the course but are not isolated to any one area. I'll try to
+    point out the development of the HLOs over the whole course. 
+  </p>
+  <p>
+    Here are the learning outcomes for the course. These are all
+    stated with active verbs: a learning outcome is something that a
+    student will be able to do, which can be demonstrated and
+    assessed. You can preface all of these with <sq>A student
+    completing this course should be able to <m>\ldots</m></sq>.
+  </p>
+  <p>
+    Here are the 20 core learning outcomes.  
+  </p>
+  <ol>
+    <li>
+      Effectively use the vocabulary of a quantitative study and a 
+      data set. In that data set, distinguish between variables and
+      cases. Classify types of variable in a data set. 
+    </li>
+    <li>
+      Analyze and critique the design of a quantitative study,
+      including discussion of variables, hypotheses, sampling, scope
+      of inference, biases and counfounding variables.
+    </li>
+    <li>
+      Analyze ethical aspects of study design, data collection, data
+      interpretation and publication of statistical results. 
+    </li>
+    <li>
+      Construct and analyze frequency and contingency tables for
+      categorical data, including discussion of potential hypothesis.  
+    </li>
+    <li>
+      Construct and analyze various bar plots and pie charts as
+      visualizations of categorical data. 
+    </li>
+    <li>
+      Construct and analyze histograms for a single numeric variable.
+    </li>
+    <li>
+      Construct and analyze scatterplots for two numeric variables,
+      focusing on potential relationships and hypotheses about
+      relationships. 
+    </li>
+    <li>
+      Construct and analyze histograms for a single numeric variable,
+      using statistical vocaulbary (skew, modality, outliers, etc) to
+      describe the shape of the data. 
+    </li>
+    <li>
+      Calculate and analyze  measures of central tendency and spread
+      to describe a single numeric variables and its historgram. 
+    </li>
+    <li>
+      Construct a linear regression for the relationship between two
+      numeric variable. Analyze and interpret the coefficients of such
+      a linear regression. 
+    </li>
+    <li>
+      Use residuals, correlations, and <m>R^2</m> to analyze the fit
+      of a linear model. 
+    </li>
+    <li>
+      State, construct and critique a null and alternative hypotheses
+      for a research questions, including questions for simple, double
+      or multiples variables and questions for both categorical and
+      numeric variables. 
+    </li>
+    <li>
+      Describe the idea of randomness and probability as potential
+      source for a distribution of data and the relationship of
+      randomness to an alternative hypothesis for a research question. 
+    </li>
+    <li>
+      Describe the properties of the normal distribution and how it is
+      produced by random selection for a difference of proportions. 
+    </li>
+    <li>
+      Calculate and analyze a sampling distribution for a difference
+      of two proportions. Using this sampling distribution, calculate
+      and analyze <m>z</m>-scores and <m>p</m>-values. 
+    </li>
+    <li>
+      Calculate and analyze a confidence interval in a sampling
+      distribution for difference of proporties. 
+    </li>
+    <li>
+      Define and identify Type 1 and Type 2 errors in study design,
+      using the language of hypothesis testing for a difference in
+      proportions. 
+    </li>
+    <li>
+      Conduct hypothesis tests and construct confidence intervals for
+      a single proportion. 
+    </li>
+    <li>
+      Conduct hypothesis tests for difference within several
+      categorical variables, showing understanding and use of the
+      <m>\Chi^2</m> distribution.
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+  </ol>
+  <p>
+    Here are the 5 holistic learning outcomes.
+  </p>
+  <ol>
+    <li>
+      Describe the nature of data as captured by a dataset, including
+      its structure, its scope, its value and its weaknesses. 
+    </li>
+    <li>
+      Competently use the R language for all of the statistic
+      constructions considered in the course. 
+    </li>
+    <li>
+      Describe holistically the idea of hypothesis testing, random
+      chance, and the comparison of a test statistics with a sampling
+      distribution. 
+    </li>
+    <li>
+      Describe the mathematical definition of a distribution and how
+      distribution can be used, in general, in hypothesis testing. 
+    </li>
+    <li>
+    </li>
+ </ol>
+</section>
+  <p>
+    Here are the 5 stretch learning outcomes.
+  </p>
+  <ol>
+    <li>
+      Use probability formulas to construct random sampling
+      distributions. 
+    </li>
+    <li>
+      Use the language of areas under curves and the symbols of
+      integral calculus  to mathematically express percentiles and
+      probabilities. 
+    </li>
+    <li>
+      Use the mathematical formulation of a general normal
+      distribution to calculate <m>z<m>-score, percentiles and other
+      aspects of a sampling distribution. 
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+ </ol>
+</section>
