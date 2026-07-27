@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-hypothesis-testing" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Hypothesis Testing - Implementations</title>
+
+  <introduction>
+    <p>
+      After doing all of the setup for hypothesis testing for the
+      specific case of a difference in proportions, we want to apply
+      the same ideas to a variety of different statistical situations.
+      This chapter runs through those variations of hypotheses
+      testing, introducing the new mathematics we need along the way. 
+    </p>
+  </introduction>
+
+  <xi:include href="clo17-ht-single-proportion.ptx" />
+  <xi:include href="clo18-ht-chi-squared.ptx" />
+  <xi:include href="slo5-mathematics-t-chi-squared.ptx" />
+  <xi:include href="clo19-ht-single-mean.ptx" />
+  <xi:include href="clo20-ht-difference-means.ptx" />
+  <xi:include href="clo21-ht-anova.ptx" />
+  <xi:include href="clo22-ht-linear.ptx" />
+
+</chapter>

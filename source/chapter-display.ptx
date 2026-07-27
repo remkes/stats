@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-display" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Descriptive Statistics</title>
+
+  <introduction>
+    <p>
+      There are, very broadly, two kinds of statistics: descriptive
+      statistics and inferencetial statistic. The technical part of
+      the course starts with descriptive statistics. The problem here
+      is the opacity of a data set. A data set, particularly a large
+      one, is just a huge collection of categories, values and
+      numbers. It's usually imposslbe to look at a data set and see
+      much of anything. Descriptive statistics is a set of method to
+      display the information in dataset. The five outcomes in this
+      section present various ways to present and visualize different
+      kinds of variables in differnet kinds of datasets. 
+    </p>
+  </introduction>
+
+  <xi:include href="clo4-tables.ptx" />
+  <xi:include href="clo5-bar-pie.ptx" />
+  <xi:include href="clo6-histograms.ptx" />
+  <xi:include href="clo7-central-tendency.ptx" />
+  <xi:include href="clo8-scatterplots.ptx" />
+
+</chapter>

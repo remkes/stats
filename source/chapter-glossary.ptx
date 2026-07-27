@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-glossary" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Glossary</title>
+
+  <introduction>
+    <p>
+      This is a glossary of terms in the course.
+    </p>
+  </introduction>
+
+  <glossary>
+    <gi>
+      <title>Inferential Statistics</title>
+      <p>
+        text
+      </p>
+    </gi>
+    <gi>
+      <title>Descriptive Statistics</title>
+      <p>
+        text
+      </p>
+    </gi>
+  </glossary>
+
+</chapter>

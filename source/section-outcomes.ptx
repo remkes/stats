@@ -46,14 +46,6 @@
       visualizations of categorical data. 
     </li>
     <li>
-      Construct and analyze histograms for a single numeric variable.
-    </li>
-    <li>
-      Construct and analyze scatterplots for two numeric variables,
-      focusing on potential relationships and hypotheses about
-      relationships. 
-    </li>
-    <li>
       Construct and analyze histograms for a single numeric variable,
       using statistical vocaulbary (skew, modality, outliers, etc) to
       describe the shape of the data. 
@@ -63,8 +55,13 @@
       to describe a single numeric variables and its historgram. 
     </li>
     <li>
+      Construct and analyze scatterplots for two numeric variables,
+      focusing on potential relationships and hypotheses about
+      relationships. 
+    </li>
+    <li>
       Construct a linear regression for the relationship between two
-      numeric variable. Analyze and interpret the coefficients of such
+      numeric variable. Interpret the coefficients of such
       a linear regression. 
     </li>
     <li>
@@ -75,7 +72,8 @@
       State, construct and critique a null and alternative hypotheses
       for a research questions, including questions for simple, double
       or multiples variables and questions for both categorical and
-      numeric variables. 
+      numeric variables. Determine what kind of statistical inference
+      is necessary to test these hypotheses. 
     </li>
     <li>
       Describe the idea of randomness and probability as potential
@@ -83,13 +81,13 @@
       randomness to an alternative hypothesis for a research question. 
     </li>
     <li>
-      Describe the properties of the normal distribution and how it is
-      produced by random selection for a difference of proportions. 
-    </li>
-    <li>
       Calculate and analyze a sampling distribution for a difference
       of two proportions. Using this sampling distribution, calculate
       and analyze <m>z</m>-scores and <m>p</m>-values. 
+    </li>
+    <li>
+      Describe the properties of the normal distribution and how it is
+      produced by random selection for a difference of proportions. 
     </li>
     <li>
       Calculate and analyze a confidence interval in a sampling
@@ -101,23 +99,60 @@
       proportions. 
     </li>
     <li>
-      Conduct hypothesis tests and construct confidence intervals for
-      a single proportion. 
+      Conduct and interpret hypothesis tests and construct confidence
+      intervals for a single proportion. 
     </li>
     <li>
-      Conduct hypothesis tests for difference within several
+      Conduct and interpret hypothesis tests for difference within several
       categorical variables, showing understanding and use of the
-      <m>\Chi^2</m> distribution.
+      <m>\chi^2</m> distribution.
     </li>
     <li>
+      Conduct and interpret hypothesis tests and confidence intervals
+      for a single mean.
     </li>
     <li>
+      Conduct and interpret hypothesis tests and confidence intervals for a
+      difference in means. 
     </li>
     <li>
+      Conduct and interpret hypothesis tests and confidence intervals
+      for multiple means using ANOVA. 
     </li>
     <li>
+      Conduct and interpret hypothesis tests and confidence intervals
+      for the coefficient of a linear regression model. 
     </li>
   </ol>
+  <p>
+    Here are the 5 stretch learning outcomes.
+  </p>
+  <ol>
+    <li>
+      Describe the basic principles and first mathematical
+      constructions of the theory of probability.
+    </li>
+    <li>
+      Use probability formulas to construct random sampling
+      distributions. 
+    </li>
+    <li>
+      Use the language of areas under curves and the symbols of
+      integral calculus  to mathematically express percentiles and
+      probabilities. 
+    </li>
+    <li>
+      Use the mathematical formulation of a general normal
+      distribution to calculate <m>z</m>-score, percentiles and other
+      aspects of a sampling distribution. 
+    </li>
+    <li>
+      Describe the mathematical properties and use of t-distributions
+      and <m>\chi^2</m> distributions. 
+    </li>
+  </ol>
+</section>
+  <!--
   <p>
     Here are the 5 holistic learning outcomes.
   </p>
@@ -139,31 +174,5 @@
       Describe the mathematical definition of a distribution and how
       distribution can be used, in general, in hypothesis testing. 
     </li>
-    <li>
-    </li>
- </ol>
-</section>
-  <p>
-    Here are the 5 stretch learning outcomes.
-  </p>
-  <ol>
-    <li>
-      Use probability formulas to construct random sampling
-      distributions. 
-    </li>
-    <li>
-      Use the language of areas under curves and the symbols of
-      integral calculus  to mathematically express percentiles and
-      probabilities. 
-    </li>
-    <li>
-      Use the mathematical formulation of a general normal
-      distribution to calculate <m>z<m>-score, percentiles and other
-      aspects of a sampling distribution. 
-    </li>
-    <li>
-    </li>
-    <li>
-    </li>
- </ol>
-</section>
+  </ol>
+  -->

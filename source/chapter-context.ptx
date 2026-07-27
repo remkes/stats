@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-context" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Context for Statistics</title>
+
+  <introduction>
+    <p>
+      The course starts with three outcomes focus on the context of
+      statistic. Where is statistics used? What is the situation and
+      setup where statistics is valuable? What are the choice made in
+      setting up a formal study? What are the moral and ethoical
+      dimensions of such a formal study? 
+    </p>
+    <p>
+      I want to start with context to situation the rest of the
+      course. I doesn't make sense to talk about the formal technique
+      of statistics without having a clear sense of where the
+      technique is used and the basic paramater that govern is
+      appropriate and ethically reasonable use. 
+    </p>
+  </introduction>
+
+  <xi:include href="clo1-vocabulary.ptx" />
+  <xi:include href="clo2-study-design.ptx" />
+  <xi:include href="clo3-study-ethics.ptx" />
+
+</chapter>

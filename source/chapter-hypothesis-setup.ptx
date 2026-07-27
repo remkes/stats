@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-hypothesis-setup" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Hypothesis Testing - Setup</title>
+
+  <introduction>
+    <p>
+      Inferential statistics is fundamentally about hypothesis
+      testing. A hypothesis is a claim about some conclusion, and the
+      methods of hypothesis testing are ways of looking at the data to
+      see if the conclusion is true. There are two chapter in this
+      course devoted to hypothesis testing. In this first chapter, we
+      have several outcomes that setup the backgrounds and methods.
+      The chapter to follow will focus on actually implementing
+      hypothesis testing for a variety of types of data. 
+    </p>
+  </introduction>
+
+  <xi:include href="clo11-hypothesis.ptx" />
+  <xi:include href="clo12-randomness.ptx" />
+  <xi:include href="slo1-probability-theory.ptx" />
+  <xi:include href="clo13-sampling-distributions.ptx" />
+  <xi:include href="clo14-normal-distributions.ptx" />
+  <xi:include href="slo2-mathematics-sampling-distributions.ptx" />
+  <xi:include href="slo3-areas-under-curves.ptx" />
+  <xi:include href="slo4-mathematics-normal-distributions.ptx" />
+  <xi:include href="clo15-confidence-intervals.ptx" />
+  <xi:include href="clo16-errors.ptx" />
+
+</chapter>

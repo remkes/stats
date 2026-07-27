@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="chapter-linear-models" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Linear Models</title>
+
+  <introduction>
+    <p>
+      This chapter is the fulcrum between the two pieces of
+      statistics: descriptive and inference. Inference statistics
+      tries to do more than just disply a data set: it tries, instead,
+      to tease out some conclusions from the data set. There is a huge
+      variety of these possible conclusions. In these two outcomes,
+      we're start with the conclusion of a linear relationship between
+      two numeric variables. Such a relation is called a linear model. 
+    </p>
+  </introduction>
+
+  <xi:include href="clo9-linear-regression.ptx" />
+  <xi:include href="clo10-linear-analysis.ptx" />
+
+</chapter>
