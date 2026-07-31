@@ -1,0 +1,108 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+\begin{frame}
+  \begin{itemize}
+    \item[] Learning Outcome 1
+      \vspace{0.5cm}
+    \item[] Identify the variables and cases in a dataset, and
+    classify the different types of variables. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{An Example}
+  \begin{itemize}
+    \item[] Stent: a small tube in an artery. 
+      \vspace{0.5cm}
+    \item[] Stents help with heart-attack recovery. 
+      \vspace{0.5cm}
+    \item[] Do stents help mitigate stroke risk?
+      \vspace{0.5cm}
+    \item[] 451 patients, two groups: control and treatment. 
+      \vspace{0.5cm}
+    \item[] Data!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{The Stroke Trial Dataset}
+  \begin{itemize}
+    \item[] The data set consists of variables and cases.
+      \vspace{0.5cm}
+  \end{itemize}
+  \begin{table}
+    \begin{tabular}{@{}cccc@{}}
+      \toprule
+      patient & group & 30 days & 365 days \\ 
+      \cmidrule(r){1-1} \cmidrule(lr){2-2} \cmidrule(lr){3-3}
+      \cmidrule(l){4-4}
+      1 & treatment & no event & no event \\[0.3em]
+      2 & treatment & stroke & stoke \\[0.3em]
+      3 & treatment & no event & no event \\[0.3em]
+      4 & treatment & no event & no event \\[0.3em]
+      5 & control & no event & no event \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{First Analyses}
+  \begin{table}
+    \begin{tabular}{@{}ccccc@{}}
+      \toprule
+      & \multicolumn{2}{c}{30 days} & \multicolumn{2}{c}{365 days} \\[0.3em]
+      Group & Stroke & No Event & Stroke & No Event \\
+      \cmidrule(r){1-1} \cmidrule(lr){2-3} \cmidrule(l){4-5} 
+      Contol & $13 (5.7 \%)$ & $214$ & $28 (12.3\%)$ & 199 \\[0.3em]
+      Treatment & $33 (14.7 \%)$ & $191$ & $28 (12.3\%)$ & 199
+      \\[0.3em]
+      Total & $46$ & $405$ & $73$ & $378$ \\
+      \bottomrule
+    \end{tabular}
+  \end{table} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Types of Data}
+  \begin{itemize}
+    \item[] Categorical: nominal, ordinal.
+      \vspace{0.5cm}
+    \item[] Numerical: discrete, continuous. 
+      \vspace{0.5cm}
+  \end{itemize}
+  \begin{table}
+    \begin{tabular}{llllll}
+      \toprule
+      name & state & pop & change & u\_rate & median\_edu\\ 
+      \cmidrule(r){1-1} \cmidrule(lr){2-2} \cmidrule(lr){3-3}
+      \cmidrule(lr){4-4} \cmidrule(lr){5-5} \cmidrule(r){6-6} 
+      Autauga & Alabama & 55,504 & 1.48 & 3.86\% & some\_college
+      \\
+      County & & & & & \\
+      Baldwin & Alabama & 212,628 & 9.19 & 3.99\% & some\_college
+      \\
+      County & & & & & \\
+      Barbour & Alabama & 25,270 & -6.22 & 5.90\% & hs\_diploma
+      \\
+      County & & & & & \\
+      Bibb & Alabama & 22,668 & 0.73 & 4.39\% & hs\_diploma \\
+      County & & & & & \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Summary}
+  \centering
+  \begin{tabular}{c}
+    \includegraphics[width=9cm]{../figures/lo1-figure1.pdf}
+  \end{tabular}
+\end{frame}
+\end{document}

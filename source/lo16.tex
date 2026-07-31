@@ -1,0 +1,136 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+\begin{frame}
+  \begin{itemize}
+    \item[] 
+      Identifying Type 1 and Type 2 errors in a given situation and
+      using them to make decisions about inference methods.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Decision Errors}
+  \begin{table}
+    \begin{tabular}{l|l|l}
+      Truth & Reject NH & Do Not Reject NH \\[1cm]
+      \hline
+      NH is true & Type 1 Error & Correct! \\[0.5cm]
+      AH is true & Correct! & Type 2 Error
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Decision Errors - Criminal Trial}
+  \begin{table}
+    \begin{tabular}{l|l|l}
+      Truth & Found Guilty & Found Innocent. \\[1cm]
+      \hline
+      Defendent is Innocent & Type 1 Error & Correct! \\[0.5cm]
+      Defendant is Guilty  & Correct! & Type 2 Error
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Errors and Risks}
+  \begin{itemize}
+    \item[] False positive risk: avoid Type 1 errors. 
+      \vspace{0.5cm}
+    \item[] False negative risk: avoid Type 2 errors. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Setting $\alpha$}
+  \begin{itemize}
+    \item[] 
+      Default: $\alpha = 0.05$
+      \vspace{0.5cm}
+    \item[] 
+      Avoid Type 1 error: $\alpha = 0.01$. 
+      \vspace{0.5cm}
+    \item[] 
+      Avoid Type 2 error: $\alpha = 0.10$. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypotheses}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      H_0 & \mapsto & p_a - p_b = 0 \\[2em]
+      H_A & \mapsto & p_a - p_b > 0 \\[2em]
+      H_A & \mapsto & p_a - p_b \neq 0 
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Normal Distribution}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        ytick=\empty,
+      ]
+      \addplot [
+        domain=-3:3,
+        samples=200,
+      ]
+      {exp(-x^2 / (2)) / (sqrt(2*pi))};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Normal Distribution}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        ytick=\empty,
+      ]
+      \addplot [
+        domain=-3:3,
+        samples=200,
+      ]
+      {exp(-x^2 / (2)) / (sqrt(2*pi))};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Two-Sided Tests}
+  \begin{itemize}
+    \item[] Two-sided tests make significance twice as difficult. 
+      \vspace{0.5cm}
+    \item[] Making significance difficult lower the chance of a Type 1
+    error. 
+      \vspace{0.5cm}
+    \item[] Two-sided tests have fewer type one errors.
+      \vspace{0.5cm}
+    \item[] One-sided tests have fewer type two errors. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Other Influences}
+  \begin{itemize}
+    \item[] 
+      Sample size. 
+      \vspace{0.5cm}
+    \item[] 
+      SE $ = \sqrt{ \dfrac{\hat{p}_1 (1 - \hat{p}_1)}{n_1} +
+      \dfrac{\hat{p}_2 (1 - \hat{p}_2)}{n_2}}$ 
+      \vspace{0.5cm}
+    \item[] 
+      The \emph{power} of a statistical test. 
+  \end{itemize}
+\end{frame}
+
+\end{document}
+

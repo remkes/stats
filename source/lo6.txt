@@ -1,0 +1,137 @@
+In the previous video, I talked about scatterplots as a way to look at
+the interaction between two numerical variables in a data set.  In
+this video, I want to step back to looking at a single numerical
+variable. In descriptive statistics we want to do both: we want to
+understand the data of a single variable and also interactions between
+variables. This video is about histograms and the distribution of a
+single numerical variable.
+
+SLIDE
+
+In class, we've already make use of a dataset about home loans and
+interest rates. I'm going to use that data set again. It had 50 cases,
+and interest rate in percentage was one of its numeric variables. 
+
+One way to understand numeric variables is to group them into
+categories or ranges. All the percentages in the data set fall between
+5 and 25 percent. I've grouped this into eight equal ranges: 5 to 7.5,
+7.5 to 10, 10 to 12.5 and so on. Then I've counted how many cases fall
+into each range and made a bar graph of that count. The result is a
+histogram. It always consists of some division of the nuemric value
+into ranges and bars indicating how many cases fall into each range.
+
+A histogram gives a good picture of the distribution of a single
+variable. When looking at a single variable, we want to understand
+exactly this: the distribution of the data. What are the possible
+values of this variable? How are those values spread out? What is a
+typical value? These are the central questions of the analysis of one
+numeric variable.
+
+In this historgraph, it's clear that there are more cases in the lower
+range than the higher range. That's already interesting information
+about the data and how it behaves. 
+
+As with all visualizations, of course, there is always judgement. For
+a histogram, a major choice is the number of categories for the data.
+The small details of a distribution can look fairly different if the
+ranges chosen are altered.
+
+SLIDE
+
+I'm going to show a number of other histograms to introduce some more
+terminology. All of this terminology is, again, for describing the
+distribution of a single variable. The distribution can have a left
+tail: a few values that are signifancly less than the main part of the
+distribution. It looks like this on a historygram.
+
+SLIDE
+
+Similarly, a distribution can have a right til, with a few values
+larger than the rest of the distribution. This is what a right tail
+looks like. I've not show it, but of course a distribution can have
+both tails as well. Tails say something about the edges of a
+distribution, the unusual cases and how far they are away from what
+might be considered usual or normal.
+
+SLIDE
+
+A distribution that involves a single peak and data that decreases on
+either side of a peak is called a unimodal distribution. The most
+common shape for a unimodel distribution is the bell curve shape. This
+distribution is similar to a bell curve but far from identical.
+
+The bell curve is called a normal distribution. The term is loaded, of
+course, and much will be said in the class about the normal
+distribution. Many kinds of data are normally distributed, but many
+kinds of data are not. The assumption that data should be normally
+distribution -- that the histogram should look like a bell curve -- is
+a dangerous and often flawed assumption. 
+
+SLIDE
+
+So, let's talk about some other general shapes of distributions of
+data -- data that has a different profile than the normal
+distribution.
+
+The normal distribution was unimodal -- one peak. A distribution can
+have more than one peak -- if there are two peaks, with a area of
+fewer cases between them, the data is called bimodal. 
+
+As an example, this is a pretty common distribution for class grades
+in university courses: I've seen a lot of bimodal classes in my
+teaching years. 
+
+SLIDE
+
+A distribution can have even more than two peaks. A multimodal
+distribution has several peaks with few cases between them. 
+
+SLIDE
+
+Sometimes, for one numerica variable in a dataset, there is a single
+case (or maybe a small number of cases) which differ a lot from the
+rest of the data. These are called outliers -- this histogram shows
+all of the cases between 0 and 8, with one outlier in the 12-14 range. 
+
+Dealing with outliers is an important part of statistics. Sometime
+they represent errors, and many place in statistics will exclude
+outliers. However, they can also represent special cases that have
+some valuable explantion -- something that can add to the
+understanding of the data. Outliers are something to be careful with
+and aware of. 
+
+SLIDE
+
+Here is a population variable presented as a histogram. Some 200 cases
+aer represented in this histogram, with all but 2 in the 0 - 2 million
+range and two outliers with higher populations. For population, these
+might be reasonable. If this is populations of cities, then maybe only
+two cities in the data set were cities or 4 or 5 million, but the rest
+were all cities between 0 and 2 million. I may not want to exclude the
+outliers. 
+
+In the previous video, I talked about transformation of data set:
+applying a mathematical function to one or more variable, to all the
+cases. Transforming the data set leads to different way of visualizing
+the data. 
+
+In a situation like this, where all the data is clustered in a small
+part of a histogram, a logarithm transformation can help see more
+detail. The logarithm decreases all values, but it has a much greater
+effect on larger values.
+
+SLIDE
+
+Here is the same poluation after applying the logarithm. The two
+outliers are still here, but the rest of the population is now spread
+out over seven piece of the histogram, not just three. I get a better
+sense of the data and its distribution after applying the logarithm.
+This is one of the things that a transformation can do: lead to more
+readable data.
+
+In summary, the histograms in this video visualize the profile, the
+distribution, of a single variable. They let us identify the shape of
+the data, left and right tails, normal unimodal distributions, bimodel
+or multimodal distribution, and other qualitative description of the
+data. Just as a visualization is supposed to do. 
+

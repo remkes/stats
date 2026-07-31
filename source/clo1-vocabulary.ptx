@@ -1,7 +1,309 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-vocabulary" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>The Vocabulary of Statistics</title>
   <p> 
-    Test
+    Statistics is the mathematical study of making meaning out of
+    data. Therefore, it's pretty appropriate that we start with
+    understanding what data is. In this course, and in much of
+    statistics, we will start with a data set. A data set is a
+    specific kind of collection of information with a specific
+    structure. It is the core of statistics: statistics is about
+    understanding data sets. 
   </p>
-</section>
+  <table xml:id="table-stroke-data">
+    <title>Stroke Data Set</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> patient </cell>
+        <cell> group </cell>
+        <cell> 30 days </cell>
+        <cell> 365 days </cell>
+      </row>
+      <row>
+        <cell> 1 </cell>
+        <cell> treatment </cell>
+        <cell> no event </cell>
+        <cell> no event </cell>
+      </row>
+      <row>
+        <cell> 2 </cell>
+        <cell> treatment </cell>
+        <cell> stroke </cell>
+        <cell> stoke </cell>
+      </row>
+      <row>
+        <cell> 3 </cell>
+        <cell> treatment </cell>
+        <cell> no event </cell>
+        <cell> no event </cell>
+      </row>
+      <row>
+        <cell> 4 </cell>
+        <cell> treatment </cell>
+        <cell> no event </cell>
+        <cell> no event </cell>
+      </row>
+      <row>
+        <cell> 5 </cell>
+        <cell> control </cell>
+        <cell> no event </cell>
+        <cell> no event </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    In a certain clinical trial, a study was done to understand
+    whether stents help to prevent strokes. A stent is a small
+    tube placed inside an artery, usually in and around the heart.
+    They are often used to aid recovery after a heart attack, but
+    ensuring blood flow through critial coronal arteries. However,
+    there is some evidence that they may have other benefits as
+    well, including possibly minimizing risk of a stroke. 
+  </p>
+  <p>
+    The researchers designed an experiment. 451 patients whose
+    were identified as at risk for stroke for randomly assigned to
+    one of two groups, as it standard for a controlled trial.
+    Patients in the control group received medical
+    management<mdash/> medication, support, lifestyle changes and
+    the like. Patients in the treatment group also received this
+    same medical managment, but in addition were given a stent
+    place in an important artery.  Then, of course, data was
+    collected on the outcomes for both groups, producing a dataset. 
+  </p>
+  <p>
+    What is the data? For each pattient, two points of data were
+    gathered: whether they had a stroke within 30 days of starting
+    the experiment, and the same but withint 365 days. <xref
+    ref="table-stroke-data"/> shows the first five patients,
+    which of the two groups they were in, and whether or not they
+    had strokes within the two time periods. 
+  </p>
+  <p>
+    Based on this example, let me make the first important definition. 
+  </p>
+  <definition>
+    <statement>
+      A <term>variable</term> is something that is measured in a data
+      set. A <term>case</term> is an individual member of a data sets.
+      A case will have one or more variable associated to it: the data
+      gathered about that individual item or situation. 
+    </statement>
+  </definition>
+  <p>
+    In the example, whether the patient had a stroke after 30 days is
+    a variable. In this case the potential values for the variable are
+    juse <sq>yes</sq> ans <sq>no</sq>. There is another variable for
+    whether the partient had a stroke after 365 dats. A case in this
+    example is an individual patient.  Patient 2 is a case, as it
+    patient 5. 
+  </p>
+  <p>
+    In <xref ref="table-stroke-data"/> there is a spreadsheet-like
+    setup. Cases are rows and variables are columns. This isn't always
+    the setup; rows and columns can be switched, so be careful reading
+    data sets and interpreting them. 
+  </p>
+  <p>
+    A data set is just data, raw information. What does it mean? This
+    is what the whole discipline of statistics is about. We analyze
+    the data set and try to draw conclusions. 
+  </p>
+  <p>
+    There are many, many ways to analyze data. Consider this new
+    table.
+  </p>
+  <table xml:id="table-stroke-frequency">
+    <title>Frequency Table for Stroke Data</title>
+    <tabular>
+      <row>
+        <cell> </cell>
+        <cell> 30 Days</cell>
+        <cell> </cell>
+        <cell> 360 Days</cell>
+        <cell> </cell>
+      </row>
+      <row bottom="medium">>
+        <cell> Group </cell>
+        <cell> Stroke </cell>
+        <cell> No Stroke </cell>
+        <cell> Stroke </cell>
+        <cell> No Stroke </cell>
+      </row>
+      <row>
+        <cell> Contol </cell>
+        <cell> 13 </cell>
+        <cell> 214 </cell>
+        <cell> 28 </cell>
+        <cell> 199 </cell>
+      </row>
+      <row bottom="minor">
+        <cell> Treatment </cell>
+        <cell> 33 </cell>
+        <cell> 191 </cell>
+        <cell> 45 </cell>
+        <cell> 179 </cell>
+      </row>
+      <row>
+        <cell> Total </cell>
+        <cell> 46 </cell>
+        <cell> 405 </cell>
+        <cell> 73 </cell>
+        <cell> 378 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    In <xref ref="table-stroke-frequency"/>, I have counted up the
+    totals for the variables of whether or not a stroke occured and I
+    am grouping them by the group variable: control or treatment.  I
+    can try to make some observations and I immediately note that
+    those with treatment actually had more instances. Whether or not
+    this is something causal happening here, or whether this is just
+    random change, is a question we get to later in the course. For
+    now, this is just a good example of one way to try to analyze this
+    data set and maybe draw some conclusions. 
+  </p>
+  <p>
+    Now for some more vocabulary. I want to talk about the kinds of
+    data in a data set. In particular, the kinds of variables, since
+    variable are the raw measurements we are making in the data set.
+    I'm going to work with another example to disucss types of
+    variables. 
+  </p>
+  <table xml:id="table-county-data">
+    <title>US County Demographics</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> County </cell>
+        <cell> State </cell>
+        <cell> Pop. </cell>
+        <cell> Pop. Change </cell>
+        <cell> Univ. Rate</cell>
+        <cell> Median Edu. </cell>
+      </row>
+      <row>
+        <cell> Autauga </cell>
+        <cell> Alabama </cell>
+        <cell> 55,504 </cell>
+        <cell> 1.48 </cell>
+        <cell> 3.86% </cell>
+        <cell> some_college </cell>
+      </row>
+      <row>
+        <cell> Baldwin </cell>
+        <cell> Alabama </cell>
+        <cell> 212,628 </cell>
+        <cell> 9.19 </cell>
+        <cell> 3.99% </cell>
+        <cell> some_college </cell>
+      </row>
+      <row>
+        <cell> Barbour </cell>
+        <cell> Alabama </cell>
+        <cell> 25,270 </cell>
+        <cell> -6.22 </cell>
+        <cell> 5.90% </cell>
+        <cell> hs_diploma </cell>
+      </row>
+      <row>
+        <cell> Bibb </cell>
+        <cell> Alabama </cell>
+        <cell> 22,668 </cell>
+        <cell> 0.73 </cell>
+        <cell> 4.39% </cell>
+        <cell> hs_diploma  </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    <xref ref="table-county-data"/> shows the first four cases of a
+    data set set dealing with various demographic information for
+    counties in the United States. The data set has six variables.
+    What kind of variables are these? Let me give you the definitions. 
+  </p>
+  <definition>
+    <statement>
+      <ul>
+        <li>
+          A <term>categorical variable</term> is a variable whose
+          values are any words in some category. In principle, any set
+          of words can be a category, though usually there is some
+          meaning tying the category togerher. 
+        </li>
+        <li>
+          A <term>nominal categorical variable</term> is a categorical
+          variable where the category is just a set of names without
+          any implicit ordering. 
+        </li>
+        <li>
+          An <term>ordinal categorical categorical variable </term> is
+          a categorical variable where the category is a list of names
+          with an instrinsic ordering to them. 
+        </li>
+        <li>
+          A <term>numeric</term> variable is a variable where the
+          values are numers instead of words.  (In some places, the
+          term is <term>numerical</term>. Both terms have common
+          usage, so I've chosen to use the shorter term.) 
+        </li>
+        <li>
+          A <term>discrete numeric variable</term> is a numeric
+          variable where the numbers are distinct, with clear steps
+          between them. 
+        </li>
+        <li>
+          A <term>continuous numeric variable</term> is a numeric
+          variable where the numbers can vary with arbitrary
+          precision, allowing intermediate values without reservation. 
+        </li>
+      </ul>
+    </statement>
+  </definition>
+  <p>
+    In the example, then, let me classify the variables.
+    <ul>
+      <li>
+        State name is a categorical variable, since its values are
+        names, not numbers. I would also say that it is a nominal
+        categorical variable. I could apply an order (say,
+        alphabetical, by land area, or by population), but it's not
+        really intrinsically ordered. It is a bunch of names of
+        things. 
+      </li>
+      <li>
+        Median education is a categorical variable as well, since its
+        values are the names of various types of education. Here, I
+        would argue that it is an ordinal categorical variable, since
+        there is (at least in a limited sense) a defined and
+        instrinsic order to tiers of education: some K-12 school;
+        grade 12 graduate; some college or university; university
+        graduate; post-graduate studies. This ordering is intrinsic
+        since, outside of very strange exceptions, one tier of
+        education will be finished before the next is achieved. 
+      </li>
+      <li>
+        Population is a numeric variable, since its value is a
+        number. Population is also a discrete variable: you can't
+        have half a member of a popopulation. Fractions are not
+        allowed and there is a full step between each number.         
+      </li>
+      <li>
+        Unemployment rate is also a numeric variable, since its value
+        is a number. This is a continuous numeric variable. Up to
+        whatever precision you want to report, the unemployment rate
+        can vary with arbitrary steps. You can have a <m>0.1\%</m>
+        increase, a <m>0.01\%</m> increase, or even finer if you want
+        to report it. 
+      </li>
+    </ul>
+  </p>
+  <p>
+    This is the starting vocabulary of the course. Statistics is about
+    data sets and data sets contain cases and variables. Variables
+    come in a variety of types. The more vocaulbary we build up, the
+    better we will be able to describe the behaviour of data sets and
+    to understand what truths they contain about the situations that
+    they are measuring.
+  </p>
+</section> 

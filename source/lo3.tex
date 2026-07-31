@@ -1,0 +1,106 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+\begin{frame}
+  \begin{itemize}
+    \item[] Learning Outcome 3
+      \vspace{0.5cm}
+    \item[] Using frequency and contingency tables (including
+    proportions) to summarize categorical data. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Two Types of Statistics}
+  \begin{itemize}
+    \item[] Descriptive - describing, summarizing, visualizing.
+      \vspace{0.5cm}
+    \item[] Inferential - hypothesis, relationships, testing. 
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{The Stroke Trial Dataset}
+  \begin{table}
+    \begin{tabular}{@{}cccc@{}}
+      \toprule
+      patient & group & 30 days & 365 days \\ 
+      \cmidrule(r){1-1} \cmidrule(lr){2-2} \cmidrule(lr){3-3}
+      \cmidrule(l){4-4}
+      1 & treatment & no event & no event \\[0.3em]
+      2 & treatment & stroke & stoke \\[0.3em]
+      3 & treatment & no event & no event \\[0.3em]
+      4 & treatment & no event & no event \\[0.3em]
+      5 & control & no event & no event \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Frequency Table}
+  \begin{table}
+    \begin{tabular}{@{}cc@{}}
+      \toprule
+      Outcome & Count \\
+      \cmidrule(r){1-1} \cmidrule(r){2-2} 
+      No event & 405 \\[0.3em]
+      Stroke & 46 \\[0.3em]
+      Total  & 451 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Frequency Table}
+  \begin{table}
+    \begin{tabular}{@{}ccc@{}}
+      \toprule
+      Outcome & Count & Percentage\\
+      \cmidrule(r){1-1} \cmidrule(rl){2-2} \cmidrule(l){3-3}
+      No event & 405 & 89.8\%\\[0.3em]
+      Stroke & 46 & 10.2\% \\[0.3em]
+      Total  & 451 & 100\% \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Contingency Table}
+  \begin{table}
+    \begin{tabular}{@{}cccc@{}}
+      \toprule
+      Group & Stroke & No Event & Total \\
+      \cmidrule(r){1-1} \cmidrule(rl){2-2} \cmidrule(rl){3-3}
+      \cmidrule(l){4-4}
+      Control & 13 & 214& 227 \\[0.3em]
+      Treatment & 33 & 191 & 224 \\[0.3em]
+      Total & 46 & 405 & 451 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Contingency Table}
+  \begin{table}
+    \begin{tabular}{@{}cccc@{}}
+      \toprule
+      Group & Stroke & No Event & Total \\
+      \cmidrule(r){1-1} \cmidrule(rl){2-2} \cmidrule(rl){3-3}
+      \cmidrule(l){4-4}
+      Control & 13 (5.7\%) & 214 (94.3\%) & 227 \\[0.3em]
+      Treatment & 33 (14.7\%) & 191 (85.3\%) & 224 \\[0.3em]
+      Total & 46 & 405 & 451 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+\end{document}

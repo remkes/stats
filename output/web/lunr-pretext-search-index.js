@@ -33,8 +33,53 @@ var ptx_lunr_docs = [
   "url": "section-vocabulary.html",
   "type": "Section",
   "number": "2.1",
-  "title": "Section Name",
-  "body": " Section Name  Test  "
+  "title": "The Vocabulary of Statistics",
+  "body": " The Vocabulary of Statistics  Statistics is the mathematical study of making meaning out of data. Therefore, it's pretty appropriate that we start with understanding what data is. In this course, and in much of statistics, we will start with a data set. A data set is a specific kind of collection of information with a specific structure. It is the core of statistics: statistics is about understanding data sets.   Stroke Data Set   > patient  group  30 days  365 days    1  treatment  no event  no event    2  treatment  stroke  stoke    3  treatment  no event  no event    4  treatment  no event  no event    5  control  no event  no event     In a certain clinical trial, a study was done to understand whether stents help to prevent strokes. A stent is a small tube placed inside an artery, usually in and around the heart. They are often used to aid recovery after a heart attack, but ensuring blood flow through critial coronal arteries. However, there is some evidence that they may have other benefits as well, including possibly minimizing risk of a stroke.  The researchers designed an experiment. 451 patients whose were identified as at risk for stroke for randomly assigned to one of two groups, as it standard for a controlled trial. Patients in the control group received medical management medication, support, lifestyle changes and the like. Patients in the treatment group also received this same medical managment, but in addition were given a stent place in an important artery. Then, of course, data was collected on the outcomes for both groups, producing a dataset.  What is the data? For each pattient, two points of data were gathered: whether they had a stroke within 30 days of starting the experiment, and the same but withint 365 days. shows the first five patients, which of the two groups they were in, and whether or not they had strokes within the two time periods.  Based on this example, let me make the first important definition.   A variable is something that is measured in a data set. A case is an individual member of a data sets. A case will have one or more variable associated to it: the data gathered about that individual item or situation.   In the example, whether the patient had a stroke after 30 days is a variable. In this case the potential values for the variable are juse yes ans no . There is another variable for whether the partient had a stroke after 365 dats. A case in this example is an individual patient. Patient 2 is a case, as it patient 5.  In there is a spreadsheet-like setup. Cases are rows and variables are columns. This isn't always the setup; rows and columns can be switched, so be careful reading data sets and interpreting them.  A data set is just data, raw information. What does it mean? This is what the whole discipline of statistics is about. We analyze the data set and try to draw conclusions.  There are many, many ways to analyze data. Consider this new table.   Frequency Table for Stroke Data      30 Days    360 Days     > Group  Stroke  No Stroke  Stroke  No Stroke    Contol  13  214  28  199    Treatment  33  191  45  179    Total  46  405  73  378     In , I have counted up the totals for the variables of whether or not a stroke occured and I am grouping them by the group variable: control or treatment. I can try to make some observations and I immediately note that those with treatment actually had more instances. Whether or not this is something causal happening here, or whether this is just random change, is a question we get to later in the course. For now, this is just a good example of one way to try to analyze this data set and maybe draw some conclusions.  Now for some more vocabulary. I want to talk about the kinds of data in a data set. In particular, the kinds of variables, since variable are the raw measurements we are making in the data set. I'm going to work with another example to disucss types of variables.   US County Demographics   > County  State  Pop.  Pop. Change  Univ. Rate  Median Edu.    Autauga  Alabama  55,504  1.48  3.86%  some_college    Baldwin  Alabama  212,628  9.19  3.99%  some_college    Barbour  Alabama  25,270  -6.22  5.90%  hs_diploma    Bibb  Alabama  22,668  0.73  4.39%  hs_diploma      shows the first four cases of a data set set dealing with various demographic information for counties in the United States. The data set has six variables. What kind of variables are these? Let me give you the definitions.     A categorical variable is a variable whose values are any words in some category. In principle, any set of words can be a category, though usually there is some meaning tying the category togerher.  A nominal categorical variable is a categorical variable where the category is just a set of names without any implicit ordering.  An ordinal categorical categorical variable is a categorical variable where the category is a list of names with an instrinsic ordering to them.  A numeric variable is a variable where the values are numers instead of words. (In some places, the term is numerical . Both terms have common usage, so I've chosen to use the shorter term.)  A discrete numeric variable is a numeric variable where the numbers are distinct, with clear steps between them.  A continuous numeric variable is a numeric variable where the numbers can vary with arbitrary precision, allowing intermediate values without reservation.     In the example, then, let me classify the variables.  State name is a categorical variable, since its values are names, not numbers. I would also say that it is a nominal categorical variable. I could apply an order (say, alphabetical, by land area, or by population), but it's not really intrinsically ordered. It is a bunch of names of things.  Median education is a categorical variable as well, since its values are the names of various types of education. Here, I would argue that it is an ordinal categorical variable, since there is (at least in a limited sense) a defined and instrinsic order to tiers of education: some K-12 school; grade 12 graduate; some college or university; university graduate; post-graduate studies. This ordering is intrinsic since, outside of very strange exceptions, one tier of education will be finished before the next is achieved.  Population is a numeric variable, since its value is a number. Population is also a discrete variable: you can't have half a member of a popopulation. Fractions are not allowed and there is a full step between each number.  Unemployment rate is also a numeric variable, since its value is a number. This is a continuous numeric variable. Up to whatever precision you want to report, the unemployment rate can vary with arbitrary steps. You can have a increase, a increase, or even finer if you want to report it.    This is the starting vocabulary of the course. Statistics is about data sets and data sets contain cases and variables. Variables come in a variety of types. The more vocaulbary we build up, the better we will be able to describe the behaviour of data sets and to understand what truths they contain about the situations that they are measuring.  "
+},
+{
+  "id": "table-stroke-data",
+  "level": "2",
+  "url": "section-vocabulary.html#table-stroke-data",
+  "type": "Table",
+  "number": "2.1.1",
+  "title": "Stroke Data Set",
+  "body": " Stroke Data Set   > patient  group  30 days  365 days    1  treatment  no event  no event    2  treatment  stroke  stoke    3  treatment  no event  no event    4  treatment  no event  no event    5  control  no event  no event    "
+},
+{
+  "id": "section-vocabulary-8",
+  "level": "2",
+  "url": "section-vocabulary.html#section-vocabulary-8",
+  "type": "Definition",
+  "number": "2.1.2",
+  "title": "",
+  "body": " A variable is something that is measured in a data set. A case is an individual member of a data sets. A case will have one or more variable associated to it: the data gathered about that individual item or situation.  "
+},
+{
+  "id": "table-stroke-frequency",
+  "level": "2",
+  "url": "section-vocabulary.html#table-stroke-frequency",
+  "type": "Table",
+  "number": "2.1.3",
+  "title": "Frequency Table for Stroke Data",
+  "body": " Frequency Table for Stroke Data      30 Days    360 Days     > Group  Stroke  No Stroke  Stroke  No Stroke    Contol  13  214  28  199    Treatment  33  191  45  179    Total  46  405  73  378    "
+},
+{
+  "id": "table-county-data",
+  "level": "2",
+  "url": "section-vocabulary.html#table-county-data",
+  "type": "Table",
+  "number": "2.1.4",
+  "title": "US County Demographics",
+  "body": " US County Demographics   > County  State  Pop.  Pop. Change  Univ. Rate  Median Edu.    Autauga  Alabama  55,504  1.48  3.86%  some_college    Baldwin  Alabama  212,628  9.19  3.99%  some_college    Barbour  Alabama  25,270  -6.22  5.90%  hs_diploma    Bibb  Alabama  22,668  0.73  4.39%  hs_diploma    "
+},
+{
+  "id": "section-vocabulary-18",
+  "level": "2",
+  "url": "section-vocabulary.html#section-vocabulary-18",
+  "type": "Definition",
+  "number": "2.1.5",
+  "title": "",
+  "body": "   A categorical variable is a variable whose values are any words in some category. In principle, any set of words can be a category, though usually there is some meaning tying the category togerher.  A nominal categorical variable is a categorical variable where the category is just a set of names without any implicit ordering.  An ordinal categorical categorical variable is a categorical variable where the category is a list of names with an instrinsic ordering to them.  A numeric variable is a variable where the values are numers instead of words. (In some places, the term is numerical . Both terms have common usage, so I've chosen to use the shorter term.)  A discrete numeric variable is a numeric variable where the numbers are distinct, with clear steps between them.  A continuous numeric variable is a numeric variable where the numbers can vary with arbitrary precision, allowing intermediate values without reservation.    "
 },
 {
   "id": "section-study-design",

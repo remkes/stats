@@ -1,0 +1,193 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+
+\begin{frame}
+  \begin{itemize}
+    \item[] LO8: Interpret the meaning of the coefficients from a
+    linear regression. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Scatterplots}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Total Length (cm)},
+        ylabel={Head Length (mm)},
+    ]
+        \addplot+ [only marks] table
+        [x=total_l,y=head_l,col sep=tab] {../data/possum.dat};
+    \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Lines}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      y & = & mx + b \\[2em]
+      m & = & \text{Slope} \\[2em]
+      b & = & y \text{-intercepts} 
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Linear Regression}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Total Length (cm)},
+        ylabel={Head Length (mm)},
+    ]
+        \addplot+ [only marks] table
+        [x=total_l,y=head_l,col sep=tab] {../data/possum.dat};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{equation*}
+      \hat{y} = 41 + 0.59x
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{$\hat{y} = 41 + 0.59x$}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Total Length (cm)},
+        ylabel={Head Length (mm)},
+    ]
+        \addplot+ [only marks] table
+        [x=total_l,y=head_l,col sep=tab] {../data/possum.dat};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{equation*}
+      \hat{y} = 41 + 0.59(90) = 94.1
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{$\hat{y} = 41 + 0.59x$}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Total Length (cm)},
+        ylabel={Head Length (mm)},
+    ]
+        \addplot+ [only marks] table
+        [x=total_l,y=head_l,col sep=tab] {../data/possum.dat};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{equation*}
+      x = 75 \implies \hat{y} = 85.25 \hspace{1cm} e = y - \hat{y} =
+      84.7 - 85.25 = -0.55
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Least Squares Regression}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      e & = & y - \hat{y} \\[2em]
+      & & e_1,\ e_2,\ \ldots,\ e_n \\[2em]
+      & & e_1^2 + e_2^2 + \ldots + e_n^2 
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Split Scatterplot}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+      legend pos=south east,
+      xlabel={Total Length (cm)},
+      ylabel={Head Length (mm)},
+      ]
+      \addplot [
+      scatter/classes={
+        m={mark=square*,red},
+        f={mark=square*,blue}
+      },
+      scatter, 
+      only marks,
+      scatter src=explicit symbolic,
+      ]   
+      table [x=total_l,y=head_l,col sep=tab,meta=sex] {../data/possum.dat};
+      \legend{Male, Female}
+      \addplot+ [
+        blue,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,81) (98,100) };
+      \addplot+ [
+        red,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,82.66) (98,101.66) };
+    \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Regression with multiple predictors}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      \hat{y} & = & 41 + 0.59x \\[2em]
+      \hat{y} & = & 43.5 + 0.56(\text{length}) + 0.30(\text{age}) -
+      1.66(\text{sex})\\[2em]
+      \text{male} & \mapsto & 0 \\[2em]
+      \text{female} & \mapsto & 1
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{$\hat{y} = 43.5 + 0.56(\text{length}) + 0.30(\text{age}) -
+  1.66(\text{female})$}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+      legend pos=south east,
+      xlabel={Total Length (cm)},
+      ylabel={Head Length (mm)},
+      ]
+      \addplot [
+      scatter/classes={
+        m={mark=square*,red},
+        f={mark=square*,blue}
+      },
+      scatter, 
+      only marks,
+      scatter src=explicit symbolic,
+      ]   
+      table [x=total_l,y=head_l,col sep=tab,meta=sex] {../data/possum.dat};
+      \legend{Male, Female}
+      \addplot+ [
+        blue,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,81) (98,100) };
+      \addplot+ [
+        red,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,82.66) (98,101.66) };
+    \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+
+\end{document}
+
+

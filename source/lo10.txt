@@ -1,0 +1,113 @@
+The previous two videos were the start of out path into inferential
+statistics: trying to make some conclusion about the relationship
+behind the data. This video moves into the most important definition
+of inferential statistics: hypothesis testing. We want to understand
+the basic idea and definition in this video.
+
+SLIDE
+
+I'll present this by example. A certain study had this research
+question: do male bank managers discriminate against female employees
+in promotion decisions?
+
+What is the population? Recall the population for a research question
+is all of the possible cases. Here, the question is about promotion
+decisions made by male managers. Therefore, the population is
+precisely that: all promotion decisions made by all male bank
+managers. (You could argue that the population be limited, maybe to
+only banks in Canada. That would also be reasonable.) 
+
+That's the population. What is the sample? Recall that the sample is
+the actual data: the portion of the population that we know something
+about. In this study, the sample was 48 specific promotion decisions
+that the researchers were aware of. 
+
+SLIDE
+
+The dataset, then, has 48 cases. Each case was two variables: gender
+and decision. Both are nominal categorical with two categories: gender
+split between men and women, and decision split between promoted and
+not promoted. The gender refers to the gender of the applicant:
+remember, that study is only about male managers, so that part is
+fixed. 
+
+Here is the contingency table for these two variables. Of the 48
+cases, exactly half were men and half were women under consideration
+for promotion. You can see from the table how many were actually
+promoted. I can read this as proportions: 87.5 percent of the men
+were promoted and 58.3 percent of the women were promoted. The
+different between these two proportion is 0.292 or 29.2%. 
+
+SLIDE
+
+Let's make sense of this 0.292 proportional difference. Again, the
+population is all instances of promotion decisions made by a male bank
+manager. I can use p_m for the value, in the entire population, of how
+many men were promoted, as a proportion. (Proportion is important here
+for comparison, since the number of promotion applicants in the entire
+population is not guaranteed to be perfectly split between men and
+women.) 
+
+Again, I can use p_f for the proportion of the women who were promoted
+in this situation. And, as I did in the last slide, I can date the
+difference. This is a measure of how much men were promoted more often
+than women. 
+
+This is a parameter. Recall the definition: a parameter is a fact
+about the entire population. Parameters are unknown: the study did
+not, in fact, look at every possible promotion decisions for all male
+bank managers everywhere. It only looked at 48 decisions, a tiny
+fraction of the whole. Statistics is about trying to say something
+about the unknown parameter using partial information. 
+
+So we have a sample that I've already described. What I calculated on
+the previous slide is the sample statistic: it is something which is
+true about this sample. In this sample, there was a 29.2% difference
+in how often men and women were promoted. The question, as always, is
+this: is the sample statistic representative of the parameter. Does
+this study capture something that is likely to be true about the whole
+population. 
+
+SLIDE
+
+Hypothesis testing is how this question is formally setup. The setup
+is a bit strange, but there are good reasons for it. Hypothesis
+testing always starts with a null hypothesis. This is default
+situation and it always says that there is no relationship between the
+data. Nothing is really going on here. This is always the default
+since the vast majority of variable in the world are not directly
+connected. The canada goose population in Ontario has nothing to do
+with the price of lager in restaurants in Rome. In this case, the null
+hypothesis says that there is no difference, in the whole
+population, between the promotion rates or men and women (under the
+decision of a male manager. This can be stated mathematically: p_m and
+p_f were the promotion proportions, so the null hypothesis says the
+difference is zero. 
+
+Hypothesis testing always starts with the null hypothesis: some
+version of saying that nothing is going on with this data. The purpose
+of a research study is to reject the null hypothesis, so say there is
+something going on.
+
+This gets stated as the alternative hypothesis. Here, it says that the
+variables "gender" and "decision" in this data set are not
+independent: they point to an actual different in the whole
+population. That is, the parameter p_m - p_f is actually larger than
+zero. Men to get promoted at a higher rate than women, at least under
+male managers. 
+
+(You could argue that the alternative hypothesis should be even more
+broad. It should be the negation of the null hypothesis, so maybe just
+that this parameter is non-zero. Maybe in the whole population, women
+actually have a higher promotion rate. This version of the alternative
+hypothesis would allow for that reality as well)
+
+This is the setup of hypothesis testing. Understand what the
+population is, what the parameter is, and how the sample statistic is
+a limited measure of the paremeter in the sample. Make an null
+hypothesis: some version of saying that, in the whole population,
+there is no relationship between the data. Maybe an alternative
+hypothesis, saying there is a relationship. Then figure out if the
+sample statistic actually supports the alternative hypothesis. That's
+it for this video, which just defined the terms and set the stage. The
+next videos will start actually answering the question. 

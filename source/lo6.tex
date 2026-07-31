@@ -1,0 +1,200 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+\begin{frame}
+  \begin{itemize}
+    \item[] 
+      Use a histogram to visualize a variable and describe the shape
+      of the data (skewness, modality, outliers).  \vspace{0.5cm}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Histogram}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=5,
+      xmax=25,
+      xlabel={Interest Rate (Percentage)},
+      ylabel={Count}
+    ]
+      \addplot+ [
+        hist={bins=8},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=interest_rate,col sep=tab] {../data/loans50.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Left Tail}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=14,
+      ylabel={Count}
+    ]
+      \addplot+ [
+        hist={bins=7},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=left,col sep=space] {../data/empty.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Right Tail}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=14,
+      ylabel={Count}
+    ]
+      \addplot+ [
+        hist={bins=7},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=right,col sep=space] {../data/empty.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Centre - Unimodal}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=14,
+      ylabel={Count}
+    ]
+      \addplot+ [
+        hist={bins=7},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=centre,col sep=space] {../data/empty.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Bimodal}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=14,
+      ylabel={Count}
+    ]
+      \addplot+ [
+        hist={bins=7},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=bimodal,col sep=space] {../data/empty.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Multimodal}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=14,
+      ylabel={Count}
+    ]
+      \addplot+ [
+        hist={bins=7},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=multimodal,col sep=space] {../data/empty.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Outlier}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=14,
+      ylabel={Count}
+    ]
+      \addplot+ [
+        hist={bins=7},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=outlier,col sep=space] {../data/empty.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Population Outlier}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=6,
+      ylabel={Count},
+      xlabel={Population in Millions}
+      ]
+      \addplot+ [
+        hist={bins=10},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=data,col sep=space] {../data/skew_population.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Population Outlier - Logarithm}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=-1,
+      xmax=1,
+      ylabel={Count},
+      xlabel={$\log_{10}$(Population in Millions)}
+      ]
+      \addplot+ [
+        hist={bins=10},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y expr=log10(\thisrow{data}),col sep=space] 
+      {../data/skew_population.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\end{document}

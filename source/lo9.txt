@@ -1,0 +1,200 @@
+This video is a continuation of the last video on linear regression.
+Having defined what a linear regression is, I want to do some analysis
+of the quality of a regression. What is a good fit and how do we know?
+
+SLIDE
+
+The first measure of quality of a linear regression is correlation.
+(Technically, Pearson correlation coefficient, but correlation will do
+find for us.) We've already used the word naturally to describe
+relationship between variables. Now it also has a technical meaning.
+Correlation is a number that describes how well we can model two
+variables in a linear relationship. This is exactly what we want in
+this video: a measure of how good a linear regression might be. 
+
+Regression is a number between 1 and -1. It has a formal mathematical
+definition and calculation method but, like with least squares
+last video, I won't cover the mathematical details. We'll let R
+generate regression for us, and then focus on the meaning.
+
+r=1 means perfect positive correlation: the data exactly fits a line
+with a positive slope. All data points must be right on the line. 
+
+SLIDE
+
+As r decreases, it means that the data is a little bit scatter from a
+pure linear relationship. This relationship has r = 0.94: it's pretty
+close to matching a line, but there is some deviation from that line. 
+
+SLIDE
+
+As the data gets farther away from matching a line, the correlation
+number gets lower. This data set has r = 0.73, notably father from a
+linear relationship that the previous, but still displaying good
+evidence of some linear relationship. 
+
+SLIDE
+
+An r value very near zero means that there is basically no
+correlation. This data set has r = 0.03. This indicate there is a very
+slight tendency towards negative correlation, but there is nothing
+close to a linear relationship. Indeed, the data is very scattered. 
+
+SLIDE
+
+As r gets closer to -1, the data becomes more linear again, but with a
+negative slope correlation. This data clearly has something line a
+linear relationship with a negative slope, and r=-0.64 shows that.
+
+SLIDE
+
+Again, as the points get closer and closer to a regression line with
+negative slope, the correlation number gets closer to -1. 
+
+SLIDE
+
+Finally, r=-1 is perfect negative correlation. All the points are
+exaclty on a line with negative slope.
+
+SLIDE
+
+Finally, this correlation number only measure how well something fits
+a linear relationship. This scatter plot has low positive correlation,
+r=0.14. There is a very slight positive correlation. However, the
+correlation entirely misses the fact that there is another kind of
+relationship here. A model for this data would be a shape like this,
+rising and then falling. This is not a linear model, so the
+correlation number doesn't see it at all. 
+
+In statistics, linear regression is almost always the firs thing to
+try. But some data has relationship which are not linear. It's very
+valuable to remember that linear models are only one of many kind of
+models of relationship between data. 
+
+SLIDE
+
+There is a related value to correlation. This value is simply called
+the R^2 value (and it often written with an upper-case R instead of a
+lower case r for correlation, which is honestly a bit confusing.)
+Sometimes, this is called the coefficient of determination, but I'll
+stick to R^2 value. 
+
+R^2 is simply the square or the correlation. Correlation is between -1
+and 1, so the square is between 0 and 1, since squares are always
+positive. R^2 forgets the different between linear models with
+positive and negative slope; instead, it is a better measure of
+whether two variables any linear relationship at all. High R^2 (close
+to 1) means a strong linear relationship; low R^2 (close to 0) means
+very little evidence of a linear relatinship. 
+
+In the last video, I talked briefly about multiple linear regression:
+fitting a linear relationship that depended on multiple inputs, not
+just one input. There is a version of R^2 for multiple linear
+regression as well, which is called adjusted R^2. I measure the same
+thing, but across several input variables: how close the relationship
+is to a linear relationship. 
+
+SLIDE
+
+Now let me get back to residuals, since these can also be used to
+evaluate the quality of a linear regression. Residuals were defined in
+the last video: they are the difference, for each data point, bewteen
+the actual data, y, and the prediction of the linear regression,
+y-hat. There is a residual for each data point: n in total, where n is
+the number of cases. 
+
+SLIDE
+
+Here is scatterplot from last video with the linear regression line 41
++ 0.59x. The residuals are the difference between the y coordinate of
+the data point and the line. However, residuals are a bit tricky to
+see in this form.
+
+SLIDE
+
+Instead, I can just plot the residuals themselves. Here is the same
+data set, but the y axis is now the residual compared to the linear
+regression. 0 is exactly on the line, this just shows how far above
+and below the line each data point is. This is a residual plot. As a
+visualization tool, the residual plot is extremely useful to seeing
+how good the regression is, since all it shows is the error for each
+data point. The shape and patterns of the residual plot can give
+information.
+
+In general, if there is not pattern to the residual plot (and the
+residuals are not too large), that is good evidence that the original
+regression was pretty good. For this data, from the last video, there
+isn't much of a pattern to the residual plot, so the linear regression
+is probably a decent model of the relationship between the variables. 
+
+SLIDE
+
+Here is another scatter plot. This looks like a pretty good
+regression. What does its residual plot look like?
+
+SLIDE
+
+Looks pretty good. Balanced above and below the line, relatively small
+residuals, no obvious pattern. This is evidence of a good linear
+regression: a line that fits the data well.
+
+SLIDE
+
+Here is a very similar scatter plot. It also looks pretty good. What
+does its residual plot look like?
+
+SLIDE
+
+This is a bit different. This residual plot has a bit of a pattern,
+starting below, then moving above, then moving below. In the original
+scatter plot, the variance of the data from the line was difficult to
+read, visually. Here, the residual plot makes that much easier to
+read. This is the strength of a residual plot: it zooms in on the
+relationship between the data and the line, and can clearly show
+things that were present in the original scatterplot, but much harder
+to see. In this case, the relationship is still close to linear, but
+this pattern means that there is probably something else going on here
+as well, something non-linear between the two variables.
+
+SLIDE
+
+Lastly, residual plots can help understand the effect of outlier on a
+linear regression. Here is a scatter plot with an outlier. This
+outlier happens to be right on the linea regression line. 
+
+SLIDE
+
+Here is the matching residual plot. You can see the outlier over here.
+The rest of the residual plot looks pretty good: no strong pattern,
+data balances above and below the line. This outlier, though it may be
+strange for other reasons, it no detrimentally affecting the
+regression.
+
+SLIDE
+
+Here is another scatter plot, with an outlier well away from the
+linear regression. The rest of this looks like a good fit, but it's
+hard to read on the scatterplot.
+
+SLIDE
+
+Here is the residual plot. This makes it a bit more clear that the
+outlier is having an effect. If the outlier is removed, more of these
+points are below the line, and farther below the line. The outlier is
+essentially pulling the line up just by itself. This can happen in
+linear regression. 
+
+At this point, a researcher would have to make a judgement about this
+outlier. It is naturally part of the data? Or is it an error, which
+could come from any number of sources (measurement error, data entry
+error, bad experimental design that allowed in one eroneous data
+point, and so on.) If there is such an argument, the the outlier
+should be expluded and the line adjusted so that the residual plot
+becomes more balanced. However, if the outlier does actually below,
+then it means something and shouldn't be removed. As is the case so
+often in this course, it comes down to judgement, experimental design,
+and careful skepticism. 
+
+
+
+

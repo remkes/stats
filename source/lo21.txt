@@ -1,0 +1,128 @@
+We're moving on, again, to another kind of statistic. We've done a
+difference of proportions, a single proportion, a single mean. Now we
+have a difference of means. 
+
+SLIDE
+
+Here is the setup. We have one numeric variable, the thing that we are
+measuring and studying. We have a categorical variable with two
+groups. This can be treatment and control, like with difference of
+proportion, or it can just be two comparison groups. 
+
+It is important for the propability theory here that the groups are
+independent. This means there is no causal connection: something that
+happens in one group doesn't affect cases in the other group.
+
+For an example, a question about smoking or non-smoking mother and
+birthweight has two independent groups: the smoking mothers and
+non-smoking mothers. They don't affect each other. The means are
+independent.
+
+In constrat, a study could measure blood pressure before and after
+medication. There would still be two groups, the before group and the
+after group, one for each case. But there is a causal relationship:
+each before and after come from a single human being. This is not
+independent.
+
+SLIDE
+
+Here is data from the births14 data set, which we have used in class
+several times already. There were many variable in that dataset, but I
+have isolated the binary categorical variable smoker or nonsmoker.
+I've given the number of cases, the mean birthweight and the standard
+deviation of the birthweight in each group. This is the right
+situation: two independent means. 
+
+Obviously, there is a difference here. The question, as always, is
+whether this difference is statistically significant. Does it provide
+evidence for an actual different in the population. 
+
+I state this as a hypothesis test. The null hypothesis is that there
+is no difference. I'm writing mu_n and mu_s for the two means: average
+for non-smokers and average for non-smokers The null hypothesis says
+that these are the same. The alternative hypothesis says that these
+are difference. In this form, I am doing a two-sided test, which I
+will remember later. 
+
+SLIDE
+
+The general setup for hypothesis testing is the same as always. We
+want to know how likely it is that our sample statistic was produced
+under the null hypothesis. To do this, we make a sampling
+distribution: a set of statistics produced randomly assumine the null
+hypothesis. From this , we get a z-score for our sample statistic, and
+a p-value, which measure how unlikely our sample statistic is.
+Originally, we got the sampling distribution by a randomization
+process, but for a while now, we've let the mathematics of probability
+theory give us the sampling distribution.
+
+We do the same here, but we need to worry about conditions. First, as
+mentioned before, we need independence in the two groups. We have that
+here, all good.
+
+As with last video for a single mean, we also have to worry about the
+outliers in the dataset. The sample size here is quite large, so we
+only need to worry about extreme outliers. I've not shown it here, but
+if you look at the data set, there some outliers, but nothing extreme.
+The mathematics should work here.
+
+SLIDE
+
+Alright, then, the sampling distribution. The central limit theorem
+tells us that the sampling distribution should be normal. However,
+like with a single mean, there is good reason in the theory to use the
+t-distribution instead: the wider distribution with heavier tails
+better suits these numerical variables. So I need the details of the
+t-distribution.
+
+First, the mean of the sampling distribution. I am doing a difference
+of means and the null hypothesis is that the difference is zero.
+The sampling distribution is under the assumption of the null
+hypothesis, which says there is no difference between the means. 
+
+Second, the standard error: the standard deviation of the sampling
+distribution. This is given by the probability theory: here is the
+formula, where sigma is the standard deviation of each category and n
+is the sample size of each category. 
+
+Then, I need the degrees of freedom parameter. Remember that
+t-distributions have a parameter, called degrees freedom. In the
+previous two situation (chi-squared for multiple categories and
+hypothesis testing for a single mean), there was a fairly direct way
+to calculate degrees of freedom. For a difference in means, the actual
+formula is pretty complicated, and there is some subtle mathematics
+that makes various adjustment. Therefore, we'll just let R calculate
+the degrees of freedom. 
+
+Then I calculate a T-score. This is the same as before: my sample
+statistic minus the mean of the sampling distribution, which is zero,
+divided by the standard error. 
+
+Finally, I calculate the p-value from the T-score. As before, I'll do
+this with R (though historically this would be calculated from a table
+of t-scores.) 
+
+That's the process. It's pretty similar to previous processes. The
+major differences here are the new standard error formula and the
+strange, hidden method to calculate the degrees of freedom.
+
+SLIDE
+
+And now for confidence intervals. The process is pretty similar again
+to previous processes. Unlike hypothesis testing, there is no null
+hypothesis, so no zero mean for the sampling distribution. Instead,
+the mean of the sampling distribution is the sample statistic.
+
+The standard error calculation is the same as for hypothesis testing.
+The degrees of freedom parameter is also the same, and again
+calculated by R for us. 
+
+The I need the coefficient for determining the confidence intervals.
+This depends on which confidence range I want, and it depends on the
+degrees of freedom. Again, I let R calculate this for me.
+
+Once I have all this information then, as we've done several time
+before, the confidence interval is from the mean minus the coefficient
+times the standard error to the mean plus the coefficient times the
+standard error. 
+

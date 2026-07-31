@@ -1,0 +1,139 @@
+Alright, now we know what a null hypothesis and an alternative
+hypothesis are. A research study wants to determine if tn alternative
+hypothesis holds. How does it do that? 
+
+One way it to use randomness. Let me try to explain by going back to
+the example in last video.
+
+SLIDE
+
+The research study in the last video was about promotion decision in
+banks. Under a male manager, is the a prejudice against women in
+promotion decisions. Does gender actually matter, are fewer women
+promoted. This was the data, and it produced a sample statistic: men
+were promoted at at rate of 87.5% and women at a rate of 58.3%. The
+difference was 29.2%, or 0.292 as a proportion. 
+
+So here is the question: could this just have been random? This is a
+sample statistic: it captures something about the parameter and the
+whole population, but it's only a tiny pieces. Maybe this variable is
+just random change. Maybe this sample happen to have more men
+promoted, but another sample is just as likely to have more women
+promoted. 
+
+SLIDE
+
+This gets back to the hypotheses. The null hypothesis says there is no
+relationship in the parameter, in the whole population. A sample can
+still be different, since a sample is a small piece of the population. 
+
+If I want to reject the null hypothesis, it I want to argue that the
+alternative hypothesis holds water, I need to say that the sample
+reflects the parameter, that it is representative. That it is
+significant. That is means something. How do I do that?
+
+I do that by arguing that the sample statistics is unlikely to be true
+under the null hypothesis. I get into probability. This course is not
+going to do much probability theory, but that is a big part of
+statistics. For now, I need to know the probability, under the null
+hypothesis, of producing my sample statistic. If that probability is
+small, it is evidence against the null hypothesis. 
+
+SLIDE
+
+So I need to study probability. This can be done with formal
+mathematics which, as I said, is a large piece of the discipline of
+statistics. But it can also be done very well by simulation. This is
+the brute-force approach, and what we will do today. Let me explain in
+the example.
+
+Of the 48 cases in the study, 35 were promoted and 13 not promoted. Of
+the promotion applicats, 24 were men and 24 were women. In the sample
+statistics, 21 men were promoted and 14 women (adding to 35). How
+likely is that breakdown to happen randomly? We'll let me find out by
+doing a bunch of random selections. I'll randomly assign the
+promotions to the applicatns. Take these 35 promotions and randomly
+split them up between the men and the women.
+
+SLIDE
+
+Here's what that looks like. There are 35 promotions, and I asked a
+random number generator to randomly assign them to the two categories.
+These were the first few random trials. You can see that, in each row,
+the two number sum to 35. I always assign 35 promotions, but the
+gender breakdown is random. I've also calculated the proportions and
+the difference, which is the third column. 
+
+This is ten random trials. I even generated the same 14 and 21 as the
+sample, though gender-switched. I also happened to generate a
+situation, randomlly, where all 24 women were promoted. 
+
+Doing this ten times in interesting. But doing this many, many times
+gives a pretty good idea of probability. As I said, this is the brute
+force method, but it is actually pretty reliable. If I want to no the
+probability of something, if I can simluate it and run the simulation
+thousands or millions of times, I get very, very good ideas of the
+probabilities.
+
+SLIDE
+
+So, I run many, many random trials. Then I look at my sample
+statistic: a 0.292 different in the proportion of men and women
+promoted. Then I ask, how often does this happen? How often do at
+least 29.% more men get promoted than women if the promotions were
+split up randomly?
+
+The answer, after all the random trials, is about 2%. This is called
+the p-value of the sample statistics. It measure how likely it is that
+the statistic is the result of random change in a varried population. 
+
+So, from the sample statistic and the mathematical of random trials, I
+can say that there is a 2% change that the null hypothesis is true,
+that there is no relationship in the population as a whole, and that
+this sample statistics is just random chance. 
+
+Alright, what do I think about this 2%? It certainly could happen. 2%
+change things to happen -- indeed, they happen one time in 50. So is
+it possible. But it is unlikely.
+
+Evaluation of statistics is all about what is likely. We approach
+truth by probability and approximation. Statistics doesn't conclude
+that a claim is true or false; it concludes that a claim is likely or
+unlike. As such, it always involves a judgement call, yet again.
+
+In a statistical analysis, we get to set a significance level. This is
+usually written with the greek letter alpha. It is a measure of what
+we consider very unlikely. 
+
+Then, if the p value of a sample statisic is below alpha, the we
+consider the sample statistics to be very unlikely to be caused by
+random variance.
+
+The most common choice, by far, for alpha is 0.05. This means that
+situation which are less that 5% likely due to random change are
+considered significant. In this study, the p value is 0.02, which is
+indeed less thatn 0.05. So, by that standard, this sample statistic is
+considered statistically significant. 
+
+As statistically significant, it is justification for the study to
+reject the null hypothesis, and argue that the alternative hypothesis
+must hold. According to these conventions, this study does provide
+real evidence of a prejudice among bank manager to promote fewer
+women. 
+
+This is judgement. The 5% singificance is a convention. If a higher
+standard of justification is needed, this can be dropped, maybe to 1%
+or a fraction of a percent. It's about probability, likeliness.
+
+But this is how hypothesis testing works. A sample statistic is
+generated from a sample. Some math or random trials are done to figure
+out the probability of the sample statistic being just random, just
+noise. If that probability is low enough, if it is very unlikely that
+the sample statistic is just random change, then it is called
+statistcally significant, the null hypothesis is rejected, and the
+study gives real evidence for the alternative hypothesis. 
+
+This video may be the very heart of this course. Statistical
+significant is the real story behind so much of statistics. What is
+likely to be true, what is likely to be random, what is likely to be
+noise, and how do we measure all of this. That's what it is all about. 

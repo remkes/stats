@@ -1,0 +1,227 @@
+We move on to yet another kind of statistics: a single mean. How do we
+test this? How to we build a confidence intervals?
+
+SLIDE
+
+So what is this kind of statistics? Let me recap the kinds of
+statistics we've seen so far in hypothesis testing and confidence
+intervals. A difference in proportion is exemplified by a controlled
+trial. An alternative hypothesis would be that vaccines can prevent
+polio. There are two proportions: the infected proportion of the
+control group and the infected proportion of the control group. The
+sample statistics is the difference in proportions. The null
+hypothesis is that there is no difference in the population, but the
+alternative hypothesis says there is a difference. 
+
+Then we moved on to single proportions. Still a categorical variable,
+but no longer a treatment/control comparison. The alternative
+hypothesis is usually a threshold: at least 30% of the lodgepole pine
+trees in BC have been infected by the mountain pine beetle. The null
+hypothesis is no longer zero, but just the negation of the threshold. 
+
+These were both for categorical variables. Now we want to do
+statistics for numeric variables. For numeric variables, we measure
+means: averages. The alternative hypothesis will again be a threshold,
+but now a threshold of a mean, not a proportion. The average length of
+an adult female blue whale is at least 20 metres. The null hypothesis
+is again the negation of this. 
+
+This is the kind of statistics I want to study now. The approach will
+be similar: hypothesis testing and confidence intervals. Find a
+distribution, figure our means and standard deviations, use those to
+construct z-scores, percentiles, p-values and confidence intervals.
+
+SLIDE
+
+Though the approach is similar, working with numerical data is
+different. This is a bit more complicated than proportions. It's not
+just yes or no, success or failure. Instead, numeric variables take a
+whole range of values. 
+
+That means what the population itself looks like is a whole
+distribution, not just a single percentage. We're trying to figure
+something out about a pretty complicated situation. The population
+distribution is, like the population parameter, the actual situation
+in the population. We have no idea what this looks like: it could be
+some strange kind of distribution, with peaks and valleys, patterns,
+whatever. There is no guarantee that it is a normal distribution, or
+any other kind as well. 
+
+So how do we investigate it? We'll, we use the tools we have for
+distributions. For now, I'll stick to two: mean and standard
+deviations. All distributions (not just normal distributions) have
+means and standard deviations. We'd like to use the sample to
+determine something about the population mean and the population
+standard deviation, with some confidence or by testing some
+hypothesis. This is what we are trying to do.
+
+Do be careful, now. This is a population distribution: it's how that
+actual unknown entire population looks for a certain variable. We'll
+be look at a sample and then looking at randomization as before. This
+will create sampling distributions. It's important to keep the
+difference in mind: there is a population distribution and a sampling
+distribution, and they are not at all the same.
+
+SLIDE
+
+Again, I'll use an example to set this up. We'll talk about the length
+of adult female blue whales. Say we managed to measure 20 such whales
+in the wild, and we got this data. This is our data set. We want to
+figure out what we can say about the general female blue whale
+population based on this data.
+
+SLIDE
+
+We're going to need a sample statistics. There are, in fact, two: the
+mean and the standard deviation. I've calculated them here: the sample
+mean is 23.385, which I will write as x-bar for the rest of this
+video. The sample standard deviation is 2.116. (Note that this is
+always standard deviation, not standard error. The term standard error
+is only used for sampling distributions, not for population
+distributions.) 
+
+From this point, for either hypothesis testing or for confidence
+intervals, I could proceed by bootstrapping to make a sampling
+distribution for either the mean or the standard deviation. Then I
+could compare my sample statistics with the distribution to determine
+a p-value or a confidence interval. As before, we're not going to do
+the randomization anymore, and instead use probability theory to
+supply us with the distributions and the process for calculating
+p-values and confidence intervals.
+
+SLIDE
+
+So the mathematical theory will give us the distributions. For
+previous sampling distributions, I applied the central limit theorem
+to say that, if I did enough bootstrapping or data-shuffling, my
+sampling distribution will be normal, so I can just use the property
+of the normal distribution. The same applies here: if you do enough
+bootstrapping randomizations, then the sampling distribution will be
+normal. But again, there are conditions.
+
+I didn't talk that much about the conditions before, but I want to
+here, since they are potentially more common. What I need to avoid are
+samples with significant outliers. If the sample size is small, than
+any significant outliers can cause the central limit theorem to fail.
+If the sample is large, then the system is more robust and only very
+extreme outliers are a problem. 
+
+In my example, the sample is small: only 20 whales. The data points
+19.3 and 26.7 were the bottom and top of the range, but the didn't
+seem too separated from the rest of the data. Maybe they are
+significant outliers, maybe not. But maybe I'm a little bit worried.
+What do I do if I am worried about the application of the central
+limit theorem?
+
+SLIDE
+
+Well, there is a solution: another kind of distribution. The
+t-distribution is quite similar to a normal distribution, but with a
+couple important difference. The red curve here is anormal
+distribution. These others are t-distributions. Look specifically at
+the blue curve: compared with the normal distribution, this has must
+larger tails. This is what a t-distribution does: it models something
+like a normal distribution, but allows more substantial outliers in
+these larger tails. 
+
+Like the chi-squared distribution from last vidoes, t-distributions
+are have a parameter called degrees of freedom. The blue curve here is
+the t-distribution with 1 degree of freedom. The green is with 2, the
+orange is with 5. The red curve is actually the t-distribution for 100
+degrees of freedom: as the degrees of freedom increase, the
+t-distribution becomes more and more like the normal distribution.
+
+Therefore, this is useful particular for smaller sample sizes, like
+the 20 whales in this example. For large sample sizes, t-distribution
+and normal distributions are nearly identical and the statistical
+method will produce almost exactly the same p-value and confidence
+intervals.
+
+Once I've chosen a t-distribution, the setup is still the same. I want
+to talk about means and standard error, percentiles and p-values. I
+want to figure out if a sample statistic is within 95% of the data or
+not. I want to determine the middle 95% of this for a confidence
+intervals.
+
+SLIDE
+
+So what is the mathematics to do this? As before, the probability
+theorists have studied the t-distribution and produced calculation
+techniques for us. Let me guide you through them. First, for
+hypothesis testing an p-values. 
+
+I have a sample statistic for the mean: 23.385. I have the null
+hypothesis, that the population mean is 21 metres or less. I have the
+alternative hypothesis that the population mean is more than 21
+meters. 
+
+I'm going to need the standard error again. Unlike the square root
+expressions, the standard error is easier to calculation here: it is
+the standard deviation of the sample, sigma divided by the square root
+of the sample size. 
+
+For a normal distribution, one I knew the standard error, I calculated
+a z-score for my sample statistic: that was a measure of how far out
+the sample statistic was in the sampling distribution: eventually, how
+unlikley it is under the null hypothesis. Here, for t-distributions,
+there is something similar. It is called a T-score. It is defined in
+basically the same way: the sample mean minus the mean dictated by the
+null hypothesis divided by the sample error. 
+
+For normal distributions, if I have a z-score, I calculated its
+percentile and used that percentile to generate a p-value (either as
+the percentile or as one minus the percentile, depending on which side
+of the distribution I am one. Here, there is a calculation that goes
+directly from the t-score to the p-value. Historically, this was done
+with t-tables. We'll just use R. I asked R and it gave me a p-value of
+0.000367. Obviously, smaller than 0.05, so by the usual threshold of
+significance, this is a significant result. I conclude that this
+sample gives evidence that the mean length of an adult female blue
+whale is over 21 metres: the null hypothesis is rejected and the
+alternative hypothesis is supported. 
+
+To recap, this is the process: calculate the sample mean. State the
+null hypothesis, with the threshold value you want for this mean.
+Calculate the degrees of freedom (which R will need from you at
+several points). Calculate the standard error. Calculate the T-score.
+Finally, use the t-score and the degrees of freedom to get a p-value. 
+
+SLIDE
+
+When we did hypothesis testing with normal distributions, we had to
+worry about one and two sided tests. The same is true here. In the
+example about blue whales, I only did a one-sided test. However,
+two-sided tests are also possible. The process is the same as before:
+if I want to make a one-sided test into a two-sided test, I just
+double the p-value. Visually, I'm, looking at both sides of the
+distibution, so the likeliness of being somewhere in one of the two
+tails doubles. The unlikely range is now only 2.5% of each side, not
+5% of one tail. 
+
+SLIDE
+
+Finally, let me talk about confidence intervals. I have the same
+starting information: the sample statistics, the degrees of freedom
+and the standard error. The setup for confidence intervals, as before,
+is an interval that starts below the sample mean and end above it. The
+distance out is some number times the standard error. For 95% for a
+normal distribution, this number was 1.96. That number comes from the
+probability theory. Again, historically you look this up on a table
+and we let R calculate it. 
+
+The same it true here: all t-distributions, for various degrees of
+freedom, have these numbers that determine various confidence
+intervals. I didn't defined these number last time, but they are
+called point estimates. The point estimate for 19 degrees of freedom
+and 95% confidence is 2.09: again, I asked R to calculate this form.
+
+Therefore, the confidence interval is the mean minus 2.09 times the
+standard error to the mean plut 2.09 times the standard error. In this
+case, it works out to 22.396 to 24.374.
+
+What does this mean? It means based on this sample (and, as always,
+assuming the study doesn't have any bias or confounding variables) I
+am 95% confidend that the mean length of adult female blue whales
+across the entire population is between 22.396 and 24.374. 
+
+

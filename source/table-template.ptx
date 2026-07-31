@@ -1,0 +1,11 @@
+  <table xml:id="table-">
+    <title>Title</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> </cell>
+      </row>
+      <row>
+        <cell> </cell>
+      </row>
+    </tabular>
+  </table>

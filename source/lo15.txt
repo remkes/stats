@@ -1,0 +1,140 @@
+The previous video used the normal distribution for hypothesis
+testing. Now we want to do something similar for confidence intervals.
+Again, these techniques tend to be specific to the type of statistic,
+so this will still be about a difference in proportions.
+
+SLIDE
+
+I'll use the same data as last time. Here are the details: recall this
+was a psychology experiment about two ways of asking a purchasing
+questions. This is a control trial: there is a control group and a
+treatment group, and each group has a percentage of buying and not
+buying. 
+
+SLIDE
+
+Here was the data, which showed that more people in the treatment
+group chose not to purchase. 
+
+SLIDE
+
+Here was the sample statistic: showing a difference of 20 percentage
+points between the two proportions. The analysis in the last video
+showed that the difference was statistically significant. Now we want
+a confidence interval. What does that mean? It means that around this
+20 percentage points difference, we want to know where the population
+parameter here. That population parameter is stil a difference in
+proportions, but it is unknown. We think this opportunity cost
+reminder does affect people's decision making, but we don't know by
+how much. The sample statistic gives us a starting point. We want to
+now where the population parameter is likely to be. This is a range
+around the sample statistic: a confidence range. It might be pretty
+close: we might be 95% confident that the population parameter is
+between 0.190 and 0.210. If might be very precise, between 0.199 and
+0.201. If might be less precise, between 0.150 and 0.250. It might be
+quite wide, between 0 and 0.4, including the possibility that there is
+not diffrence at all.
+
+A few videos ago, we used bootstrapping to make random samples, look
+at the distribution of those new sample, and take the middle 95%
+(excluding the top and bottomr 2.5%) to get the 95% confidence
+interval (or similar for other percentages of confidence.) Now I want
+to show you how to do this using the mathematics of probability
+theory. 
+
+SLIDE
+
+First, let me remind you about the sampling distribution. Our random
+process, both for the shuffles in hypothesis testing and the
+bootstrapping in confidence intervals, involves making a bunch of
+randomly generated samples. Then, from each randomly generated sample,
+we calculate the relevant statistic: the difference of proportions.
+That gives us a bunch of statistics. Then we treat all those
+statistics as a new distribution: the sampling distribution. It shows
+the possibilities of what the population parameter might be using all
+these random samples. 
+
+The central limit theorem (the key idea for this section) said that
+under certain reasonable condition, the sampling distribution is
+normal. This makes all the mathematic here work: we can work with a
+normal distribution and its properties. 
+
+SLIDE
+
+So let me show you how to calculate the confidence interval. Say we
+are aiming for 95% confidence. The sample distribution shows all the
+random samples. I've labeled the x-axis here by standard deviations
+away from the mean, out to -3 and 3. (Again, almost all of the normal
+distribution falls within 3 standard deviations)
+
+I want to know what is within 95% of the possibilities. Where is 95%
+of the data? It's in this range, between these two bars. The excluded
+tails are 2.5% of the data, and removing them gives 95% of data -- of
+the sampling distribution.
+
+The range, in terms of standard deviations, for 95% of the data is
+approximately -1.96 standard deviations to 1.96 standard deviations.
+(Like going from z-scores to percentiles, there is a complicated
+function behind this, but we are not going to go into it. The ranges
+for confidence will just be given to you, or we'll use R to calculate
+them. 
+
+SLIDE
+
+So we have this range, in terms of standard deviations. To apply this,
+I need the mean and standard deviation of some distribution.I want to
+know what is within 95% of the possibilities. Where is 95% of the
+data? It's in this range, between these two bars. The excluded tails
+are 2.5% of the data, and removing them gives 95% of data -- of the
+sampling distribution.
+
+The range, in terms of standard deviations, for 95% of the data is
+approximately -1.96 standard deviations to 1.96 standard deviations.
+(Like going from z-scores to percentiles, there is a complicated
+function behind this, but we are not going to go into it. The ranges
+for confidence will just be given to you, or we'll use R to calculate
+them. 
+
+SLIDE
+
+So we have this range, in terms of standard deviations. To apply this,
+I need the mean and standard deviation of some distribution. Once I
+have this, I can calculate the 95% confidence interval. It starts at
+1.96 standard deviations below the mean, which is mu minus 1.96 times
+sigma. Then it ends at 1.96 standard deviations above, which is mu
+plut 1.96 times sigma. That's the process.
+
+Let me apply this to the data for the psychology study. The mean of
+the sample distribution is the sample statistics: 0.200. The standard
+deviation, which for the sampling distribution is often called the
+standard error, is 0.076. (We calculated this last video, so feel free
+to review the process from that video.) 
+
+Then I must apply this. I take 0.200 minus 1.96 times 0.076 gives
+0.051, and likewise 0.200 plus 1.96 times 0.076 gives 0.349. This is
+my 95% confidence interval for the population parameter. 
+
+SLIDE
+
+Let me recap. We have a sample statistic. That sample statistic
+becomes the mean of the sampling distribution. The central limit
+theorem says that the sampling distribution is normal (again, under
+reasonable conditions). We calculate the standard deviation, also
+called standard error, using the formula from the previous video.
+Then, for each standard of confidence, there is a confidence interval
+defined in terms of standard deviations. We use that, and the mean and
+standard error, to calculate the confidence interval. No randomization
+required: just the central limit theorem and the tools of mathematical
+probability.
+
+This distribution is what we would have produced if we did many, many
+randomizations. It is reliable -- the probability theory says so,
+definitively. This is what bootstrapping would have produced with
+many, many randomizations. We can be 95% confident that, in the
+population as a whole, the effect of reminding a buyer about the
+oppotunity cost means an actual difference in purchase rates, and that
+difference is between 5.1 and 34.9 percentage points. In particluar, 0
+is not in that range, so we are 95% confident that there must be at
+least some difference. This matches the previous video, which
+concluded that the sample statistics was, indeed, statistically
+significant and that the null hypothesis could be rejected. 

@@ -1,0 +1,121 @@
+In the previous video, we talked about bar plots and pie charts to
+visualize categorical variables, either alone or in relationship to
+each other. Now we want to move on to visualization of numerical
+variables. This video starts with scatterplots
+
+SLIDE
+
+A study collected data on a group of students, including how many
+hours they spend studying per week over a term and their resulting GPA
+in that term. These are both discrete numeric variables, assuming we
+round to the nearest hour. 
+
+There are two numeric variables. This works well on a plot with two
+axes. We can treat each variable as an axis. Here, the horizontal axis
+is the GPA variable and the vertical axis is the study variables.
+Then, every case gives a value for each variable. These values are,
+now, eseentially coordinates: an x and a y value. These are dot, which
+I can put on the visualization.
+
+I get this: each case is a dot and the cases together give all these
+dots. A scatterplot is perhaps the most direct way to show two
+potentially interacting numeric variable: all the data is here,
+nothing about those two variables is hidden. 
+
+Visualization is meant to show something about the data. What does
+this scatterplot show? When we have two numeric variables, we can
+wonder about the relationship between them. Is there a relationship
+here? Maybe, but it's hard to tell. The data seems to fall into a
+triangle, which might be evidence that more studying leads to higher
+GPA. But is is pretty marginal. 
+
+More importantly, though, this is the difference between description
+and inferential statistics. A scatter plot is descriptive: it shows
+the data. To hypothesize a relationship based on this is to make an
+inference, which may or may not be true. We will return to the this
+idea in great detail later in the course. 
+
+SLIDE
+
+Here is another scatter plot, this one about house prices and square
+footage of sold houses in a certain city. Again, every dot is a case,
+a house that was sold along with its area and its price. 
+
+Here there seems to be better evidence for a relationship. Larger
+houses certainly seem to correlate with higher prices. This would be a
+positive corelation, if it held: higher values in one variable lead to
+higher values in the other. A negative corelation would be the
+oppotise: larger values in one variable lead to smaller in the other.
+Again, whether there actually is a relationship here is something for
+later in the course.
+
+This scatter plot also demonstrates something else: an outlies.
+Scatterplots show how the data is group. This data has a unique case
+which is very far away from the others. This is an outlier. Dealing
+with outliers is an important part of data analysis and, again,
+something we will certainly return to. 
+
+SLIDE
+
+Here is another scatter plot, this one from a British study about
+smoking. The two numeric variables are cigarettes smokes per day on a
+weekend day and the age of the smoker. 
+
+This scatter plot is really all over the place. Other than certain
+responses (15, 20) being more common, this looks like a pretty random
+spray of data, and it is very unlikely there is any relationship here
+to be drawn between these two variables. 
+
+SLIDE
+
+Here is another scatter plot, from a study of US counties that
+includes variables of median household income and poverty rate in
+percentage. Again, each dot is a particular county and its value in
+these two variables. There looks like there might be a relationship
+here, a negative correlation since higher income leads to lower povery
+rates, but perhaps not a straight line relationship.
+
+SLIDE
+
+This lets me introduce a new idea for numeric data, this is the second
+big idea of this video. Instead of just visualizing data, we can also
+do something to the data before visualizing or otherwise working with
+it. What do I mean by do something? Well, I mean applying some
+mathematical function. This is called transforming the data.
+
+In principle, I can use any mathematical function on the data. I could
+square root the dat, or calculation 2 to the power of the data. I
+could apply a logarithm to the data. If I do this to all the cases, I
+get a new, related variable, a transformed variable. There are many
+places in statistic where these transformations are valuable and
+important.
+
+It turns out that the logarithm transformation is particular useful. I
+have here the logarithm base ten, which I hope and expect you are
+familiar with. However, there is another logarithm which is very often
+used in both mathematics and statistics. There is a special number
+written "e" with value approximation 2.718 and so on. Even though this
+is a letter, it is just a number, a constant. Why this number is
+special is a subject treated in calculus but a bit more than this
+video has time for. But it is one of the most important number in
+mathematics. 
+
+The logarithm with base e has a special name: it is called the natural
+logarithm. It is written l-n instead of log e. Transformation by the
+natural logarithic is a very common transformation. 
+
+Though this is not a mathematics class, there are piece of mathematics
+that we will need to be comfortable with. The logarithm, and the
+natural logarithm, are two of these. Please review logarithms if you
+have any reservations about your memory of them. 
+
+SLIDE
+
+Now back to the income and povery scatter plot. Here is the same data,
+but with the natural logarithm applied to both variables. I get a new
+scatter plot. The previous one seemed to have a curved-line
+relationship, but now this looks like their might be a straight line
+negative correlation. Since working with straight line (and trying to
+fine them) is much easier than curves, this transformation might turn
+out to be wonderful. For now, it's enough to know that doing this
+transformation is simply a thing that can be done. 

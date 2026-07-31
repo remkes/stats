@@ -1,0 +1,116 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+\begin{frame}
+  \begin{itemize}
+    \item[] Use a scatterplot to visualize the relationship between
+    two numeric variables and describe this relationship. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{GPA and Study Hours}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={GPA},
+        ylabel={Study Hours per Week},
+    ]
+        \addplot+ [only marks] table
+        [x=gpa,y=study_hours,col sep=tab] {../data/gpa_study_hours.dat};
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{House Prices and Square Footage}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Price (Hundreds of Thousands)},
+        ylabel={Area (Square Feet)},
+        scaled ticks=false,
+    ]
+        \addplot+ [only marks] table [
+          x expr=\thisrow{sale_price}/(100000),
+          y=house_square_feet,
+          col sep=tab
+        ] {../data/pierce_county_house_sales.dat};
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Smoking and Age}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Age (Years)},
+        ylabel={Cigarettes per Day, Weekends},
+    ]
+        \addplot+ [only marks] table
+        [x=age,y=amt_weekends,col sep=tab] {../data/smoking.dat};
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Median Household Income and Poverty}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Poverty Rate (Percentage)},
+        ylabel={Median Household Income (Dollars)},
+        scaled ticks=false,
+        yticklabel style={/pgf/number format/fixed},
+    ]
+        \addplot+ [only marks] table
+        [x=poverty,y=median_hh_income,col sep=tab] {../data/county.dat};
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Transforming Data}
+  \centering
+  \begin{displaymath}
+    \begin{array}{ccccc}
+      x & \sqrt{x} & 2^x & \log_{10} x & \ln x \\[0.3em] \hline
+      2.0 & 1.41 & 4 & 0.301 & 0.693  \\[0.3em]
+      3.7 & 1.92 & 13.00 & 0.57 & 1.31  \\[0.3em]
+      5.1 & 2.26 & 34.30 & 0.71 & 1.63  \\[0.3em]
+      9.3 & 3.02 & 630.35 & 0.97 & 2.23  \\[0.3em]
+    \end{array} 
+  \end{displaymath}
+  \begin{align*}
+    \vspace{1cm}
+    e & \doteq 2.718281828 \\[0.3em]
+    \ln x & \defeq \log_e x
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Median Household Income and Poverty - Transformed}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Poverty Rate (Percentage) - Logarithm},
+        ylabel={Income (Dollars) - Logarithm},
+        scaled ticks=false,
+    ]
+        \addplot+ [only marks] table [
+          x expr=ln(\thisrow{poverty}),
+          y expr=ln(\thisrow{median_hh_income}),
+          col sep=tab
+        ] {../data/county.dat};
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+\end{document}
+

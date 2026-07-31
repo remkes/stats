@@ -1,0 +1,101 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+\begin{frame}
+  \begin{itemize}
+    \item[] 
+      LO10: Define the null and alternative hypotheses for a research
+      question. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Research Question}
+  \begin{itemize}
+    \item[] 
+      Do male bank managers discriminate against female employees in
+      promotion decisions? 
+      \vspace{0.5cm}
+    \item[] 
+      Population: All instances of a male bank manager making a
+      promotion decision.
+      \vspace{0.5cm}
+    \item[] 
+      Sample: 48 promotion decisions by male bank managers.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Frequency Table: Gender and Decision}
+  \begin{table}
+    \begin{tabular}{@{}rlll@{}}
+      \toprule
+      gender & promoted & not promoted & total \\ 
+      \cmidrule(r){1-1} \cmidrule(lr){2-2} \cmidrule(lr){3-3}
+      \cmidrule(l){4-4}
+      men & 21 & 3 & 24 \\[0.3em]
+      women & 14 & 10 & 24 \\[0.3em]
+      \cmidrule(r){1-1} \cmidrule(lr){2-2} \cmidrule(lr){3-3}
+      \cmidrule(l){4-4}
+      total & 35 & 13 & 48 \\[0.3em]
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{itemize}
+    \item[] Propotion of men promoted: $\dfrac{21}{24} = 0.875$. 
+      \vspace{0.5cm}
+    \item[] Propotion of women promoted: $\dfrac{14}{24} = 0.583$. 
+      \vspace{0.5cm}
+    \item[] Difference in promotion proportions: $0.875 - 0.583 = 0.292$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Parameters and Statistics}
+  \begin{itemize}
+    \item[] 
+      Population: all instances of a promotion decision by a
+      male bank managers
+      \vspace{0.5cm}
+    \item[] 
+      $p_m$: the promotion proportion for male promotion applicants
+      across the entire population.
+      \vspace{0.5cm}
+    \item[] 
+      $p_f$: the promotion proportion for female promotion applicants
+      across the entire population.
+      \vspace{0.5cm}
+    \item[] 
+      Parameter: $p_m - p_f$. 
+      \vspace{0.5cm}
+    \item[] 
+      Sample: 48 specific promotion decisions.
+      \vspace{0.5cm}
+    \item[] 
+      Sample statistic: $\hat{p}_m - \hat{p}_f = 0.292$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypotheses}
+  \begin{itemize}
+    \item[] $H_0$: Null hypothesis. The variables `gender' and
+    `decision' are independent. 
+      \vspace{0.5cm}
+    \item[] $H_0$: $p_m - p_f = 0$. 
+      \vspace{0.5cm}
+    \item[] $H_A$: Alternative hypothesis. The variables `gender' and
+    `decision' are not independent. 
+      \vspace{0.5cm}
+    \item[] $H_A$: $p_m - p_f > 0$
+      \vspace{0.5cm}
+    \item[] $H_A$: $p_m - p_f \neq 0$
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
+

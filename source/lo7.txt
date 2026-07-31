@@ -1,0 +1,229 @@
+The histograms of the last video introduced the idea of distribution
+of a single variable. What is the shape of the data, how it is
+grouped, where are its peaks and valleys? I want to continue this
+theme by talking about central tendencies and spread. This is a bit
+video -- central tendencies are one of the most important ideas in
+statistics. Let's get started.
+
+SLIDE
+
+I'm going to work with the same Loans data set and interest rate
+variable as before. Here is the histogram from last video. A central
+tendency is any way of measuring what is usual or typical from a
+single variable in a data set. There are many central tendencies, but
+I'll start with the averge, which is usually called the mean in
+statistics. 
+
+SLIDE
+
+An average of a numeric variable is found by adding up all the cases,
+which I can label as x with subscripts. Then I divide by the number of
+cases. x with a bar over it, read x-bar, is a common notation. 
+
+We are going to ask R to do many of our calculations in this course.
+But I want you to understand what R is doing for the most important
+calculations. To understand a mean is to understand how it is
+calculated, hence actually having some mathematics for you to process.
+This notation might be quite new: variable with subscripts to count
+them, bars over variable letters. I encourage you, for all the
+mathematics in this course, to spend time with the definitions and try
+to internalize them. 
+
+For the Loans data, there are 50 cases. Adding up the interest rate in
+percentage for all 50 and dividing by 50 gives a mean interest rate of
+11.57 percent.
+
+SLIDE
+
+I can draw that 11.57 as a line on the histogram. That's the average,
+which is one way of measuring what is a typical interest rate in this
+data. 
+
+Once I have a central tendency set, I have another important question:
+how much does the data spread out from the central tendency? There are
+two important words to define here: deviation and variance. Both
+capture the idea of an individual case being different from the mean.
+Visually, both relate to how the values, shown here group in a
+histogram, spread out.
+
+SLIDE
+
+Let me get to the definitions. Deviation is a term that applies to a
+single case (for a single numeric variable) and is the difference
+between that case and the mean. The mean for the loans data was 11.57
+percent. For each case, there is a percentage, and I can subtract the
+mean. What I get is the deviation for each case: the first case
+deviated by .67 below, the next by 1.65 below, the next by 14.73
+above and so on. I can calculate a deviation for each of the 50 cases. 
+
+SLIDE
+
+Deviation is good for an individual case, but how do I summarize that
+for the whole data set? The definition that statistics has come up
+with for this is sample variable. It is found by squaring all the
+deviations, adding them up, and dividing by the number of cases. It is
+written s^2. 
+
+Wait a second, I said dividing by the number of cases, but here I
+wrote 50-1, dividing by one less. This is a strange thing in the
+definition of sample variance called Bessel's correction. If you want
+to hear more about the mathematical subtleties of this, ask me in
+class. For now, just remember to divide by one less than the number of
+cases. 
+
+SLIDE
+
+The sample variance is a meausre of the spread of data, but not the
+most intuitive one. However, I can take the square root. The result is
+s, which is called the standard deviation. It is something like the
+average of the devitiations: it measures how far out the data
+typically is from the mean. 
+
+SLIDE
+
+Here is the histogram again. I'll draw the mean of 11.75. The standard
+deviation was about 5, so I can draw a region 5 units away from the
+mean. 
+
+Outside of very strange distribution, usually about two thirds of the
+data point will fall within one standard deviation. This is not a
+fixed rule, more a tendency or trend, but it is pretty reliable.
+Likewise, almost all of most data sets will fall within two standard
+deviations of the mean, but just a few cases remaining outside such a
+range.
+
+SLIDE
+
+That was a discussion of mean or average, and the associated ideas of
+devitions, sample variance, and standard deviation. But mean is not
+the only central tendency: in fact, many exist. Mean is one of the two
+most common, the other of that pair is the median.
+
+The median of a numerical variable in a dataset is litterally the
+middle value. Here are all 50 cases in the loans data, showing their
+interest rate in percentage. I've put them in order by this variable.
+Let me count halfway in: 25. I get here. Since there are an even
+number of cases, I am between two elements. The median will be the sum
+of these two divided by 2. They are both 9.93, so M works out to 9.93
+here. If there were an odd number of cases, the median would just be
+the middle number. 
+
+This is also a central tendency. One of the strange things about
+statistics is that multiple different things align with the normal
+language sense of "usual" or "normal". Both the mean and the median
+are some measure of what it typical in the sample. 
+
+SLIDE
+
+The mean came with devitations, sample variance, and standard
+deviation as associated definitions. The median likewise has
+associated definitions which can be used to describe the distribution
+of the data. First, let me talk about quartiles. This is just a
+slightly fancy word: it just means quarters of the data (in ascending
+order). I can put this data into quarters. A quarter of 50 is 12 and a
+half, to here are the distinctions.
+
+Then, every data point is in one of the quartiles (with a couple being
+exactly on the boundaries). When I say "the first quartile", I measure
+this by the upper bound, in this case, 7.96. Likewise, the second
+quartile is the upper bound of the second quarter, which is just the
+median again. The third quartile is 14.08. These quartiles give a way
+to break up the data into pieces, to understand it better.
+
+Let me briefly also define the associated idea of percentiles.
+Dividing into quarters was an arbitrary choise: I can divide into any
+piece I wish. A percentile is a division determined by a percent. The
+first quartiles if the 25th percentile. I could then ask for the 30th
+percentile, the 40th, and so on. Each of these is just a percentage of
+the ordered variable. You'll hear the phrase "in the 90th percentile"
+in various places: this just means that the particular case exceeds 90
+percent of the other cases. This popular use is slightly confusing
+temrinology, but hopefully the idea of breaking an order data set into
+pieces is still clear. 
+
+SLIDE
+
+I still have a few more definition here. After the medians and the
+quartiles, I can define the inter-quartile ranges. This is simply the
+third quartile minus the first. It defines the spread of the middle
+half of the data: in this case, the middle half of the data all sits
+within an interval of 6.12: from 7.96 percent to 14.08 percent. Like
+the sample variance and the standard deviation from earlier, this is a
+mesure of the spread of the data. A low IQR is a tight data set and a
+high IQR is a spread out data set. 
+
+Finally, let me calculate 1.5 times the IQR, and then add that to the
+third quartile. This seems a bit arbitrary, but what this number is
+telling me is a range that is well beyond the centre of the data. This
+convention: adding 1.5 the IQR to the third quartile, is often used to
+determine outliers on the top of the data. In this case, I get 23.26,
+so I have some justification for treating the last two data point as
+outliers. Something similar could be done for the bottom half of the
+data, subtractking 1.5IQR from the first quartile. In this dataset,
+there are no such outliers on the lower side: 5.31 is actually pretty
+close to the mean, much closer than 26.30.
+
+SLIDE
+
+That was a lot of definition. There is a visualzation for all these
+definitions, called a box plot. It start with a line at the median.
+Then I make a box from the first quartile to the third. This box
+contains hald the data, and the position of the median within this
+half data shows something of how it is distributed. Here, the median
+is less than halfway through the box, showing that the data is
+clustered more tightly below the median. 
+
+The box is half the data set. I then draw two more lines at the
+extreme values of the data set: the lower and highest values. These
+are called the whiskers of the box plot, and all of the data sits
+between the whiskers. Again, I see a tighter cluser of data on the low
+side, and a more spread out data set above. This is like showing a
+right tail with a histogram, but using an entirely new visualization
+tool. 
+
+All the data? Well, not all the data. When I make the whiskers, I can
+choose to ignore outliers. Remember on the last slide, using the
+pattern of 1.5 times IQR above the third quartile, I excluded two
+points. On the box plot, I can draw these as dots and only extend the
+whisker to the third highest data point. This is, again, conventional.
+Outliers are statistically interesting, so in this way, the box plot
+can make their existence clear.
+
+Finally, as with all visualizations, something is shown and something
+is hidden. This box plot gives me a sense of the data: where the
+median is, how the data is spread. The box is the middle half of the
+data, so inside the box is some measure of usual data. Out to the
+wiskers is the rest of the data, so I can see a bit of how it is
+distrubted. I can show specific outliers. For a simple diagram, a lot
+of information is shown.
+
+This video talked about two hold systems. The first was the system
+with means, deviations, sample variance and standard deviation. I drew
+these over a histogram to show the shape of the data. The second
+system was the system with medians, quartiles, inter-quartile ranges,
+box plots, whisker and outliers. It gives another picture. 
+
+Which one do I use? Well, this is the real heart of the matter. As you
+have already seen and will continue to see, statistics has no shortage
+of methods. There are many things you can do to display and analyze
+data. Being a good statistician is knowing the various system well and
+choosing a system for the goals as hand. 
+
+That's pretty vague, so let me leave you with one criteria for
+choosing between mean and median. A statistic or visualiztion is
+called robust if changes to just a small number of data points don't
+really change the statistic. This is often desirable. If I change only
+one data point out of 200, probably the analysis should be almost the
+same. 
+
+The mean and associated sample variance and standard deviation are
+useful and great for some tests and calculations, but they are not
+necessarily robust. Outliers can have a great effect on the mean, and
+moving an outlier further out will show up, even if it is only one
+data point among many. In contrast, medians and the rest of the
+information in a box plot is robust. If I move these two outliers even
+further out, nothing else in the box plot will change. Box plots are
+less sensitive to outliers, and often that is a desirable trait. We'll
+talk more about these judgement calls in the future -- indeed, as you
+should be aware of by now, such judgement calls are oen of the main
+themes of the course. 

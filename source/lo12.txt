@@ -1,0 +1,100 @@
+We're moving on to another method of statistical inference: the
+confidence interval. This video will define the term and give a
+calculation approach by simulation, much like we did for p-value.
+
+SLIDE
+
+To compare, let me review what we defined for hypothesis testing. A
+hypothesis is a statement that something is going on with the
+statistic, something other than a null hypothesis. The example we did
+in the last video was an explanatory variable having an effect on a
+dependent variable. The null hypothesis says there is no affect, but
+we can test to reject the null hypothesis and say there is an effect. 
+
+We didn't do an example, but the hypothesis can be any other kind of
+statement about a population parameter. It might not be a variable
+dependence: it might just be that the value of a population parameter
+is above or below some threshold.
+
+How did we test a hypothesis? Through simulation. If the null
+hypothesis is true, we can generate random samples. If we do this
+enough time, we get a sense of how likely our sample is. If our sample
+is very unlikely, the we have justification to reject the null
+hypothesis. 
+
+Now what are confidence intervals? Well, instead of a yes/no question,
+this is about a range of value. A confidence interval measure the size
+of the effect of an explanatory variable on a dependent variable or
+the range for a population parameter. Instead of a yes/no
+null/alternative hypothesis, we want to use our sample to say
+something about the range of values in the whole population. It's not
+about statistical significane -- that's a hypothesis term. It's about
+where we think the population might be only using our sample.
+
+How do we figure out a confidence interval? Like hypothesis testing,
+we use probability again. And again, we can do this mathematically
+with probability theory, or by simulation. We'll stick with simulation
+for now. 
+
+SLIDE
+
+Here is an example to try to explain what is going on with confidence
+intervals. There is a strange game you can play with two people where
+one person taps out the rhythm of a well-known song, and the other
+tries to guess the song only by the rhythm. This turns out to be
+harder than most people thing. A certain study did this with 120 pairs
+of people. Only 3 of the 120 pairs has someone actually guess the
+sone. This is our sample statisitc: 2.5 success rate. The sample
+statistic is just a percentage, unlike the percentage difference in
+the previous video. 
+
+This is all we have to go on, just this study. What is likely true
+about the general population -- how often would someone actually guess
+the correct song? This is the population parameter. It's almost
+certainly no exactly 2.5% -- that would be strange and uncanny. But we
+can give it a range. 
+
+Using only this study, only this information, what range would we be
+confidence in for the population parameter? Our study produces 2.5%.
+Maybe the rang is 0 to 5%? Maybe only 2 to 3%? Maybe 0 to 10? Where
+can we have confidence about the population parameter just based on
+our study?
+
+SLIDE
+
+How do we do this process? The simulation method here is called
+bootstrapping, and it works this way. Very strangely, we assume that
+the sample statistics is the population parameter. But then, using
+that population parameter, we re-draw samples of the same size. Then
+we calculate the probability of a range of values around our sample
+parameter, using probability theory or simulation. It is an odd
+process, but it does produce a range around the sample parameter.
+
+SLIDE
+
+Here is the graph when I did this for our song-guessing game. I
+assumed that the population parameter was 2.5%: 2.5% of pair would
+guess correctly. Then I asked a computer for random selections of 120
+pairs from a very large population. I did this 1000 time, and this is
+the histogram of those samples. 
+
+From this, I make a confidence interval. Which confidence interval
+depends on the range of confidence. 95% is common, so I take the part
+of this histogram that includes 95% of the data. Such a range would be
+0 to 0.07. It excludes these three bars, which take up less than 5% of
+the data. (If I look at the data more carefully, I can get a finer
+number than just 0.06, but this is enough for now). Using this
+probability simulation, 95% of the sample are between 0 and 6%. This
+is my 95% confidence interval. 
+
+Other percentages could be taken. The 99% confidence interval would be
+about 0 to 0.08. A 90% confidence would be about 0.1 to 0.5. And do
+on. 
+
+Let me recap. The point is this: knowing our sample, what can we say
+about the population parameter? We can't say exactly, but we can say a
+range. If our sample is without hidden bias or confounding factors,
+then is means that we can be 95% sure that the population parameter is
+between 0 and 6%. That's the point: our sample gives us a range for
+the whole population. 
+

@@ -1,0 +1,109 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+\begin{frame}
+  \begin{itemize}
+    \item[] 
+      Define and interpret a confidence interval, and use
+      bootstrapping to construct a confidence interval.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Two Tests for Inference}
+  \begin{itemize}
+    \item[] 
+      Hypothesis Testing
+      \vspace{0.5cm}
+    \item[] 
+      Does this explanatory variable have an effect on this dependent
+      variable.
+      \vspace{0.5cm}
+    \item[] 
+      Is this population parameter less than or greater than some
+      fixed value?
+      \vspace{0.5cm}
+    \item[] 
+      Calculate probability of randomly generated the sample
+      statistics with the null hypothesis.
+      \vspace{0.5cm}
+    \item[] 
+      Confidence Interval
+      \vspace{0.5cm}
+    \item[] 
+      Measure the size of the effect of this explanatory variable on a
+      dependent variable.
+      \vspace{0.5cm}
+    \item[] 
+      Measure a range for a population parameter 
+      \vspace{0.5cm}
+    \item[] 
+      Calculate the probability of the population parameter falling
+      within a certain interval. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Confidence Interval Example}
+  \begin{itemize}
+    \item[] 
+      Song-Tapping Game
+      \vspace{0.5cm}
+    \item[] 
+      Sample: 120 pairs of people
+      \vspace{0.5cm}
+    \item[] 
+      Sample statistic: 3 out of 120, 2.5\%
+      \vspace{0.5cm}
+    \item[] 
+      Population parameter: $p \in [a,b]$
+    \item[] 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Bootstrapping}
+  \begin{itemize}
+    \item[] 
+      Assume the sample statistic \emph{is} the population parameter.
+      \vspace{0.5cm}
+    \item[] 
+      With that assumption, re-draw the sample.
+      \vspace{0.5cm}
+    \item[] 
+      Calculate the probability, either mathematically or by
+      simulation.
+      \vspace{0.5cm}
+    \item[] 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simulation}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0,
+      xmax=0.1,
+      x tick label style={/pgf/number format/fixed},
+      xlabel={Correct Guess Proportion},
+      ylabel={Count}
+      ]
+      \addplot+ [
+        hist={bins=10},
+        fill=orange,
+        draw=black,
+        mark=none
+      ]
+      table [y=count,col sep=comma] {../data/bootstrap.dat};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\end{document}
+
+

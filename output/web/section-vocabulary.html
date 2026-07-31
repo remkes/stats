@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Section Name</title>
+<title>The Vocabulary of Statistics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -35,7 +35,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.44"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.45"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,15 +57,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.1.16';
+eBookConfig.runestone_version = '8.2.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.279b1f0077454c32.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.db8001875cb726c2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.66fa8a682a32c0ac.css">
+<script src="_static/prefix-runtime.82b0f3334d1d4a05.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.5555907f139e2014.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -102,8 +102,11 @@ eBookConfig.enable_chatcodes =  false;
 <legend>Assistive technologies</legend>
 <label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
 </fieldset>
-<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter-context.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-context.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-study-design.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="chapter-context-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-context.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-study-design.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -116,6 +119,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-organization.html" class="internal"><span class="codenumber">1</span> <span class="title">Course Organization</span></a></div>
 <ul id="ptx-toc-group-chapter-organization" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-organization-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-structure.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Course Structure</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-organization.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Course Learning Outomes</span></a></div></li>
 </ul>
@@ -123,7 +127,8 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter-context.html" class="internal"><span class="codenumber">2</span> <span class="title">The Context for Statistics</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter-context">
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-vocabulary.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Section Name</span></a></div></li>
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-context-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-vocabulary.html" class="internal"><span class="codenumber">2.1</span> <span class="title">The Vocabulary of Statistics</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-study-design.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-study-ethics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Section Name</span></a></div></li>
 </ul>
@@ -131,6 +136,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-display.html" class="internal"><span class="codenumber">3</span> <span class="title">Descriptive Statistics</span></a></div>
 <ul id="ptx-toc-group-chapter-display" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-display-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-tables.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-bar-pie.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-histograms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Section Name</span></a></div></li>
@@ -141,6 +147,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-linear-models.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear Models</span></a></div>
 <ul id="ptx-toc-group-chapter-linear-models" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-linear-models-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-linear-regression.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-linear-analysis.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Section Name</span></a></div></li>
 </ul>
@@ -148,6 +155,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-hypothesis-setup.html" class="internal"><span class="codenumber">5</span> <span class="title">Hypothesis Testing - Setup</span></a></div>
 <ul id="ptx-toc-group-chapter-hypothesis-setup" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-hypothesis-setup-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-hypotheses.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-randomness.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-probability-theory.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Section Name</span></a></div></li>
@@ -163,6 +171,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-hypothesis-testing.html" class="internal"><span class="codenumber">6</span> <span class="title">Hypothesis Testing - Implementations</span></a></div>
 <ul id="ptx-toc-group-chapter-hypothesis-testing" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-hypothesis-testing-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-single-proportion.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-chi-squared.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Section Name</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-mathematics-t-chi-squared.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Section Name</span></a></div></li>
@@ -181,15 +190,217 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section-vocabulary">
 <h1 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section Name</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Vocabulary of Statistics</span>
 </h1>
-<div class="para" id="section-vocabulary-2">Test<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-vocabulary-2">Statistics is the mathematical study of making meaning out of data. Therefore, it’s pretty appropriate that we start with understanding what data is. In this course, and in much of statistics, we will start with a data set. A data set is a specific kind of collection of information with a specific structure. It is the core of statistics: statistics is about understanding data sets.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Section 2.1: Section Name"><a tabindex="-1" href="#section-vocabulary" title="Copy heading and permalink for Section 2.1: Section Name" aria-label="Copy heading and permalink for Section 2.1: Section Name">🔗</a></div>
+<figure class="table table-like" id="table-stroke-data"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Stroke Data Set<div class="autopermalink" aria-hidden="true" data-description="Table 2.1.1: Stroke Data Set"><a tabindex="-1" href="#table-stroke-data" title="Copy heading and permalink for Table 2.1.1: Stroke Data Set" aria-label="Copy heading and permalink for Table 2.1.1: Stroke Data Set">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t0 lines">patient</td>
+<td class="l m b2 r0 l0 t0 lines">group</td>
+<td class="l m b2 r0 l0 t0 lines">30 days</td>
+<td class="l m b2 r0 l0 t0 lines">365 days</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">treatment</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">treatment</td>
+<td class="l m b0 r0 l0 t0 lines">stroke</td>
+<td class="l m b0 r0 l0 t0 lines">stoke</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">treatment</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">treatment</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">control</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+<td class="l m b0 r0 l0 t0 lines">no event</td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="section-vocabulary-4">In a certain clinical trial, a study was done to understand whether stents help to prevent strokes. A stent is a small tube placed inside an artery, usually in and around the heart. They are often used to aid recovery after a heart attack, but ensuring blood flow through critial coronal arteries. However, there is some evidence that they may have other benefits as well, including possibly minimizing risk of a stroke.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-5">The researchers designed an experiment. 451 patients whose were identified as at risk for stroke for randomly assigned to one of two groups, as it standard for a controlled trial. Patients in the control group received medical management— medication, support, lifestyle changes and the like. Patients in the treatment group also received this same medical managment, but in addition were given a stent place in an important artery.  Then, of course, data was collected on the outcomes for both groups, producing a dataset.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-6">What is the data? For each pattient, two points of data were gathered: whether they had a stroke within 30 days of starting the experiment, and the same but withint 365 days. <a href="section-vocabulary.html#table-stroke-data" class="xref" data-knowl="./knowl/xref/table-stroke-data.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.1: Stroke Data Set">Table 2.1.1</a> shows the first five patients, which of the two groups they were in, and whether or not they had strokes within the two time periods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-7">Based on this example, let me make the first important definition.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="section-vocabulary-8"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>A <dfn class="terminology">variable</dfn> is something that is measured in a data set. A <dfn class="terminology">case</dfn> is an individual member of a data sets. A case will have one or more variable associated to it: the data gathered about that individual item or situation.<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.2"><a tabindex="-1" href="#section-vocabulary-8" title="Copy heading and permalink for Definition 2.1.2" aria-label="Copy heading and permalink for Definition 2.1.2">🔗</a></div>
+</article>
+<div class="para" id="section-vocabulary-9">In the example, whether the patient had a stroke after 30 days is a variable. In this case the potential values for the variable are juse ‘yes’ ans ‘no’. There is another variable for whether the partient had a stroke after 365 dats. A case in this example is an individual patient.  Patient 2 is a case, as it patient 5.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-10">In <a href="section-vocabulary.html#table-stroke-data" class="xref" data-knowl="./knowl/xref/table-stroke-data.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.1: Stroke Data Set">Table 2.1.1</a> there is a spreadsheet-like setup. Cases are rows and variables are columns. This isn’t always the setup; rows and columns can be switched, so be careful reading data sets and interpreting them.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-11">A data set is just data, raw information. What does it mean? This is what the whole discipline of statistics is about. We analyze the data set and try to draw conclusions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-12">There are many, many ways to analyze data. Consider this new table.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-stroke-frequency"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Frequency Table for Stroke Data<div class="autopermalink" aria-hidden="true" data-description="Table 2.1.3: Frequency Table for Stroke Data"><a tabindex="-1" href="#table-stroke-frequency" title="Copy heading and permalink for Table 2.1.3: Frequency Table for Stroke Data" aria-label="Copy heading and permalink for Table 2.1.3: Frequency Table for Stroke Data">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">30 Days</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines">360 Days</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Group</td>
+<td class="l m b2 r0 l0 t0 lines">Stroke</td>
+<td class="l m b2 r0 l0 t0 lines">No Stroke</td>
+<td class="l m b2 r0 l0 t0 lines">Stroke</td>
+<td class="l m b2 r0 l0 t0 lines">No Stroke</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Contol</td>
+<td class="l m b0 r0 l0 t0 lines">13</td>
+<td class="l m b0 r0 l0 t0 lines">214</td>
+<td class="l m b0 r0 l0 t0 lines">28</td>
+<td class="l m b0 r0 l0 t0 lines">199</td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0 lines">Treatment</td>
+<td class="l m b1 r0 l0 t0 lines">33</td>
+<td class="l m b1 r0 l0 t0 lines">191</td>
+<td class="l m b1 r0 l0 t0 lines">45</td>
+<td class="l m b1 r0 l0 t0 lines">179</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Total</td>
+<td class="l m b0 r0 l0 t0 lines">46</td>
+<td class="l m b0 r0 l0 t0 lines">405</td>
+<td class="l m b0 r0 l0 t0 lines">73</td>
+<td class="l m b0 r0 l0 t0 lines">378</td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="section-vocabulary-14">In <a href="section-vocabulary.html#table-stroke-frequency" class="xref" data-knowl="./knowl/xref/table-stroke-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.3: Frequency Table for Stroke Data">Table 2.1.3</a>, I have counted up the totals for the variables of whether or not a stroke occured and I am grouping them by the group variable: control or treatment.  I can try to make some observations and I immediately note that those with treatment actually had more instances. Whether or not this is something causal happening here, or whether this is just random change, is a question we get to later in the course. For now, this is just a good example of one way to try to analyze this data set and maybe draw some conclusions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-15">Now for some more vocabulary. I want to talk about the kinds of data in a data set. In particular, the kinds of variables, since variable are the raw measurements we are making in the data set. I’m going to work with another example to disucss types of variables.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="table-county-data"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>US County Demographics<div class="autopermalink" aria-hidden="true" data-description="Table 2.1.4: US County Demographics"><a tabindex="-1" href="#table-county-data" title="Copy heading and permalink for Table 2.1.4: US County Demographics" aria-label="Copy heading and permalink for Table 2.1.4: US County Demographics">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t0 lines">County</td>
+<td class="l m b2 r0 l0 t0 lines">State</td>
+<td class="l m b2 r0 l0 t0 lines">Pop.</td>
+<td class="l m b2 r0 l0 t0 lines">Pop. Change</td>
+<td class="l m b2 r0 l0 t0 lines">Univ. Rate</td>
+<td class="l m b2 r0 l0 t0 lines">Median Edu.</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Autauga</td>
+<td class="l m b0 r0 l0 t0 lines">Alabama</td>
+<td class="l m b0 r0 l0 t0 lines">55,504</td>
+<td class="l m b0 r0 l0 t0 lines">1.48</td>
+<td class="l m b0 r0 l0 t0 lines">3.86%</td>
+<td class="l m b0 r0 l0 t0 lines">some_college</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Baldwin</td>
+<td class="l m b0 r0 l0 t0 lines">Alabama</td>
+<td class="l m b0 r0 l0 t0 lines">212,628</td>
+<td class="l m b0 r0 l0 t0 lines">9.19</td>
+<td class="l m b0 r0 l0 t0 lines">3.99%</td>
+<td class="l m b0 r0 l0 t0 lines">some_college</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Barbour</td>
+<td class="l m b0 r0 l0 t0 lines">Alabama</td>
+<td class="l m b0 r0 l0 t0 lines">25,270</td>
+<td class="l m b0 r0 l0 t0 lines">-6.22</td>
+<td class="l m b0 r0 l0 t0 lines">5.90%</td>
+<td class="l m b0 r0 l0 t0 lines">hs_diploma</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Bibb</td>
+<td class="l m b0 r0 l0 t0 lines">Alabama</td>
+<td class="l m b0 r0 l0 t0 lines">22,668</td>
+<td class="l m b0 r0 l0 t0 lines">0.73</td>
+<td class="l m b0 r0 l0 t0 lines">4.39%</td>
+<td class="l m b0 r0 l0 t0 lines">hs_diploma</td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="section-vocabulary-17">
+<a href="section-vocabulary.html#table-county-data" class="xref" data-knowl="./knowl/xref/table-county-data.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.4: US County Demographics">Table 2.1.4</a> shows the first four cases of a data set set dealing with various demographic information for counties in the United States. The data set has six variables. What kind of variables are these? Let me give you the definitions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="section-vocabulary-18"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<ul class="disc" id="section-vocabulary-18-1-1">
+<li id="section-vocabulary-18-1-1-1">
+<div class="para" id="p-derived-section-vocabulary-18-1-1-1">A <dfn class="terminology">categorical variable</dfn> is a variable whose values are any words in some category. In principle, any set of words can be a category, though usually there is some meaning tying the category togerher.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-18-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-18-1-1-2">
+<div class="para" id="p-derived-section-vocabulary-18-1-1-2">A <dfn class="terminology">nominal categorical variable</dfn> is a categorical variable where the category is just a set of names without any implicit ordering.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-18-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-18-1-1-3">
+<div class="para" id="p-derived-section-vocabulary-18-1-1-3">An <dfn class="terminology">ordinal categorical categorical variable</dfn> is a categorical variable where the category is a list of names with an instrinsic ordering to them.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-18-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-18-1-1-4">
+<div class="para" id="p-derived-section-vocabulary-18-1-1-4">A <dfn class="terminology">numeric</dfn> variable is a variable where the values are numers instead of words.  (In some places, the term is <dfn class="terminology">numerical</dfn>. Both terms have common usage, so I’ve chosen to use the shorter term.)</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-18-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-18-1-1-5">
+<div class="para" id="p-derived-section-vocabulary-18-1-1-5">A <dfn class="terminology">discrete numeric variable</dfn> is a numeric variable where the numbers are distinct, with clear steps between them.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-18-1-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-18-1-1-6">
+<div class="para" id="p-derived-section-vocabulary-18-1-1-6">A <dfn class="terminology">continuous numeric variable</dfn> is a numeric variable where the numbers can vary with arbitrary precision, allowing intermediate values without reservation.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-18-1-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.1.5"><a tabindex="-1" href="#section-vocabulary-18" title="Copy heading and permalink for Definition 2.1.5" aria-label="Copy heading and permalink for Definition 2.1.5">🔗</a></div>
+</article>
+<div class="para logical" id="section-vocabulary-19">
+<div class="para">In the example, then, let me classify the variables.</div>
+<ul class="disc" id="section-vocabulary-19-1">
+<li id="section-vocabulary-19-1-1">
+<div class="para" id="p-derived-section-vocabulary-19-1-1">State name is a categorical variable, since its values are names, not numbers. I would also say that it is a nominal categorical variable. I could apply an order (say, alphabetical, by land area, or by population), but it’s not really intrinsically ordered. It is a bunch of names of things.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-19-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-19-1-2">
+<div class="para" id="p-derived-section-vocabulary-19-1-2">Median education is a categorical variable as well, since its values are the names of various types of education. Here, I would argue that it is an ordinal categorical variable, since there is (at least in a limited sense) a defined and instrinsic order to tiers of education: some K-12 school; grade 12 graduate; some college or university; university graduate; post-graduate studies. This ordering is intrinsic since, outside of very strange exceptions, one tier of education will be finished before the next is achieved.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-19-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-19-1-3">
+<div class="para" id="p-derived-section-vocabulary-19-1-3">Population is a numeric variable, since its value is a number. Population is also a discrete variable: you can’t have half a member of a popopulation. Fractions are not allowed and there is a full step between each number.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-19-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="section-vocabulary-19-1-4">
+<div class="para" id="p-derived-section-vocabulary-19-1-4">Unemployment rate is also a numeric variable, since its value is a number. This is a continuous numeric variable. Up to whatever precision you want to report, the unemployment rate can vary with arbitrary steps. You can have a <span class="process-math">\(0.1\%\)</span> increase, a <span class="process-math">\(0.01\%\)</span> increase, or even finer if you want to report it.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#section-vocabulary-19-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-vocabulary-20">This is the starting vocabulary of the course. Statistics is about data sets and data sets contain cases and variables. Variables come in a variety of types. The more vocaulbary we build up, the better we will be able to describe the behaviour of data sets and to understand what truths they contain about the situations that they are measuring.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-vocabulary-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Section 2.1: The Vocabulary of Statistics"><a tabindex="-1" href="#section-vocabulary" title="Copy heading and permalink for Section 2.1: The Vocabulary of Statistics" aria-label="Copy heading and permalink for Section 2.1: The Vocabulary of Statistics">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="chapter-context.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-study-design.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="chapter-context-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-study-design.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

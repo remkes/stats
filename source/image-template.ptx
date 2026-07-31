@@ -1,0 +1,7 @@
+  <figure xml:id="figure">
+    <caption>Caption</caption>
+    <image xml:id="image-" width="80%">
+      <latex-image>
+      </latex-image>
+    </image>
+  </figure>

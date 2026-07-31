@@ -1,0 +1,138 @@
+The previous videos focused on tables as summaries of data. Tables are
+good, but data communication can do much better. I want to turn data
+into visualizations: pictures that express the data.
+
+This is very powerful, since a visualization can be so much more
+effective. However, it also always comes with risk. Visualization is
+always a choice of how to display data, and, like so many things in
+this course, that choice is always a judgement call. Every choice of
+visualization emphasizes something about the data and hides something
+else. There is no such thing as a neutral visualizations -- they are
+always informed by a goal. 
+
+SLIDE
+
+In this video, I'm going to be talking about a data gathered by a bank
+about home loan applications. There are ten thousand cases in this
+data and three variables. One variable is the current home ownership
+status of the application: whether they already own a home outright,
+have a mortgage, or rent. Another variable is the applition type:
+individual or joint. The final variable is the rating the bank gave to
+the application, which is a letter from A to G with A being the safest
+loan to aware and G being the most risky.
+
+Here is a frequency table for the ownership variable, showing the
+count of all three categories for this variable. It's not bad to get a
+sense of the data from the table, but I want to visualize the data.
+
+SLIDE
+
+Therefore, I make a bar plot. In a bar plot, each category is
+expressed as a vertical or horizontal bar, the length of which is the
+value of the variable. This is the same data, but now I have a
+qualitative sense of the relationship between the variable -- a sense
+that might have been missing from the raw numbers. It's easy to see,
+at a glance, the relative sizes of the categories. 
+
+SLIDE
+
+The previous bar graph was the total count, but I can also do a bar
+graph with proportions. Here is the same data, but the vertical axis
+is now proportion instead of count. These proportions have been lefts
+as decimals (the count divided by the total), but I could have also
+written these as 48%, 14% and 39%, if I whished. 
+
+SLIDE
+
+That was a frequency table in bar graph form. It captures the count or
+proportion of one variables. But now let me do some interaction
+between variables. A contingency table was introduced last video to
+show how variables interact each other. Here, I want to see how the
+ownership variable interacts with the application type: individual or
+joint. Of the 4789 applications with a mortgage, 37977 were
+individuals and 812 were joint applications. Again, the data is here,
+but seeing what is all means in just the number is getting more
+difficult. With bar plots, I'm going to show you three ways to express
+this contingency table. 
+
+SLIDE
+
+Here is a stacked bar plot. This are the same bars as the first bar
+plot I shoed you, but now I have used the second variable, the
+application type, to colour the bars in two colours. In the mortgage
+bar, the blue is individuals and the pink is joint applications.
+Likewise for the other two bars. This still shows the ownership
+variable in the height of the bar, but also gives a good visualization
+of the breakdown of each bar by application type. It's easy to get a
+rough sense of how many of each bar are individual or joint
+applicant.s
+
+SLIDE
+
+A dodged bar shows the same information, but shows the breakdown
+side-by-side instead in one bar. The total of the mortgage category is
+now the sum of these two bars, and each subset is its own side-by-side
+bar. This makes the total of each category, mortgage, onw and rent, a
+little bit less visable, but it makes the comparison in each part
+between individual and joint more clear. As I said before,
+visualization is always about trade-offs: what you want to show, what
+you are content with making less visible. If the comparison between
+individuals and joint applicatants is the most important, this is a
+good choice.
+
+SLIDE
+
+Finally, I can also do something similar with proportions. Here, but
+total of the mortgage, own and rent categories is completely gone. All
+that this plot tries to show is the relative percentages of individual
+and joint applications inside each ownership category. What is shown
+is that more mortgage carries have joint applications, and fewer
+homeowners do. Again, the choice of plot is determined by what the
+author of the visualization wishes to display or allows to be hidden.
+Here, the relative values are entirely hidden. 
+
+SLIDE
+
+In addition to bar plots, another visualization I imagine you are
+already familiar with is a pie chart. Pie charts are exclusively for
+proportions: the pie of always consider as a whole and each section of
+the pie is a portion of the whole. Here is the category data for the
+ownership variable again, from the frequency table earlier. This is
+just the one variable -- I'm not comparing variables as I did in the
+previous three slide. This pie chart shows in a nice, clear way, how
+many applicants have a mortgage, own a proprety, or rent a property.
+
+SLIDE
+
+Pie charts are often great for proportions -- they are seen as
+intuitive and easy to read representations of parts of a whole.
+However, they too can have their weaknesses. I haven't talked about
+the third variable yet, but here is the data for the loan grades the
+bank gave to all its applicants. Again, A is the safest loan to grant
+and G is the most risky. This is pretty clear for the early letters,
+but readinng this for E, F and G is not pleasant, even if I were to
+take away the overlaping percentage text. Pie chart work well for
+large percentages, but showing very small slices can be a problem.
+Again, in addition to knowing terms for these visualization tools, the
+main these of this video is that visualizations are also about choice:
+choosing the right visualization for clarity and purpose, and
+realizing that all visualizations necessarily involve tradeoffs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

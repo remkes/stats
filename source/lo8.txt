@@ -1,0 +1,156 @@
+We've spend a few videos on description statistics: visualizations of
+data. Now we want to move on to the first piece of inferential
+statistics, which is regression. This video will introduce the idea of
+linear regression, with the goal being to understand the concept and,
+in particular, the coefficients.
+
+SLIDE
+
+Here is a scatter plot of two numeric variables in a data set about
+possums. The variables are the length of the whole animal (including
+the long tail)in centimeters, and the length of just the head, in
+milimeters. As usual, the dots are the cases, representing the
+measurements of one specific possum. 
+
+As before, a natural question in a scatter plot is this: is there a
+relationship between the two numeric variables. In this scatter plot,
+it looks like their might be a positive correlation. This also
+intuitively makes some sense: the larger animals can be reasonably
+expected to also have larger heads. 
+
+What is this relationship? It's always hard to say, but statistics
+tries to guess. And the first guess is the simplest relationship: a
+linear relationship. This is a relationship repesented by a straight
+line. 
+
+SLIDE
+
+So let me briefly review lines. A couple videos ago, I mentioned that
+logarithms were an important piece of mathematical background that was
+work reviewing. Equations of lines are another such piece. The
+standard form is this, called the slope-intercept form. I hope that
+this is at least a little familiar. x and y are the coordinates, of
+course. The line is described by two numbers, m, the slope, and b, the
+y-intercept. The y-intercept is the less important for today's
+interpretation, though it certainly carries meaning. You can think of
+it as where the relationship stats. When x, the input, is zero, the
+output is b. 
+
+The slope is the more important measure. It tells how quickly the line
+rises (or falls, if the slope is negative). A linear relationship is
+defined by its slope. A steep slope means that changes in x
+correspond to large changes in y, a shallow slope means the opposite. 
+
+SLIDE
+
+So, let's try to fit a line to this scatterplot. Regression is the
+mathematical task of matching a function to a collection of data.
+Linear regression is matching a linear function. Trying to draw a line
+that best captures the data. I'll draw this line.
+
+What line have I drawn? Here is an equation for a linear regression
+generated from this data. Note two things: the intercept and the
+slope. The intercepts is 41, which is not terribly relevant here. The
+slope is very useful, though. It describes the relationship: for every
+cm of length, the head of the possum increases by 0.59mm. The slope
+is, in many ways, the relationship. 
+
+Notice the hat over the y. This is a notational reminder that this y
+is an approximation. Not all the data fits the line perfectly, of
+course. The y-hat notation is a useful reminder that this y is not the
+perfect outcome, but a statistical approximation.
+
+SLIDE
+
+This is a linear regression, then: a line meant to fit the data. It
+can then be used to make predictions. If I put a body length into the
+equation of the line, say 90 cm, then the linear regression predicts a
+94.1 millimeter long head. These predictions can then be compared
+against future data.
+
+SLIDE
+
+Obviously, the line is an approximation. For each data point, I can
+ask how far it is away from the line. This is called the residual.
+Each data point has a residual with respect to the linear regression.
+For this first data point, if I put x=75 into the line, it predicts
+85.25 mm. The actual value is 84.7. The different, y minus y-hat, is
+the residual for this data point. In this case, the data is -.55 below
+the line: the residual is -0.55.
+
+SLIDE
+
+How was the linear regression determined? This is actually quite a
+difficult mathematical problem, and one we'll leave to the statistical
+software. However, I want to give you the rough outline, and introduce
+an important term. 
+
+The residual is the difference between a data point and the line.
+There is one of these for each data point. If I number the data from
+one to n (n being the number of cases), then I have all these
+residuals. Then I can make this expression: the sum of the squares of
+all the residuals.
+
+How is the line chosen? It is chosen to make this number as small as
+possible. This is called a least squares regression: it is the line
+for which the sum of the squares of the residuals is minimized.
+Actually doing the minimization is quite complicated, but you should
+understand at least the decision criteria.
+
+Why do we square the residuals? There are several reasons. One is that
+is makes everything positive, since it's not important whether the
+data is above or below the line. Second is that is emphasizes large
+distances. If there are any large residuals, they will have an even
+larger impact on this sum when squared. This is discoured in the
+method of least squares. There are other reasons as well, which I
+won't get into now, but which have to do with mathematical notions of
+length and optimization strategies.
+
+SLIDE
+
+That's the idea of linear regression, the important of the slope, and
+the least squares method. For the rest of the video, I want to give a
+short idea of where else we can go with this method. I can bring more
+variables to bear on this analysis. The dataset also includes the age
+of the possum, as well as the sex. Here is the scatterplot
+colour-coded by the sex variable: red for male and blue for female.
+The males have, on average, slightly larger heads for the same body
+lengths. I've drawn linear regressions separately for male and female
+possums. 
+
+SLIDE
+
+What's going on with these two lines? Well, the first linear
+regression was a line y-hat that depended on x, the body length. Maybe
+y-hat, depends on more? Maybe it also depends on age and sex? I can
+extend this linear regression with more terms that all look like the
+slope of a line: a constant times an input variable. This model then
+says that the head size is determined by length, age and sex, with
+these coefficients being the relationships. Also, sex is a categorical
+variable, so to put it in an equation, I need to make it a number.
+I'll choose male to be 0 and female to be 1. Doing this makes it
+something we call an indicator variable, or sometimes a dummy
+variable. By making male set to 0 and female to 1, this term, which
+makes all the head sizes 1.66mm smaller, only applies to the females.
+For the males, this would multiplication by zero, which is just zero.
+This term would not do anything.
+
+SLIDE
+
+Here are the two line again on the separated scatter plot. Ignoring
+age for now, I can give a good interpretation, visually, for what this
+indicator variable is doing. This -1.66 is just shifting this line by
+1.66 units. The female line is the same slope, just slightly lower,
+1.66 units exactly, under the male line. For indicator variables,
+where each category is arbitrarily set to a number, I can view the
+results as shifts of the line up or down. 
+
+The point here is three fold. First, there is mathematics to create a
+linear regression by the least squares method: finding the best line
+by minimizing the residuals. Second, the numbers in that line carry
+statistical meaning: they encode the relationship between the data, at
+least approximately. Finally, those relationships can be extended to
+more variables. Extending to other numeric variables is just adding
+new terms to the equation, but to use categorical variables we have to
+assignment numbers to them, making them indicator variables. In all
+this, the coefficients carry the meaning of the relationship. 

@@ -1,0 +1,151 @@
+So far, with hypothesis testing and confidence intervals we've focused
+on a difference in proportions. This was a good place to start, since
+a controlled trial is always a difference in proportions and a
+controlled trial is one of the most fundamental ways to design a
+research study. But there are other types of statistics. We are now
+moving on to just a single proportion instead of a difference between
+two proportions. 
+
+SLIDE
+
+So what kind of statistic is this? Well, it is a proportion, a
+percentage, but only one. We are asking about the value of a single
+percentage observation. It is still a categorical variable with two
+options. It's like a trial but without a control group: there is only
+the treatment group. 
+
+Instead of comparing the two groups, it's just about the one group:
+what percentage of the group falls into the two categories. Regardless
+of the two categories, they are generally interpreted as success and
+failure, and we will use that languagine throughout.
+
+What kind of questions are we asking then? We're asking these
+questions:
+
+- How many canadians suppor the green party? There is only one group:
+  Canadians. There are two categories: support or do not support.
+  There is one percentage: what percentage support?
+
+- How often do we have snow in Septmeber in Edmonton? There is one
+  categories: years. There are two outcomes: snow or now snow. There
+  is one percentage: how many years have snow sometime in September.
+
+- How many restaurants in Edmonton have gluten-free options clearly
+  available on their menus? There is one group: restaurants in
+  Edmonton. There are two categories: glute free optiosn clearly
+  available, or not clearly available. There is one percetange: how
+  many restaurants have this?
+
+SLIDE
+
+Here is an example. A survey of payday loan borrowers asked 826 people
+is they supported better regulation on payday loan lenders. 578
+responded yes, which is 70%. Our sample statistics is 70%. The
+question for a single proportion is always a threshold question. Here,
+say we want to know if the population parameter (that is, the
+percentage of all possible payday loan borrowers who would answer yes)
+is at least 65%. That's a threshold. We can do hypothesis testing or
+build a confidence interval to understand this threshold and answer
+the question with some standard of confidence.
+
+SLIDE
+
+The threshold question gives a hypothesis: is the population
+parameter above 65%? Our sample statistics is just one proprotion:
+70% or 0.70. The null hypothesis answers no: the population parameter
+is 65%. This is a bit different from before, when the null hypothesis
+was a more definitive negative: there is not difference between
+treatment and control groups. Here, we set a baseline or threshold. In
+this case, the threshold we are interesting in, for whatever reason,
+is this 65% threshold.
+
+The alternative hypothesis says that the population parameter is
+indeed above 65%. I'm doing a one-sided test here, since the reasearch
+question is specifically interested whether this number exceeds 0.65.
+The other side is not of interest, so a one-sided test is appropriate. 
+
+SLIDE
+
+So we have our hypothesis question and our sample statistics. The
+quesiton is the same as before: how unlikely is our sample statistics
+to be a random outcome of the null hypothesis? If likely, then it is
+not significant and we do not have evidence for the alternative
+hypothesis. If unlikely, then we is significant, we reject the null
+hypothesis and accept the alternative. 
+
+The setup for this is the same as before: we do randomizations and
+study probability to figure this out. I'll leave the randomization
+methods aside for now, but we still get a sampling distribution. Under
+reasonable conditions, the central limit theorem applies and the
+sampling distribution will be normal. The mean of the sampling
+distribution will be given by the null hypothesis: in this case, a
+mean of 0.65. Our sample statistics is 0.7. We want to know how far
+out this is in the sampling distribution: now unlikely this is. 
+
+SLIDE
+
+So we need, again, to understand the sampling distribution. We already
+have the mean, since that is given by the null hypothesis. We need the
+standard deviation in order to figure out how many standard deviations
+away we find our sample statistic, so we can use z-scores and
+percentiles to calculate its probability. 
+
+SLIDE
+
+For a difference in proprtions, this was the formula for standard
+error, the standard deviation of the sampling distribution. This has
+two proprotions and two sample sizes. However, now we only have one
+group. Happily for us, having one group just simplifies the standard
+error. The formula is just one half of this express, with only one
+porportion to worry about. We don't have any pooled proportion
+question anymore either, since there aren't two groups to pool
+together. 
+
+SLIDE
+
+Let me put the whole calculation together. I have a sample statistics:
+0.70. I have a null hypothesis which stipulates a mean of 0.65. I have
+a standard error calculated by this square root expression, which has
+the null hypothesis proportion and the sample size. I then have the
+z-score of the sample statistics, which tells me that is is 2.94
+standard deviations away from the mean. I can turn that into a
+percentile, which is 0.998 or 99.8th percentile. I can make a p-value
+by taking the difference from one, which gives me the probability that
+0.7 (or above) was randomly produced by the null hypothesis. This
+probability is 0.002, must less that 0.05, so the finding is
+signficant. I reject the null hypothesis and conlude that, by the
+evidence of this study, the population parameter is indeed above 65%. 
+
+Let me make the same note I did before. In the standard error, the
+sample size is in the denominator. That means that larger sample sizes
+mean smaller standard error, which mean larger z score, and
+percentiles closer to 1, and smaller p-value, and, finally, more
+likely to find significant. Larger sample sizes are more likely to
+produce significant results, mathematically, according to the
+probability theory. 
+
+SLIDE
+
+That's hypothesis testing. I can do the same thing for confidence
+intervals. The setup is very similar to what we did before, but let me
+go over it. Under reasonable conditions, I can assume the sampling
+distribution is normal as before. However, the sampling distributino
+for confidence intervals is difference. I don't have a null hypothesis
+anymore, I just have the sample statistic: 0.70. That is the mean of
+the sample distribution here. The standard error is the same formula,
+but now I am using the sample statistic as the mean, not another mean
+from a null hypothesis. Here, the standard error works out to 0.016.
+That's the standard deviation of this normal sampling distribution. 
+
+Then the range of the 95% confidence interval was given by this
+formula, which is still the same. I go out 1.96 standard deviations
+from the mean on either side. The numbers here work out to 0.669 to
+0.731. I am 95% confidence that the population parameter is between
+66.9& and 73.1%. This also matches the hypothesis test: I am 95%
+certain that the population parameter is above 0.65, since I am 95%
+certain that is lies in this range which does not include 0.65. 
+
+The number 1.96 is for the 95% confidence intervals. Other confidence
+intervals have other coefficients here, which I mentioned before. To
+change your standard of confidence, you just replace this 1.96 with
+the appropriate coefficient. 

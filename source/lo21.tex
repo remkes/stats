@@ -1,0 +1,127 @@
+\documentclass{beamer}
+\usetheme{default}
+\beamertemplatenavigationsymbolsempty
+\usepackage{rembeamer}
+
+\begin{document}
+
+\begin{frame}
+  \begin{itemize}
+    \item[] 
+      Conducting hypothesis tests and constructing confidence
+      intervals for the difference between two independent means and
+      interpreting the results.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Difference of Means}
+  \begin{itemize}
+    \item[] 
+      One numeric variable.
+      \vspace{0.5cm}
+    \item[] 
+      One categorical variable with two groups. 
+      \vspace{0.5cm}
+    \item[] 
+      Independent: the groups are not connected. 
+      \vspace{0.5cm}
+    \item[] 
+      Independent: do babies born to mothers who smoke have a
+      different average birthweight than babies botn to mother who do
+      not smoke?
+      \vspace{0.5cm}
+    \item[] 
+      Dependent: Is average blood pressure lower afer meditation than
+      before meditation?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Data}
+  \centering
+  \begin{table}
+    \begin{tabular}{@{}cccc@{}}
+      Habit & Cases & Mean & SD  \\
+      \cmidrule(r){1-1} \cmidrule(rl){2-4} \cmidrule(rl){3-3}
+      \cmidrule(l){4-4}
+      Nonsmoker & 867 & 7.27 & 1.23 \\
+      Smoker & 114 & 6.68 & 1.60 \\ 
+      \cmidrule(r){1-1} \cmidrule(rl){2-4} \cmidrule(l){3-3}
+      \cmidrule(l){4-4}
+    \end{tabular}
+  \end{table}
+  \begin{itemize}
+    \item[] 
+      $H_0:$ There is no difference between the groups. 
+      \vspace{0.5cm}
+    \item[] 
+      $H_0: \mu_n - \mu_s = 0$
+      \vspace{0.5cm}
+    \item[] 
+      $H_A: \mu_n - \mu_s \neq 0$
+      \vspace{0.5cm}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypothesis Testing}
+  \begin{itemize}
+    \item[] 
+      Sampling distribution, z-score, p-value. 
+      \vspace{0.5cm}
+    \item[] 
+      Independence.
+      \vspace{0.5cm}
+    \item[] 
+      Outliers.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypothesis testing}
+  \begin{itemize}
+    \item[] 
+      $x = \hat{\mu}_n - \hat{\mu}_s$. 
+      \vspace{0.2cm}
+    \item[] 
+      T-Distribution
+      \vspace{0.2cm}
+    \item[] 
+      $\mu = 0$
+      \vspace{0.2cm}
+    \item[] 
+      $SE = \sqrt{ \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} }$
+      \vspace{0.2cm}
+    \item[] 
+      Degrees of freedom
+      \vspace{0.2cm}
+    \item[] 
+      $T = \frac{x - 0}{SE}$
+      \vspace{0.2cm}
+    \item[] 
+      p-value
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Confidence Intervals}
+  \begin{itemize}
+    \item[] 
+      mean $x = \hat{\mu}_n - \hat{\mu}_s$
+      \vspace{0.5cm}
+    \item[] 
+      $SE = \sqrt{ \frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2} }$
+      \vspace{0.5cm}
+    \item[] 
+      Degrees of freedom
+      \vspace{0.5cm}
+    \item[] 
+      Coefficient $t$
+      \vspace{0.5cm}
+    \item[] 
+      $[x - t(SE), x + t(SE)]$
+  \end{itemize}
+\end{frame}
+
+\end{document}

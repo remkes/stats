@@ -1,0 +1,43 @@
+For categorical variables, in LO19 considered the situation where variables
+had more than two categories. We needed a new tool there: chi-squared,
+which gathered together a total measurment of the variance between the
+various categories. Now we want to do something similar for numerical
+variable and consider multiples means
+
+SLIDE
+
+As usual, I'll rely on an example to help setup the material. Today,
+I'll talk about baseball. Many sports have an obsession with their
+statistics, but I feel the importance of stats to baseball is
+particularly notable. So let's look at some baseball data.
+
+The dataset here consists of players from the 2018 MLB season and
+their performance in various catgories. Here is just the start of the
+dataset, showing just a few players and just a few pieces of data.
+What I want to focus on today is postion and OBP: on base percentage.
+Position is grouped into three categories in this data: in-field,
+out-field, and catcher. OBP is a measurement of how often the player
+makes it at least to first base when they are at bat. 
+
+The question here: how much does the position category matter for OBP?
+Are infields, outfields, or catchers substantially better batters?
+
+SLIDE
+
+Here is a summary of the specific pieces of data related to the
+research question. These are the three position categories: outfield,
+infield and catcher. n is the count of each category, and here are the
+means and standard deviations for the on-base-percentage, OBP, for
+each. There are three means here, since there are three categories.
+This difference from previous learning outcomes: this not a single
+mean past a threshold or a comparison of two categories, such as
+treatment and control. New techniques are needed here.
+
+At a glance, it seems that catchers are a bit worse for OBP than
+either infielders or outfielders. There is a difference between the
+first two categories, but it is pretty small. Are these difference
+significant? This is what we want to know.
+
+SLIDE
+
+

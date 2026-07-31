@@ -1,0 +1,236 @@
+Now back to hypothesis tesing. Previously, we used a random simulation
+to produce a p-value. This works, but there are more efficient ways.
+Now, I'm going to draw on some mathematical probability theory to
+produce a direct way to test a hypothesis. 
+
+These techniques tend to different depending on the type of
+statistics. We'll start with techinques that work for a statistic
+which is a difference of proportions. 
+
+SLIDE
+
+Let's review what is going on in a difference of proportion. I'm going
+to make this a very specific situation. There are two categorical
+variables, one dependent and one explanatory. Each has only two
+categories. 
+
+The two cateogries in the explanatory variable are two different
+group, and the study is really about the two groups. They might be two
+parts of a populion: men and women, cat and dogs, spruce trees and
+pine trees whatever. The are very often test and control groups. In
+any case, the point is to determine a difference between the groups.
+
+Then there are two outcomes in the dependent variable. Again, these
+can be any kinds of pairs: happy or sad, tall or short, healty or
+infected, and so on. 
+
+The question is always this: do the two groups have different
+outcomes. This is measured in percentages: if the percentage of one
+outome versus the other different between the groups. The statistic is
+the meausre of this percentage.
+
+I've already mentioned it, but this is ths standard setup for a
+controlled trial, one of the most common and most reliable
+experimental designs. Two group: one that is neutral and one that is
+effected. Two outcomes. Determine if the effected gooup has a
+differene outcome to the control group. A difference in proportions of
+outcomes. 
+
+SLIDE
+
+We'll use an example to demonstrate this. The example is a psychology
+study. (This is a bit old, since it is about buying physical media,
+but work with me here.) 
+
+The subject we presented with a scenario. There is a DVD of a film
+that they want to see, and they can purchase is right now for a
+discounted price of $15. (Again, assume this is old enough that
+physical media is the only way to get a copy of this film.) They are
+asked if they would make the purchase.
+
+But the psychologists are interested in something called oppotunity
+cost: buying this DVD means that these subject have $15 less for
+something else. So, they split the subject up into two groups, a
+control group and a treatment group. 
+
+They asked the control group a simple question: buy the DVD or don't
+buy the DVD. But they asked the treatment group a different version,
+where the second option also included "and keep the $15 for other
+purchase". They wanted to know if this reminder, if making the
+oppotunity cost explicit, would change the behaviours.
+
+They ran this on 150 subjects, 75 control and 75 treatment. This is a
+controlled trial, so a difference in proportions. What percentage of
+the control group chose "buy", what percentage of the treatment group
+chose" buy" and what is the difference in those two percentages?
+
+SLIDE
+
+Here is the data, presented as a contingency table. More subjects in
+the control group bought the video, and more in the treatment group,
+when remindered about the oppotunity cost, decline to buy. 
+
+SLIDE
+
+Here is a standardized bar plot to demonstrate that difference.
+
+SLIDE
+
+The sample statistic is the difference in the proportions, treatment
+minus control.  (Recall that the hat here indicates something from the
+sample, not the whole population.) The numbers from the table are
+here, and 34 of the treatment group chose not to buy while 19 of the
+control group chose not to buy. The difference is 0.200. The null
+hypothesis says that there is no actual difference in the population
+and the sample difference is just random noise. The alternative
+hypothesis says that this reminder of opportunity cost will actually
+have a general affect in the whole population, and that effect will be
+to lower the rate of purchase, to this difference is positive. 
+
+SLIDE
+
+Previous, we did simulations to determine the p-value of the sample
+statistic. We could have done the same thing here: assume the null
+hypothesis, generate random samples of 150 subjects, shuffle the data,
+and make a histogram. This is an example of what such a histogram
+might have looked like. Our sample statistic is way out at 0.2, past
+all most all of the data. Past, in fact, 99.4% of the data, so that
+the p value is 0.6%. This would almost certainly show significance. 
+
+But I don't want to have to simulations all the time. Last video, I
+mentioned the Central Limit Theorem. It applies here and, under good
+experimental design, it should apply to all differences of
+proportions. What did is say. Well, it applies to sample
+distributions: data sets where each data point was a statistics for
+some randomaly generated sample. That's exactly what we have here: the
+count on the axis is how many randomly generated samples that a
+certain difference in proportions. Then what did the Central Limit
+Theorem say? It said that as the number of random samples grows, this
+distribution becomes more and more like a normal distributions.
+
+SLIDE
+
+So I'll use that. Instead of simulating a bunch of samples, if I know
+from the mathematics that the distributon of samples will eventually
+just be normal, why don't I go directly to that. I won't do any
+simulation: I'll just let the math tell me that if I did many, many
+simulations, then I'd get this normal distribution. I've drawn the
+bell curve through here as well, just to show the standard normal
+distribution shape. 
+
+Then I can again, put the sample statistics 0.02 onto this graph and
+ask how likely it is. It seems pretty unlikely.
+
+But if I do this mathematically, it would be nice have a direct way to
+calculate this. But this is a normal distribution -- from the last
+videos, I have z-scores!
+
+SLIDE
+
+Here was the calculation of the z-score from last video: the unique
+data point x minus the mean divided by the standard deviation. I want
+the sample distribution from the null hypothesis, which says that the
+difference is zero, so the normal distribution will be centred at this
+zero. The mean will be zero. I also need to know how to calculation
+the standard deviation, which I'll get to in a minute; for now, that
+number is 0.078. then the z-score of my sample statitics is 2.56: it
+is 2.56 standard deviations away from the mean. 
+
+Also from last video, z-score gave me percentiles. These are from a
+table. If I look up 2.56 on the table, I get the 99.48% percentile.
+This sample statistic is greater than 99.48% of the randomly generated
+samples. 
+
+But then what is the p-value? It's how unlike the sample statistics is
+to be generate from the null hypothesis. If this sample statistic is
+above 99.48 percent of the distribution, then there is only a 0.52
+percent chance of generating this value or greater. The p-value is
+just one minus the percentile. Here, that's 0. 0052. If our threshold
+of significance is 0.05, then this is much less, so the result is
+certainly statistically significant. 
+
+That's it -- that's the idea. The central limit says that the sampling
+distribution is normal. That means I can calculate a z-score for my
+sample statistics, which I can change into a percentile, which I can
+change into a p-value. 
+
+SLIDE
+
+Well, what about that standard deviation sigma? I just pulled that
+number out of thin air on the last slide, but where did it come from?
+Again, probability theory and some heavy mathematics has figured out
+how to calculate this. Here is the theory, stated quite generally. 
+
+I'm measuring a difference in proportions for two categories in the
+explanatory variable, category 1 and category 2. The sample statistics
+is this difference. Each category has a count, its sample sizes. Here
+are those numbers. The central limit theorem, again under certain
+conditions, says that the sampling distribution will be normal. It's
+standard deviation is calculated by this strange equation.  
+
+Lastly, the standard deviation in this particular context (that is,
+for a sampling distribution) is also called the standard error.
+Multiple terms is annoying and confusing, but we are stuck with them.
+This is sometimes written SE instead of the more general sigma.
+
+SLIDE
+
+Alright, that's the theory. Let's calculate for the example. Here is
+the contingency table again for our two categorical variables. I'll
+start with the numbers n_1 and n_2. These are the sample sizes for the
+individual categories. Here, these are both 75.
+
+SLIDE
+
+Then I need the proportions p_1 and p_2. However, here I have to be
+careful. I don't want the difference in proportion from this sample. I
+am trying to understand the sampling distribution produced by the null
+hypothesis, since that's how hypothesis testing works. The null
+hypothesis says that there is no difference in proportions between the
+two groups. So I have to look at the totals here. In these totals
+there are 150 cases and 53 of them declined to buy the DVD. This what
+I want to measure. So p_1 and p_2 will both be 0.35. Since this is the
+proportion of the total, this is often called the pooled proportion.
+For the hypothesis, both proportions should be set to the pooled
+proportion. 
+
+The mathematical theory here is more general and more powerful that we
+need. It will give the standard deviations for any hypothesis that
+sets a specific value for p_1 and p_2. Only by remembing that I want
+the sampling distribution for the null hypothesis do I get the correct
+use of the formula. 
+
+SLIDE
+
+Finally, here is that calculation. By the null hypothesis, both
+proportions are the pooled proportion, which is 0.35. Both categories
+have 75 subjects, so both n_1 and n_2 are 75. The result works out to
+0.078, which is the number I used previous to calcluate the z-score.
+
+SLIDE
+
+Let me recap, since there are many steps to this process. 
+
+You start with a sample statistic which is a difference in
+proportions. 
+
+Then you calculate the pooled proportion, which is the proportion of
+the totals across the two categories of the explanatory variable. 
+
+Then you calculate the standard error using the pooled proportion for
+both proportions, and use the sample sizes for the two groups in the
+explanatory variable.
+
+Then you calculate the z-score of the sample statistics, using a mean
+of zero and the standard error which you just calculated.
+
+Then you take your z-score to a table to get the percentile.
+
+Then you subtract your percentile from 1 to get a p-value. 
+
+Finally, you use your standard of significance with this p-value to
+determine whether you can rejecdt the null hypothesis. 
+
+Lots of steps, for sure, and lots of vocabulary. But hopefully this is
+doable, and it is certainly a lot easier than programming and running
+large simulations each time. 

@@ -1,0 +1,121 @@
+The last videos was pretty conceptual. We want good statistics, good
+samples, results that are realiable. Now let's get into some methods.
+In this video, I introduce the first two tools to draw conclusions
+from data, which is what the course is all about.
+
+SLIDE
+
+First, as usual, more vocabulary! The analysis of conclusions, of
+statistics, can be broken down into two categories: descriptive and
+inferential. This is tricky, since both are about getting information
+from data. What is the difference, really, between a description and
+an inference?
+
+This is how it works, though the distinction is a little bit subtle.
+Descriptive statistics are ways of describing, summarizing and
+visualizing the data in a dataset. They help up make sense of what the
+data is. They are relatively direct.
+
+Inferential statistics are more ambitious. They start with a
+hypothesis of a relationship between the variables in the data set.
+This relationship is more than a description of the data, it's a
+mathematical connection hidden inside the data. One this hypothesis is
+put forward, it is tested with a variety of methods, to determine
+whether the hypothesis holds. It's a much more active process than
+summarizing or describing. 
+
+For now, we want to use descriptive methods. I'm going to start with
+categorical variables. 
+
+SLIDE
+
+Here's the data from the first video again. To reminder you, the data
+measure whether or not patients had a stroke within two time periods,
+separated into treatment and control groups. There are 451 patients in
+this data sets. Just skimming through it we can try to get a sense of
+how many had strokes and how many didn't, but that's not particularly
+precise. Instead, we make tables to summarize. 
+
+SLIDE
+
+A frequency table is a table that gives the total count for each value
+of a categorical variables. Remember that categorical variables were
+variabls with some set number of categories, which could be anything
+the researcher wants. This is just counting up how many of each
+category shows up for this one variable. It's not fancy -- in many
+ways, it's the first thing to do. However, having a term -- frequency
+table -- to refer to this is still very useful. Even the
+straightforward thinks like counting are well served by a definition. 
+Note the total here: the total should always add up to the number of
+cases, since each case has to fall into one of the categories. 
+
+SLIDE
+
+This count could also be presented as a percentage. The total is 451,
+so 405/451 is 0.898 or 89.8 percent of 451. Likewise 46 calculates to
+10.2 percent. The following is
+still called a frequency table. Total count or percentage are two ways
+of recording the frequency of each category in a categorical variable.
+Again, the total should have 100 percent, to make sure all of the
+cases are accounted for. This summary tells us that strokes occured in
+roughly 10 percent of patients over this variable (which was the
+30-day time period variable). 
+
+A frequency table just recounts what happened with one fixed
+variables. The study, however, wants to compare treatment and control
+groups. 
+
+SLIDE
+
+This is a contingency table -- more vocabulary again. Stats exist and
+move by its terminology. Taking this course seriously means working on
+the terms, internalizing them.
+
+A contingency table counts the frequency of each variable when another
+variable is fixed. Here, the first colum is the categories of a
+categorical variable: control and treatmet are the categories in the
+variable group. Then, for each value of that variable, the other
+variables are counted. 
+
+It's a setup to do something pretty obvious: how many people in the
+treatment group actually had a stroke? How many in the control group?
+Very natural questions, the central questions of the research study.
+We need a name for this table, as obvious as it is. It's called the
+contingency table, since it records how other categorical variables
+are contingent on some fixed categorical variable. 
+
+The totals are included on the right and at the bottom: the right is
+totals in the control and treatment categories and the bottom is totals in
+the stroke and no event variables. Adding them all up gives up the
+check on the bottom right, that we have accounted for all the
+variable. 
+
+SLIDE
+
+As with a frequency table, we can convert these to percentages. This
+is pretty valuable for interpretation, since the control and treament
+groups might be of difference size. Raw numbers might not be the best
+comparison, but percentages may be more honest. How are these
+percentages calculated? They are a percentage of the total for each
+category, to 5.7 percent is 13 divided by 227 and 14.7 percent is 33
+divided by 224. That's the correct ratio: what percentage of this
+group category fall under this 30-day stroke/no storke category. 
+
+This is descriptive statistics. We are summarizing the data. 5.7\% of
+the control group had a stroke within 30 day, and 14.7\% of the
+treatment group. This study is looking poor for the efficay of
+stents in helping prevent strokes. That's a reasonable conclusion from
+this display of data. 
+
+You might be frustrated by how we've turned something pretty obvious:
+just compare the percentages, into a formal structure with a technical
+name. This is an understandable frustration, and one that is really
+common in statistics. The terms, calculations and structure can often
+confuse and seem like they are getting in the way of the more
+common-sense analysis. But they are necessary. We are going to build
+on these terms and structure, and we are going to need a way to
+clearly and precisely refer to them. So stick with it, work on the
+vocabulary, and try to connect all the new terms and structure to the
+pretty reasonable and straightforward logic underneath it all. Which
+group had more strokes in the first 30 days? Surprisingly, perhaps,
+the treatment group did, but a large margin in percentage. 

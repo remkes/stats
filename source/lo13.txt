@@ -1,0 +1,176 @@
+We've done two videos about inferential statistics: hypothesis testing
+and confidence intervals. Both were trying to use a sample to say
+something, probabilistically, about the general population. We
+approached these by randomization simulations. However, as I said,
+there is a great wealth of probability theory in mathematics that can
+just provide the required probability numbers for us instead of having
+to run these simluation. I want to move in that direction. This video
+is the first step: talking about the normal distribution and z-scores.
+
+SLIDE
+
+Let me start with the the term distribution. This words is going to do
+a lot of heavy lifting in this section, so it is important to make
+sure it is very clear. A distribution is the shape or arrangement of
+some data. We first talked about this with histograms: one numeric
+variable in a dataset, but into bins and displayed with counts for
+each bin. This gave a visualization of the data, a shape. A
+distribution. This was the data used in lo6 about interest rates,
+showing a unimodal distribution with a right tail. 
+
+SLIDE
+
+We've already mentioned, in passing, the shape of a normal
+distribution. This is the bell curve: a unimodel symmetric
+distribution. This histogram shows a roughly normal distribution
+shape. In this video, I want to really understand the normal
+distribution, mathematically, so that we can use it going forward. 
+
+SLIDE
+
+In mathematics, the normal distribution is a function. The probability
+theory of the normal distribution is all about understanding this
+function. For now, I just want you to recognize it: it is an
+exponential function with this special number "e" as its base. The
+exponent has a -x^2 with some constants involves, and there is also a
+constant in front, which always has a denominator involving the square
+root of pi. It's a very strange expression, but it turns out to give
+exactly this shape if you graph the function. It is the bell curve. 
+
+SLIDE
+
+The normal distribution is entirely determing by two things: its mean
+and its standard deviation. The mean is at the top of the bell, and is
+represented by the greek letter mu. The standard deviation is a
+measure of how wide the bell curve is, and it is represented by the
+greek letter sigma. These mu and sigma give the constants in the
+function: mu in this numerator, and sigma squared in these two
+denominators. Knowing both these numbers entirely determines the
+function. 
+
+SLIDE
+
+This means that there are many normal distributions with various means
+and standard deviations. Here are three. This tall one has mean of 0
+and a standard deviation of 1 (which disappears in the function). This
+second distribution has a mean of 4 and a standard deviation of 3,
+more spread out than the previous. Finally, this has a mean of -3 and
+a standard deviation of 5: even more spread out. The point here is
+just that the mean and standard deviation entirely describe a normal
+distribution.
+
+SLIDE
+
+Alright, that's the normal distribution. Let me move on to z-scores.
+For normal distributions, a z-score is a way of measuring where one
+particular data point falls in relation to the distribution. It is
+calculated this way: the data point value, x, minus the mean, divided
+by the standard deviation. 
+
+SLIDE
+
+That's the calculation, but what does it mean? Here is a normal
+distribution with mean 15 and standard deviation 6. Let me look at the
+value of z(18). This calculates to 0.5. The data point 18 has a
+z-score of 0.5. Notice that the standard deviation is 6, but the data
+point is exactly 3 units away from the mean. This is not coincidence.
+A z-score counts how many standard deviations a data point is away
+from the mean, with positive above the mean and negative below the
+mean. It's a very convenient measure of how far out a data point is
+with respect to a normal distribution. Since almost all of the data
+for a normal distribution is within 3 standard deviations, typical
+values of z-scores range from -3 to 3 (only very extreme outliers
+would need larger z-scores). 
+
+SLIDE
+
+Let me now connect this to another definition from a previous videos:
+percentiles. For a data point in a distribution, its percentile is the
+percentage of how many other data points are below it. Here is the
+same normal distribution, with 18 having a z-score of 0.5. There is a
+way to go from z-scores to percentile. For our purposes, that way will
+just be from a table (which is included on the Moodle page for your
+reference). The table says that z=0.5 gives a percentile of 0.691 or
+69.1 percent. That means that 69.1 percent of the data is below this
+and 30.9 percent of the data is above this. Finally, there is one last
+lovely interpretation here: the area under the curve. This area is
+exactly 69.1% of the total area under the curve, and this area is
+exactly 30.1%. Geometrically, the area to the left of any data point
+is its percentile, which is pretty great. 
+
+SLIDE
+
+That's what we are going to need so far for z-scores, to setup the
+class activity. But I'm not entirely done this video yet. There is one
+more important topic to cover today. Let me go back to the idea of
+distributions. This was the sample distribution I showed earlier. It
+is the shape of one variable from one sample.
+
+SLIDE
+
+SLIDE
+
+Now go back to LO11, where we did a simulation for hypothesis testing.
+Assuming the null hypothesis, we generated difference in heights
+between men and women by generating random samples. Each difference
+here, then, is the difference from a unique sample. Ten samples, ten
+differences. 
+
+SLIDE
+
+These differences are also numeric data, so I can make a histograph
+here. There are ten samples: 2 in the first bar, 2 in the second, 2 in
+the fourth and 4 in the last. This is also a distribution, but
+a different kind. This is a sampling distribution: each count is one
+randomly generated sample and the distribution shows what happens over
+many different samples. This is what we used for hypothesis testing. 
+
+SLIDE
+
+So I have several different distribution running around. A statistical
+study starts with a population parameter it wants to investigate.
+Let's say that parameter is a proportion or difference in proportions.
+There is a distribution for the whole population: the population
+distribution. But this is unknown, since we can't measure the
+population. Instead, we take a sample and get a sample statistics,
+which is like the parameter. In this case, a proportion or difference
+in proportion. 
+
+Then I have just defined the sampling distribution. This is the
+distribution of the statistics for many different samples, either
+measured or, like in LO11, randomly generated. The sampling
+distribution was what we used to generate the p-value, even though we
+didn't call it that. 
+
+This is getting hectic, so let me be very careful. A sampling
+distirbution is not a display of the cases in one sample. Instead,
+each sample generates a statistcs: one number for the sample. That
+produces a new kind of dataset, with one value for each sample. The
+shape of this data is the sampling distribution. 
+
+SLIDE
+
+This lets me state the big mathematical idea that pulls together both
+parts of this video. This is a fundamentally important result which
+makes much of the probability theory work. Say we are measuring a
+statistic which is a proportion or a difference in proportions. Assume
+that the observations in the samples are independent: that is, each
+measurement doesn't affect all the other meausrements. This will
+usually be true for well-designed studies, but it needs to be stated.
+The, also assume that the sample size is large enough (with large
+enough to be worked out later). Then, if I generate many, many samples
+and calculate the statistic for each, I will get a roughly normal
+distribution. 
+
+This is sort-of crazy. The population doesn't have to be normally
+distributed at all. I have no idea what the population data actually
+looks like. But if I take many samples and take the statistic from
+each sample and graph that data, under these assumptions, I always
+get a normal distribution. 
+
+This is a real mind-twister, and if your head is spinning right now,
+that's alright. The real take away here is that this result, which is
+called the Central Limit Theorem, is going to justify the use of the
+normal distribution for the next few videos. It's the big mathematical
+truth that makes it all work. 
+

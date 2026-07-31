@@ -1,0 +1,189 @@
+We now have two methods of inferential statistics: hypothesis testing
+and confidence intervals. We also have mathematical tools to calculate
+them. We're going to step back and give some context by talking about
+the potential errors in inferential statistics and how those inform
+our approach.
+
+SLIDE
+
+In the context of hypothesis testing, there are two types of errors.
+I'll use this chart to explain. The two hypotheses cover the two
+potential truths: either the null hypothesis is true or the
+alternative hypothesis is true. If the null hypothesis is true and we
+fail to reject it (again, a nice double negative, but this is how we
+talk about it), then we're correct. Nothing is going on, and our data
+is not statistically significant, so we believe, indeed, that nothing
+is going on.
+
+If we reject the null hypothesis in favour of the alternative and the
+alternative is true, then again, correct! There is some relationship
+here and our statistics found evidence for it. Great. 
+
+However, two other things can happy. The null hypothesis can be true,
+but our analysis can still give evidence to reject it. This is called
+a Type 1 error. Similarly, the alternative hypothesis might be true
+but our particular sample is not strong enough to reject the null
+hypotheses, thus we cannot give evidence for this truth. This is
+called a Type 2 error. Similarly, I can call a Type 1 error a false
+positive and a type 2 error a false negative. 
+
+SLIDE
+
+A common way to explain these errors is in terms of criminal trials.
+The setup is similar. There is a null hypothesis, which is the default
+position: the defendant is inoccent. Some strong evidence is needed to
+overturn this and convict. If the defendant is actually innocent and found
+innocent, great. If the defendant is actually guilty and found guilty,
+great. If the defendant is wrongfully convicted, innocent but found
+guilty, that is a type 1 error. If the defendant is guilty by found
+innocent, that is a type 2 error. 
+
+SLIDE
+
+Why go through the bother of classifying these errors? Well, different
+errors have different risks associated with them. When looking at a
+research study, you can ask yourself where the major risks are.
+
+Sometimes, the false positive is a major risk. If you are testing a
+medication that has significant side effects, then having that
+medication prescirbed when it doesn't actully work is a major risk:
+all those dangerous side effects would happen with no justification or
+benefit. The false positive is the greater risk, so you would want to
+minimize type 1 errors. 
+
+Sometimes, the false negative is a major risk. If you are testing a
+food addative that might cause cancer, a false negative means that you
+think there is no cancer risk where there is, in fact, a risk. You end
+up approving the additive and causing a bunch of cancer cases --
+obviously a very bad outcome. In this study, you would want to
+minimize type 2 errors.
+
+SLIDE
+
+So how do we manage this? How can we design our statistics to favour a
+certain kind of errors? In hypothesis testing, we do have one major
+choice to make: the threshold of significance, which we called alpha
+in previous videos. 
+
+Alpha = 0.05 is a standard: a middle of the road threshold of
+significant which is frequently used. 
+
+What if we want to specifically avoid type 1 errors? Well, type 1 is a
+false positive: we find something significant but, in truth, there
+isn't actually a significant result to find. To avoid this, we have to
+make significance harder to justify. So we lower alpha. Lower alpha
+means that the p value has to be even lower, which is harder to
+accomplish. More samples will be rejected, and we will have less
+change of calling something significant when it actually isn't.
+
+On the flip side, what if we want to avoid type 2 errors? Type 2 is a
+false negative: we find no significance, but there actually is
+something significant to find. To avoid this, we have to make
+significance easier to justify. So we raise alpha. Higher alpha means
+that more p-values are treated as significant, we accept more samples,
+and we are less like to miss observing a real effect. 
+
+Of course, we also make these choice not knowing whether there is an
+effect or not. That's what the study is for, of course. But in setting
+the significance threshold, we can determine which errors are riskiest
+and should be more carefully avoided. 
+
+SLIDE
+
+That's setting significance. However, there is another subtle choice
+that we've been making in hypothesis test, one that I've briefly
+mentioned but not elaborated on. Let me do that now. Recall, for a
+difference in proportion, this is what the null hypothesis looked
+like. This is form of the alternative hypothesis we used, where we
+expected a certain direction of the effect and assumed this difference
+was greater than zero. (Equivalently, could have been less than zero).
+However, I pointed out that this is restrictive: a more open
+alternative hypothesis is that this difference is simply non-zero. We
+aren't assuming the direction of the effect, just that there is an
+effect.
+
+There is a name for these hypothesis. The first here is called a
+one-sided test, since it only conisiders what happens when the
+difference is positive: one side of the mathematical possibilities.
+The second is called a two-sided test. 
+
+SLIDE
+
+What difference does it make? Well, let's think about hypothesis
+testing, either done mathematically or through actual randomization by
+shuffling the data. The sampling distribution will be normal under
+reasonable conditions according to the central limit theorem. Here is
+a normal distribution, with the standard deviations marked on the x
+axis. 
+
+Say I am doing a one-sided test with a 0.05 threshold of significance.
+Then, to call my sample statistic significant, it must be above 95% of
+the data: it must fall in this one tail on the positive side. 
+
+SLIDE
+
+However, if I am doing a two-sided test, then the 95% is the middle of
+the data, and I consider both tails. That 5% now becomes two tails,
+each with 2.5% of the data. If the difference is, indeed, positive as
+we expect, it now has to fall in this 2.5% on the positive side, not
+just a 5% positive tail. 
+
+The result is that it is more difficult to conclude statistical
+significance, at least when our predication about the direction of the
+effect is the same. 
+
+SLIDE
+
+Alright, let me sumarize again. I just argued that two-sided test make
+significance more difficult. As before, making significance more
+difficult lowers the chance of a false positive: a type 1 error.
+Therefore, two-sided tests have fewer type one errors. An, in balance,
+one-sided tests have fewer type one errors. 
+
+It is generally considered good practice to default to two-sided
+tests. It is always possible that the assumption about the direction
+of an effect is wrong: we try to see if a medication is effect, but it
+turns out to be counter-effective. We assume certain trees grow better in
+wetter soils, but it might turn out that drier soils actually give
+better outcomes. 
+
+Based on this argument, a one-sided test should only be justified by a
+very strong rationale that the effect must only occur on one side of
+the data. Without a strong rationale like this, two-sided tests are
+the preferred method. 
+
+SLIDE
+
+Finally, let me cover one last influence on error: sample size. In
+general, larger samples sizes are very positive. They lead to more
+precise statistics, smaller errors. You can see this very clearly with
+the calculation for confidence intervals. If you recall from earlier
+videos, the standard error for the sampling distribution was
+calculated this way. The sample sizes are in the denominator here.
+This means that larger sample sizes leads to smaller standard error,
+which lead to smaller confidence intervals. Smaller confidence
+intervals are more precise: we are confident that the actual
+popuplation parameter is in a smaller range. In this way, increasing
+the sample size leads to a more precise error. Something similar
+happens in hypothesis testing.
+
+So larger sample sizes are more precise, lead to smaller p-value and
+smaller confidence intervals. All of this, in general, helps to reject
+a null hypothesis. Therefore, larger sample sizes are particularly
+helpful for avoiding type 2 errors: false negative. If you are worried
+about type 2 errors, then large sample sizes are particularly helpful. 
+
+Finally, this idea generalizes. The power of a statistical test is
+define to be its ability to avoid type 2 errors. A powerful test will
+more often reject the null hypothesis when the alternative hypothesis
+is true. A large sample size in hypothesis testing produces a more
+powerful teset. 
+
+The idea of a powerful test in statistics ends up being pretty
+complicated one. For now, you should think of a powerful test as one
+that is good at finding positive results: if there is a truth in the
+alternative hypothesis, if there is something going one between the
+variables, then a powerful test is more likely to actually find it. 
+
+
+

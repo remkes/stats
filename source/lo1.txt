@@ -1,0 +1,143 @@
+Statistics is the mathematical study of making meaning out of data.
+Therefore, it's pretty appropriate that we start with understanding
+what data is. In this course, and in much of statistics, we will start
+with a data set. This is a specific kind of collection of information
+with a specific structure. We'll start to understand that structurein
+this video.
+
+SLIDE
+
+Let's start with an example. In a certain clinical trial, a study was
+done to understand whether stents help to prevent strokes. A stent is
+a small tube placed inside an artery, usually in and around the heart.
+They are often used to aid recovery after a heart attack, but
+ensuring blood flow through critial coronal arteries. However, there
+is some evidence that they may have other benefits as well, including
+possibly minimizing risk of a stroke. 
+
+The researches designed an experiment. 451 patients whose were
+identified as at risk for stroke for randomly assigned to one of two
+groups, as it standard for a controlled trial. Patients in the control
+group received medical management -- medication, support, lifestyle
+changes and the like. Patients in the treatment group also received
+this same medical managment, but in addition were given a stent place
+in an important artery. Then, of course, data was collected on the
+outcomes for both groups, producing a dataset. 
+
+SLIDE
+
+What data did they gather? For each pattient, two points of data were
+gathered: whether they had a stroke within 30 days of starting the
+experiment, and the same but withint 365 days. The table here shows
+the first five patients, which of the two groups they were in, and
+whether or not they had strokes within the two time periods. 
+
+There are two terms to define here. Statistics is pretty heavy on the
+vocabulary, which is honestly one of the major challenges of the
+discipline. The definitions here are `case' and 'variable'. A variable
+is something that is measured in the data set. Whether the patient had
+a stroke after 30 days is a variable, in this case, a yes/no variable.
+Likewise for after 365 dase. A case is an individual situation in the
+data set. Here, it is an individual patient. Patient 2 is a case, as
+it patient 5. 
+
+In this spreadsheet-like setup, cases are rows and variables are
+columns. This isn't always the case; rows and columns can be switched,
+so be careful reading data sets and interpreting them. 
+
+SLIDE
+
+A data set is just data, raw information. What does it mean? This is
+what the whole discipline of statistics is about. We analyze the data
+set and try to draw conclusions. 
+
+There are many, many ways to analyze data. Here, I m counting up
+the totals for the variables of whether or not a stroke occured and I
+am grouping them by the group variable: control or treatment. I get
+these numbers. I can try to make some observations and I immediately
+notes that those with treatment actually had more instances. Whether
+or not this is something causal happening here, or whether this is
+just random change, is a question we get to later in the course. For
+now, this is just a good example of one way to try to analyze this
+data set and maybe draw some conclusions.
+
+SLIDE
+
+Now for some more vocabulary. We want to talk about the kinds of data
+in a data set. In particular, the kinds of variables, since variable
+are the raw measurements we are making in the data set. Here is a data
+set dealing with various demographic information for counties in the
+United States. I've show four cases and the data set has six
+variables. What kind of variables are these?
+
+First distinction: there are categorical variable and numerical
+variables. Categorical variables are, unsurprisingly, about
+categories. Any set of categories can work, but the valubes for each
+variable are the categories. State name is a categorical variable, with
+values being the 50 states. Median education is a categorical
+variable, with the categories being things like some college education
+or high school diploma. These categories have been constructed and
+chosen for the study. 
+
+There are two types of categorical variables that we'll deal with in
+this course and both are demonstrated here. State name is a nominal
+categorical variable: the category is a list of names. (Nominal is
+from the latin root for name.) Names are, in general, unordered. You
+could order them, but they are not intrinsically ordered. Median
+educations, on the other hand, is an ordinal category: there is an
+intrinsic ordering to the category, moving from less to more
+education. Some college is more than a high school diploma, where are
+alabama is not more of a state that california. 
+
+That's categorical variables. There are also numerical variables. The
+three middle variables here are all numerical: their values are
+numbers. Again, there are two types of numerical variable here.
+Population is a discrete variable. Throughout mathematics, discrete
+always means separated numbers with gaps inbetween them. Here, the
+variable is measured in whole numbers, so there are gaps between each
+whole number. There is not such thing at a fifth of a person, so the
+data doesn't allow intermediate values. Unemployement rate, on the
+other hand, is a continuous numerical variable. It can take any
+intermediate value, up to whatever decimal precision we want. This
+3.86 could be 3.87 or 3.85 -- conceptually, there are no restrictions
+to intermediate values. 
+
+SLIDE
+
+To summarize, in this course the variables in data sets break down as
+follows. Variables are either numerical, actual numbers, or
+categorical, some other labels than numbers. Then numbers are
+discrete, separated numbers without allowing inbetween values or
+continuous where all inbetween values are possible. Categorical
+variables are ordinal, where there is a natural ordering of the
+categories, or nominal, where any ordering is somewhat arbitrary. 
+
+As I said, vocabulary is one of the main challenges in statistics.
+This is just the start of the terms we will define in this course. I
+encourage you to keeps careful notes or make your own glossary to
+remember all the terms. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

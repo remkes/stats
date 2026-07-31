@@ -1,0 +1,177 @@
+We are moving on to another kind of statistic to test today. For both
+difference in proportions and single proprotions, I said there must be
+only two categories in the categorical variable: one treated as
+success and one treated as failure. Now I want to allow for more than
+two categories and see what happens to hypothesis testing. This is
+going to lead to yet more probability theory and more techniques.
+
+SLIDE
+
+In one of the early class activities, we looked at data about where
+lizards were found. There were two categorical variables, but each
+had three categories. This needs a new technique: there isn't just
+success and failure here, or yes and no. There are multiple options. 
+
+In the context of hypothesis, this contingency table is often called a
+two-way table. Apologies for the multiple terminology, but it is
+conventional. 
+
+SLIDE
+
+Again, I'll use an example for this video. This is a study about
+consumer inquiry and purchasing confidence. If you are purchasing
+something, particular outside of a formal store (i.e. someplace like
+Facebook Marketplace), how can you figure out if the item being sold
+is in good condition? In particular, does the particular way in which
+you ask your questions made a difference?
+
+A study was setup were 219 participants were asked to sell a used iPod
+which they knew had frozen twice in the past. The buyers got to keep
+some of the sale price, so they were motivated to recover decent value
+selling the iPod. (Forgive, again, the dated study. I know iPod died
+as a thing years ago, but this was a study from a good while back.
+Work with me here!)
+
+Unbeknownst to the sellers, the buyers were also part of the study.
+They were instruced to ask questions to determine the condition of the
+iPod. They were told to randomly choose between these three questions
+- What can you tell me about it?
+- It doesn't have any problems, does it?
+- What problems does it have?
+
+The idea here, psychologically, is that the first question seem
+neutral, the second has an implicitly positive assumption that there
+aren't problems, and the third has an implicitly negative assumption,
+that there are problems. Do these assumptions, built into the
+question, have an effect on the responses?
+
+SLIDE
+
+Here is the data. Each of the questions was asked exactly 73 times.
+Only twice in the neutral question lead to disclose of the potential
+freezing problems. The positive assumption led to 23 disclosures and
+the negative assumption led to 36 disclosure.
+
+The research question here is this: does the form of the question make
+a difference? But there are three options, not just two. How do we do
+the stats to answer this question? We now want to know not just was
+there a difference, but what difference is due to which type of
+questions.
+
+SLIDE
+
+I want to do hypothesis testing, so I'm going to need some baseline
+information in order to setup my null hypothesis. Let me first look at
+how many disclosures there were in total. I add up the disclosers and
+divide by the number of case, and I get a general disclosure rat e of
+27.8%. Mutliplying by 73, this means that if all is equal, there
+should be about 20 disclosures in each of the three groups of 73
+cases. Similarly, I could calculate that there should be about 53
+non-disclosure in each group of 73. 
+
+The null hypothesis is that the questions make no difference at all,
+that in the whole population, roughly 22 out of 73 people would
+disclose and the difference between these groups in this sample is
+just random. Again, I want to use probability theory to ask how like
+the sample is under this null hypothesis. 
+
+SLIDE
+
+So I have a baseline of 22.33 disclosures and 52.67 non-disclosures. I
+now want to compare that baseline to what actually happened in each
+situation. I have three categories and two outcomes: six situations.
+For all of the six, I use this formula to measure the difference
+between the sample outcome and the baseline I just established. I take
+the difference, square it, and divide by the baseline proportion. Why
+this way? Again, it comes from the probability theory and
+mathematically is it a reliable way to measure how much the sample
+differs from the baseline, from the null hypothesis. (This method also
+always produces positive values, which is nice since all the
+difference then add up instead of cancelling out). 
+
+Then I add up all these six numbers. This gives me one value, which is
+a measure of the total variation in the sample from the expectation of
+the null hypothesis. This sum is called a chi-squared test statistics.
+This is something like a new version of a z-score: it's a
+probabilistic measure of how unlikely this sample is compared to a
+certain null hypothesis. (This is called chi-squared because this x is
+actually not an x: it's the uppercase version of the greek letter chi.
+It just happens to look like an x. Sorry for the confusion, but, again
+for whatever conventional reason, chi is the symbol chosen here. You
+just have to remember that this is not an x, it's a capital chi. Also,
+chi is the usual pronunciation in statistics, even though the greek is
+something close to chi(greek pronunciation).) 
+
+So what do we do with it? How do we use the chi-squared to answer the
+hypothesis testing question?
+
+SLIDE
+
+As before, we can do a randomization process. In this case, the null
+hypothesis is that all categories are equally likely. To emulate that,
+we can just shuffle the data: take the 61 discloe and the 18 hide and
+then just re-destribute them among the groups. Then, each of these
+instances would have its own chi-squared value and I could calculate
+those, one by one. This would give me a distribution, and then I could
+compare that dsitribution with the sample statistic, to see how likely
+it is. This is the same randomization process I used previously, just
+with more categories to shuffle between.
+
+SLIDE
+
+Here is a histogram of a bunch of randomizations of this data and
+their chi-squared scores. This is assuming the null hypothesis: that
+there is no difference between groups. Chi-square = 0 would recover
+this perfect balance, but that hardly ever happens. Instead, almost
+all of the sample have some variables, but most have a low
+chi-squraed. The random samples are groups near 0 and they decay away.
+Our sample statistics had a chi-squared of 40, which is way, way out
+compared to these randomizations. Like, this means that something
+significant is happening: these randomizations don't seem to have any
+chance at all of producing a chi-squared of 40. 
+
+SLIDE
+
+That would be doing the randomizations by hand. I don't want to do
+that. I want to make use of the fact that many clever mathematicians
+have build probability models so that I can just calculate directly.
+Happily, this is true, but the models are now different. This is no
+longer a normal distribution at all. The previous histogram didn't
+look normal at all: it started with lots of data and then decayed away
+only in the positive direction. There were no negative at all (indeed,
+chi-squared is always a positive number).
+
+The theory here, then, it not based on normal distributions. It is
+based on another set of mathematical functions, unsurprisingly called
+chi-squared distributions. The normal distributions difference by mean
+and standard deviations. For chi-squared, there is one parameter --
+degrees of freedom. Here are the graphs for for 1 to 8 degrees of
+freedom. They all start tall near zero and then decay away in the
+positive direction. They don't exist at all below zero. 
+
+Like with normal distributions, understanding these mathematical
+functions allows us to do the hypothesis test directly, without having
+to do the randomizations ourselves. 
+
+The central limit theorem said that the sampling distribution is
+normal under certain reasonable conditions. The same is true here:
+there are conditions for the data to fit these distributions. I'm not
+going to get into the details of those conditions -- a well designed
+study with good data should satisfy, but you should be aware that
+these conditions do exist. 
+
+SLIDE
+
+I showed you pretty graphs of several chi-squared distribution. Which
+one to use? Well, it's depends on the degree of freedom. So what is
+the degree of freedom of a data set? Well, the situation here is
+categorical variables with multiple categories. The number of
+categories is this degree of freedom. Specifically, take the two
+cateogrical variables we have here. Take the number of categories in
+the first varible, subtract one, then multiply by the number of
+categories in the second variable, again subtrating one.
+
+In our cases, there were three categories of questions, so the first
+piece here is 3-1, and two categories of outcome, so 2-1 in the
+second. The degree of freedom we need for this particular chi-squared
+process is 2. 
