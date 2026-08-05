@@ -1,7 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-study-design" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
-  <p> 
-    Test
-  </p>
-</section>
+  <title>Sampling and Study Design</title>
+  <subsection xml:id="subsection-samples"/>
+    <title>Populations and Samples</title>
+    <p> 
+      Statistics is about drawing conclusion from data. In <xref
+      ref="section-vocabulary"/>, I defined a data set and some
+      vocabulary associated to it. I want to draw conclusion from a data
+      set and have those conclusion carry some meaning. In this course,
+      we're going to do a lot of mathematics to analyze the data. But
+      before the mathematics happens, we have to think about how the
+      data was collected, how the study was designed, and all the
+      various human components of data. This leads into study design and
+      sampling. Let me get back into some vocabulary. 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>population</term> is all possible cases for a dataset
+          in the world. It covers the entire scope of the study,
+          whatever that situation is. A <term>sample<term> is the subset
+          of the population for which data is gathered: it is the cases
+          that are in the data set. It is always part of a population,
+          but very often a small part of the population.
+        </p>
+      </statement>
+    </definition>
+    <p> 
+      Consider an example. Say I am interesting in how much mercury is
+      found in Atlantic swordfish. In a perfect world, I'd have the
+      opportunity, time and resources to examine every last swordfish in
+      the ocean. This would be studying the entire population: every
+      last swordfish. Alas, this is impossible. 
+    </p>
+    <p> 
+      Since examing the population writ large is impossible, a study
+      will instead try to examine a portion of the population: the
+      sample.  the samplee in this case is the count of how many fish
+      are actually measured by the study. 
+    </p>
+    <p> 
+      So I study population by way of samples. I have yet more
+      vocabulary to refer to information about population and samples. 
+    </p>
+    <definition>
+      <statement>
+        A measurement that covers the entire population is called a
+        <term>parameter</term>. Since studies almost never get to
+        actually measure the population, parameters are almost always
+        unknown. In contrast, a measurement of a sample, of all the
+        cases actually in the study, is called a <term>statistic</term>.
+        The goal, then, it to use the known statistic to make some
+        reasonable conclusion about the unknown parameter. 
+      </statement>
+    <definition>
+    <p> 
+      Again in this example, say I want to know the length of swordfish.
+      If I measured every swordfish in the ocean and took the average of
+      those lengths, I would get a parameter: the average length of
+      atlantic swordfish. Working with a sample, I get a statistic:
+      the average length of the specific swordfish which happen to be in
+      my sample. 
+    </p>
+    <p>
+      The discipline is called <em>statistics</me>: is it the study of
+      these statistics, these measurement of samples Research wants to
+      discover something truth, something real, or at least something
+      that is likely to be truth or real. If we can't study a whole
+      population, and we almost always can't, we study a sample. We
+      measure statistics. What we hope for are <em>representative
+      statistics</em>: the statistics should be close to the
+      parameter.  What we observe of a piece of the population should
+      be close to the whole population. This is a good statistic. The
+      whole rest of this course will be about figuring out what a good
+      statistics actually is and how to measure it.
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-study-design"/>
+    <title>Study Design</title>
+    <p>
+      A study want to understand a population and one or more of the
+      parameters of that population. It does this by collecting a
+      sample and calculating a statistic. The method by which a sample
+      is collected is called <em>study design</em>. Study design is
+      the important non-mathematical part of statistics (and overlaps
+      with many other aspects of research methods). 
+    </p>
+    <p>
+      Study design can be good quality or poor quality. Not all
+      samples are created equal: there are good samples and there are
+      poor samples, even before any of the mathematics is calculated.
+      In this section, I want to talk about study design: how to
+      collect a good sample and understand sampling risks. 
+    </p>
+    <p>
+      So what is a good sample? A good sample is, as I said before,
+      <em>representative</em>: the sample statistics is likely to
+      match-up reasonably well with the population parameter. 
+    </p>
+    <p>
+      The first 
+    </p>
+
+
+    >
+SLIDE
+
+Statistics is always about collections of cases. Many other things
+effect samples, but it is almost always true that the larger a sample,
+the more likely it is to be representative. More cases lead to better
+statistics.
+
+The opposite is also true: fewer cases lead to worse statistics. The
+extreme version of this is anecdotal evidence: using a single case or
+a small number of notable cases to make an argument. 
+
+
+
+
+Anecdotal evidence is very appealing and is widely used in human
+conversation. And for conversation, that's neither here or there. But
+as a way of producing reliable conclusions, it's a major risk. A good
+statistician needs training to resist the allure of one really good
+story and fall back to larger samples and good methods. It's not
+nearly as exciting, but much more likely to produce something close to
+the truth. 
+
+In addition to vocabulary and calculation, I hope this course builds
+habits of thinking. When you hear a remarkable story, I hope there is
+a little circuit in your brain that thinks: well, maybe this is just
+an exceptional case. If a certain government changes its tax rate
+(either up or down) and job losses follow, the political temptation is
+to generalize: obviously these new taxes (lower taxes or higher taxes,
+whichever it is) are bad for the economoy. I hope, after this course,
+there is a little piece of your mind that will always think: well,
+maybe this is an unusually case, an outlier, something in the sample
+that is not representative. 
+
+SLIDE
+
+Now let me talk about sampling.  There are many ways to get good or
+poor sample.  If I look at a piece of the population, what piece is
+it? We want it to be representative -- that is, to capture what is
+typical about the population. A great deal of work in experimental
+design revolves around finding a good, representative sample.
+
+Naive samples are unlikely to be representative. If I have these 32
+cases in my data set, I can select the first 10, but there is a good
+change such a sample will have a bias. 
+
+Instead, I'll choose a random 10 cases.  A random sample is just at it
+says: selected a random subset of the population. By some method, I
+this random subset and then hope that it is representative. 
+
+SLIDE
+
+Random samples are used to reduce the risk of a biased sample. A
+biased sample has some criterion, either explicit or hidden, that make
+the sample less likely to be representative.
+
+- If you want to study attitudes of kings students but only ask arts
+  majors, you are unlikely to capture the breadth of the student body.
+  This is a biased sample.
+- If you want to study lifespan of coyotes in Alberta but only
+  measure coyotes in Elk Island Park, you are unlike to capture the
+  variety in the population. This is a biased sample. 
+- If you want to study the spending habits of Canadians but only
+  survey white men, you are missing the majority of the population and
+  are unlikely to capture the breadth of the data. This is a biased
+  sample. 
+
+Producing an unbiased sample is often very difficult: there are many
+potential sources of bias, some obvious but some very difficult to
+discover. A hidden source of bias is often called a confounding
+factor or confounding variable. A good statistician, a good
+experimental designer is always looking at data gathering methods and
+wondering about potential bias and confounding factors in the method.
+
+There is much more to be said about random samples, and I encourage
+you to read the matching section of the text for some more
+information.
+
+SLIDE
+
+The process of planning and experiment and choosing methods of
+gathering data is called experimental design. Good experimental design
+tries very hard to avoid bias in sampling. Experimental design is a
+whole discipline itself and this course will only scratch the surface,
+but let me say a little about it and define some terms which will
+shope up later in the course.
+
+When possible, a good study is controlled. A controlled study is a
+study like what we discussed in the previous video, where an
+experiment is applied to one group and a second group, the control
+group, is measured to provide a reference point. Both groups need to
+be selected to avoid sampling bias. 
+
+A good study has good randomization. I've already talked about random
+sampling, so I am repeating myself here. There may be hidden biases in
+the sample -- confounding variables. A good study looks for these and
+tries to be aware of their potential. 
+
+A good study is replicated. A replicated study is simply a repetition
+of the study with new samples. Replication is another check again
+bias: if several studies can repeat the same conclusion, then the
+potential for bias affecting the conclusion is mitigated. Of course,
+this doesn't solve everything, since it is always possible a hidden
+bias, a confounding factors, was equally affecting all repetitions of
+the study. 
+
+SLIDE
+
+Let me summarize. Since studying whole is almost always
+impossible, researchers study samples. The measure information about
+those samples, which are called statistics. 
+
+Experimental design is the process of collecting data. Good design
+produces good samples and hence good statistics. Good experimenters
+look for sources of hidden bias -- the confounding variables. This is
+all in the services of producing a result that has a good probability
+of being reliable. 
