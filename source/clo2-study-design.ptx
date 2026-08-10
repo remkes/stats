@@ -96,92 +96,167 @@
     <p>
       So what is a good sample? A good sample is, as I said before,
       <em>representative</em>: the sample statistics is likely to
-      match-up reasonably well with the population parameter. 
+      match-up reasonably well with the population parameter. There
+      are two main factors that affect the quality of a sample. 
     </p>
     <p>
-      The first 
+      The first is simply size. As the mathematics will show later in
+      the course, the more cases in a sample, the more likely it is to
+      be representative. This is hardly surprising: the more data you
+      gather, the more likely you are to capture something real about
+      the world. I'll quantify this effect later in the course, but
+      for now, this is just a simple observation.
     </p>
-
-
-    >
-SLIDE
-
-Statistics is always about collections of cases. Many other things
-effect samples, but it is almost always true that the larger a sample,
-the more likely it is to be representative. More cases lead to better
-statistics.
-
-The opposite is also true: fewer cases lead to worse statistics. The
-extreme version of this is anecdotal evidence: using a single case or
-a small number of notable cases to make an argument. 
-
-
-
-
-Anecdotal evidence is very appealing and is widely used in human
-conversation. And for conversation, that's neither here or there. But
-as a way of producing reliable conclusions, it's a major risk. A good
-statistician needs training to resist the allure of one really good
-story and fall back to larger samples and good methods. It's not
-nearly as exciting, but much more likely to produce something close to
-the truth. 
-
-In addition to vocabulary and calculation, I hope this course builds
-habits of thinking. When you hear a remarkable story, I hope there is
-a little circuit in your brain that thinks: well, maybe this is just
-an exceptional case. If a certain government changes its tax rate
-(either up or down) and job losses follow, the political temptation is
-to generalize: obviously these new taxes (lower taxes or higher taxes,
-whichever it is) are bad for the economoy. I hope, after this course,
-there is a little piece of your mind that will always think: well,
-maybe this is an unusually case, an outlier, something in the sample
-that is not representative. 
-
-SLIDE
-
-Now let me talk about sampling.  There are many ways to get good or
-poor sample.  If I look at a piece of the population, what piece is
-it? We want it to be representative -- that is, to capture what is
-typical about the population. A great deal of work in experimental
-design revolves around finding a good, representative sample.
-
-Naive samples are unlikely to be representative. If I have these 32
-cases in my data set, I can select the first 10, but there is a good
-change such a sample will have a bias. 
-
-Instead, I'll choose a random 10 cases.  A random sample is just at it
-says: selected a random subset of the population. By some method, I
-this random subset and then hope that it is representative. 
-
-SLIDE
-
-Random samples are used to reduce the risk of a biased sample. A
-biased sample has some criterion, either explicit or hidden, that make
-the sample less likely to be representative.
-
-- If you want to study attitudes of kings students but only ask arts
-  majors, you are unlikely to capture the breadth of the student body.
-  This is a biased sample.
-- If you want to study lifespan of coyotes in Alberta but only
-  measure coyotes in Elk Island Park, you are unlike to capture the
-  variety in the population. This is a biased sample. 
-- If you want to study the spending habits of Canadians but only
-  survey white men, you are missing the majority of the population and
-  are unlikely to capture the breadth of the data. This is a biased
-  sample. 
-
-Producing an unbiased sample is often very difficult: there are many
-potential sources of bias, some obvious but some very difficult to
-discover. A hidden source of bias is often called a confounding
-factor or confounding variable. A good statistician, a good
-experimental designer is always looking at data gathering methods and
-wondering about potential bias and confounding factors in the method.
-
-There is much more to be said about random samples, and I encourage
-you to read the matching section of the text for some more
-information.
-
-SLIDE
+    <p>
+      This means that studies with small sample sizes carry more
+      uncertainty and risk of being incorrect. Such studies are not
+      useless, they just require more care. This leads into a major
+      theme of statistics: analysis of data is always about judgment.
+      Statistics is going to use mathematics to give some
+      probabilities about how much a statistic corresponds with a
+      population parameter. Those probabilities lead to a judgment on
+      whether the statistic is useful: <sq>significant</sq> will be
+      the term we will eventually use. But it is never a simple
+      black-and-white situation. Judgment is always involved. 
+    </p>
+    <p>
+      This fact<mdash/>the ubiquity of judgment<mdash/>makes
+      statistics a fascinating mix of the precision of mathematics and
+      the ambiguity of human activity. Once you design a study,
+      collect data and choose a method of statistical analysis, the
+      mathematics will provide the same results every time.
+      Mathematics is rigorous and consistent in this way. But
+      everything else about the process involves human activity and
+      human decisions, with all the fuzziness that implies. 
+    </p>
+    <p>
+      The second factor that affect the quality of a sample needs
+      quite a bit more discussion. This factor is randomness. A good
+      samply is a truly random selection of members of the population.
+      The opposite of randomessness is <term>bias</term>: a sample
+      contains a bias is certain portions of the population are more
+      or less likely to be included in the sample. 
+    </p>
+    <p>
+      This is the single greatest challenge to study design. Removing
+      bias from a sample is very difficult and the sources of bias in
+      a sample are many and varied. Consider, as an example, a sample
+      collected in a political poll. Ideally, the same is a truly
+      random cross-section of the population. But, as examples, the
+      following things can occur. 
+      <ul>
+        <li>
+          If the sample is conducted over the phone, it is biases to
+          those who actualy answers call from unknown numbers. This is
+          selecting a personaly, but likely also selecting a
+          demographic. 
+        </li>
+        <li>
+          If the sample is collected online, then it likely has a bias
+          to those people who are online. 
+        </li>
+        <li>
+          If the sample is collected in person, then it has a bias of
+          where the sample is collected. Asking people in the streets
+          will select those people who are likely to be outside on the
+          street.
+        </li>
+        <li>
+          Assuing that participation is optional (which seems
+          necessary), the sample selects for those who are willing to
+          do a political survey. This might select for those who are
+          more politically involved. 
+        </li>
+      </ul>
+    </p>
+    <p>
+      Due to the factor listed above, or other similar factors, it is
+      difficult to ensure that your sample is really a cross-section
+      of the population. Mostly likely, them method of sampling will
+      appeal to a certain demographic more than others: older or
+      younger people, men or women, native speakers or second-language
+      speakers, citizens or non-citizens, certain ethnic or cultural
+      groups, and so on. 
+    </p>
+    <p>
+      Study design attempts to design a collection method that
+      produces a sample with minimal bias. This is always a trade-off
+      between quality and time or money. A really good political poll
+      will use multiple modes of collection over multiples days and
+      times of day. But such a poll is more costly and takes more
+      time. 
+    </p>
+    <p>
+      To critique a study, I want to look at its collection methods
+      and consider what potential biases exist. A good statistical
+      study will be aware of its own potential biases and discuss them
+      in its analysis. 
+    </p>
+    <p>
+      Before finishing this section, I want to give one more important
+      definition about study design. 
+    </p>
+    <definition. 
+  </subsection>
+  <subsection xml:id="subsection-math-and-judgment">
+    <title>Mathematics and Judgment</title>
+    <p>
+      I want to elabote on the theme I introduced in the previous
+      section, since it is a major theme of the course and a major
+      part of the identity of statistics. In short, statistics is
+      fascinating combination of mathematics techniques and human
+      judgment. The mathematical techniques (assuming we trust the
+      mathematicians) are proven and reliable to calculate what they
+      calculate. But around them, statistics is full of judgment. Here
+      are the judgments we've covered so far. 
+      <ul>
+        <li>
+          When I have a data set, what mathematical tool do I choose
+          to use?
+        </li>
+        <li>
+          How is my study design and what are its potential biases?
+        </li>
+        <li>
+          How many cases can I include in my study and how strong is
+          the data based on this number?
+        </li>
+        <li>
+          What is the tradeoff between designing an excellent study
+          with many cases and representative samples and the reality
+          of what my resourcess will actually allow?
+        </li>
+      </ul>
+      These are far from the only jdugments, and I will return to this
+      theme throughout the course. 
+    </p>
+    <p>
+      This issue of judgment fits into a larger theme: that of human
+      psychology and statistics inference. It turns out that humans
+      intuition is pretty terrible at statistical reasoning. We like
+      narratives and our brains are very good are forming narratives
+      based on very few pieces of information.  Anecdotal evidence is
+      very appealing and is widely used in human conversation. And for
+      conversation, that's neither here or there. But as a way of
+      producing reliable conclusions, it's a major risk. A good
+      statistician needs training to resist the allure of one really
+      good story and fall back to larger samples and good methods.
+      It's not nearly as exciting, but much more likely to produce
+      something close to the truth. 
+    </p>
+    <p>
+      In addition to vocabulary and calculation, I hope this course
+      builds habits of thinking. When you hear a remarkable story, I
+      hope there is a little circuit in your brain that thinks: well,
+      maybe this is just an exceptional case. If a certain government
+      changes its tax rate (either up or down) and job losses follow,
+      the political temptation is to generalize: obviously these new
+      taxes (lower taxes or higher taxes, whichever it is) are bad for
+      the economoy. I hope, after this course, there is a little piece
+      of your mind that will always think: well, maybe this is an
+      unusually case, an outlier, something in the sample that is not
+      representative. 
+    </p>
 
 The process of planning and experiment and choosing methods of
 gathering data is called experimental design. Good experimental design
