@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section xml:id="section-study-design" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="section-study-design">
   <title>Sampling and Study Design</title>
-  <subsection xml:id="subsection-samples"/>
+  <subsection xml:id="subsection-samples">
     <title>Populations and Samples</title>
     <p> 
       Statistics is about drawing conclusion from data. In <xref
@@ -19,7 +18,7 @@
         <p>
           A <term>population</term> is all possible cases for a dataset
           in the world. It covers the entire scope of the study,
-          whatever that situation is. A <term>sample<term> is the subset
+          whatever that situation is. A <term>sample</term> is the subset
           of the population for which data is gathered: it is the cases
           that are in the data set. It is always part of a population,
           but very often a small part of the population.
@@ -53,7 +52,7 @@
         The goal, then, it to use the known statistic to make some
         reasonable conclusion about the unknown parameter. 
       </statement>
-    <definition>
+    </definition>
     <p> 
       Again in this example, say I want to know the length of swordfish.
       If I measured every swordfish in the ocean and took the average of
@@ -63,7 +62,7 @@
       my sample. 
     </p>
     <p>
-      The discipline is called <em>statistics</me>: is it the study of
+      The discipline is called <em>statistics</em>: is it the study of
       these statistics, these measurement of samples Research wants to
       discover something truth, something real, or at least something
       that is likely to be truth or real. If we can't study a whole
@@ -76,7 +75,7 @@
       statistics actually is and how to measure it.
     </p>
   </subsection>
-  <subsection xml:id="subsection-study-design"/>
+  <subsection xml:id="subsection-study-design">
     <title>Study Design</title>
     <p>
       A study want to understand a population and one or more of the
@@ -170,7 +169,7 @@
       </ul>
     </p>
     <p>
-      Due to the factor listed above, or other similar factors, it is
+      Due to the factors listed above, or other similar factors, it is
       difficult to ensure that your sample is really a cross-section
       of the population. Mostly likely, them method of sampling will
       appeal to a certain demographic more than others: older or
@@ -193,10 +192,67 @@
       in its analysis. 
     </p>
     <p>
-      Before finishing this section, I want to give one more important
-      definition about study design. 
+      Before finishing this section, I want to give two more important
+      definition about bias and study design. 
     </p>
-    <definition. 
+    <definition>
+      <statement>
+        <p>
+          A bias or other effect that creates a problem with the data
+          in a study is caleld a <term>confounding effect</term>. This
+          word, <sq>confounding</sq>, is the standard technical term
+          in statistics even though many synonyms could be stated for
+          this in regular language. It's useful to set such a standard
+          term so that, when you read <sq>confouding</sq> in a
+          statistical context, you know that it carries a technical
+          meaning. 
+        </p>
+        <p>
+          In particular, an unmeasured variable that has an effect on
+          the data but does not form part of the data set is called a
+          <term>confounding variable</term>. 
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Looking for counfounding variables is a big part of minimizing
+      bias in study design. A researcher should always consider
+      potential unmeasured variable and try to identify what might be
+      confounding their data. 
+    </p>
+    <p>
+      There are many ways to design studies to try to minimize bias,
+      avoid confounding variables, and produce representative data.
+      One of the most important and common methods of study design is
+      covered in the next definition. 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>controlled study</term> is a study where the cases
+          in the data are broken into two groups. One group, called
+          the <term>control group</term>, is a default and the
+          researchers take no action for this group. The second group,
+          called the <term>experimental group</term> is the set of
+          cases where the researches change something (administer a
+          medication to be testing, introduce a chemical into the
+          environment, etc). The study then focuses on the statistical
+          differences between the control and the experimental group. 
+        </p>
+        <p>
+          A controlled study is caleld a <term>blind study</term> if the
+          researchers do now know which cases are the control cases
+          and the experimental cases. This is done to reduce bias
+          caused by the researches treating the two groups
+          differently. A controlled study involving human cases is
+          caleld a <term>double blind study</term> if the people
+          undergoing the study, the cases, also don't know if they are
+          in the control group of the experimental group. Again, this
+          is done to reduce bias whereby a participant might act
+          differently if they know which group they are in. 
+        </p>
+      </statement>
+    </definition>
   </subsection>
   <subsection xml:id="subsection-math-and-judgment">
     <title>Mathematics and Judgment</title>
@@ -257,41 +313,5 @@
       unusually case, an outlier, something in the sample that is not
       representative. 
     </p>
-
-The process of planning and experiment and choosing methods of
-gathering data is called experimental design. Good experimental design
-tries very hard to avoid bias in sampling. Experimental design is a
-whole discipline itself and this course will only scratch the surface,
-but let me say a little about it and define some terms which will
-shope up later in the course.
-
-When possible, a good study is controlled. A controlled study is a
-study like what we discussed in the previous video, where an
-experiment is applied to one group and a second group, the control
-group, is measured to provide a reference point. Both groups need to
-be selected to avoid sampling bias. 
-
-A good study has good randomization. I've already talked about random
-sampling, so I am repeating myself here. There may be hidden biases in
-the sample -- confounding variables. A good study looks for these and
-tries to be aware of their potential. 
-
-A good study is replicated. A replicated study is simply a repetition
-of the study with new samples. Replication is another check again
-bias: if several studies can repeat the same conclusion, then the
-potential for bias affecting the conclusion is mitigated. Of course,
-this doesn't solve everything, since it is always possible a hidden
-bias, a confounding factors, was equally affecting all repetitions of
-the study. 
-
-SLIDE
-
-Let me summarize. Since studying whole is almost always
-impossible, researchers study samples. The measure information about
-those samples, which are called statistics. 
-
-Experimental design is the process of collecting data. Good design
-produces good samples and hence good statistics. Good experimenters
-look for sources of hidden bias -- the confounding variables. This is
-all in the services of producing a result that has a good probability
-of being reliable. 
+  </subsection>
+</section>

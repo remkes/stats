@@ -1,7 +1,391 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-study-ethics" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
-  <p> 
-    Test
-  </p>
+  <title>Ethics in Statistics</title>
+    <subsection xml:id="subsection-ethics-general">
+    <title>Public and Professional Ethics in Statistics</title>
+    <p> 
+      In the previous section, I talked about how statistics is a
+      combination of mathematical technique and human judgment. Both
+      mathematical skill and careful judgment can be exercised well or
+      exercised poorly. In particularly, both can be used ethically or
+      non-ethically. In this section, before getting into the technical
+      discipline, I want to talk about the ethical
+      considerations of statistics. 
+    </p>
+    <p>
+      Statistics is a discipline of information: data sets and what
+      inferences can be drawn from them. As such, its ethics are the
+      ethics of information: how is the information gathered, how it
+      is processed, how it is communicated and what is it used for.
+    </p>
+    <p>
+      Moreover, statistics is a pretty big business: many researchers,
+      governments, pundtics, pollers, advertisers, companies, all
+      needs good statistical information and are willing to pay
+      statisticians to produce that information. As a big business,
+      its ethics are the subject of considerable deliberation and
+      debate. The ethics of statistics are culturally important and
+      have a substantial impact on popular knowledge, politics,
+      consumer behaviour, and so on. Knowing this, where do we start? 
+    </p>
+    <p>
+      Like all ethics, we have to start with a perspective, a
+      worldview. We need some vision of the purpose of human culture
+      and the role of information to that culture. We need some basic
+      principles to start from. Your own ethical conclusions will, of
+      course, be based on your own worldview and beliefs about how
+      human culture and society should be structured. But statistics
+      is a public activity, so the ethics of statistics are the
+      subject of public discourse. Public discourse is always tricky
+      because it relies on the fragile and ever-changing public
+      consensus of the goals and purposes of human society. 
+    </p>
+    <p>
+      I want to analyze two instances of this public understanding
+      statistical ethics. The point of this analysis is to see what
+      public consensus exists about the use and methods of statistics
+      and what principles and worldviews inform that consensus. 
+    </p>
+    <p>
+      First, I'll look to the Statistical Society of Canada.
+      Professional societies are a good place to look for the common
+      understanding, stated in public and secular terms, of the
+      purposes of a professional. The Statistical Soceity of Canada
+      (SSC) publishes a Code of Ethical Statistical Practice. This is
+      intended to be a guide for its members who are, for the most
+      part, professional statisticians. 
+    </p>
+    <p>
+      This Code of Ethical Statistical Practice starts with four
+      principles.
+      <ul>
+        <li>
+          Responsibility to society.
+        </li>
+        <li>
+          Responsibility to employers and clients. 
+        </li>
+        <li>
+          Responsibility to other statistical practitioners.
+        </li>
+        <li>
+          Professionalism. 
+        </li>
+      </ul>
+      The Code obviously goes on to provide much more detail based on
+      these principles. Even knowing that, though, I am struck by how
+      vague these principles are: responsibility and professionalism
+      are very general terms.  There is some sense of the common good
+      here in the principle of <sq>responsibility to society</sq>, but
+      that common good is nebulous. What are statisticians responsible
+      to society for? Producing truth? Acting transparently? Something
+      else? Moreover, what vision of society do these principles
+      envision?
+    </p>
+    <p>
+      An interesting contrast to these are the principles published by
+      the National Science and Engineering Research Council (NSERC),
+      Canada's major federal government research funder for the
+      natural sciences. Here are the principles that underpin their
+      discussion of ethics in statistics (what they call <sq>data
+      ethics</sq>). 
+      <ul>
+        <li>
+          Benefits for Canadians. 
+        </li>
+        <li>
+          Fairness and Do No Harm. 
+        </li>
+        <li>
+          Quality
+        </li>
+        <li>
+          Transparency and Accountability
+        </li>
+        <li>
+          Trust and Sustainability
+        </li>
+        <li>
+          Privacy and Security. 
+        </li>
+      </ul>
+      Where there is some of the same general language here
+      (<sq>benefit</sq> and <sq>quality</sq> are very generic terms),
+      there is a lot more detail here. 
+    </p>
+    <p>
+      NSERC's principles are coming from a governmental authority
+      instead of a professional organization. That does make a
+      difference for their description of ethical principles. I makes
+      sense that, for exampoe, <sq>transparency and
+      accountability</sq> show up, since the government need to be
+      transparent and accountable for how it spends what it gathers as
+      taxes from its citizenry. 
+    </p>
+    <p>
+      Where there is more detail here, I still wouldn't say that these
+      principles are clearly rooted in a vision of what flourishing
+      society looks like: the word <sq>benefit</sq> is doing some
+      heavy lifting here. 
+    </p>
+    <p>
+      One of the main ideas that runs through the King's common
+      curriculum is how our basic beliefs (worldviews, faith
+      commitments, assumptions) inform how we act and behave in the
+      world. I think the analysis of these ethical principles are a
+      really good example. The generality of these priciples reflects,
+      I believe, a hesitance to be more specific about the secular
+      consensus of a <sq>good society</sq>. For our own investigation
+      of ethical use of statistics, I would encourage you to connect
+      any ethical discussion to your own worldview, based on your own
+      vision of what constiutues a flourishing society.
+    </p>
+    <p>
+      To end this section, consider a few questions that might arise
+      in the practice statistics. 
+      <ul>
+        <li>
+          How do you report a result that the opposite of what your
+          research group is hoping for? 
+        </li>
+        <li>
+          If you uncover something that is statistically proven to be
+          dangerous in some what, what responsibility do you have to
+          make that information public? How does this differ if you
+          are working with public or private resources?
+        </li>
+        <li>
+          Who decides exactly what research question will inform your
+          study design? Who sets the scope and limits of the study?
+        </li>
+        <li>
+          How to you report data that really doesn't show any clear
+          conclusions, particularly when a lot of resources have been
+          contributed to the study?
+        </li>
+        <li>
+          Who will make use of your data and for what purposes? How
+          much does this depend on who funds the research?
+        </li>
+        </li>
+          Who decides what mathematical techniques will be used to
+          analyze the statistics and what goals are reflected by that
+          choice?
+        </li>
+      </ul>
+      All of these questions can be answers, but the answers will
+      always depend on the ethical principles you start with. I would
+      argue that both NSERC and SSC's principles need a fair bit of
+      development and possibly extra assumptions before you get to
+      clear answers to any of these questions. 
+    </p>
+    <p>
+      
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-data-collection">
+    <title>Data Collection and Management</title>
+    <p>
+      The previous section was quite generate. I want to move
+    </p>
+  </subsection>
 </section>
+
+
+SLIDE
+
+Let's spring-off from these Tri-Council guideline into some specifics
+about ethical statistics. Tri council cared about confidentiality,
+consent and animal care. That's all about gathering data, so what can
+we say, in general, about the ethical guidelines for data? Well, here
+are some questions.
+
+What the data collected ethically? If human subjects were involved,
+were they informed and did they consent? If animal were involved, were
+they treated as well as reasonable, and if they suffered hardship (as
+if often the case in medical research), was there justification for
+that hardship in the value of the potential research outcomes? Was the
+data stored carefully and confidentially?
+
+Similarly, is their bias in the data? This gets back to the issue of
+study design that we talked about early in the course. Bias is an
+ethical issue in addition to producing questionable research. One of
+the most well-known and documented bias in research is the sex bias in
+historical medical research. For decades and decades, the male human
+was simply assumed to be the default subject and males were use for
+most medical trials. But it turns out that there are biological
+differences between the sexes, and those difference present in a wide
+variety of ways, including different symptoms for common ailments,
+different reactions to medications, different physiological effects of
+lifestyle choices, etcetera, etcetera. Much of medical science has been
+correcting these biases for a long time know, but the work is still
+ongoing. 
+
+Other than bias, we've already talked about some other limitations of
+data. Observatonal data and data without a control group both present
+strong limitations to drawing statistical inference. 
+
+All of this is about the data before any statistics is actually done.
+You may have noticed in the Stats Canada slide, the guidelines were
+for the broader term "data science", not just statistics. It all fits
+together. Not asking the necessary questions about your data and how
+it was produced is an ethical failing, even before any mathematics is
+done at all. 
+
+SLIDE
+
+Then we get into doing mathematics itself. Mathematics unfortuantely
+has the reputation of being neutral: just a set of tools. Hopefully,
+in this course, you are realizing that judgment cannot be separated
+from the use of mathematical tools: judgment is baked in. We're
+already seen many instances of judgment:
+- how do you decide which visualization to use?
+- how to you determine a null hypothesis?
+- what threshold of statistical significance do you use?
+- what threshold of confidence do you use for a confidence interval?
+- what level of correlation or R^2 value justifies a linear
+  regression?
+- which variables do you assume to be explanatory?
+
+There is an even larger overarching judgment here. Stats has many
+tools. You've seen a few, but only just a few among a whole jungle of
+techniques. You can't use them all, you can't even use many of them,
+you don't have time. So, what do you use? How do you decide what kind
+of tests and visualizations to bring to some data? It's all judgment. 
+
+SLIDE
+
+There is something infact deeper going on here as well, which I feel
+the need to point out. I'm a mathematician, and sometimes I get into
+discussion about the ethics of mathematics. Very often, if someone is
+asked the ethics of mathematics, the response is something like this:
+well, mathematics is inert, just a set of tools. A tools doesn't have
+ethics, but the use of tool has ethics. Mathematics in itself is
+ethically blank, but whether you use mathematics for good or ill ends
+determines its ethics. 
+
+I want to argue here, in the context of stats, that this is a myth.
+There is no such thing as a neutral tool, whether that is a hammer or
+a hypothesis testing technique. 
+
+I want to give you two reasons. First, when you have a tool are your
+disposal, there is an inclination to use it. When all you have is a
+hammer, you are liable to start hammering things regardless of whether
+they ought to be hammered. Learning how to use a tool, particularly a
+sophisticated tool like statistics, required hard work and
+persistance. Having put in hard work and persistance, humans really
+like to see value coming out of their hard work. They want to use
+their tools. This is why, if you teach someone sophisticated
+management techniques in an MBA, they will go out into a company and
+use them. If you teach someone how to patch clothing, they will go
+looking through their wardrobe for clothes to patch. If you teach
+someone debate and public speaking techniques, they'll bring them out
+at the next Christmas dinner with their extended family. People want
+to use what they have learned. And, on the flip side, people can't use
+what they don't know. So learning a tool is, to some level, always
+creating a bias to use that tool, regardless of whether it is
+appropriate. 
+ 
+That's the first point, but let me go even further. Not only is there
+a tendency to want to use what we know, but there is a deeper effect
+on how situations are framed. In short, having a set of solution
+techinques informs out imagination of what the world is about.
+Solutions techniques actually dictate what the problems are, even
+before we get to how to solve them. If you are trained in carpentry,
+you can walk around the world seeing the flaws in buildings and
+furniture, seeing problems everywhere that can be solved by carpentry.
+If you are trained in business managements, you can end up seeing
+every social situation through lense of effective people management.
+If you are in clinical psychology, you can start seeing neuroses and
+other psychological flaws in all the people you interact with. Tools
+end up defining the problem. 
+
+For the most complicated human situation, like those in politics or
+other large human systems, everything is at place: the psychology of
+the people, the sociology of their interactions, their individual and
+collective histories, their financial realities, their social
+hierarchies, the physical spaces they move in, their medical
+histories, their diets and exercise regimes, the composition of the
+air and soil around them, all of this. How do you solve complex
+problems? Well, defining the problem is often the hardest part, and
+people define problems by the tools they know.
+
+This applies to statistics as well. Stats is the science of getting
+meaning out of data, and it is very good at doing that if used well.
+But not every human situation is a collection of data. If stats is
+your lense for seeing the world, then every problem becomes a
+statistical problem, to the detrement of those situations which are
+better suited as psychological problems, historical problems,
+narrative problems, ecological problem, medical problem, engineering
+problems, financial problems, and so on. 
+
+Lastly, all this fits into our worldview, our basic understanding of
+who we are, what it means to be human, what our purpose is on this
+planet. Statistics is glorious, but it can be immensely reductive.
+Much of the world is data, but it is completely false to claim that
+the world is nothing buy unanalyzed data. This is not a whole and full
+want to understand the world. 
+
+SLIDE
+
+Let me finish with a short list of other potential ethical questions
+about statistical practice. There are many, many ways to go with
+ethical questions -- these are just a few more.
+
+Often if there is a weakness in a study, it is obvious to a skill
+statistician. Such a weakness should be disclosed, even if it means
+that the results are somewhat less conclusive. This is obviously a
+difficult thing to do: researchers want to state clear and confident
+results. 
+
+Good studies can be replicated, since replication is the most reliable
+way to turn the indications of one study into reliable knowledge. If
+the design of the study is such that it can never be repeated, then
+it's value is limited.
+
+Sometimes a research runs a study and ends up with a result other than
+what they hoped for. Particularly when there is a public interest in
+the knowledge (along with public funding for the research), the public
+deserves to know the result even if the researcher disapproves of it
+for some reason. The most on-the-nose example of this is, perhaps,
+medical studies funded by pharmeceutical companies. Say a company
+wants to see if one of their medications is effective in a new
+situation.  They run a study, and the study shows that their treament
+is, in fact, counter-effective: it made the medical outcomes worse.
+That's useful information for the public to know, so there is an
+ethical argument that the research should be reported. But, obviously,
+there is a financial insentive against, since any negative press about
+a medication can mean lower sales for the company. 
+
+Communication of statistical information is fraught with ethical
+concerns. We've already talked about this, but to recap briefly, there
+are huge numbers of ways of display data. Each way emphasized
+something and hides something. Which do you choose? Are you misleading
+the public if your choices?
+
+The confidentiality of data is another major ethical issue. Particular
+for human data, there is a strong requirement to keep information
+about individual subject confidential, for very obvious reasons.
+However, there is also a strong public good to make as much data as
+possible publically available. (The data-set used in this course are
+good examples: they are dataset created by researchers which have been
+made publically available and usable, particularly here for
+educational purposes). So there is a tension here, which must be tread
+carefully. 
+
+Finally, you can always ask a simple question about any statistical
+result: who benefits. Someone benefiting does not, of course,
+necessarily mean the study is ethically subspect, but it should
+inspire some amount of healthy skepticism. If an oil company runs a
+study that shows the impacts of oil extraction on the ecosystem are
+less severe than previously though, I'm going to be cautious about the
+study, reserving judgment until, perhaps, it is replicated without any
+industry funding. At the same time, is an alternative energy company
+runs a study showing how amazingly productive and non-invasize their
+wind farms are, I should show them the same skepticism, even if it
+might be the case that I am already inclined towards the development
+of renewable energy industries. 
+
+This is a lot, and this is just the surface. Whole courses could be
+taken, of course, on statistical ethics. But hopefully this is enough
+to get you thinking. 
