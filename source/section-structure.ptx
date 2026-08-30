@@ -2,6 +2,50 @@
 <section xml:id="section-structure" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Course Structure</title>
   <p> 
-    How the course is structured.
+    This course has an unconvenional structure. Please read carefully
+    to understand what you need to do and how you are assessed. 
+  </p>
+  <p>
+    The day-to-day pattern of this course consists of videos and
+    in-class activities. For most lecture periods, there is a short
+    viedo to watch before class. Then, there is an activity during
+    class which will develop the ideas in the video. This is an active
+    course: most of class will be spent doing the activities and I
+    will be spending my time talking with students to help them
+    through said activity.
+  </p>
+  <p>
+    The in-class activity will mostly be done using the statistical
+    computing tool <sq>R</sq>. This is a powerful and widely-used
+    piece of software that will be able to do all of the statistical
+    tasks we need for the course. The first class will be about
+    setting up R and making sure everyone is comfortable with using
+    it. By making heavy use of R in the course, we can let the
+    computer do all the number-crunching for us. There will be almost
+    no by-hand calculations in this course. 
+  </p>
+  <p>
+    That's the content of the course: videos and activities. Now let
+    me talk about the assessment. This course is structured around 25
+    learning outcomes. You will be assessed direclty on those outcomes
+    and your final grade is determined entirely by how many of them
+    you meet. They are all described in <xref ref="section-outcomes"/>. 
+  </p>
+  <p>
+    There will be several quizzes during the term, where you will have
+    the ability to demonstrate several of the learning outcomes. If
+    you miss something on a quiz, you will have two further
+    opportunities. First, you will be able to schedule a
+    mini-interview with me to explain a learning outcome. You have a
+    certain number of these opportunities during the term. Second, you
+    can re-try any missing outcomes on the final exam. 
+  </p>
+  <p>
+    Lastly, there are assignments. They are graded on completion only:
+    as long as you follow the instructions and submit a complete
+    assignmnet, you will get credit. With this setup, the assignments
+    are mostly used to give you feedback on your progress through the
+    course. You must get at least 8 of the 11 assignments completed to
+    pass the course. 
   </p>
 </section>
