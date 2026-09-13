@@ -1,7 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-tables" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
-  <p> 
-    Test
-  </p>
+  <title>Visualizing Data: Tables</title>
+  <subsection xml:id="subsection-two-types">
+    <title>Two Types of Statistics</title>
+    <p> 
+      Statistics can be roughly separated into two subdisciplines. Let
+      me give you the definition. 
+    </p> 
+    <definition>
+      <statement>
+        <p>
+          <term>Descriptive statistics</term> is the art of displaying
+          or summarizing a data set. It tries to show the data in a
+          concise and readable way. It involves various ways to
+          package the data and those methods may be quite complicated.
+          But, even so, it is pretty direct: it tries to display the
+          data as it is. 
+        </p>
+        <p>
+          <term>Inferential statistics</term> is a set of technique
+          that try to draw new information out of a data set. Instead
+          of just displaying or summarizing, these technique try to
+          understand a deeper, less direct meaing present in the data.
+          This starts with a <term>hypothesis</term>: often a
+          mathematical statement about some relationship between the
+          variables. Then the hypothesis is <term>tested</term>. Must
+          of interenfial statistics is developing reliable hypothesis
+          tests. 
+        </p>
+        <p>
+          There is some subtlety in the distinction between
+          descriptive and inferential statistics. Displaying and
+          summarizing do always involve some choice about what meaning
+          to display, and hypotheses can be implicit in a descriptive
+          presentation. But the distinction is nonetheless very
+          useful. 
+        </p>
+      </statement>
+    </definition>
+    <p>
+      In this course, we will devote seveal outcomes to descriptive
+      statistics, including the current outcomes. Then we will move to
+      inferential statistics for the second half of the course. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-table">
+    <title>Counting Catgeorical Variables</title>
+    <p>
+      I want to start this section on descriptive statistics by
+      looking at categorical variables. In a categorical variable,
+      there are, obviously, categories. It's natural to want to know
+      how many cases are in each category. To demonstrate this, I'll
+      use the same data set from <xref ref="section-vocabulary"/>.
+      From that data, I can look at the <sq>30-Day Event</sq>
+      variable. This is a categorical variable with two category:
+      <sq>stroke</sq> or <sq>no event</sq>, indicating for each case
+      whether or not a stroke occured within 30 days of the stat of
+      the trial. I can count up the totals for this variable: how many
+      cases are in each category. The result is this table. 
+    </p>
+    <table xml:id="table-stroke-frequency3">
+      <title>Frequency Table for 30-Day Event Variable</title>
+      <tabular>
+        <row bottom="medium">
+          <cell>
+            Category
+          </cell>
+          <cell>
+            Count
+          </cell>
+        </row>
+        <row>
+          <cell>
+            No Event
+          </cell>
+          <cell>
+            405
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Stroke
+          </cell>
+          <cell>
+            45
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total
+          </cell>
+          <cell>
+            451
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <definition>
+      <statement>
+        <p>
+          A table which displays the counts of the categories of a
+          categorical variable is called a <term>frequency
+          table</term>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      A frequency table is the first of several kind of descriptive
+      statstics that I will define over the next few sections. It does
+      something pretty obvious: count up the totals in the categories
+      of a categorical variable. But it is still great to have such a
+      construction and a name for it. It is displaying something very
+      useful about the data. 
+    </p>
+    <p>
+      Often frequency tables are presented as percentages instead of
+      raw counts. In many cases, we care more about what percentage of
+      cases fall into each category than the raw number, so this also
+      makes sense as way to see the data. Here is the same example
+      table but now presented in percentages. 
+    </p>
+    <table xml:id="table-stroke-frequency4">
+      <title>Frequency Table for 30-Day Event Variable with
+      Percentages</title>
+      <tabular>
+        <row bottom="medium">
+          <cell>
+            Category
+          </cell>
+          <cell>
+            Count
+          </cell>
+        </row>
+        <row>
+          <cell>
+            No Event
+          </cell>
+          <cell>
+            89.8%
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Stroke
+          </cell>
+          <cell>
+            10.2%
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total
+          </cell>
+          <cell>
+            100%
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>
+      The percentages are just the count divided by the total number
+      of cases. The total at the end, of course, should be all the
+      cases: 100%. 
+    </p>
+    <p>
+      A table can also be used to look at the interaction of
+      several categorical variables. Instead of just a count of one
+      variable and its categories, I can ask for a count of which
+      cases fall into two specific categories in two different
+      variables. Consider, again, the test data from this and previous
+      sections. This data is from a controlled study, so there is a
+      control group and a treatment group. What the study wants to
+      actually know is the difference between those groups regarding
+      strokes. I can make the following table. 
+    </p>
+    <table xml:id="table-stroke-frequency5">
+      <title>Frequency Table for Stroke Data </title>
+      <tabular>
+        <row bottom="medium">
+          <cell></cell>
+          <cell> Stroke </cell>
+          <cell> No Stroke </cell>
+          <cell> Total </cell>
+        </row>
+        <row>
+          <cell> Contol </cell>
+          <cell> 13 </cell>
+          <cell> 214 </cell>
+          <cell> 227 </cell>
+        </row>
+        <row bottom="minor">
+          <cell> Treatment </cell>
+          <cell> 33 </cell>
+          <cell> 191 </cell>
+          <cell> 224 </cell>
+        </row>
+        <row>
+          <cell> Total </cell>
+          <cell> 46 </cell>
+          <cell> 405 </cell>
+          <cell> 451 </cell>
+        </row>
+      </tabular>
+    </table>
+    <definition>
+      <statement>
+        <p>
+          A <term>contingency table</term> is a table which shows the
+          counts of cases that call into categories from two different
+          categorical variables. One set of categories is listed
+          veritcally and the other is listed horizontally, with the
+          entries counting all cases that match both the vertical and
+          horizontal categories. 
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The example shows a contingency table. There are two variables:
+      the group and the 30-day event or non-event. Each cell is an
+      interaction of these two variables. There were 13 cases in the
+      contronl group which had a stroke within 30 days. This is a
+      great visauzliations of the data, since it points to the very
+      poitn of the study: the researchers want to know the
+      difference in the rate of strokes between the control group and
+      the treatment groups. A contingency table can show this
+      difference. It is more subtle than a frequency table, since it
+      shows interaction between variables instead of just a count for
+      a single variable. 
+    </p>
+    <p>
+      As with a frequency table, I can convert a contingency talbe  to
+      percentages in this table. Such a table is still called a
+      contingency table. 
+    </p>
+    <table xml:id="table-stroke-frequency6">
+      <title>Frequency Table for Stroke Data - Percentages</title>
+      <tabular>
+        <row bottom="medium">
+          <cell></cell>
+          <cell> Stroke </cell>
+          <cell> No Stroke </cell>
+          <cell> Total </cell>
+        </row>
+        <row>
+          <cell> Contol </cell>
+          <cell> 5.7% </cell>
+          <cell> 94.3% </cell>
+          <cell> 100% </cell>
+        </row>
+        <row bottom="minor">
+          <cell> Treatment </cell>
+          <cell> 14.7% </cell>
+          <cell> 85.3% </cell>
+          <cell> 100% </cell>
+        </row>
+        <row>
+          <cell> Total </cell>
+          <cell> 10.2% </cell>
+          <cell> 89.8%</cell>
+          <cell> 100% </cell>
+        </row>
+      </tabular>
+    </table>
+    <p>
+      This percentage display is pretty valuable for interpretation, since
+      the control and treament groups might be of difference size. Raw
+      numbers might not be the best comparison, but percentages may be
+      more honest. How are these percentages calculated? They are a
+      percentage of the total for each category, to 5.7 percent is 13
+      divided by 227 and 14.7 percent is 33 divided by 224. That's the
+      correct ratio: what percentage of this group category fall under
+      this 30-day stroke/no storke category. 
+    </p>
+    <p>
+      This is descriptive statistics. We are summarizing the data.
+      5.7% of the control group had a stroke within 30 day, and 14.7%
+      of the treatment group. This study is looking poor for the
+      efficay of stents in helping prevent strokes. That's a
+      reasonable conclusion from this display of data. 
+    </p>
+    <p>
+      This is, however, where descriptive statistics ends. This table,
+      in the previous paragraph, leads to a hypotheses: that the data
+      shows that stents are actually counter-productive and increase
+      the risk of strokes. Hypotheses are the domain is inferential
+      statistics. Whether or not the data actually support this data
+      remains to be seen. You might argue that the descriptive table
+      here is enough: it's clear that the stents were worse for stroke
+      preventions. That's true about the sample, sure. But a
+      hypothesis for inferential statistics is about the population,
+      not the sample. And what the data says about the popluation is
+      not so easy to conclude. 
+    </p>
+  </subsection>
 </section>
