@@ -3,15 +3,12 @@
   <subsection xml:id="subsection-samples">
     <title>Populations and Samples</title>
     <p> 
-      Statistics is about drawing conclusion from data. In <xref
-      ref="section-vocabulary"/>, I defined a data set and some
-      vocabulary associated to it. I want to draw conclusion from a data
-      set and have those conclusion carry some meaning. In this course,
-      we're going to do a lot of mathematics to analyze the data. But
-      before the mathematics happens, we have to think about how the
-      data was collected, how the study was designed, and all the
-      various human components of data. This leads into study design and
-      sampling. Let me get back into some vocabulary. 
+      Statistics is about drawing conclusion from data.  In this
+      course, we're going to do a lot of mathematics to analyze the
+      data. But before the mathematics happens, we have to think about
+      how the data was collected, how the study was designed, and all
+      the various human components of data. This leads into study
+      design and sampling. Let me get back into some vocabulary. 
     </p>
     <definition>
       <statement>
@@ -33,13 +30,13 @@
       last swordfish. Alas, this is impossible. 
     </p>
     <p> 
-      Since examing the population writ large is impossible, a study
+      Since examing the population as a whole is impossible, a study
       will instead try to examine a portion of the population: the
-      sample.  the samplee in this case is the count of how many fish
+      sample.  the sample in this case is the specific group of fish
       are actually measured by the study. 
     </p>
     <p> 
-      So I study population by way of samples. I have yet more
+      So I study populations by way of samples. I have yet more
       vocabulary to refer to information about population and samples. 
     </p>
     <definition>
@@ -58,27 +55,37 @@
       If I measured every swordfish in the ocean and took the average of
       those lengths, I would get a parameter: the average length of
       atlantic swordfish. Working with a sample, I get a statistic:
-      the average length of the specific swordfish which happen to be in
-      my sample. 
+      the average length of the specific swordfish which happens to be
+      in my sample. 
     </p>
     <p>
       The discipline is called <em>statistics</em>: is it the study of
-      these statistics, these measurement of samples Research wants to
-      discover something truth, something real, or at least something
+      these statistics, these measurement of samples. Research wants to
+      discover something true, something real, or at least something
       that is likely to be truth or real. If we can't study a whole
       population, and we almost always can't, we study a sample. We
-      measure statistics. What we hope for are <em>representative
-      statistics</em>: the statistics should be close to the
-      parameter.  What we observe of a piece of the population should
-      be close to the whole population. This is a good statistic. The
-      whole rest of this course will be about figuring out what a good
-      statistics actually is and how to measure it.
+      measure statistics. What we hope for are good
+      statistics. We have a term for this. 
+    </p>
+    <definition>
+      <statement>
+        A statistic is called a <term>representative statistics</term>
+        if it is a reasonably close fit to the population parameter.
+        Similarly, a statistic with a high probability of matching a
+        paremeter is caleld <term>significant</term>.
+      </statement>
+    </definition>
+    <p>
+      We want the statistics to be close to the parameter parameter:
+      we want representative statistics and significant statistics.
+      The whole rest of this course will be about figuring out what a
+      representative statistics actually is and how to measure it.
     </p>
   </subsection>
   <subsection xml:id="subsection-study-design">
     <title>Study Design</title>
     <p>
-      A study want to understand a population and one or more of the
+      A study wants to understand a population and one or more of the
       parameters of that population. It does this by collecting a
       sample and calculating a statistic. The method by which a sample
       is collected is called <em>study design</em>. Study design is
@@ -90,7 +97,7 @@
       samples are created equal: there are good samples and there are
       poor samples, even before any of the mathematics is calculated.
       In this section, I want to talk about study design: how to
-      collect a good sample and understand sampling risks. 
+      collect a good samples and understand sampling risks. 
     </p>
     <p>
       So what is a good sample? A good sample is, as I said before,
@@ -104,19 +111,21 @@
       be representative. This is hardly surprising: the more data you
       gather, the more likely you are to capture something real about
       the world. I'll quantify this effect later in the course, but
-      for now, this is just a simple observation.
+      for now, this is just an important observation backed up by
+      intuition. 
     </p>
     <p>
-      This means that studies with small sample sizes carry more
-      uncertainty and risk of being incorrect. Such studies are not
-      useless, they just require more care. This leads into a major
-      theme of statistics: analysis of data is always about judgment.
-      Statistics is going to use mathematics to give some
+      This fact implies  that studies with small sample sizes carry
+      more uncertainty and risk of being incorrect. Such studies are
+      not useless, they just require more care. This leads into a
+      major theme of statistics: analysis of data is always about
+      judgment.  Statistics is going to use mathematics to give some
       probabilities about how much a statistic corresponds with a
       population parameter. Those probabilities lead to a judgment on
-      whether the statistic is useful: <sq>significant</sq> will be
-      the term we will eventually use. But it is never a simple
-      black-and-white situation. Judgment is always involved. 
+      whether the statistic is useful: as mentioned above,
+      <sq>significant</sq> will be the term we will use.
+      But it is never a simple black-and-white situation. Judgment is
+      always involved.  
     </p>
     <p>
       This fact<mdash/>the ubiquity of judgment<mdash/>makes
@@ -129,49 +138,58 @@
       human decisions, with all the fuzziness that implies. 
     </p>
     <p>
-      The second factor that affect the quality of a sample needs
+      The second factor that effects the quality of a sample needs
       quite a bit more discussion. This factor is randomness. A good
       samply is a truly random selection of members of the population.
-      The opposite of randomessness is <term>bias</term>: a sample
-      contains a bias is certain portions of the population are more
-      or less likely to be included in the sample. 
+      There is a useful term here. 
     </p>
+    <definition>
+      <statement>
+        A sample which is not a purely random selection from the
+        popluation is called a sample with <term>bias</term> or a
+        <term>biased sample</term>. A sample contains a bias if
+        certain portions of the population are more or less likely to
+        be included in the sample. 
+      </statement>
+    </definition>
     <p>
-      This is the single greatest challenge to study design. Removing
+      This is the single greatest challenge to study design: removing
       bias from a sample is very difficult and the sources of bias in
       a sample are many and varied. Consider, as an example, a sample
-      collected in a political poll. Ideally, the same is a truly
-      random cross-section of the population. But, as examples, the
-      following things can occur. 
+      collected in a political poll. Ideally, the sample is a truly
+      random cross-section of the population. But the
+      following problems might possibly occur. 
       <ul>
         <li>
-          If the sample is conducted over the phone, it is biases to
+          If the sample is conducted over the phone, it is biased to
           those who actualy answers call from unknown numbers. This is
-          selecting a personaly, but likely also selecting a
-          demographic. 
+          selecting a personality, but likely also selecting a
+          demographic and possibly a political learning.  
         </li>
         <li>
           If the sample is collected online, then it likely has a bias
-          to those people who are online. 
+          to those people who are online and willing to spend time to
+          answer online polls. Again, this is probably a special
+          demographic and possibly a political leaning. 
         </li>
         <li>
           If the sample is collected in person, then it has a bias of
           where the sample is collected. Asking people in the streets
           will select those people who are likely to be outside on the
-          street.
+          street, for example.
         </li>
         <li>
           Assuing that participation is optional (which seems
           necessary), the sample selects for those who are willing to
           do a political survey. This might select for those who are
-          more politically involved. 
+          more politically involved, among other issues. 
         </li>
       </ul>
     </p>
     <p>
       Due to the factors listed above, or other similar factors, it is
       difficult to ensure that your sample is really a cross-section
-      of the population. Mostly likely, them method of sampling will
+      of the population. Mostly likely, the method of sampling will
       appeal to a certain demographic more than others: older or
       younger people, men or women, native speakers or second-language
       speakers, citizens or non-citizens, certain ethnic or cultural
@@ -182,7 +200,7 @@
       produces a sample with minimal bias. This is always a trade-off
       between quality and time or money. A really good political poll
       will use multiple modes of collection over multiples days and
-      times of day. But such a poll is more costly and takes more
+      times of day. But such a poll is more costly and take more
       time. 
     </p>
     <p>
@@ -193,7 +211,8 @@
     </p>
     <p>
       Before finishing this section, I want to give two more important
-      definition about bias and study design. 
+      definition about bias and study design, introducing terms that
+      are very common in the statistic literature. 
     </p>
     <definition>
       <statement>
@@ -216,9 +235,10 @@
     </definition>
     <p>
       Looking for counfounding variables is a big part of minimizing
-      bias in study design. A researcher should always consider
-      potential unmeasured variable and try to identify what might be
-      confounding their data. 
+      bias in study design. A demographic, as in the examples above,
+      can be such a compounding variable. A researcher should always
+      consider potential unmeasured variable and try to identify what
+      might be confounding their data. 
     </p>
     <p>
       There are many ways to design studies to try to minimize bias,
@@ -234,10 +254,11 @@
           the <term>control group</term>, is a default and the
           researchers take no action for this group. The second group,
           called the <term>experimental group</term> is the set of
-          cases where the researches change something (administer a
-          medication to be testing, introduce a chemical into the
-          environment, etc). The study then focuses on the statistical
-          differences between the control and the experimental group. 
+          cases where the researchers change something (administer a
+          medication that they want to test, introduce a chemical into
+          the environment, etc). The study then focuses on the
+          statistical differences between the control and the
+          experimental group. 
         </p>
         <p>
           A controlled study is caleld a <term>blind study</term> if the
@@ -267,33 +288,36 @@
       are the judgments we've covered so far. 
       <ul>
         <li>
-          When I have a data set, what mathematical tool do I choose
+          When I have a data set, what mathematical tools do I choose
           to use?
         </li>
         <li>
-          How is my study design and what are its potential biases?
+          How is my study designed and what are its potential biases
+          and confounding variables?
         </li>
         <li>
           How many cases can I include in my study and how strong is
           the data based on this number?
         </li>
         <li>
-          What is the tradeoff between designing an excellent study
-          with many cases and representative samples and the reality
-          of what my resourcess will actually allow?
+          What is the cost tradeoff between designing an excellent
+          study with many cases and representative samples and the
+          reality of what my resourcess will actually allow?
         </li>
       </ul>
-      These are far from the only jdugments, and I will return to this
-      theme throughout the course. 
+      These are far from the only judgments, of course.I will return
+      to this theme throughout the course, developing more
+      understanding of how judgment runs through the discipline. 
     </p>
     <p>
       This issue of judgment fits into a larger theme: that of human
       psychology and statistics inference. It turns out that humans
       intuition is pretty terrible at statistical reasoning. We like
       narratives and our brains are very good are forming narratives
-      based on very few pieces of information.  Anecdotal evidence is
+      based on very few pieces of information.  <term>Anecdotal
+      evidence</term> is
       very appealing and is widely used in human conversation. And for
-      conversation, that's neither here or there. But as a way of
+      conversation, that's often not a problem. But as a way of
       producing reliable conclusions, it's a major risk. A good
       statistician needs training to resist the allure of one really
       good story and fall back to larger samples and good methods.
@@ -311,7 +335,8 @@
       the economoy. I hope, after this course, there is a little piece
       of your mind that will always think: well, maybe this is an
       unusually case, an outlier, something in the sample that is not
-      representative. 
+      representative. Good statistics breeds a healthy skepticism
+      about quantitative conclusions whethever you may find them. 
     </p>
   </subsection>
 </section>

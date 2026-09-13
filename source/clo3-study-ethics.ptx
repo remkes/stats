@@ -20,8 +20,8 @@
     </p>
     <p>
       Moreover, statistics is a pretty big business: many researchers,
-      governments, pundtics, pollers, advertisers, companies, all
-      needs good statistical information and are willing to pay
+      governments, pundits, pollsters, advertisers, and companies all
+      need good statistical information and are willing to pay
       statisticians to produce that information. As a big business,
       its ethics are the subject of considerable deliberation and
       debate. The ethics of statistics are culturally important and
@@ -47,11 +47,11 @@
       and what principles and worldviews inform that consensus. 
     </p>
     <p>
-      First, I'll look to the Statistical Society of Canada.
+      First, I'll look to the Statistical Society of Canada (SSC).
       Professional societies are a good place to look for the common
       understanding, stated in public and secular terms, of the
-      purposes of a professional. The Statistical Soceity of Canada
-      (SSC) publishes a Code of Ethical Statistical Practice. This is
+      purposes of a professional. The SSC
+      publishes a Code of Ethical Statistical Practice. This is
       intended to be a guide for its members who are, for the most
       part, professional statisticians. 
     </p>
@@ -83,12 +83,21 @@
       envision?
     </p>
     <p>
-      An interesting contrast to these are the principles published by
-      the National Science and Engineering Research Council (NSERC),
-      Canada's major federal government research funder for the
-      natural sciences. Here are the principles that underpin their
-      discussion of ethics in statistics (what they call <sq>data
-      ethics</sq>). 
+      However, I am also struck on how useful the term
+      <sq>responsibility</sq> is. I like the idea that statisticians
+      are bound by various responsibilities and that ethics can be
+      framed in terms of those responsibilities. It does however lead
+      to one major question (which I'll return to later): which of
+      these responsibilities takes priority over the others if they
+      are in conflict?
+    </p>
+    <p>
+      First, though, an interesting contrast to these are the
+      principles published by the National Science and Engineering
+      Research Council (NSERC), Canada's major federal government
+      research funder for the natural sciences. Here are the
+      principles that underpin their discussion of ethics in
+      statistics (what they call <sq>data ethics</sq>). 
       <ul>
         <li>
           Benefits for Canadians. 
@@ -116,17 +125,18 @@
     <p>
       NSERC's principles are coming from a governmental authority
       instead of a professional organization. That does make a
-      difference for their description of ethical principles. I makes
+      difference for their description of ethical principles. It makes
       sense that, for exampoe, <sq>transparency and
       accountability</sq> show up, since the government need to be
-      transparent and accountable for how it spends what it gathers as
-      taxes from its citizenry. 
+      transparent and accountable for how it spends the 
+      taxes it gathers from its citizenry. 
     </p>
     <p>
       Where there is more detail here, I still wouldn't say that these
       principles are clearly rooted in a vision of what flourishing
       society looks like: the word <sq>benefit</sq> is doing some
-      heavy lifting here. 
+      heavy lifting here. The same question of priority can also be
+      asked here. 
     </p>
     <p>
       One of the main ideas that runs through the King's common
@@ -145,6 +155,10 @@
       in the practice statistics. 
       <ul>
         <li>
+          If a statistician is responsible to various parties, which
+          takes precedence?
+        </li>
+        <li>
           How do you report a result that the opposite of what your
           research group is hoping for? 
         </li>
@@ -159,7 +173,7 @@
           study design? Who sets the scope and limits of the study?
         </li>
         <li>
-          How to you report data that really doesn't show any clear
+          How do you report data that really doesn't show any clear
           conclusions, particularly when a lot of resources have been
           contributed to the study?
         </li>
@@ -173,8 +187,9 @@
           choice?
         </li>
       </ul>
-      All of these questions can be answers, but the answers will
-      always depend on the ethical principles you start with. I would
+      All of these questions can be answered, but the answers will
+      always depend on the ethical principles you start with and the
+      worldview those principles arise from. I would
       argue that both NSERC and SSC's principles need a fair bit of
       development and possibly extra assumptions before you get to
       clear answers to any of these questions. 
@@ -194,15 +209,15 @@
       Unlike the more nebulous statements about benefit or
       responsibility to society, there are very specific and detailed
       guidelines for data. I'm just going to give a summary of the
-      main point here; any of you who do a research methods course in
+      main points here; any of you who do a research methods course in
       your specific discipline will dig deeply into the details. 
       <ul>
         <li>
           Data collection from human subjects must receive informed
           consent. When you ask a person to participate in a study and
-          provide some data bout themselves, you need to let them know
+          provide some data about themselves, you need to let them know
           what your study is for and how their data will be used. The
-          subject have to explicitly consent to participate having
+          subjects have to explicitly consent to participate,  having
           been so informed. 
         </li>
         <li>
@@ -218,11 +233,11 @@
         </li>
         <li>
           Data collection that uses animal subjects has a whole
-          collection of its own policy. Some amount of harm to animals
+          collection of its own policies. Some amount of harm to animals
           is permitted in a study, but it needs to be justified in
           terms of human benefit (for example, surgery on medical test
           animals to develop a new benefitial surgery method that
-          could be used on human in the future.) Animals need to be
+          could be used on human in the future). Animals need to be
           kept in humane conditions and treated well in all
           circumstances other than the specific actions relevant to
           the study. 
@@ -239,25 +254,22 @@
       Any one who conducts a research study, particularly involving
       humans or animals, needs to live up to these expectations.
       Studies that do not do so are ethically compromised.
-      Any one who conducts a research study, particularly involving
-      humans or animals, needs to live up to these expectations.
-      Studies that do not do so are ethically compromised.
     </p>
     <p>
       It might seem that this is pretty straightforward, but there are
-      tensions here. There are many, but let me mention two here.
-      First, informed consent can be in tension with the goals and
-      designs of the research. Many psychology studies want to study
-      something about human behaviour without the subject being aware
-      of what specific piece of their behaviour is under scrutiny.
-      This makes sense, since humans behave differently when they know
-      they are being evaluated on some metric. To get natural
-      behaviour, it may be necessary to limit the description of the
-      study in the process of informed consent. But if you don't tell
-      the subject what the study is actualy about, how is that
-      actually <sq>informed</sq>? The discpline of psychology wrestled
-      with this and its research methods and practices include detail
-      discussion of how manage this tension. 
+      tensions here. These tensions are manifold, but let me mention
+      two here.  First, informed consent can be in tension with the
+      goals and designs of the research. Many psychology studies want
+      to study something about human behaviour without the subject
+      being aware of what specific piece of their behaviour is under
+      scrutiny.  This makes sense, since humans behave differently
+      when they know they are being evaluated on some metric. To get
+      natural behaviour, it may be necessary to limit the description
+      of the study in the process of informed consent. But if you
+      don't tell the subject what the study is actualy about, how is
+      that actually <sq>informed</sq>? The discpline of psychology
+      wrestles with this and its research methods and practices
+      include detail discussion of how manage this tension. 
     </p>
     <p>
       A more general and pragmatic tension coems from the fact that
@@ -273,7 +285,7 @@
   <subsection xml:id="subsection-stats-truth">
     <title>Statistics and Truth</title>
     <p>
-      We've talked about the general responsibility of statistics to
+      I've talked about the general responsibility of statistics to
       human society and the details of data management. I want to
       end this section with a discussion of how statistics deals
       with truth, as an ethical consideration. 
@@ -292,9 +304,9 @@
       ideological leaning and want the poll to reflect that leaning.
       A corporation running a study may want evidence that supports
       the further use of a product that they have spend time and
-      money developing. A scientific researching leading a study
+      money developing. A scientific researcher leading a study
       mostly likely has biases and intuitions about what ought to be
-      true and may want the results of their study to fits those
+      true and may want the results of their study to fit those
       biases and intuitions. Many other motivations could be listed,
       but they all present temptations to undermine the goal of
       truth. 
@@ -317,12 +329,13 @@
     </p>
     <p>
       Finally, there is the ever present issue of choosing what
-      mathematics to do. There is an important truth in mathematics,
+      mathematics to do. Here is an important truth in mathematics,
       not just related to statistics: mathematics gives you a bunch of
       reliable problem-solving tools, but it never tells you which
       ones you should use. It's up to you to know which tools are
       appropriate. Even more so, mathematics doesn't tell you if you
-      are actually asking the right questions. 
+      are actually asking the right questions. It's up to you to
+      choose your questions carefully. 
     </p>
     <p>
       This problem is felt heavily in statistics, where many different
@@ -356,7 +369,7 @@
     </p>
     <p>
       How does a statistician make these choices? The ethical
-      principle of this section states that the point of statistics is
+      principles of this section states that the point of statistics is
       the pursuit of truth. A statistician should choose whatever
       methods lead to truthful outcomes. This is one of the most
       common pitfall in statistics: it is far to easy to make choice
@@ -366,17 +379,70 @@
     </p>
     <p>
       And, at the end, this brings us back to judgment and the goals
-      of the course. I want you to understand the first and most
-      important statistical methods. But even more, I want you to
-      understand what they are used for and when they should and
-      should not be used. I want you to understand how the detail of
+      of the course. I want you to understand several important
+      statistical methods. But even more, I want you to understand
+      what they are used for, when they should be use and when they
+      should be avoided. I want you to understand how the details of
       the use of statistics involve various judgments, and that those
-      judgments can be use to elucidate or to mislead. Finally, I want
-      you to understand, at the end of the course, that this is an
-      ethical consideration and that statistics only functions as a
+      judgments can be used to elucidate or to mislead. Finally, I
+      want you to understand, at the end of the course, that this is
+      an ethical consideration and that statistics only functions as a
       discipline of truth if pursued carefully and dilligently,
       focused on the truth over whatever other, more preferred,
       outcomes might exist. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-neutral-tool">
+    <title>The Myth of a Neutral Tool</title>
+    <p>
+      Finally, I want to mention one more idea about the use of
+      mathematics. There is a public conception that mathematics is
+      a neutral tooll. (This conception holds in many situation
+      where tools, paritcularly pieces of technology, are considered
+      neutral in and of themselves and ethics is limited to the
+      human decisions regarding their use). I want to challenge this
+      idea. I claim that there is no such thing as a neutral tool.
+    </p>
+    <p>
+      Every tool imposes some reality on the situation in which the
+      tool is used. The idea that you have a blank slate from which
+      to choose tools is naive. Mathematics is no different. Let me
+      give you two arguments here. 
+    </p>
+    <ul>
+      <li>
+        First, it is false that people chose their tools from a pure
+        empty blank slate. People are drawn to their own expertise:
+        they want to use what they know. Ask an economist for a
+        solution and they will propose an economic solution. As a
+        sociologist, and they will propose a sociological solution.
+        Ask a mathematician, and they will propose a mathematical
+        solution. We see the world through the lenses of our skills
+        and education, and we want to use the tools we understand.
+        Expertise itself is a bias when viewing the world. 
+      </li>
+      <li>
+        Similarly, solution methods end up defining problems. If you
+        start to think mathematically, you will end up stating
+        problems that can be approached mathematically. You will think
+        quantitatively, logically, analytically. However, this might
+        not actually be the right approach. Maybe the problems are
+        really psychological or political problems, and a mathematical
+        approach is misguided from the start. Because mathematical
+        methods only solve mathematical problems, the use of those
+        methods necessarily limits the very idea of what the problem
+        might be. Even more than just choosing a tool: simple
+        understanding what a problem is asking is already dependent
+        and affect by the tools you have at your disposal. 
+      </li>
+    </ul>
+    <p>
+      I could say a lot more on this theme, but I want to leave it
+      here as just an introduction of an idea. Statistics, like any
+      technique, necessarily imposes assumptions and conventions on
+      the scope and nature of any problem. This is far from neutral.
+      Our judgement and worldview are always involved in the use of
+      statistics, at a very fundamental level. 
     </p>
   </subsection>
 </section>

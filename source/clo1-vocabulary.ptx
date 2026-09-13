@@ -6,7 +6,7 @@
     data. Therefore, it's pretty appropriate that we start with
     understanding what data is. In this course, and in much of
     statistics, we will start with a data set. A data set is a
-    specific kind of collection of information with a specific
+    specific collection of information with a specific
     structure. It is the core of statistics: statistics is about
     understanding data sets. 
   </p>
@@ -55,21 +55,22 @@
     In a certain clinical trial, a study was done to understand
     whether stents help to prevent strokes. A stent is a small
     tube placed inside an artery, usually in and around the heart.
-    They are often used to aid recovery after a heart attack, but
+    They are often used to aid recovery after a heart attack, buy
     ensuring blood flow through critial coronal arteries. However,
     there is some evidence that they may have other benefits as
     well, including possibly minimizing risk of a stroke. 
   </p>
   <p>
-    The researchers designed an experiment. 451 patients whose
-    were identified as at risk for stroke for randomly assigned to
+    The researchers designed an experiment. 451 patients were
+    identified who displayed high risk of a  stroke. These parients
+    were randomly assigned to
     one of two groups, as it standard for a controlled trial.
-    Patients in the control group received medical
-    management<mdash/> medication, support, lifestyle changes and
-    the like. Patients in the treatment group also received this
-    same medical managment, but in addition were given a stent
-    place in an important artery.  Then, of course, data was
-    collected on the outcomes for both groups, producing a dataset. 
+    Patients in the control group received medical management<mdash/>
+    medication, support, lifestyle changes and the like. Patients in
+    the treatment group also received this same medical managment, but
+    in addition were given a stent placed in an important artery.
+    Then, of course, data was collected on the outcomes for both
+    groups, producing a dataset. 
   </p>
   <p>
     What is the data? For each pattient, two points of data were
@@ -86,17 +87,17 @@
     <statement>
       A <term>variable</term> is something that is measured in a data
       set. A <term>case</term> is an individual member of a data sets.
-      A case will have one or more variable associated to it: the data
+      A case will have one or more variables associated to it: the data
       gathered about that individual item or situation. 
     </statement>
   </definition>
   <p>
     In the example, whether the patient had a stroke after 30 days is
-    a variable. In this case the potential values for the variable are
-    juse <sq>yes</sq> ans <sq>no</sq>. There is another variable for
-    whether the partient had a stroke after 365 dats. A case in this
-    example is an individual patient.  Patient 2 is a case, as it
-    patient 5. 
+    a variable. In this data set, the potential values for this
+    variable are just <sq>yes</sq> ans <sq>no</sq>. There is another
+    variable for whether the partient had a stroke after 365 dats. A
+    case in this example is an individual patient.  Patient 2 is a
+    case, as is patient 5. 
   </p>
   <p>
     In <xref ref="table-stroke-data"/> there is a spreadsheet-like
@@ -167,7 +168,7 @@
   <p>
     Now for some more vocabulary. I want to talk about the kinds of
     data in a data set. In particular, the kinds of variables, since
-    variable are the raw measurements we are making in the data set.
+    variables are the raw measurements we are making in the data set.
     I'm going to work with another example to disucss types of
     variables. 
   </p>
@@ -243,7 +244,7 @@
         </li>
         <li>
           A <term>numeric</term> variable is a variable where the
-          values are numers instead of words.  (In some places, the
+          values are numbers instead of words.  (In some places, the
           term is <term>numerical</term>. Both terms have common
           usage, so I've chosen to use the shorter term.) 
         </li>

@@ -2,15 +2,12 @@
   <title>Course Learning Outomes</title>
   <p>
     This course is organized into learning outcomes, and each
-    section of the notes (and each video) reflection one of the
-    learning outcomes. There are three
-    types of these: core learning outcomes (CLOs), stretch learning
-    outcomes (SLOs) and holistic learning outcomes (HLOs). The main
-    content of the course is organized by the CLOs and the SLOs: you
-    will see each section of the course labelled by one of these.
-    The HLOs are major ideas, themes and skills that run throughout
-    the course but are not isolated to any one area. I'll try to
-    point out the development of the HLOs over the whole course. 
+    section of the notes (and each video) presents one of the
+    learning outcomes. There are two types of these: core learning
+    outcomes (CLOs) and stretch learning outcomes (SLOs). The stretch
+    outcomes indicate something that is a bit more challenging that
+    the rest of the course, usually due to digging a bit deeper into
+    the mathematical structures behind statistics. 
   </p>
   <p>
     Here are the learning outcomes for the course. These are all
@@ -39,7 +36,7 @@
     </li>
     <li>
       Construct and analyze frequency and contingency tables for
-      categorical data, including discussion of potential hypothesis.  
+      categorical data, including discussion of potential hypotheses.  
     </li>
     <li>
       Construct and analyze various bar plots and pie charts as
@@ -47,12 +44,12 @@
     </li>
     <li>
       Construct and analyze histograms for a single numeric variable,
-      using statistical vocaulbary (skew, modality, outliers, etc) to
+      using statistical vocabulary (skew, modality, outliers, etc) to
       describe the shape of the data. 
     </li>
     <li>
       Calculate and analyze  measures of central tendency and spread
-      to describe a single numeric variables and its historgram. 
+      to describe a single numeric variable and its historgram. 
     </li>
     <li>
       Construct and analyze scatterplots for two numeric variables,
@@ -61,16 +58,16 @@
     </li>
     <li>
       Construct a linear regression for the relationship between two
-      numeric variable. Interpret the coefficients of such
+      numeric variables. Interpret the coefficients of such
       a linear regression. 
     </li>
     <li>
       Use residuals, correlations, and <m>R^2</m> to analyze the fit
-      of a linear model. 
+      of a linear regression model. 
     </li>
     <li>
-      State, construct and critique a null and alternative hypotheses
-      for a research questions, including questions for simple, double
+      State, construct and critique null and alternative hypotheses
+      for a research question, including questions for simple, double
       or multiples variables and questions for both categorical and
       numeric variables. Determine what kind of statistical inference
       is necessary to test these hypotheses. 
@@ -91,7 +88,7 @@
     </li>
     <li>
       Calculate and analyze a confidence interval in a sampling
-      distribution for difference of proporties. 
+      distribution for a difference of proporties. 
     </li>
     <li>
       Define and identify Type 1 and Type 2 errors in study design,
@@ -121,7 +118,7 @@
     </li>
     <li>
       Conduct and interpret hypothesis tests and confidence intervals
-      for the coefficient of a linear regression model. 
+      for the coefficients of a linear regression model. 
     </li>
   </ol>
   <p>
@@ -142,12 +139,12 @@
       probabilities. 
     </li>
     <li>
-      Use the mathematical formulation of a general normal
+      Use the mathematical formulation of a normal
       distribution to calculate <m>z</m>-score, percentiles and other
       aspects of a sampling distribution. 
     </li>
     <li>
-      Describe the mathematical properties and use of t-distributions
+      Describe the mathematical properties and uses of t-distributions
       and <m>\chi^2</m> distributions. 
     </li>
   </ol>
