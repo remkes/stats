@@ -174,8 +174,8 @@
       actually know is the difference between those groups regarding
       strokes. I can make the following table. 
     </p>
-    <table xml:id="table-stroke-frequency5">
-      <title>Frequency Table for Stroke Data </title>
+    <table xml:id="table-stroke-contingency1">
+      <title>Contingency Table for Stroke Data </title>
       <tabular>
         <row bottom="medium">
           <cell></cell>
@@ -233,8 +233,8 @@
       percentages in this table. Such a table is still called a
       contingency table. 
     </p>
-    <table xml:id="table-stroke-frequency6">
-      <title>Frequency Table for Stroke Data - Percentages</title>
+    <table xml:id="table-stroke-contingency2">
+      <title>Contingency Table for Stroke Data - Percentages</title>
       <tabular>
         <row bottom="medium">
           <cell></cell>

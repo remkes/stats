@@ -1,7 +1,436 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-bar-pie" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Bar Plots and Pie Charts</title>
   <p> 
-    Test
+    The previous section focused on tables as summaries of data.
+    Tables are good, but data communication can do much better. I want
+    to turn data into visualizations: pictures that express the data.
+  </p>
+  <p>
+    I want to strongly state one important theme as the start of this
+    section. Visualizaiton are powerful, since they can display data
+    in much more readable way. But they always also come with some
+    amount of risk. The choice of a visualization, much like
+    everything in this course, always comes down to a judgment call. 
+    Every choice of visualization emphasizes something about the data
+    and hides something else. There is no such thing as a neutral
+    visualizations<mdash/>they are always informed by a goal. 
+  </p>
+  <p>
+    Now let me get started with the definition. In this section, I'll
+    demonstrate by example. I'll use a data set gathered by a bank
+    about home loan applications. There are ten thousand cases in this
+    data and three variables. One variable is the current home
+    ownership status of the application: whether they already own a
+    home outright, have a mortgage, or rent. Another variable is the
+    applition type: individual or joint. The final variable is the
+    rating the bank gave to the application, which is a letter from A
+    to G with A being the safest loan to aware and G being the most
+    risky.
+  </p>
+  <p>
+    I'll start with a frequency table for the ownership variable,
+    showing the count of all three categories for this variable.
+    <table xml:id="table-loans-ownership">
+      <title>Frequency Table for the Ownership variable</title>
+      <tabular>
+        <row bottom="medium">
+          <cell>
+            Ownership
+          </cell>
+          <cell>
+            Count
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Mortgage
+          </cell>
+          <cell>
+            4789 
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Own 
+          </cell>
+          <cell>
+            1353
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Rent 
+          </cell>
+          <cell>
+            3858 
+          </cell>
+        </row>
+        <row>
+          <cell>
+            Total 
+          </cell>
+          <cell>
+            100000 
+          </cell>
+        </row>
+      </tabular>
+    </table>
+    <href red="table-loans-ownership"/> is not a bad way to get a
+    sense of the data from the table, but I want to visualize the
+    data to make the breakdown more readiable. To do this, I'm going
+    to make a bar plot. 
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A <term>bar plot</term> is a visualization of the count of the
+        categories in a single numeric variable. It uses a bar for
+        each category and the height or length of the bar is
+        representative of the count of that category. 
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Here is the bar plot for the Ownership variable from before. 
+  </p>
+  <figure xml:id="figure-ownership-bar">
+    <caption>Onwership variable bar plot</caption>
+    <image witdh="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            ybar,
+            enlargelimits=0.15,
+            legend style={at={(0.5,-0.2)},
+            anchor=north,legend columns=-1},
+            ylabel={Count},
+            symbolic x coords={Mortgage,Own,Rent},
+            xtick=data,
+            nodes near coords,
+            nodes near coords align={vertical},
+            x tick label style={rotate=45,anchor=east},
+          ]
+          \addplot coordinates {
+            (Mortgage,4789) (Own,1353) (Rent,3858)
+          };
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    This is the same data, but now the bar plots gives a qualitative
+    sense of the relationship between the variable<mdash/>a sense that
+    might have been missing from the raw numbers. It's easy to see, at
+    a glance, the relative sizes of the categories. 
+  </p>
+  <p> 
+    <xref ref="figure-ownership-bar"/> was a measure of the total
+    count. A bar plot can also be expressed in proportions: the bars
+    can measure percentages instead of total counts. 
+  </p>
+  <figure xml:id="figure-ownership-bar-proportions">
+    <caption>Bar plots for Onwership variable - proportions</caption>
+    <image witdh="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            ybar,
+            enlargelimits=0.15,
+            legend style={at={(0.5,-0.2)},
+            anchor=north,legend columns=-1},
+            ylabel={Proportions},
+            symbolic x coords={Mortgage,Own,Rent},
+            xtick=data,
+            nodes near coords,
+            nodes near coords align={vertical},
+            x tick label style={rotate=45,anchor=east},
+          ]
+          \addplot coordinates {
+            (Mortgage,0.4789) (Own,0.1353) (Rent,0.3858)
+          };
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    In <xref ref="figure-ownership-bar-proportions"/>, the proportions
+    are represented as decimals. This is probably the more common
+    notation in statistics, but I certainly could have written these
+    also as percentages: <m>48.9\%</m> instead of <m>0.479</m>.
+    Ultimately, both notations are used and switched between
+    frequently, so you should be comfortable with both. 
+  </p>
+  <p>
+    So far I've demonstrated a simple bar plot, either for counts or
+    percentages. There are variants on a bar plot that display more
+    information about the data set. Let me introduce them now.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        There are three variants of a bar plot that display
+        information about two different categorical variables in a
+        data set. A <term>stacked bar plot</term> is a usual bar plot
+        but the bars are colour in different colours corresponding to
+        the counts of a second categorical variable. A <term>dodged
+        bar plot</term> is a bar plot where each original bar is split
+        into several smaller bars by the second categorical variable.
+        Finally a <term>standardized bar plot</term> is a bar plot
+        where the heights of all the bars are fixed and the bars are
+        colour by the proportions of the second variable. 
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The definitions themselves are hard to understand directly, so let
+    me show some examples. Here is a contingency table that combines
+    the Ownership variable and the Appliction Type variable. 
+  </p>
+  <table xml:id="table-contingency-ownership-application">
+    <title>Frequency Table for Stroke Data </title>
+    <tabular>
+      <row bottom="medium">
+        <cell> </cell>
+        <cell> Individual </cell>
+        <cell> Joint </cell>
+        <cell> Total </cell>
+      </row>
+      <row>
+        <cell> Mortgage </cell>
+        <cell> 3977 </cell>
+        <cell> 812 </cell>
+        <cell> 4789 </cell>
+      </row>
+      <row bottom="minor">
+        <cell> Own </cell>
+        <cell> 1242 </cell>
+        <cell> 111 </cell>
+        <cell> 1353 </cell>
+      </row>
+      <row>
+        <cell> Rent </cell>
+        <cell> 3494 </cell>
+        <cell> 364 </cell>
+        <cell> 3858 </cell>
+      </row>
+      <row>
+        <cell> Total </cell>
+        <cell> 8713 </cell>
+        <cell> 1287 </cell>
+        <cell> 10000 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    Previously, I turned a frequency table into a bar graph. Now I
+    want to turn this contingency table into one of these three new
+    bar graphs. I want to show the interaction: not just that there
+    are 4789 applicatnts who previous had a mortgage, but that 3977 of
+    them were solo applicants and 812 were joint applicants. Again,
+    the data is here but seeing what is all means in just the number
+    is getting more difficult. 
+  </p>
+  <figure xml:id="figure-stacked-bar">
+    <caption></caption>
+    <image witdh="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            ybar stacked,
+            enlargelimits=0.15,
+            legend style={at={(0.5,-0.2)},
+            anchor=north,legend columns=-1},
+            ylabel={Count},
+            symbolic x coords={Mortgage,Own,Rent},
+            xtick=data,
+            x tick label style={rotate=45,anchor=east},
+          ]
+          \addplot+ [ybar] coordinates {(Mortgage,3977) (Own,1242)
+          (Rent,3494)};
+          \addplot+ [ybar] coordinates {(Mortgage,812) (Own,111)
+          (Rent,364)};
+          \legend{Individual,Joint}
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <xref ref="figure-stacked-bar"/> is a stacked bar plot. These are
+    the same bars as <xref ref="figure-ownership-bar"/>, but now I
+    have used the second variable, the application type, to colour the
+    bars in two colours. In the mortgage bar, the blue is individuals
+    and the pink is joint applications.  Likewise for the other two
+    bars. This still shows the ownership variable in the height of the
+    bar, but also gives a good visualization of the breakdown of each
+    bar by application type. It's easy to get a rough sense of how
+    many of each bar are individual or joint applicants.
+  </p>
+  <figure xml:id="figure-dodged-bar">
+    <caption></caption>
+    <image witdh="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            ybar,
+            enlargelimits=0.15,
+            legend style={at={(0.5,-0.2)},
+            anchor=north,legend columns=-1},
+            ylabel={Count},
+            symbolic x coords={Mortgage,Own,Rent},
+            xtick=data,
+            x tick label style={rotate=45,anchor=east},
+          ]
+          \addplot coordinates {(Mortgage,3977) (Own,1242)
+          (Rent,3494)};
+          \addplot coordinates {(Mortgage,812) (Own,111)
+          (Rent,364)};
+          \legend{Individual,Joint}
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <href ref="figure-dodged-bar"/> is a dodged bar plot. It shows the
+    same information, but shows the breakdown side-by-side instead in
+    one bar. The total of the mortgage category is now the sum of
+    these two bars, and each subset is its own side-by-side bar. This
+    makes the total of each category, mortgage, onw and rent, a little
+    bit less visable, but it makes the comparison in each part between
+    individual and joint more clear. As I said before, visualization
+    is always about trade-offs: what you want to show, what you are
+    content with making less visible. If the comparison between
+    individuals and joint applicatants is the most important, this is
+    a good choice.
+  </p>
+  <figure xml:id="figure-standardized-bar">
+    <caption></caption>
+    <image witdh="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            ybar stacked,
+            enlargelimits=0.15,
+            legend style={at={(0.5,-0.2)},
+            anchor=north,legend columns=-1},
+            ylabel={Proportion},
+            symbolic x coords={Mortgage,Own,Rent},
+            xtick=data,
+            x tick label style={rotate=45,anchor=east},
+          ]
+          \addplot+ [ybar] coordinates {(Mortgage,0.83) (Own,0.918)
+          (Rent,0.9057)};
+          \addplot+ [ybar] coordinates {(Mortgage,0.17) (Own,0.082)
+          (Rent,0.0943)};
+          \legend{Individual,Joint}
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <href ref="figure-standardized-bar"/> is a standardized bar plot.
+    Here, the count of the mortgage, own and rent categories is
+    completely gone. All that this plot tries to show is the relative
+    percentages of individual and joint applications inside each
+    ownership category.  What is shown is that more mortgage carries
+    have joint applications, and fewer homeowners do. Again, the
+    choice of plot is determined by what the author of the
+    visualization wishes to display or allows to be hidden.  Here, the
+    relative values are entirely hidden. 
+  </p>
+  <p>
+    In addition to bar plots, let me define another familiar
+    visualization.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A <term>pie chart</term> is a diagram that shows the
+        proportions of a categorical variable as radial slices of a
+        circle. The size of each slice measures the proportion of
+        cases in each category. 
+      </p>
+    </statement>
+  </definition> 
+  <p>
+    Pie charts are exclusively for proportions: the pie of always
+    consider as a whole and each section of the pie is a portion of
+    the whole. Pie charts are also only about a single variable, so I
+    am going back to visualizing the data in the frequency table, for
+    one variable, instead of the contingency table, for two variables. 
+  </p>
+  <figure xml:id="figure-pie1">
+    <caption></caption>
+    <image witdh="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \pie{47.89/Mortgage,
+            13.53/Own,
+            38.58/Rent}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <xref ref="figure-pie1"/> is a pie chart of the ownership variable. 
+    This pie chart shows in a nice, clear way, how many
+    applicants have a mortgage, own a proprety, or rent a property.
+  </p>
+  <p>
+    Pie charts are often great for proportions<mdash/>they are seen as
+    intuitive and easy to read representations of parts of a whole.
+    However, they too can have their weaknesses. I haven't talked
+    about the third variable yet: the loan grades. 
+    To remind you,  A is the safest
+    loan to grant and G is the most risky. Consider a pie chart for
+    this variable. 
+  </p>
+  <figure xml:id="figure-pie2">
+    <caption></caption>
+    <image witdh="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \pie{24.3/A,
+            32.5/B,
+            26.2/C,
+            11.5/D,
+            4.0/E,
+            0.9/F,
+            0.6/G}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <xref ref="figure-pie2"/> is pretty clear for
+    the early letters, but readinng this for E, F and G is not
+    pleasant, even if I were to take away the overlaping percentage
+    text. Pie chart work well for large percentages, but showing very
+    small slices can be a problem.  Again, in addition to knowing
+    terms for these visualization tools, the main theme of this
+    section is that visualizations are also about choice: choosing the
+    right visualization for clarity and purpose, and realizing that
+    all visualizations necessarily involve tradeoffs.
   </p>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
