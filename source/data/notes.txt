@@ -1,0 +1,26 @@
+earthquakes.dat:
+
+Downloaded from openintro.org, from their open access data sets,
+September 17.
+
+gpa_study_hours.dat:
+
+Downloaded from openintro.org, from their open access data sets,
+September 17.
+
+pierce_county_house_sales.dat: 
+
+Downloaded from openintro.org, from their open access data sets,
+September 17. Reduced from over 16000 cases to 2999 cases. Removed
+three other outliers for a nicer scatterplot.
+
+smoking.dat:
+
+Downloaded from openintro.org, from their open access data sets,
+September 17.
+
+county.dat:
+
+Downloaded from openintro.org, from their open access data sets,
+September 17.
+

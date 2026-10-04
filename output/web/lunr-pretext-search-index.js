@@ -352,6 +352,339 @@ var ptx_lunr_docs = [
   "body": "     "
 },
 {
+  "id": "section-histograms",
+  "level": "1",
+  "url": "section-histograms.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Histograms",
+  "body": " Histograms  Bar plots and pie charts were ways to vizualise one or two categorical variables. Now I want to move on to ways to display a numeric variable. With a numeric variable, the distirbution of the data is usually the subject of interest. The data is a bunch of numbers, so I want to know where the numbers are concentrated, how they spread out, how they are distributed.    A histogram is a bar plot made from a numeric variable by dividing the range of numbers into equal intervals and then plotting, with a vertical bar, how many cases have a value that sits in each interval.    As always, its best to see by definition. I'll use a data set about loans and interest rates. This data set has 50 cases and one of the variables is interest rate in percentage. This is a numeric variable. The possible values range from 5 to 25 percent. To make a hisogram, I need to divide this into smalle rranges. I'll use an interval of 2.5, so that the groups are as follows: 5 to 7.5, 7.5 to 10, 10 to 12.5 and so on. Then I count how many cases fall into each range and made a bar graph of that count. The result is a the historgram shown in .   Histogram      In this historgraph, it's clear that there are more cases in the lower range than the higher range. That's already interesting information about the data and how it behaves.  As I said, the distribution of data is the main point of a histogram. We have some useful terms to describe this distribution.     A distribution which extends out to the left while decreasing is said to have a left tail .  A distribution which extends out to the right while decreasing is said to have a right tail .  A distribution which has one prominent peak is caleld unimodal .  A distribution which has two prominent peaks is called bimodal .  A distribution which has more than two prominent peaks is called multimodal .     The following histograms are examples off these definitions.   A left tail distribution.       A right tail distribution       A unimodal distribution       A bimodal distribution       A multimodal distribution      Before moving on, I should say a few works about unimodal distributions. The most common kind of uni-modal distribution is a bell curve: the distribution of the data has the shape roughly of a bell, with a single peak descending quickly at first and more slowly farther away. Such a curve is called a normal distribution (a technical definition of these terms will follow later in the notes). Data which fits this pattern is often called normally distributed .  You may be familiar with a bell curve from high school, or just from general knowlwedge. It is an extremely common model for data. Many kinds of data are, indeed, normally distributed. But there is also a tendency, in some places, to assume a normal distribution where it really doesn't fit. This is dangerous. It is good to understand that the normal distribution is very common, but also good to understand that not all data is normal.  A nice example of this is grades in courses. Often, it is assumed that grades will be normally distributed. In very large situation, this can be justified. Provincial exams for high-school students, for examples, are assumed to be normally distributed. With tens of thousands of students writing the exams, this is not a terrible assumption. However, for smaller classes, this is usually not the case. In many of my classes, bimodal distributions are more common than normal distributions.  Now I have another definition.    For a numerical variable, a single case (or small group of cases) which differs greatly from the rest of the data is called an outlier .    Here is a histogram with one outlier: most of the data falls between 0 and 8, but there is one separated case in the 12-14 range.   An outlier in a histogram      Dealing with outliers is an important part of statistics. Sometimes they represent errors, and many situations in statistics will exclude outliers. However, they can also represent special cases that have some valuable explantion something that can add to the understanding of the data. Outliers are something to be careful with and aware of.  The last thing I want to cover in this section is transformations of histogram. Again, I'll give a formal definition later in the course, but I want to demonstrate the rough idea at this point. The following histogram shows the population of cities.   A Histogram for the Population of Cities      Almost all of the cities in this data set are in the 0 - 2 million population range. There are two outlier with higher population. Such a situation might be reasonsable: it can easily imagine a set of cases that represent cities where most at in the 0 - 2 million range and only a couple exceed this. These outliner are probably a reasonable part of the data set. But having the outliers present another problem: since the histogram needs to be wider to display the outliers, the rest of the data gets more tightly grouped together in only part of the histogram.  In a situation like this, where all the data is clustered in a small part of a histogram, a logarithm transformation can help see more detail. This means applying the logarithm to all of the data. The logarithm decreases all values, but it has a much greater effect on larger values.  The next diagram is the same poluation after applying the logarithm. The two outliers are still here, but the rest of the population is now spread out over seven piece of the histogram, not just three. I get a better sense of the data and its distribution after applying the logarithm. This is one of the things that a transformation can do: lead to more readable data.   Histogram with a lograithm transformation      "
+},
+{
+  "id": "section-histograms-3",
+  "level": "2",
+  "url": "section-histograms.html#section-histograms-3",
+  "type": "Definition",
+  "number": "3.3.1",
+  "title": "",
+  "body": "  A histogram is a bar plot made from a numeric variable by dividing the range of numbers into equal intervals and then plotting, with a vertical bar, how many cases have a value that sits in each interval.   "
+},
+{
+  "id": "figure-histogram1",
+  "level": "2",
+  "url": "section-histograms.html#figure-histogram1",
+  "type": "Figure",
+  "number": "3.3.2",
+  "title": "",
+  "body": " Histogram     "
+},
+{
+  "id": "section-histograms-8",
+  "level": "2",
+  "url": "section-histograms.html#section-histograms-8",
+  "type": "Definition",
+  "number": "3.3.3",
+  "title": "",
+  "body": "   A distribution which extends out to the left while decreasing is said to have a left tail .  A distribution which extends out to the right while decreasing is said to have a right tail .  A distribution which has one prominent peak is caleld unimodal .  A distribution which has two prominent peaks is called bimodal .  A distribution which has more than two prominent peaks is called multimodal .    "
+},
+{
+  "id": "figure-left-tail",
+  "level": "2",
+  "url": "section-histograms.html#figure-left-tail",
+  "type": "Figure",
+  "number": "3.3.4",
+  "title": "",
+  "body": " A left tail distribution.     "
+},
+{
+  "id": "figure-right-tail",
+  "level": "2",
+  "url": "section-histograms.html#figure-right-tail",
+  "type": "Figure",
+  "number": "3.3.5",
+  "title": "",
+  "body": " A right tail distribution     "
+},
+{
+  "id": "figure-unimodal",
+  "level": "2",
+  "url": "section-histograms.html#figure-unimodal",
+  "type": "Figure",
+  "number": "3.3.6",
+  "title": "",
+  "body": " A unimodal distribution     "
+},
+{
+  "id": "figure-bimodal",
+  "level": "2",
+  "url": "section-histograms.html#figure-bimodal",
+  "type": "Figure",
+  "number": "3.3.7",
+  "title": "",
+  "body": " A bimodal distribution     "
+},
+{
+  "id": "figure-multimodal",
+  "level": "2",
+  "url": "section-histograms.html#figure-multimodal",
+  "type": "Figure",
+  "number": "3.3.8",
+  "title": "",
+  "body": " A multimodal distribution     "
+},
+{
+  "id": "section-histograms-15",
+  "level": "2",
+  "url": "section-histograms.html#section-histograms-15",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "normal distribution normally distributed "
+},
+{
+  "id": "section-histograms-19",
+  "level": "2",
+  "url": "section-histograms.html#section-histograms-19",
+  "type": "Definition",
+  "number": "3.3.9",
+  "title": "",
+  "body": "  For a numerical variable, a single case (or small group of cases) which differs greatly from the rest of the data is called an outlier .   "
+},
+{
+  "id": "figure-outlier",
+  "level": "2",
+  "url": "section-histograms.html#figure-outlier",
+  "type": "Figure",
+  "number": "3.3.10",
+  "title": "",
+  "body": " An outlier in a histogram     "
+},
+{
+  "id": "figure-histogram-population",
+  "level": "2",
+  "url": "section-histograms.html#figure-histogram-population",
+  "type": "Figure",
+  "number": "3.3.11",
+  "title": "",
+  "body": " A Histogram for the Population of Cities     "
+},
+{
+  "id": "figure-histogram-logarithm",
+  "level": "2",
+  "url": "section-histograms.html#figure-histogram-logarithm",
+  "type": "Figure",
+  "number": "3.3.12",
+  "title": "",
+  "body": " Histogram with a lograithm transformation     "
+},
+{
+  "id": "section-central-tendencies",
+  "level": "1",
+  "url": "section-central-tendencies.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Central Tendencies",
+  "body": " Central Tendencies  In my presentation of histograms in the previous section, I talked about the distribution of data: left and right tails, modality, outliers. I want to continue that analysis in this section by talking about central tendencies. I am asking an important question here: what is a typical or usual value for this data and how is the data spread around that typical or usual value.  What becomes complicated is translating typical into mathematics. It turns out there are many ways to mathematically measure this. All of these measurements are called central tendencies . In this section, I will define the two most common and most useful mathematical definitions. The first half of this section will handle the first of the two definitions.    The mean or average of a numeric variable in a data set is the central tendency calcluated by adding up all of the cases and dividing by the number of cases. I can number the cases $x_1, x_2, \\ldots x_n$, where $n$ is the number of cases. The mean is usually written with a bar notation.     Let's go back to the same Loans data set and interest rate variable as before. Recall , the histogram of this data. For the Loans data, there are 50 cases. Adding up the interest rate in percentage for all 50 and dividing by 50 gives a mean interest rate of 11.57 percent. You can see, in the histogram, that 11.57 percent falls fairly nicely in the middle of the data.  Once I have a central tendency set, I have another important question: how much does the data spread out from the central tendency? There are two important words to define here: deviation and variance. Both capture the idea of an individual case being different from the mean. Visually, both relate to how the values, shown here group in a histogram, spread out. Let me get to the first definition.    Let be the value of a single care of a numeric variable in a dataset. The variance of this value is the difference between the particular case and the mean: .    The mean for interest rate variable in the loans data was 11.57 percent. For each case, there is a percentage, and I can subtract the mean. If a particular case has a loan with a 12 percent interest, then the deviance of that case is . Likewise, it a particular case has an interest rate of 8 percent, then the deviance of this case is .  Deviation is good for an individual case, but how do I summarize that for the whole data set? The definition that statistics has come up with for this is sample variation.    Let be a numeric variable in a dataset. The sample variation of the numeric variable is found by adding up the squares of the variance of all the cases then dividing by the number of case minus one. If is the notation for variance, then here is the calculate. The symbol is pretty conventional for sample variation.    In the average, the definition divides by the number of cases. In the sample variable, the definition divides by the number cases minus one. This seems a bit strange. This subtraction of one is called Bessel's correction. There are good mathematical reasons to justify this correction, but I won't cover them here.  The sample variance is a measure of the spread of data, but not the most intuitive one. However, I can take the square root of the sample variation to get something possibly more familiar.    For a numeric variable in a data set, the square root of the sample variables is called the standard deviation . It is a measure of the spread of the data.  is a common symbol for standard deviation. The greek letter sigma, , is also used in many context for standard deviation.    If I look at again, the mean was the value 11.75, roughly in the middle. The stndard devition for this dataset is about 5. Looking 5 units of percentage out from the mean, it looks like the majority of the data does fall within this spread. This is typical.  As a rule of thumb, about two thirds of a dataset typically fall within one standard devition from the mean. (There are certainly exceptions to this rule of thumb, but they typically come from strange and unusually distributed data). In this sense, most of the time, the standard deviation indicates how far from the mean you have to go to capture most (two-thirds) of the data. Even most, almost all of the data will fall within two standard deviations. Again in the histogram, almost all of this data is within 10 unit, 2 standard deviations, from the mean.  That was a discussion of mean or average, and the associated ideas of devitions, sample variance, and standard deviation. But mean is not the only central tendency: in fact, many exist. Mean is one of the two most common, the other of that pair is the median.    Let be a numeric variable in a dataset. The median of the variable is simply the middle value. If there are an odd number of cases, then the median is the middle cases when the cases are put in numeric order. If there are even number of cases, the median is the sum of the two middle ordered cases divided by two.    In the loans data, there are 50 cases. Here are the values for the interest rate variable for all 50 cases, put into increasing order.   Interest Rates Variable - All Cases    5.31  5.31  5.32  6.08  6.08  6.08  6.71  6.71    7.34  7.34  7.35  7.96  7.96  7.96  7.97  9.43    9.43  9.44  9.44  9.44  9.92  9.92  9.92  9.92    9.93  9.93  10.42  10.42  10.90  10.90  10.91  10.91    10.91  11.98  12.62  12.62  12.62  14.08  15.04  16.02    17.09  17.09  17.09  18.06  18.45  19.42  20.00  21.45    24.85  26.30     If I count halfway through thtis table, I count 25 of the 50 cases. The 25th and 26th cases both have interest rates of 9.93, so 9.93 will be the median. (Adding these together and dividing by two, which is done for an even number of cases, just recovers 9.93 since they are the same value )  The median is also a central tendency. One of the strange things about statistics is that multiple different things align with the normal language sense of usual or normal . Both the mean and the median are some measure of what it typical in the sample. I'll talk more later about the different between these central tendency and how statistician decide which one to use. For now, I can use the median and its setup to make some more definitions.    Let be a numeric variable in a dataset. The median was found by taking a value exactly halfway through the cases, when they were order. I'll keep that setup, but now insist that the cases are ordered in increasing value. The value of the cases that is one quarter of the way through the count is the first quartile .  The value of the cases that is three quarters of the way through the count is the third quartile .  For any percentage , the value of the case that is of the way through the dataset is the th percentile. (So the first quartile is the 25th percentile, the median is the 50th percentile, and the third quartile is the 75% percentile).   For quartiles and percentiles, when the fractions would fall between two data points, the upper bound is chosen.    The quartiles and percentile are a way to meausure how much of the data is above or below a certain value. Exactly a quarter of the data should have values below the value of the first quartile. similarly, exactly three quarters of the data should have values below the third quartile. Exactly 93% of the data should have values below the value of the 93rd percentile.  Now I can look back at the table. There are 50 cases, to one quarter is 12.5. Looking at the upper bounds, I look at the 13th case. Countintg through the table, the 13th case in increasing order has value 7.96, so the first quartile is 10.90. Likewise, three quarters of 50 is 37.5, so I look at the 38th case. Again counting through the cases, the 38th case is 14.08, so the third quartile value is 14.08. I could similarly calculate percentiles if I wished. 92% of 50 is 46. The value of the 46th case is 19.42, so the 92nd percentile is 19.42.  From quartiles, I still have yet another definition.    Let be a numeric variable in a data set. The inter-quartile range or IQR is the value of the third quartile minus the first quartile. It measures the spread of the middle half of the data.    In the loans data, the first quartile was 7.96 and the third quartile was 14.08. The difference is This is the IQR for this data. It says that middle half of the data lies in a range of width 6.12.  In general, when working with the median, IQR does something similar to standard devition for means. A low IQR means data that is tightly bunches around the median. A high IQR means data that is quite spread out around the median. The precise measure of this differs: roughly two-thirds of the data typically is within one standrad deviation of the mean, and exactly half of the data is within the IQR. But the idea is similar. These are both meausre of the spread of the data.  I've talked about outliers already a little bit. Outliers are values that are a long way away from most of the rest of the data. Using quartiles and IQR, there is a useful rule of thumb for outliers.    Let be a numeric variable in a data set. A case in this variable, , can be consider an outlier if it falls in one of two situations.  If is more than 1.5 times the IQR above the third quartile.  If is less than 1.5 times the IQR below the first quartile.      This definition is not strict: determining exactly what is and what isn't an outlier is always a judgment. However, it is still a common method and one to be familiar with.  Let me look at the loans data one last time. The IQR was 6.12. If I multiply this by 1.5, I get 9.18. The first quartile was 7.96, so 1.5(IQR) below the first quartile is This is below all of the data: there are no negativ interest rates here. By this rule of thumb, there are no outliers on the lower end of this data. HOwever, the third quartile was 14.08, so I can again calcualte 1.5(IQR) above the third quartile. Looking at the table of values again, there are two interest rates above this value: 24.85 and 26.30. It's reasonable, using this rule of thumb, to consider these two as outlier.  Finally, I'd like a visualization for this information about medians, quartiles and IQR.    Let be a numeric variable in a dataset. A box plot is a visualition which includes the following.  A vertical line at the median.  A box starting at the first quartile and ending at the third quartile  A line line at the lowest and highest cases, excluding outliers defined by the 1.5(IQR) rule of thumb. (These two are called the whiskers ).  Isolate dots for the outliers.       shows the box plot for the interest rate variable in the loans data. As note above, there are two outliers, represented as dots, on the higher side of the data.   Interest Rates Box Plot      Finally, as with all visualizations, something is shown and something is hidden. This box plot gives me a sense of the data: where the median is, how the data is spread. The box is the middle half of the data, so inside the box is some measure of usual data. Out to the wiskers is the rest of the data, so I can see a bit of how it is distrubted. I can show specific outliers. For a simple diagram, a lot of information is shown. But it is still a summary. Exactly how the data fits between the whiskers and the quartiles is not shown. Unlike the histogram, the shape of the data, how it is bunchs and how quickly or slowly it decays, is harder to see.  This section talked about two systems to analyze the central tendency and spread of a numeric variable. The first was the system with means, deviations, sample variance and standard deviation. I drew these over a histogram to show the shape of the data. The second system was the system with medians, quartiles, inter-quartile ranges, box plots, whisker and outliers. It gives another picture.  Which one do I use? Well, this is the real heart of the matter. As you have already seen and will continue to see, statistics has no shortage of methods. There are many things you can do to display and analyze data. Being a good statistician is knowing the various systems well and choosing a system for the goals as hand.  That's pretty vague, so let me leave you with one criteria for choosing between mean and median.    A statistic or visualiztion is called robust if changes to just a small number of data points have a minimal effect on the statistic or visualization    Robust statistics or visualizations are often desirable. If I only one data point out of 200, probably the analysis should be almost the same. The mean and associated sample variance and standard deviation are useful measure and necessary for some tests and calculations, but they are not necessarily robust. Outliers can have a great effect on the mean, and moving an outlier further out will show up, even if it is only one data point among many. In contrast, medians and the rest of the information in a box plot is robust. If I move the two outliers in the loans data even further out, nothing else in the box plot will change. Box plots are less sensitive to outliers, and often that is a desirable trait. We'll talk more about these judgement calls in the future indeed, as you should be aware of by now, such judgement calls are oen of the main themes of the course.  "
+},
+{
+  "id": "section-central-tendencies-3",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "central tendencies "
+},
+{
+  "id": "section-central-tendencies-4",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-4",
+  "type": "Definition",
+  "number": "3.4.1",
+  "title": "",
+  "body": "  The mean or average of a numeric variable in a data set is the central tendency calcluated by adding up all of the cases and dividing by the number of cases. I can number the cases $x_1, x_2, \\ldots x_n$, where $n$ is the number of cases. The mean is usually written with a bar notation.    "
+},
+{
+  "id": "section-central-tendencies-7",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-7",
+  "type": "Definition",
+  "number": "3.4.2",
+  "title": "",
+  "body": "  Let be the value of a single care of a numeric variable in a dataset. The variance of this value is the difference between the particular case and the mean: .   "
+},
+{
+  "id": "section-central-tendencies-10",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-10",
+  "type": "Definition",
+  "number": "3.4.3",
+  "title": "",
+  "body": "  Let be a numeric variable in a dataset. The sample variation of the numeric variable is found by adding up the squares of the variance of all the cases then dividing by the number of case minus one. If is the notation for variance, then here is the calculate. The symbol is pretty conventional for sample variation.   "
+},
+{
+  "id": "section-central-tendencies-13",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-13",
+  "type": "Definition",
+  "number": "3.4.4",
+  "title": "",
+  "body": "  For a numeric variable in a data set, the square root of the sample variables is called the standard deviation . It is a measure of the spread of the data.  is a common symbol for standard deviation. The greek letter sigma, , is also used in many context for standard deviation.   "
+},
+{
+  "id": "section-central-tendencies-17",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-17",
+  "type": "Definition",
+  "number": "3.4.5",
+  "title": "",
+  "body": "  Let be a numeric variable in a dataset. The median of the variable is simply the middle value. If there are an odd number of cases, then the median is the middle cases when the cases are put in numeric order. If there are even number of cases, the median is the sum of the two middle ordered cases divided by two.   "
+},
+{
+  "id": "table-interest-rates",
+  "level": "2",
+  "url": "section-central-tendencies.html#table-interest-rates",
+  "type": "Table",
+  "number": "3.4.6",
+  "title": "Interest Rates Variable - All Cases",
+  "body": " Interest Rates Variable - All Cases    5.31  5.31  5.32  6.08  6.08  6.08  6.71  6.71    7.34  7.34  7.35  7.96  7.96  7.96  7.97  9.43    9.43  9.44  9.44  9.44  9.92  9.92  9.92  9.92    9.93  9.93  10.42  10.42  10.90  10.90  10.91  10.91    10.91  11.98  12.62  12.62  12.62  14.08  15.04  16.02    17.09  17.09  17.09  18.06  18.45  19.42  20.00  21.45    24.85  26.30    "
+},
+{
+  "id": "section-central-tendencies-22",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-22",
+  "type": "Definition",
+  "number": "3.4.7",
+  "title": "",
+  "body": "  Let be a numeric variable in a dataset. The median was found by taking a value exactly halfway through the cases, when they were order. I'll keep that setup, but now insist that the cases are ordered in increasing value. The value of the cases that is one quarter of the way through the count is the first quartile .  The value of the cases that is three quarters of the way through the count is the third quartile .  For any percentage , the value of the case that is of the way through the dataset is the th percentile. (So the first quartile is the 25th percentile, the median is the 50th percentile, and the third quartile is the 75% percentile).   For quartiles and percentiles, when the fractions would fall between two data points, the upper bound is chosen.   "
+},
+{
+  "id": "section-central-tendencies-26",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-26",
+  "type": "Definition",
+  "number": "3.4.8",
+  "title": "",
+  "body": "  Let be a numeric variable in a data set. The inter-quartile range or IQR is the value of the third quartile minus the first quartile. It measures the spread of the middle half of the data.   "
+},
+{
+  "id": "section-central-tendencies-30",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-30",
+  "type": "Definition",
+  "number": "3.4.9",
+  "title": "",
+  "body": "  Let be a numeric variable in a data set. A case in this variable, , can be consider an outlier if it falls in one of two situations.  If is more than 1.5 times the IQR above the third quartile.  If is less than 1.5 times the IQR below the first quartile.     "
+},
+{
+  "id": "section-central-tendencies-34",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-34",
+  "type": "Definition",
+  "number": "3.4.10",
+  "title": "",
+  "body": "  Let be a numeric variable in a dataset. A box plot is a visualition which includes the following.  A vertical line at the median.  A box starting at the first quartile and ending at the third quartile  A line line at the lowest and highest cases, excluding outliers defined by the 1.5(IQR) rule of thumb. (These two are called the whiskers ).  Isolate dots for the outliers.     "
+},
+{
+  "id": "figure-boxplot1",
+  "level": "2",
+  "url": "section-central-tendencies.html#figure-boxplot1",
+  "type": "Figure",
+  "number": "3.4.11",
+  "title": "",
+  "body": " Interest Rates Box Plot     "
+},
+{
+  "id": "section-central-tendencies-41",
+  "level": "2",
+  "url": "section-central-tendencies.html#section-central-tendencies-41",
+  "type": "Definition",
+  "number": "3.4.12",
+  "title": "",
+  "body": "  A statistic or visualiztion is called robust if changes to just a small number of data points have a minimal effect on the statistic or visualization   "
+},
+{
+  "id": "section-scatterplots",
+  "level": "1",
+  "url": "section-scatterplots.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Scatterplots",
+  "body": " Scatterplots  Histograms and boxplots were visualizations of a single numeric variable. Now I want to move on to visualizations of the interactions of two numeric variables. The main tool here is a scatterplot.    Let and be two numeric variables in a dataset. A scatterplot is a graph where the values of each variable in a case, and , are indicated as a dot with coordinates .    As always, lets demonstrate this by examples. A study collected data on a group of students, including how many hours they spend studying per week over a term and their resulting GPA in that term. These are both discrete numeric variables, assuming we round to the nearest hour. So, for each case, there are two numbers. If I draw a two-dimensional graph with two axes, I can think of each case a coordinates on those axes. This is show in .   Study Hours and GPA      In the scatterplot, each case is a dot and the cases together give all these dots. A scatterplot is perhaps the most direct way to show two potentially interacting numeric variable: all the data is here, nothing about those two variables is hidden.  Visualization is meant to show something about the data. What does this scatterplot show? When we have two numeric variables, we can wonder about the relationship between them. Is there a relationship here? Maybe, but it's hard to tell. The data seems to fall into a triangle, which might be evidence that more studying leads to higher GPA. But is is pretty marginal.  However, just asking the question about a relationship means that we are almost at the end of descriptive statistics. Visualizations show the data: they are a description. Most of the remainder of this course will be about inferential statistics, where we try to guess about a relationship between the data, something that isn't obvious but can be tested. Scatterplots already invite this kind of guessing.   is another scatter plot, this one about house prices and square footage of sold houses in a certain city. Again, every dot is a case, a house that was sold along with its area and its price.   Price and Square Footage      Here there seems to be better evidence for a relationship. Larger houses certainly seem to correlate with higher prices. This would be a positive corelation, if it held: higher values in one variable lead to higher values in the other. A negative corelation would be the oppotise: larger values in one variable lead to smaller in the other. Again, whether there actually is a relationship here is something for later in the course.  The house sales scatterplot also demonstrates something else: an outlier. Scatterplots show how the data is grouped. This data has a unique case which is very far away from the others. This case is an outlier. As mentioneed before, dealing with outliers is an important part of data analysis.   is another scatter plot, this one from a British study about smoking. The two numeric variables are cigarettes smokes per day on a weekend day and the age of the smoker.   Smoking and Age      This scatter plot is really all over the place. Other than certain values for amount smoked (15, 20) being more common, this looks like a pretty random spray of data, and it is very unlikely there is any relationship here to be drawn between these two variables.  Finally, is the final scatterplot that I want to deal with today. It is from a study of US counties. It includes variables of median household income and poverty rate in percentage. Again, each dot is a particular county and its value in these two variables. There looks like there might be a relationship here, a negative correlation since higher income leads to lower povery rates, but perhaps not a straight line relationship.   Mediah Household Income and Povery Rate      The county povery data lets me introduce a new idea for numeric data, Instead of just visualizing data, I can also do something to the data before visualizing or otherwise working with it. What do I mean by do something? Well, I mean applying some mathematical function. This is called transforming the data. I mentioned this briefly before when talking about histograms, but let me be more precise now.  In principle, I can use any mathematical function on the data. I could square root the dat, or calculation 2 to the power of the data. I could apply a logarithm to the data. If I do this to all the cases, I get a new, related variable, a transformed variable. This table shows the effect of applying a transformation to the first few cases of a dataset.   Example Transformation    x  \\sqrt{x}  2^x  \\log_{10} x  \\ln x    2.0  1.41  4  0.301  0.693    3.7  1.92  13.00  0.57  1.31    5.1  2.26  34.30  0.71  1.63    9.3  3.02  630.35  0.97  2.23     The table shows four transforms. The third of the logairthm base 10, which I hope is familiar. The fourth might be something new. It is also a logarithm, but a new logarithm. There is a special number in mathematics, often called Euler's number. This is an irrational number, like , with a never-ending decimal expansion. It's a strange number, but for reasons developed in calculus, it turns out to be the best number to use for exponentns and logarithms. It's logarithm has a special notation. This is called the natural logarith and is one of the most common used functions in mathematics, statistics included.  In historgrams, I used a logarithm transformation to spread out data, to make the distribution easier to see. For scatterplot, the logarithm has another us. Some data seems to show a realationship, but not a straight line relationship. As I will talk about in the very next section, straight line relationships are very valuable. For some kinds of data, applying the logarithm to all the data point can change the scatterplot into a something that looks like a straight-line relationship. This income and povery data is one such example. is the same scatterplot but I have applied the natural logarithm to both variables and all cases.   Caption      The new scatterplot looks like it might be a straight line relationship, which is precisely the point.  "
+},
+{
+  "id": "section-scatterplots-3",
+  "level": "2",
+  "url": "section-scatterplots.html#section-scatterplots-3",
+  "type": "Definition",
+  "number": "3.5.1",
+  "title": "",
+  "body": "  Let and be two numeric variables in a dataset. A scatterplot is a graph where the values of each variable in a case, and , are indicated as a dot with coordinates .   "
+},
+{
+  "id": "figure-scatterplot1",
+  "level": "2",
+  "url": "section-scatterplots.html#figure-scatterplot1",
+  "type": "Figure",
+  "number": "3.5.2",
+  "title": "",
+  "body": " Study Hours and GPA     "
+},
+{
+  "id": "figure-scatterplot2",
+  "level": "2",
+  "url": "section-scatterplots.html#figure-scatterplot2",
+  "type": "Figure",
+  "number": "3.5.3",
+  "title": "",
+  "body": " Price and Square Footage     "
+},
+{
+  "id": "figure-scatterplot3",
+  "level": "2",
+  "url": "section-scatterplots.html#figure-scatterplot3",
+  "type": "Figure",
+  "number": "3.5.4",
+  "title": "",
+  "body": " Smoking and Age     "
+},
+{
+  "id": "figure-scatterplot4",
+  "level": "2",
+  "url": "section-scatterplots.html#figure-scatterplot4",
+  "type": "Figure",
+  "number": "3.5.5",
+  "title": "",
+  "body": " Mediah Household Income and Povery Rate     "
+},
+{
+  "id": "table-transformation",
+  "level": "2",
+  "url": "section-scatterplots.html#table-transformation",
+  "type": "Table",
+  "number": "3.5.6",
+  "title": "Example Transformation",
+  "body": " Example Transformation    x  \\sqrt{x}  2^x  \\log_{10} x  \\ln x    2.0  1.41  4  0.301  0.693    3.7  1.92  13.00  0.57  1.31    5.1  2.26  34.30  0.71  1.63    9.3  3.02  630.35  0.97  2.23    "
+},
+{
+  "id": "section-scatterplots-21",
+  "level": "2",
+  "url": "section-scatterplots.html#section-scatterplots-21",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "natural logarith "
+},
+{
+  "id": "figure-scatterplot5-logarithm",
+  "level": "2",
+  "url": "section-scatterplots.html#figure-scatterplot5-logarithm",
+  "type": "Figure",
+  "number": "3.5.7",
+  "title": "",
+  "body": " Caption     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",

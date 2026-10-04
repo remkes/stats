@@ -20,10 +20,8 @@
 
   <xi:include href="clo4-tables.ptx" />
   <xi:include href="clo5-bar-pie.ptx" />
-  <!--
   <xi:include href="clo6-histograms.ptx" />
   <xi:include href="clo7-central-tendency.ptx" />
   <xi:include href="clo8-scatterplots.ptx" />
-  -->
 
 </chapter>
