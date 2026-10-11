@@ -1,7 +1,567 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-linear-regression" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Linear Models</title>
   <p> 
-    Test
+    The methods of the previous few sections were descriptive
+    statistics: ways to summarize and display information from a data
+    set. Now I want to slowly move into inferential statistics. Now,
+    instead of summarizing or displaying, I want to try to use the
+    data in a data set to try to uncover some underlying truth about
+    that data. I want to try to infer something. 
+  </p>
+  <p>
+    There are many ways to do this, and we will devote the remainder
+    of the course to just a few of the techniques of inferential
+    statistics. We are starting with one important large category:
+    regression. This is a category that applies to two numeric
+    variables. A regression puts forward the idea that the two numeric
+    variables are related by a mathematical function, where one is the
+    independent variable and the other is the independent variable. In
+    principle, any mathematical function can be chosen in a
+    regression, and regression is commonly performed for many such
+    functions: polynomials, trigonometric functions, exponentials
+    functions, and so on. But by far the most common regression is
+    linear regression.
+  </p>
+  <p>
+    Before stating the definition that I want to work with in this
+    course, let me remind you about the mathematical structure of a
+    line. The most common equation of a line, where <m>x</m> and
+    <m>y</m> are the variable, is called the
+    <term>slope-intercept</term> form of the line. 
+    <md>
+      y = mx + b
+    </md>
+    In this setup, <m>x</m> is the independent variable, the input,
+    and <m>y</m> is the dependent variatible, the output. <m>m</m> is
+    the slope of the line, showing how steep the line is, with
+    positive slope for upward moving lines and negative slope for
+    downward moving lines. <m>b</m> is the <m>y</m>-intercept of the
+    line: it shows where the line crosses the <m>y</m> axis. <xref
+    ref=:figure-slope/> show a demonstration: this line has slope 
+    <figure xml:id="slope">
+      <caption>Slope-Intercept Form </caption>
+      <image xml:id="figure82" width="80%">
+        <asymptote>
+          size(10cm,0);
+
+          import graph;
+
+          xlimits(-4,8);
+          ylimits(-4,3);
+
+          xaxis("$x$",Ticks("%"));
+          yaxis("$y$",Ticks("%"));
+
+          draw((-4,-4)--(8,2));
+
+          draw((2,-1)--(6,-1)--(6,1));
+
+          draw((-2,1)--(0,-2),Arrow);
+
+          label("$y$-intercept $b$",(-2,1),N);
+          label("Slope $m$", (4,-1),S);
+
+          label("$y = mx + b$", (3,-3),E);
+        </asymptote>
+      </image>
+    </figure>
+    This slope-intercept form is the setup for lines that we will use.
+    Now let me give the main definition of the section.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A <term>linear regression</term> or <term>linear model</term>
+        is a line chosen to match two numeric variables in a data set.
+        The linear model is written in slope-intercept form.
+        <md>
+          \hat{y} = mx + b
+        </md>
+        The variable <m>x</m> is called the <term>explanatory
+        variable</term>. The variable <m>y</m> is called the
+        <term>dependent variable</term>. The notation <m>\hat{y}</m>
+        indicates that the mdoel is an approximation of the data:
+        individual data point are hopefully near the line, but the
+        <m>y</m> values of the data points don't exactly match the
+        <m>y</m> values of th eline. The coefficient <m>b</m> is the
+        <term>intercept</term> and the coefficient <m>m</m> is the
+        slope
+      </p>
+      <p>
+        If the slope is positive, we say that the linear model
+        demonstrates <term>positive correlation</term>. Likewise, if
+        the slope is egative, there is <term>negative
+        correlation</term> or <term>inverse correlation</term>.
+        Positive correlations means an increase in the explanatory
+        variable causes an increase in the dependent variable; inverse
+        correlation is the opposite, where increasing the explanatory
+        variable decreases the dependent variable. 
+      </p>
+    </statement>
+  </definition>
+  <p>
+    For the linear models we will analyze, the slope is by far the
+    most important of the two coefficients. The slope indicates the
+    strength of the effect of the explanatory variable. A high slope
+    means that a small change in <m>x</m> produces a large change
+    in<m>y</m>. Likewise, a small slope means that change in <m>x</m>
+    have a pretty small effect. 
+  </p>
+  <p>
+    Visually, we fit linear models to scatter plots. <xref
+    ref="figure-scatterplot6"/> is a
+    scatterplot of two numeric variables in a data set about 
+    possums. The variables are the length of the whole animal
+    (including the long tail)in centimeters, and the length of just
+    the head, in milimeters. As usual, the dots are the cases,
+    representing the measurements of one specific possum. 
+  </p>
+  <figure xml:id="figure">
+    <caption>Caption</caption>
+    <image xml:id="image-" width="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            xlabel={Total Length (cm)},
+            ylabel={Head Length (mm)},
+          ]
+            \addplot+ [only marks] table [
+              x=total_l,
+              y=head_l,
+              col sep=comma,
+              row sep=crcr
+            ] {
+head_l,total_l\\
+94.1,89\\
+92.5,91.5\\
+94,95.5\\
+93.2,92\\
+91.5,85.5\\
+93.1,90.5\\
+95.3,89.5\\
+94.8,91\\
+93.4,91.5\\
+91.8,89.5\\
+93.3,89.5\\
+94.9,92\\
+95.1,89.5\\
+95.4,91.5\\
+92.9,85.5\\
+91.6,86\\
+94.7,89.5\\
+93.5,90\\
+94.4,90.5\\
+94.8,89\\
+95.9,96.5\\
+96.3,91\\
+92.5,89\\
+94.4,84\\
+95.8,91.5\\
+96,90\\
+90.5,85\\
+93.8,87\\
+92.8,88\\
+92.1,84\\
+92.8,93\\
+94.3,94\\
+91.4,89\\
+90.6,85.5\\
+94.4,85\\
+93.3,88\\
+89.3,82.5\\
+92.4,80.5\\
+84.7,75\\
+91,84.5\\
+88.4,83\\
+85.3,77\\
+90,81\\
+90.7,81\\
+90.1,89\\
+98.6,85\\
+95.4,85\\
+91.6,88\\
+95.6,85\\
+97.6,93.5\\
+93.1,91\\
+96.9,91.5\\
+103.1,92.5\\
+99.9,93.7\\
+95.1,93\\
+94.5,91\\
+102.5,96\\
+91.3,88\\
+95.7,86\\
+91.3,90.5\\
+92,88.5\\
+96.9,89.5\\
+93.5,88.5\\
+90.4,86\\
+93.3,85\\
+94.1,88.5\\
+98,88\\
+91.9,87\\
+92.8,90\\
+85.9,80.5\\
+82.5,82\\
+88.7,83\\
+93.8,89\\
+92.4,89\\
+93.6,84\\
+86.5,81\\
+85.8,81\\
+86.7,84\\
+90.6,85.5\\
+86,82\\
+90,81.5\\
+88.4,80.5\\
+89.5,92\\
+88.2,86.5\\
+98.5,93\\
+89.6,87.5\\
+97.7,84.5\\
+92.6,85\\
+97.8,89\\
+90.7,85\\
+89.2,82\\
+91.8,84\\
+91.6,88.5\\
+94.8,83\\
+91,86\\
+93.2,84\\
+93.3,86.5\\
+89.5,81.5\\
+88.6,82.5\\
+92.4,89\\
+91.5,82.5\\
+93.6,89\\
+            };
+            
+          \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+
+
+
+  <p>
+    Regression looks at a scatter plot and asks: what relationship is
+    demonstrated by this data.  In this scatter plot, it looks like
+    their might be linear relationship with a positive correlation.
+    This also intuitively makes some sense: the larger animals can be
+    reasonably expected to also have larger heads. 
+  </p>
+  <p>
+    I want to fit a linear model to this data. Visually, I want to
+    draw a line through this scatterplot that best fits all these data
+    points. <xref ref="figure-linear-model"/> shows the scatterplot
+    with this line. 
   </p>
 </section>
+
+
+What is this relationship? It's always hard to say, but statistics
+tries to guess. And the first guess is the simplest relationship: a
+linear relationship. This is a relationship repesented by a straight
+line. 
+
+SLIDE
+
+So let me briefly review lines. A couple videos ago, I mentioned that
+logarithms were an important piece of mathematical background that was
+work reviewing. Equations of lines are another such piece. The
+standard form is this, called the slope-intercept form. I hope that
+this is at least a little familiar. x and y are the coordinates, of
+course. The line is described by two numbers, m, the slope, and b, the
+y-intercept. The y-intercept is the less important for today's
+interpretation, though it certainly carries meaning. You can think of
+it as where the relationship stats. When x, the input, is zero, the
+output is b. 
+
+The slope is the more important measure. It tells how quickly the line
+rises (or falls, if the slope is negative). A linear relationship is
+defined by its slope. A steep slope means that changes in x
+correspond to large changes in y, a shallow slope means the opposite. 
+
+SLIDE
+
+So, let's try to fit a line to this scatterplot. Regression is the
+mathematical task of matching a function to a collection of data.
+Linear regression is matching a linear function. Trying to draw a line
+that best captures the data. I'll draw this line.
+
+What line have I drawn? Here is an equation for a linear regression
+generated from this data. Note two things: the intercept and the
+slope. The intercepts is 41, which is not terribly relevant here. The
+slope is very useful, though. It describes the relationship: for every
+cm of length, the head of the possum increases by 0.59mm. The slope
+is, in many ways, the relationship. 
+
+Notice the hat over the y. This is a notational reminder that this y
+is an approximation. Not all the data fits the line perfectly, of
+course. The y-hat notation is a useful reminder that this y is not the
+perfect outcome, but a statistical approximation.
+
+SLIDE
+
+This is a linear regression, then: a line meant to fit the data. It
+can then be used to make predictions. If I put a body length into the
+equation of the line, say 90 cm, then the linear regression predicts a
+94.1 millimeter long head. These predictions can then be compared
+against future data.
+
+SLIDE
+
+Obviously, the line is an approximation. For each data point, I can
+ask how far it is away from the line. This is called the residual.
+Each data point has a residual with respect to the linear regression.
+For this first data point, if I put x=75 into the line, it predicts
+85.25 mm. The actual value is 84.7. The different, y minus y-hat, is
+the residual for this data point. In this case, the data is -.55 below
+the line: the residual is -0.55.
+
+SLIDE
+
+How was the linear regression determined? This is actually quite a
+difficult mathematical problem, and one we'll leave to the statistical
+software. However, I want to give you the rough outline, and introduce
+an important term. 
+
+The residual is the difference between a data point and the line.
+There is one of these for each data point. If I number the data from
+one to n (n being the number of cases), then I have all these
+residuals. Then I can make this expression: the sum of the squares of
+all the residuals.
+
+How is the line chosen? It is chosen to make this number as small as
+possible. This is called a least squares regression: it is the line
+for which the sum of the squares of the residuals is minimized.
+Actually doing the minimization is quite complicated, but you should
+understand at least the decision criteria.
+
+Why do we square the residuals? There are several reasons. One is that
+is makes everything positive, since it's not important whether the
+data is above or below the line. Second is that is emphasizes large
+distances. If there are any large residuals, they will have an even
+larger impact on this sum when squared. This is discoured in the
+method of least squares. There are other reasons as well, which I
+won't get into now, but which have to do with mathematical notions of
+length and optimization strategies.
+
+SLIDE
+
+That's the idea of linear regression, the important of the slope, and
+the least squares method. For the rest of the video, I want to give a
+short idea of where else we can go with this method. I can bring more
+variables to bear on this analysis. The dataset also includes the age
+of the possum, as well as the sex. Here is the scatterplot
+colour-coded by the sex variable: red for male and blue for female.
+The males have, on average, slightly larger heads for the same body
+lengths. I've drawn linear regressions separately for male and female
+possums. 
+
+SLIDE
+
+What's going on with these two lines? Well, the first linear
+regression was a line y-hat that depended on x, the body length. Maybe
+y-hat, depends on more? Maybe it also depends on age and sex? I can
+extend this linear regression with more terms that all look like the
+slope of a line: a constant times an input variable. This model then
+says that the head size is determined by length, age and sex, with
+these coefficients being the relationships. Also, sex is a categorical
+variable, so to put it in an equation, I need to make it a number.
+I'll choose male to be 0 and female to be 1. Doing this makes it
+something we call an indicator variable, or sometimes a dummy
+variable. By making male set to 0 and female to 1, this term, which
+makes all the head sizes 1.66mm smaller, only applies to the females.
+For the males, this would multiplication by zero, which is just zero.
+This term would not do anything.
+
+SLIDE
+
+Here are the two line again on the separated scatter plot. Ignoring
+age for now, I can give a good interpretation, visually, for what this
+indicator variable is doing. This -1.66 is just shifting this line by
+1.66 units. The female line is the same slope, just slightly lower,
+1.66 units exactly, under the male line. For indicator variables,
+where each category is arbitrarily set to a number, I can view the
+results as shifts of the line up or down. 
+
+The point here is three fold. First, there is mathematics to create a
+linear regression by the least squares method: finding the best line
+by minimizing the residuals. Second, the numbers in that line carry
+statistical meaning: they encode the relationship between the data, at
+least approximately. Finally, those relationships can be extended to
+more variables. Extending to other numeric variables is just adding
+new terms to the equation, but to use categorical variables we have to
+assignment numbers to them, making them indicator variables. In all
+this, the coefficients carry the meaning of the relationship. 
+
+
+
+\begin{frame}
+  \frametitle{Lines}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      y & = & mx + b \\[2em]
+      m & = & \text{Slope} \\[2em]
+      b & = & y \text{-intercepts} 
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Linear Regression}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Total Length (cm)},
+        ylabel={Head Length (mm)},
+    ]
+        \addplot+ [only marks] table
+        [x=total_l,y=head_l,col sep=tab] {../data/possum.dat};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{equation*}
+      \hat{y} = 41 + 0.59x
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{$\hat{y} = 41 + 0.59x$}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Total Length (cm)},
+        ylabel={Head Length (mm)},
+    ]
+        \addplot+ [only marks] table
+        [x=total_l,y=head_l,col sep=tab] {../data/possum.dat};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{equation*}
+      \hat{y} = 41 + 0.59(90) = 94.1
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{$\hat{y} = 41 + 0.59x$}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Total Length (cm)},
+        ylabel={Head Length (mm)},
+    ]
+        \addplot+ [only marks] table
+        [x=total_l,y=head_l,col sep=tab] {../data/possum.dat};
+    \end{axis}
+    \end{tikzpicture}
+    \begin{equation*}
+      x = 75 \implies \hat{y} = 85.25 \hspace{1cm} e = y - \hat{y} =
+      84.7 - 85.25 = -0.55
+    \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Least Squares Regression}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      e & = & y - \hat{y} \\[2em]
+      & & e_1,\ e_2,\ \ldots,\ e_n \\[2em]
+      & & e_1^2 + e_2^2 + \ldots + e_n^2 
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Split Scatterplot}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+      legend pos=south east,
+      xlabel={Total Length (cm)},
+      ylabel={Head Length (mm)},
+      ]
+      \addplot [
+      scatter/classes={
+        m={mark=square*,red},
+        f={mark=square*,blue}
+      },
+      scatter, 
+      only marks,
+      scatter src=explicit symbolic,
+      ]   
+      table [x=total_l,y=head_l,col sep=tab,meta=sex] {../data/possum.dat};
+      \legend{Male, Female}
+      \addplot+ [
+        blue,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,81) (98,100) };
+      \addplot+ [
+        red,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,82.66) (98,101.66) };
+    \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Regression with multiple predictors}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      \hat{y} & = & 41 + 0.59x \\[2em]
+      \hat{y} & = & 43.5 + 0.56(\text{length}) + 0.30(\text{age}) -
+      1.66(\text{sex})\\[2em]
+      \text{male} & \mapsto & 0 \\[2em]
+      \text{female} & \mapsto & 1
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{$\hat{y} = 43.5 + 0.56(\text{length}) + 0.30(\text{age}) -
+  1.66(\text{female})$}
+  \centering
+    \begin{tikzpicture}
+    \begin{axis}[
+      legend pos=south east,
+      xlabel={Total Length (cm)},
+      ylabel={Head Length (mm)},
+      ]
+      \addplot [
+      scatter/classes={
+        m={mark=square*,red},
+        f={mark=square*,blue}
+      },
+      scatter, 
+      only marks,
+      scatter src=explicit symbolic,
+      ]   
+      table [x=total_l,y=head_l,col sep=tab,meta=sex] {../data/possum.dat};
+      \legend{Male, Female}
+      \addplot+ [
+        blue,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,81) (98,100) };
+      \addplot+ [
+        red,
+        mark=|
+        sharp plot,
+      ]
+      coordinates { (74,82.66) (98,101.66) };
+    \end{axis}
+    \end{tikzpicture}
+\end{frame}
+
+
+\end{document}
+
+
+
