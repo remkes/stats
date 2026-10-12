@@ -685,6 +685,258 @@ var ptx_lunr_docs = [
   "body": " Caption     "
 },
 {
+  "id": "section-linear-regression",
+  "level": "1",
+  "url": "section-linear-regression.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Linear Models",
+  "body": " Linear Models  The methods of the previous few sections were descriptive statistics: ways to summarize and display information from a data set. Now I want to slowly move into inferential statistics. Now, instead of summarizing or displaying, I want to try to use the data in a data set to try to uncover some underlying truth about that data. I want to try to infer something.  There are many ways to do this, and we will devote the remainder of the course to just a few of the techniques of inferential statistics. We are starting with one important large category: regression. This is a category that applies to two numeric variables. A regression puts forward the idea that the two numeric variables are related by a mathematical function, where one is the independent variable and the other is the independent variable. In principle, any mathematical function can be chosen in a regression, and regression is commonly performed for many such functions: polynomials, trigonometric functions, exponentials functions, and so on. But by far the most common regression is linear regression.  Before stating the definition that I want to work with in this course, let me remind you about the mathematical structure of a line. The most common equation of a line, where and are the variable, is called the slope-intercept form of the line. In this setup, is the independent variable, the input, and is the dependent variatible, the output. is the slope of the line, showing how steep the line is, with positive slope for upward moving lines and negative slope for downward moving lines. is the -intercept of the line: it shows where the line crosses the axis.  This slope-intercept form is the setup for lines that we will use. Now let me give the main definition of the section.    A linear regression or linear model is a line chosen to match two numeric variables in a data set. The linear model is written in slope-intercept form. The variable is called the explanatory variable . The variable is called the dependent variable . The notation indicates that the mdoel is an approximation of the data: individual data point are hopefully near the line, but the values of the data points don't exactly match the values of th eline. The coefficient is the intercept and the coefficient is the slope  If the slope is positive, we say that the linear model demonstrates positive correlation . Likewise, if the slope is egative, there is negative correlation or inverse correlation . Positive correlations means an increase in the explanatory variable causes an increase in the dependent variable; inverse correlation is the opposite, where increasing the explanatory variable decreases the dependent variable.    For the linear models we will analyze, the slope is by far the most important of the two coefficients. The slope indicates the strength of the effect of the explanatory variable. A high slope means that a small change in produces a large change in . Likewise, a small slope means that change in have a pretty small effect.  Visually, we fit linear models to scatter plots. is a scatterplot of two numeric variables in a data set about possums. The variable is the length of the whole animal (including the long tail)in centimeters, and the variable is the length of just the head, in milimeters. As usual, the dots are the cases, representing the measurements of one specific possum.   Possum Scatterplot      Regression looks at a scatter plot and asks: what relationship is demonstrated by this data. In this scatter plot, it looks like their might be linear relationship with a positive correlation. This also intuitively makes some sense: the larger animals can be reasonably expected to also have larger heads.  I want to fit a linear model to this data. Visually, I want to draw a line through this scatterplot that best fits all these data points. shows the scatterplot with this line. The axis is the explanatory variable, in this case, the total length in centimeters.   Linear Model      The specific line that is drawn through the scatter plot has this equation. Remember that the hat notation over the dependent variable is there to remind us that this line is an approximation of the data, not a perfect fit to the data.  Now I can interpret the coefficients of this line. 41 is the intercept. On a raw interpretation, this would mean that if the explanatory variable were zero, the output would be 41. In our units, a total body length of 0cm predicts a head length of 41mm. This obviously doesn't make much sense: a body length of 0 is not actually a possum at all. However, the data here doesn't really care about (relatively) very small body lengths. The data is studying grown possums, not developmental data. So there is an interpretation here, but it's not much of a problem that the interpretation isn't very sensical. The dataset isn't really concerned with very small values. (Of course, other data sets may care about the intercept, if the data does include values of the explanatory variable which are near zero.)  The slope coefficient is more useful here. The number says that for each cm increase in body length, the expectation is that the corresponding length of the head of the possum is 0.59mm larger. In many ways, this coefficient is the relationship between the two variables, showing how changes in one variable are reflected in the other variable.  A linear regression, once found, can be used to make predictions. If I put a body length into the equation of the line, say 90 cm, then the linear regression predicts a 94.1 millimeter long head. These predictions can then be compared against future data. In this way, a linear model is like a hypothesis: something that comes from the data but can be tested in future experiments to determine how well it holds up.  As I have already noted, a linear model is an approximation. The data points are hopefully near the line, but not exactly on the line. That leads to the next definition.    Let be a linear model of a data set. For each data point, the difference is called the residual of the data point.    Using the previous example, consider the datapoint . If I put x=75 into the line, it predicts 85.25 mm. The actual value is 84.7. The different, minus , is the residual for this data point. In this case, the data is -.55 below the line: the residual is -0.55.  Must can be done with residuals, and we will return to them in . For now, though, I can use residuals to answer an important questions. I've talked about linear models, but I haven't yet said anything about how they are actually determined. How is the line and its coefficients discovered?  There are several methods, but the most common is called the method of least squares . Let me sketch the idea. First, I can number all of the data points from 1 to where is the number of cases in the data set. Then, given any line I can calculate the residuals of each data point. I'll use the letter for these residuals (short for the error of the approximation). This gives me a list of residuals, each measuring how far the data point is away from the line. Since the residuals measure the error, I want the error to be as small as possible. There are different ways to measure this, but the most common method looks at the sum of the squares of the residuals. For any line, this sum of the squares of the residuals. I want the specific line for which this number is as small as possible. Such a line will be considered the best linear model. Since I have a bunch of squares and I want to minimie them, this is called the method of least squares.  Why do we use squares? There are a number of reasons, some which require more mathematics to discussn. One important effect, though, is that it makes all the errors positive. Residuals can be positive or negative: above or below the line. By squaring them, I get a positive numbers for each error. A second important effect comes from the fact that squaring has a larger effect on larger numbers. Therefore, this method exagerated large errors: points which are very far away from the line. This method is quite sensitive to major outliers, which is desirable in this context.  Finally, let me talk about minimizing this sum. You might be wondering: how is this actually done? Sure, I can make this sum and say that I want a minimum value, but how is the minimum actually calculated? Unfortunately for us, calculating such a minimum is well beyond the mathematics expected in this course. This is a calculus problem, and a fairly difficult calculus problem at that. In general, mostly problems in mathematics that are searching for a minimum or a maximum end up being calculus problems. Since this is not a calculus course, I am not going to go into the minimization methods.  This covers the basic ideas of linear regression, but I want to introduce one more important idea in this section. The linear model so far had one explanatory variable. It is possible that we want to consider more than one explanatory variable. This leads to the idea of multiple linear regression. I'll state the definition specifically for three explanatory variables.    Let , , and be numeric variables ina data set. A multiple linear regression is a linear model where is the dependent variable and depends on all three of the other variables. It has this equation.     Those I have stated it for three variables, a multiple linear regression could have any number of variable. Notice that there is still only one intercept coefficient, but that each explanatory variable has its own slope coefficient. Each of those slope coefficients measures the way in which depends on each of the explanatory variables.  I can no longer graphs a multiple regression, since there are too many variables (hence too many axes) to draw. But the principles are exactly the same: there are still residuals, I still can find a model by least squares, the coefficients still explains the relationship. I am just allowing multiple variables to have an effect on my dependent variable.  Let me go back to the example of this section. The data set also include variable for the age of the possum as well as the sex. I'd like to put these all in the linear model. Again, the head length is the dependent variable, which I will still call . A multiple regression might look like this. Then I can interpret these coefficients. As discussed above, the intercept is not terribly importnat here, but the other three are important. 0.56 means that each centimeter increase in total body length corresponds with a 0.56mm increase in head length. The 0.30 say that each year older corresponds to 0.3mm increase in head length. Finally, there is also the sex variable. This requires some more discussion.  In this data set, unsurprisingly, sex is a nominal categorical varaible, with two categories: male and female. As such, I can't put it into an equation. However, there is way to solve this problem.    If I have a categorical variable in a dataset and I assign numbers to each category, the result is called an indicator variable     The assignment of numbers usually arbitrary (though for ordinal categorical variable, we would usually try to preserve the natural order). In this case, the researches made this assignment. This changes the categorical variable into numbers. Now I can interpret the last term in the multiple regression. The coefficient only takes effect for female possums. If the case is male, the indicator variable is 0, so this term is multiplied by 0 and has no effect. If the case is female, the indicator variable is 1, so the term subtract 1.66 from the head length. The result is the observation that the female possums of the same age and body length typically have a head length that is 1.66mm shorter than the males.  I said I couldn't draw multiple regressions, since there are too many variables. However, I can often draw the effects of an indicator variable. Let me show you how. If I ignore the age category and just do regression with the body length and sex variables, I can treat each instance of the indicator variable as a new line. The coefficient move the line for female possums below the line for the male possums. show the result. In the figure, the cases are colour coded: red for male and blue for female. I get two lines with the same slope (the other slope coefficient is unchanged) but the lines are shifted up or down from each other. If I have more categories, I could likewise have a whole set of shifted lines.   Indicator Variable and Lines      To finish this section, let me summarize with three points. First, there is mathematical way to create a linear regression by the least squares method: finding the best line by minimizing the residuals. Second, the numbers in that line carry statistical meaning: they encode the relationship between the data, at least approximately. Finally, those relationships can be extended to more variables. Extending to other numeric variables is just adding new terms to the equation, but to use categorical variables we have to assignment numbers to them, making them indicator variables. In all this, the coefficients carry the meaning of the relationship.  "
+},
+{
+  "id": "section-linear-regression-4",
+  "level": "2",
+  "url": "section-linear-regression.html#section-linear-regression-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "slope-intercept "
+},
+{
+  "id": "section-linear-regression-6",
+  "level": "2",
+  "url": "section-linear-regression.html#section-linear-regression-6",
+  "type": "Definition",
+  "number": "4.1.1",
+  "title": "",
+  "body": "  A linear regression or linear model is a line chosen to match two numeric variables in a data set. The linear model is written in slope-intercept form. The variable is called the explanatory variable . The variable is called the dependent variable . The notation indicates that the mdoel is an approximation of the data: individual data point are hopefully near the line, but the values of the data points don't exactly match the values of th eline. The coefficient is the intercept and the coefficient is the slope  If the slope is positive, we say that the linear model demonstrates positive correlation . Likewise, if the slope is egative, there is negative correlation or inverse correlation . Positive correlations means an increase in the explanatory variable causes an increase in the dependent variable; inverse correlation is the opposite, where increasing the explanatory variable decreases the dependent variable.   "
+},
+{
+  "id": "figure-scatterplot6",
+  "level": "2",
+  "url": "section-linear-regression.html#figure-scatterplot6",
+  "type": "Figure",
+  "number": "4.1.2",
+  "title": "",
+  "body": " Possum Scatterplot     "
+},
+{
+  "id": "figure-linear-model",
+  "level": "2",
+  "url": "section-linear-regression.html#figure-linear-model",
+  "type": "Figure",
+  "number": "4.1.3",
+  "title": "",
+  "body": " Linear Model     "
+},
+{
+  "id": "section-linear-regression-18",
+  "level": "2",
+  "url": "section-linear-regression.html#section-linear-regression-18",
+  "type": "Definition",
+  "number": "4.1.4",
+  "title": "",
+  "body": "  Let be a linear model of a data set. For each data point, the difference is called the residual of the data point.   "
+},
+{
+  "id": "section-linear-regression-21",
+  "level": "2",
+  "url": "section-linear-regression.html#section-linear-regression-21",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "method of least squares "
+},
+{
+  "id": "section-linear-regression-25",
+  "level": "2",
+  "url": "section-linear-regression.html#section-linear-regression-25",
+  "type": "Definition",
+  "number": "4.1.5",
+  "title": "",
+  "body": "  Let , , and be numeric variables ina data set. A multiple linear regression is a linear model where is the dependent variable and depends on all three of the other variables. It has this equation.    "
+},
+{
+  "id": "section-linear-regression-30",
+  "level": "2",
+  "url": "section-linear-regression.html#section-linear-regression-30",
+  "type": "Definition",
+  "number": "4.1.6",
+  "title": "",
+  "body": "  If I have a categorical variable in a dataset and I assign numbers to each category, the result is called an indicator variable    "
+},
+{
+  "id": "figure-indicator-variable",
+  "level": "2",
+  "url": "section-linear-regression.html#figure-indicator-variable",
+  "type": "Figure",
+  "number": "4.1.7",
+  "title": "",
+  "body": " Indicator Variable and Lines     "
+},
+{
+  "id": "section-linear-analysis",
+  "level": "1",
+  "url": "section-linear-analysis.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Evaluation of Linear Models",
+  "body": " Evaluation of Linear Models  This section is a continuation of the previous on linear regression. Having defined what a linear regression is, I want to do some analysis of the quality of a regression. What is a good fit and how do we know? In this section, I will define three measures of the strength of a linear regression.    The correlation of a linear model is a number , with values between -1 and 1. A value of indicates a perfect match with a line with positive slope. A value of indicates a perfect match with a line of negative slope. As the value of gets closer to zero, it indicates a weaker and weaker match with the line. (In some context, this number is more specifically called the Pearson correlation coefficient .)    The term here is a bit annoying. We use correlation already to indicate a relationship, with positive correlation indicating that both variable grow goether and negative correlation indicating an inverse relationship. Now correlation is also a technical measure with the same name. This is frustrating, but it is standard terminology.  Let me use some diagrams to visualize correlation. What follows is a sequence of figure. The caption of each gives the correlation value, and you can see how the data becomes more scattered and less aligned to the linear model as the correlation gets close to zero.                                            As a final note about correlation, this tool only measures how something fits. is one last correlation figure.        This scatter plot has low positive correlation, r=0.14. There is a very slight positive correlation. However, the correlation entirely misses the fact that there is another kind of relationship here. A better model for this data would be a function that rises and then falls. is not a linear model, so the correlation number doesn't see it at all.  In statistics, linear regression is almost always the first thing to try. But some data has relationship which are not linear. It's very valuable to remember that linear models are only one of many kind of models of relationship between data.  Now let me define the second measure of a linear model, which is very closely connected to correlation.    The square of the correlation is simply called the measure. (In some context, this is called the coefficient of determination . However, simply referring to it as is so common that I'll stick with that convention. Also, the fact that we've change from a lower case r to an upper case R is annoying, but again is the conventional notation.)    By squaring the correlation, a couple things happen. First, the value of is always positive, so it ignore the difference between positive and negative slopes. Close to 0 means that the data probably doesn't fit a linear model well, and close to 1 means a good fit. In this way, is a slightly more elegant measure of linearity, and it gets used more often because of this. Second, by squaring, the numbers get slightly smaller. (If you square a number less than 1, it gets closer to zero). Therefore, is a bit of a finer measure: is a stronger indication of a good linear fit than correlation of the same value.  In the previous section, I also talked multiple regression: making linear models with multiple explanatory variables. There are extension of to multiple regression as well. The one which we will use in the classroom activities is called adjusted . You can assume that adjusted means that we must be dealing with several explanatory variables.  Now let me get back to residuals, since these can also be used to evaluate the quality of a linear regression. Residuals were defined in the last section: they are the difference, for each data point, bewteen the actual data, , and the prediction of the linear regression, . There is a residual for each data point: n in total, where n is the number of cases.  From the previous section, recall . It has a linear model with equation . The residuals are the difference between the y coordinate of the data point and the line. However, residuals are a bit tricky to see in the original scatterplot.  Instead, I can just plot the residuals themselves. shows the same data set, but the axis is now the residual compared to the linear regression. The value of each data point is simpliy how far it was, in the original diagram, away from the line.  A scatterplot where the axis is the residual of a linear regression, instead of the original value of the data point, is called a residual plot .   A Residual Plot      As a visualization tool, the residual plot is extremely useful to seeing how good the regression is, since all it shows is the error for each data point. The shape and patterns of the residual plot can give information.  In general, if there is not pattern to the residual plot (and the residuals are not too large), that is good evidence that the original regression was pretty good. For this data, from the last video, there isn't much of a pattern to the residual plot, so the linear regression is probably a decent model of the relationship between the variables.   is another scatter plot with a linear regression. This looks like a pretty good regression.   Another Linear Model      Then, is the matching residual plot.   Caption      This residual plot looks pretty good. The residuals are balanced above and below the line, they are relatively small residuals, and there is no obvious pattern. This is evidence of a good linear regression: a line that fits the data well.   is another scatter plot with as it residual plot.   Another linear model       A matching residual plot      This residual plot is a bit different. There seems to be a pattern to the residuals: starting below, then moving above, then moving below. In the original scatter plot, the variance of the data from the line was difficult to read, visually. Here, the residual plot makes that much easier to read. This is the strength of a residual plot: it zooms in on the relationship between the data and the line, and can clearly show things that were present in the original scatterplot, but much harder to see. In this case, the relationship is still close to linear, but this pattern means that there is probably something else going on here as well, something non-linear between the two variables.  "
+},
+{
+  "id": "section-linear-analysis-3",
+  "level": "2",
+  "url": "section-linear-analysis.html#section-linear-analysis-3",
+  "type": "Definition",
+  "number": "4.2.1",
+  "title": "",
+  "body": "  The correlation of a linear model is a number , with values between -1 and 1. A value of indicates a perfect match with a line with positive slope. A value of indicates a perfect match with a line of negative slope. As the value of gets closer to zero, it indicates a weaker and weaker match with the line. (In some context, this number is more specifically called the Pearson correlation coefficient .)   "
+},
+{
+  "id": "figure-correlation1",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation1",
+  "type": "Figure",
+  "number": "4.2.2",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "figure-correlation2",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation2",
+  "type": "Figure",
+  "number": "4.2.3",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "figure-correlation3",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation3",
+  "type": "Figure",
+  "number": "4.2.4",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "figure-correlation4",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation4",
+  "type": "Figure",
+  "number": "4.2.5",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "figure-correlation5",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation5",
+  "type": "Figure",
+  "number": "4.2.6",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "figure-correlation6",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation6",
+  "type": "Figure",
+  "number": "4.2.7",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "figure-correlation7",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation7",
+  "type": "Figure",
+  "number": "4.2.8",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "figure-correlation8",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-correlation8",
+  "type": "Figure",
+  "number": "4.2.9",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "section-linear-analysis-18",
+  "level": "2",
+  "url": "section-linear-analysis.html#section-linear-analysis-18",
+  "type": "Definition",
+  "number": "4.2.10",
+  "title": "",
+  "body": "  The square of the correlation is simply called the measure. (In some context, this is called the coefficient of determination . However, simply referring to it as is so common that I'll stick with that convention. Also, the fact that we've change from a lower case r to an upper case R is annoying, but again is the conventional notation.)   "
+},
+{
+  "id": "section-linear-analysis-20",
+  "level": "2",
+  "url": "section-linear-analysis.html#section-linear-analysis-20",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "adjusted "
+},
+{
+  "id": "section-linear-analysis-24",
+  "level": "2",
+  "url": "section-linear-analysis.html#section-linear-analysis-24",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "residual plot "
+},
+{
+  "id": "figure-residuals",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-residuals",
+  "type": "Figure",
+  "number": "4.2.11",
+  "title": "",
+  "body": " A Residual Plot     "
+},
+{
+  "id": "figure-linear-model-2",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-linear-model-2",
+  "type": "Figure",
+  "number": "4.2.12",
+  "title": "",
+  "body": " Another Linear Model     "
+},
+{
+  "id": "figure-residual-plot-2",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-residual-plot-2",
+  "type": "Figure",
+  "number": "4.2.13",
+  "title": "",
+  "body": " Caption     "
+},
+{
+  "id": "figure-linear-model3",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-linear-model3",
+  "type": "Figure",
+  "number": "4.2.14",
+  "title": "",
+  "body": " Another linear model     "
+},
+{
+  "id": "figure-residual-plot3",
+  "level": "2",
+  "url": "section-linear-analysis.html#figure-residual-plot3",
+  "type": "Figure",
+  "number": "4.2.15",
+  "title": "",
+  "body": " A matching residual plot     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",

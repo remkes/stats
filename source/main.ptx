@@ -14,8 +14,8 @@
     <xi:include href="./chapter-organization.ptx" />
     <xi:include href="./chapter-context.ptx" />
     <xi:include href="./chapter-display.ptx" />
-    <!--
     <xi:include href="./chapter-linear-models.ptx" />
+    <!--
     <xi:include href="./chapter-hypothesis-setup.ptx" />
     <xi:include href="./chapter-hypothesis-testing.ptx" />
     <xi:include href="./chapter-glossary.ptx" />

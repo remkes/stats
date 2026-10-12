@@ -14,10 +14,10 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Section Name</title>
+<title>Linear Models</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="_static/pretext/fonts/material-symbols-outlined.css">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
@@ -25,8 +25,9 @@ hasWebworkReps: false,
 hasSage: false,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
-</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+</script><script defer data-pretext-mathjax="true" onerror="this.dataset.loadFailed = 'true';" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta name="twitter:title" content="Course Notes for Stat 313">
@@ -35,7 +36,7 @@ htmlPresentation: false,
 <meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.45"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -57,19 +58,19 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.10';
+eBookConfig.runestone_version = '8.3.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
+<script src="_static/prefix-runtime.3adcbea95009347b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.7a45395f326e122c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
-<body id="changeme" class="pretext book ignore-math">
+<body id="remkesstatsnotes" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
 <div class="heading ptx-banner-heading"><a href="stats-notes.html"><span class="title">Course Notes for Stat 313</span></a></div>
 <p class="byline">Remkes Kooistra</p>
@@ -84,7 +85,17 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
 <ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
-<span class="nav-other-controls"><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
 <h2 class="heading">Readability settings</h2>
 <button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
@@ -136,70 +147,216 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-study-design.html#subsection-math-and-judgment" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Mathematics and Judgment</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-study-ethics.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Ethics in Statistics</span></a></div>
+<ul id="ptx-toc-group-section-study-ethics" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-study-ethics.html#subsection-ethics-general" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Public and Professional Ethics in Statistics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-study-ethics.html#subsection-data-collection" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Data Collection and Management</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-study-ethics.html#subsection-stats-truth" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Statistics and Truth</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-study-ethics.html#subsection-neutral-tool" class="internal"><span class="codenumber">2.3.4</span> <span class="title">The Myth of a Neutral Tool</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-display.html" class="internal"><span class="codenumber">3</span> <span class="title">Descriptive Statistics</span></a></div>
 <ul id="ptx-toc-group-chapter-display" class="structural toc-item-list">
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-display-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-tables.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-bar-pie.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-histograms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-central-tendencies.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-scatterplots.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Section Name</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-tables.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Visualizing Data: Tables</span></a></div>
+<ul id="ptx-toc-group-section-tables" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-tables.html#subsection-two-types" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Two Types of Statistics</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-tables.html#subsection-table" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Counting Catgeorical Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-bar-pie.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Bar Plots and Pie Charts</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-histograms.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Histograms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-central-tendencies.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Central Tendencies</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-scatterplots.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Scatterplots</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter-linear-models.html" class="internal"><span class="codenumber">4</span> <span class="title">Linear Models</span></a></div>
 <ul class="structural toc-item-list contains-active" id="ptx-toc-group-chapter-linear-models">
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-linear-models-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-linear-regression.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-linear-analysis.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Section Name</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="section-linear-regression.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Linear Models</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-linear-analysis.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Evaluation of Linear Models</span></a></div></li>
 </ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="chapter-hypothesis-setup.html" class="internal"><span class="codenumber">5</span> <span class="title">Hypothesis Testing - Setup</span></a></div>
-<ul id="ptx-toc-group-chapter-hypothesis-setup" class="structural toc-item-list">
-<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-hypothesis-setup-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-hypotheses.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-randomness.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-probability-theory.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-sampling-distributions.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-normal-distributions.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-mahtmeatics-sampling-distributions.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-slo3-areas-under-curves.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-mathematics-normal-distributions.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-confidence-intervals.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-errors.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Section Name</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="chapter-hypothesis-testing.html" class="internal"><span class="codenumber">6</span> <span class="title">Hypothesis Testing - Implementations</span></a></div>
-<ul id="ptx-toc-group-chapter-hypothesis-testing" class="structural toc-item-list">
-<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="chapter-hypothesis-testing-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-single-proportion.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-chi-squared.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-mathematics-t-chi-squared.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-single-mean.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-difference-means.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-anova.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Section Name</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-ht-linear.html" class="internal"><span class="codenumber">6.7</span> <span class="title">Section Name</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="chapter-glossary.html" class="internal"><span class="codenumber">7</span> <span class="title">Glossary</span></a></div>
-<ul id="ptx-toc-group-chapter-glossary" class="structural toc-item-list"><li class="toc-item toc-glossary"><div class="toc-title-box"><a href="chapter-glossary-3.html" class="internal"><span class="codenumber">7</span> <span class="title">Glossary</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="section-linear-regression">
 <h1 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section Name</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear Models</span>
 </h1>
-<div class="para" id="section-linear-regression-2">Test<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="section-linear-regression-2">The methods of the previous few sections were descriptive statistics: ways to summarize and display information from a data set. Now I want to slowly move into inferential statistics. Now, instead of summarizing or displaying, I want to try to use the data in a data set to try to uncover some underlying truth about that data. I want to try to infer something.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Section 4.1: Section Name"><a tabindex="-1" href="#section-linear-regression" title="Copy heading and permalink for Section 4.1: Section Name" aria-label="Copy heading and permalink for Section 4.1: Section Name">🔗</a></div>
+<div class="para" id="section-linear-regression-3">There are many ways to do this, and we will devote the remainder of the course to just a few of the techniques of inferential statistics. We are starting with one important large category: regression. This is a category that applies to two numeric variables. A regression puts forward the idea that the two numeric variables are related by a mathematical function, where one is the independent variable and the other is the independent variable. In principle, any mathematical function can be chosen in a regression, and regression is commonly performed for many such functions: polynomials, trigonometric functions, exponentials functions, and so on. But by far the most common regression is linear regression.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-linear-regression-4">
+<div class="para">Before stating the definition that I want to work with in this course, let me remind you about the mathematical structure of a line. The most common equation of a line, where <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are the variable, is called the <dfn class="terminology">slope-intercept</dfn> form of the line.</div>
+<div class="displaymath process-math" id="section-linear-regression-4-4">
+\begin{equation*}
+y = mx + b
+\end{equation*}
+</div>
+<div class="para">In this setup, <span class="process-math">\(x\)</span> is the independent variable, the input, and <span class="process-math">\(y\)</span> is the dependent variatible, the output. <span class="process-math">\(m\)</span> is the slope of the line, showing how steep the line is, with positive slope for upward moving lines and negative slope for downward moving lines. <span class="process-math">\(b\)</span> is the <span class="process-math">\(y\)</span>-intercept of the line: it shows where the line crosses the <span class="process-math">\(y\)</span> axis.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-5">This slope-intercept form is the setup for lines that we will use. Now let me give the main definition of the section.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="section-linear-regression-6"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="section-linear-regression-6-1-1">
+<div class="para">A <dfn class="terminology">linear regression</dfn> or <dfn class="terminology">linear model</dfn> is a line chosen to match two numeric variables in a data set. The linear model is written in slope-intercept form.</div>
+<div class="displaymath process-math" id="section-linear-regression-6-1-1-3">
+\begin{equation*}
+\hat{y} = mx + b
+\end{equation*}
+</div>
+<div class="para">The variable <span class="process-math">\(x\)</span> is called the <dfn class="terminology">explanatory variable</dfn>. The variable <span class="process-math">\(y\)</span> is called the <dfn class="terminology">dependent variable</dfn>. The notation <span class="process-math">\(\hat{y}\)</span> indicates that the mdoel is an approximation of the data: individual data point are hopefully near the line, but the <span class="process-math">\(y\)</span> values of the data points don’t exactly match the <span class="process-math">\(y\)</span> values of th eline. The coefficient <span class="process-math">\(b\)</span> is the <dfn class="terminology">intercept</dfn> and the coefficient <span class="process-math">\(m\)</span> is the slope</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="section-linear-regression-6-1-2">If the slope is positive, we say that the linear model demonstrates <dfn class="terminology">positive correlation</dfn>. Likewise, if the slope is egative, there is <dfn class="terminology">negative correlation</dfn> or <dfn class="terminology">inverse correlation</dfn>. Positive correlations means an increase in the explanatory variable causes an increase in the dependent variable; inverse correlation is the opposite, where increasing the explanatory variable decreases the dependent variable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 4.1.1"><a tabindex="-1" href="#section-linear-regression-6" title="Copy heading and permalink for Definition 4.1.1" aria-label="Copy heading and permalink for Definition 4.1.1">🔗</a></div>
+</article>
+<div class="para" id="section-linear-regression-7">For the linear models we will analyze, the slope is by far the most important of the two coefficients. The slope indicates the strength of the effect of the explanatory variable. A high slope means that a small change in <span class="process-math">\(x\)</span> produces a large change in<span class="process-math">\(y\text{.}\)</span> Likewise, a small slope means that change in <span class="process-math">\(x\)</span> have a pretty small effect.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-8">Visually, we fit linear models to scatter plots. <a href="section-linear-regression.html#figure-scatterplot6" class="xref" data-knowl="./knowl/xref/figure-scatterplot6.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.2">Figure 4.1.2</a> is a scatterplot of two numeric variables in a data set about possums. The <span class="process-math">\(x\)</span> variable is the length of the whole animal (including the long tail)in centimeters, and the <span class="process-math">\(y\)</span> variable is the length of just the head, in milimeters. As usual, the dots are the cases, representing the measurements of one specific possum.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="figure-scatterplot6"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/image-scatterplot6.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Possum Scatterplot<div class="autopermalink" aria-hidden="true" data-description="Figure 4.1.2"><a tabindex="-1" href="#figure-scatterplot6" title="Copy heading and permalink for Figure 4.1.2" aria-label="Copy heading and permalink for Figure 4.1.2">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="section-linear-regression-10">Regression looks at a scatter plot and asks: what relationship is demonstrated by this data. In this scatter plot, it looks like their might be linear relationship with a positive correlation. This also intuitively makes some sense: the larger animals can be reasonably expected to also have larger heads.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-11">I want to fit a linear model to this data. Visually, I want to draw a line through this scatterplot that best fits all these data points. <a href="section-linear-regression.html#figure-linear-model" class="xref" data-knowl="./knowl/xref/figure-linear-model.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.3">Figure 4.1.3</a> shows the scatterplot with this line. The <span class="process-math">\(x\)</span> axis is the explanatory variable, in this case, the total length in centimeters.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="figure-linear-model"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/image-linear-model.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Linear Model<div class="autopermalink" aria-hidden="true" data-description="Figure 4.1.3"><a tabindex="-1" href="#figure-linear-model" title="Copy heading and permalink for Figure 4.1.3" aria-label="Copy heading and permalink for Figure 4.1.3">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="section-linear-regression-13">
+<div class="para">The specific line that is drawn through the scatter plot has this equation.</div>
+<div class="displaymath process-math" id="section-linear-regression-13-1">
+\begin{equation*}
+\hat{y} = 41 + 0.59x
+\end{equation*}
+</div>
+<div class="para">Remember that the hat notation over the dependent variable is there to remind us that this line is an approximation of the data, not a perfect fit to the data.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-14">Now I can interpret the coefficients of this line. 41 is the intercept. On a raw interpretation, this would mean that if the explanatory variable were zero, the output would be 41. In our units, a total body length of 0cm predicts a head length of 41mm. This obviously doesn’t make much sense: a body length of 0 is not actually a possum at all. However, the data here doesn’t really care about (relatively) very small body lengths. The data is studying grown possums, not developmental data. So there is an interpretation here, but it’s not much of a problem that the interpretation isn’t very sensical. The dataset isn’t really concerned with very small <span class="process-math">\(x\)</span> values. (Of course, other data sets may care about the intercept, if the data does include values of the explanatory variable which are near zero.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-15">The slope coefficient is more useful here. The number <span class="process-math">\(0.59\)</span> says that for each cm increase in body length, the expectation is that the corresponding length of the head of the possum is 0.59mm larger. In many ways, this coefficient is the relationship between the two variables, showing how changes in one variable are reflected in the other variable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-16">A linear regression, once found, can be used to make predictions. If I put a body length into the equation of the line, say 90 cm, then the linear regression predicts a 94.1 millimeter long head. These predictions can then be compared against future data. In this way, a linear model is like a hypothesis: something that comes from the data but can be tested in future experiments to determine how well it holds up.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-17">As I have already noted, a linear model is an approximation. The data points are hopefully near the line, but not exactly on the line. That leads to the next definition.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="section-linear-regression-18"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="section-linear-regression-18-1-1">Let <span class="process-math">\(\hat y{y}\)</span> be a linear model of a data set. For each data point, the difference <span class="process-math">\(y - \hat{y}\)</span> is called the <dfn class="terminology">residual</dfn> of the data point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 4.1.4"><a tabindex="-1" href="#section-linear-regression-18" title="Copy heading and permalink for Definition 4.1.4" aria-label="Copy heading and permalink for Definition 4.1.4">🔗</a></div>
+</article>
+<div class="para" id="section-linear-regression-19">Using the previous example, consider the datapoint <span class="process-math">\((75,
+94.7)\text{.}\)</span> If I put x=75 into the line, it predicts 85.25 mm. The actual value is 84.7. The different, <span class="process-math">\(y\)</span> minus <span class="process-math">\(\hat{y}\text{,}\)</span> is the residual for this data point. In this case, the data is -.55 below the line: the residual is -0.55.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-20">Must can be done with residuals, and we will return to them in <a href="section-linear-analysis.html" class="internal" title="Section 4.2: Evaluation of Linear Models">Section 4.2</a>. For now, though, I can use residuals to answer an important questions. I’ve talked about linear models, but I haven’t yet said anything about how they are actually determined. How is the line and its coefficients discovered?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-linear-regression-21">
+<div class="para">There are several methods, but the most common is called the <dfn class="terminology">method of least squares</dfn>. Let me sketch the idea. First, I can number all of the data points from 1 to <span class="process-math">\(n\)</span> where <span class="process-math">\(n\)</span> is the number of cases in the data set.</div>
+<div class="displaymath process-math" id="section-linear-regression-21-4">
+\begin{equation*}
+(x_1, y_1), (x_2, y_2), \ldots, (x_n y_n)
+\end{equation*}
+</div>
+<div class="para">Then, given any line <span class="process-math">\(\hat{y} = b + mx\)</span> I can calculate the residuals of each data point. I’ll use the letter <span class="process-math">\(e\)</span> for these residuals (short for the error of the approximation).</div>
+<div class="displaymath process-math" id="section-linear-regression-21-7">
+\begin{equation*}
+e_i = y_i - \hay{y}(x_i)  
+\end{equation*}
+</div>
+<div class="para">This gives me a list of residuals, each measuring how far the data point is away from the line.</div>
+<div class="displaymath process-math" id="section-linear-regression-21-8">
+\begin{equation*}
+e_1, e_2, \ldots e_n
+\end{equation*}
+</div>
+<div class="para">Since the residuals measure the error, I want the error to be as small as possible. There are different ways to measure this, but the most common method looks at the sum of the squares of the residuals.</div>
+<div class="displaymath process-math" id="section-linear-regression-21-9">
+\begin{equation*}
+e_1^2 + e_2^2 + \ldots + e_n^2
+\end{equation*}
+</div>
+<div class="para">For any line, this sum of the squares of the residuals. I want the specific line for which this number is as small as possible. Such a line will be considered the best linear model. Since I have a bunch of squares and I want to minimie them, this is called the method of least squares.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-22">Why do we use squares? There are a number of reasons, some which require more mathematics to discussn. One important effect, though, is that it makes all the errors positive. Residuals can be positive or negative: above or below the line. By squaring them, I get a positive numbers for each error. A second important effect comes from the fact that squaring has a larger effect on larger numbers. Therefore, this method exagerated large errors: points which are very far away from the line. This method is quite sensitive to major outliers, which is desirable in this context.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-23">Finally, let me talk about minimizing this sum. You might be wondering: how is this actually done? Sure, I can make this sum and say that I want a minimum value, but how is the minimum actually calculated? Unfortunately for us, calculating such a minimum is well beyond the mathematics expected in this course. This is a calculus problem, and a fairly difficult calculus problem at that. In general, mostly problems in mathematics that are searching for a minimum or a maximum end up being calculus problems. Since this is not a calculus course, I am not going to go into the minimization methods.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-24">This covers the basic ideas of linear regression, but I want to introduce one more important idea in this section. The linear model so far had one explanatory variable. It is possible that we want to consider more than one explanatory variable. This leads to the idea of multiple linear regression. I’ll state the definition specifically for three explanatory variables.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="section-linear-regression-25"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para logical" id="section-linear-regression-25-1-1">
+<div class="para">Let <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(x_1\text{,}\)</span> <span class="process-math">\(x_2\)</span> and <span class="process-math">\(x_3\)</span> be numeric variables ina  data set. A <dfn class="terminology">multiple linear regression</dfn> is a linear model where <span class="process-math">\(y\)</span> is the dependent variable and depends on all three of the other variables. It has this equation.</div>
+<div class="displaymath process-math" id="section-linear-regression-25-1-1-7">
+\begin{equation*}
+\hat{y} = b + m_1x_2 + m_2x_2 + m_3x_3
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-25-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 4.1.5"><a tabindex="-1" href="#section-linear-regression-25" title="Copy heading and permalink for Definition 4.1.5" aria-label="Copy heading and permalink for Definition 4.1.5">🔗</a></div>
+</article>
+<div class="para" id="section-linear-regression-26">Those I have stated it for three variables, a multiple linear regression could have any number of variable. Notice that there is still only one intercept coefficient, but that each explanatory variable has its own slope coefficient. Each of those slope coefficients measures the way in which <span class="process-math">\(y\)</span> depends on each of the explanatory variables.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-27">I can no longer graphs a multiple regression, since there are too many variables (hence too many axes) to draw. But the principles are exactly the same: there are still residuals, I still can find a model by least squares, the coefficients still explains the relationship. I am just allowing multiple variables to have an effect on my dependent variable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="section-linear-regression-28">
+<div class="para">Let me go back to the example of this section. The data set also include variable for the age of the possum as well as the sex. I’d like to put these all in the linear model. Again, the head length is the dependent variable, which I will still call <span class="process-math">\(y\text{.}\)</span> A multiple regression might look like this.</div>
+<div class="displaymath process-math" id="section-linear-regression-28-2">
+\begin{equation*}
+\hat{y} = 43.5 + 0.56(\text{length}) + 0.30(\text{age}) -
+1.66(\text{sex})
+\end{equation*}
+</div>
+<div class="para">Then I can interpret these coefficients. As discussed above, the intercept is not terribly importnat here, but the other three are important. 0.56 means that each centimeter increase in total body length corresponds with a 0.56mm increase in head length. The 0.30 say that each year older corresponds to 0.3mm increase in head length. Finally, there is also the sex variable. This requires some more discussion.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-29">In this data set, unsurprisingly, sex is a nominal categorical varaible, with two categories: male and female. As such, I can’t put it into an equation. However, there is way to solve this problem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="section-linear-regression-30"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="section-linear-regression-30-1-1">If I have a categorical variable in a dataset and I assign numbers to each category, the result is called an <dfn class="terminology">indicator variable</dfn><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-30-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 4.1.6"><a tabindex="-1" href="#section-linear-regression-30" title="Copy heading and permalink for Definition 4.1.6" aria-label="Copy heading and permalink for Definition 4.1.6">🔗</a></div>
+</article>
+<div class="para logical" id="section-linear-regression-31">
+<div class="para">The assignment of numbers usually arbitrary (though for ordinal categorical variable, we would usually try to preserve the natural order). In this case, the researches made this assignment.</div>
+<div class="displaymath process-math" id="section-linear-regression-31-1">
+\begin{equation*}
+\text{male} \mapsto 0 \text{ and } \text{female} \mapsto 1.
+\end{equation*}
+</div>
+<div class="para">This changes the categorical variable into numbers. Now I can interpret the last term in the multiple regression. The coefficient <span class="process-math">\(-1.66\)</span> only takes effect for female possums. If the case is male, the indicator variable is 0, so this term is multiplied by 0 and has no effect. If the case is female, the indicator variable is 1, so the term subtract 1.66 from the head length. The result is the observation that the female possums of the same age and body length typically have a head length that is 1.66mm shorter than the males.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="section-linear-regression-32">I said I couldn’t draw multiple regressions, since there are too many variables. However, I can often draw the effects of an indicator variable. Let me show you how. If I ignore the age category and just do regression with the body length and sex variables, I can treat each instance of the indicator variable as a new line. The coefficient <span class="process-math">\(-1.66\)</span> move the line for female possums below the line for the male possums. <a href="section-linear-regression.html#figure-indicator-variable" class="xref" data-knowl="./knowl/xref/figure-indicator-variable.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.1.7">Figure 4.1.7</a> show the result. In the figure, the cases are colour coded: red for male and blue for female. I get two lines with the same slope (the other slope coefficient is unchanged) but the lines are shifted up or down from each other. If I have more categories, I could likewise have a whole set of shifted lines.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="figure-indicator-variable"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/image-indicator-variable.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Indicator Variable and Lines<div class="autopermalink" aria-hidden="true" data-description="Figure 4.1.7"><a tabindex="-1" href="#figure-indicator-variable" title="Copy heading and permalink for Figure 4.1.7" aria-label="Copy heading and permalink for Figure 4.1.7">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="section-linear-regression-34">To finish this section, let me summarize with three points. First, there is mathematical way to create a linear regression by the least squares method: finding the best line by minimizing the residuals. Second, the numbers in that line carry statistical meaning: they encode the relationship between the data, at least approximately. Finally, those relationships can be extended to more variables. Extending to other numeric variables is just adding new terms to the equation, but to use categorical variables we have to assignment numbers to them, making them indicator variables. In all this, the coefficients carry the meaning of the relationship.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#section-linear-regression-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Section 4.1: Linear Models"><a tabindex="-1" href="#section-linear-regression" title="Copy heading and permalink for Section 4.1: Linear Models" aria-label="Copy heading and permalink for Section 4.1: Linear Models">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
@@ -207,7 +364,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" alt="Runestone Academy logo" src="data:image/png;base64,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"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" alt="MathJax logo" src="data:image/png;base64,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"></a>
 </div>
 </body>
 </html>

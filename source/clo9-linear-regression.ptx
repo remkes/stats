@@ -37,35 +37,9 @@
     the slope of the line, showing how steep the line is, with
     positive slope for upward moving lines and negative slope for
     downward moving lines. <m>b</m> is the <m>y</m>-intercept of the
-    line: it shows where the line crosses the <m>y</m> axis. <xref
-    ref=:figure-slope/> show a demonstration: this line has slope 
-    <figure xml:id="slope">
-      <caption>Slope-Intercept Form </caption>
-      <image xml:id="figure82" width="80%">
-        <asymptote>
-          size(10cm,0);
-
-          import graph;
-
-          xlimits(-4,8);
-          ylimits(-4,3);
-
-          xaxis("$x$",Ticks("%"));
-          yaxis("$y$",Ticks("%"));
-
-          draw((-4,-4)--(8,2));
-
-          draw((2,-1)--(6,-1)--(6,1));
-
-          draw((-2,1)--(0,-2),Arrow);
-
-          label("$y$-intercept $b$",(-2,1),N);
-          label("Slope $m$", (4,-1),S);
-
-          label("$y = mx + b$", (3,-3),E);
-        </asymptote>
-      </image>
-    </figure>
+    line: it shows where the line crosses the <m>y</m> axis. 
+  </p>
+  <p>
     This slope-intercept form is the setup for lines that we will use.
     Now let me give the main definition of the section.
   </p>
@@ -118,9 +92,9 @@
     are the cases, representing the measurements of one specific
     possum. 
   </p>
-  <figure xml:id="figure">
-    <caption>Caption</caption>
-    <image xml:id="image-" width="80%">
+  <figure xml:id="figure-scatterplot6">
+    <caption>Possum Scatterplot</caption>
+    <image xml:id="image-scatterplot6" width="80%">
       <latex-image>
         \begin{tikzpicture}
           \begin{axis}[
@@ -258,8 +232,8 @@ head_l,total_l\\
     this case, the total length in centimeters. 
   </p>
   <figure xml:id="figure-linear-model">
-    <caption>Caption</caption>
-    <image xml:id="image-" width="80%">
+    <caption>Linear Model</caption>
+    <image xml:id="image-linear-model" width="80%">
       <latex-image>
         \begin{tikzpicture}
         \begin{axis}[
@@ -376,6 +350,12 @@ head_l,total_l\\
 91.5,82.5\\
 93.6,89\\
             };
+            \addplot+ [
+              black,
+              mark=|
+              sharp plot,
+            ]
+            coordinates { (73.84,84.07) (100,100) };
           \end{axis}
         \end{tikzpicture}
       </latex-image>
@@ -386,7 +366,7 @@ head_l,total_l\\
     equation. 
     <md>
       \hat{y} = 41 + 0.59x
-    <md>
+    </md>
     Remember that the hat notation over the dependent variable is
     there to remind us that this line is an approximation of the data,
     not a perfect fit to the data. 
@@ -446,7 +426,7 @@ head_l,total_l\\
   </p>
   <p>
     Must can be done with residuals, and we will return to them in
-    <xref ref="clo10-linear-analysis"/>. For now, though, I can use
+    <xref ref="section-linear-analysis"/>. For now, though, I can use
     residuals to answer an important questions. I've talked about
     linear models, but I haven't yet said anything about how they are
     actually determined. How is the line and its coefficients
@@ -455,7 +435,7 @@ head_l,total_l\\
   <p>
     There are several methods, but the most common is called the
     <term>method of least squares</term>. Let me sketch the idea.
-    First, I can number all of the data points from 1 to <m>n</n>
+    First, I can number all of the data points from 1 to <m>n</m>
     where <m>n</m> is the number of cases in the data set. 
     <md>
       (x_1, y_1), (x_2, y_2), \ldots, (x_n y_n)
@@ -518,7 +498,7 @@ head_l,total_l\\
   <definition>
     <statement>
       <p>
-        Let <m>y<m>, <m>x_1</m>, <m>x_2</m> and <m>x_3</m> be numeric
+        Let <m>y</m>, <m>x_1</m>, <m>x_2</m> and <m>x_3</m> be numeric
         variables ina  data set. A <term>multiple linear
         regression</term> is a linear model where <m>y</m> is the
         dependent variable and depends on all three of the other
@@ -554,7 +534,7 @@ head_l,total_l\\
     <md>
       \hat{y} = 43.5 + 0.56(\text{length}) + 0.30(\text{age}) -
       1.66(\text{sex})
-    <md>
+    </md>
     Then I can interpret these coefficients. As discussed above, the
     intercept is not terribly importnat here, but the other three are
     important. 0.56 means that each centimeter increase in total body
@@ -611,8 +591,8 @@ head_l,total_l\\
     shifted lines. 
   </p>
   <figure xml:id="figure-indicator-variable">
-    <caption>Caption</caption>
-    <image xml:id="image-" width="80%">
+    <caption>Indicator Variable and Lines</caption>
+    <image xml:id="image-indicator-variable" width="80%">
       <latex-image>
         \begin{tikzpicture}
         \begin{axis}[
