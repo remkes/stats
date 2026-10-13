@@ -18,9 +18,9 @@
           data as it is. 
         </p>
         <p>
-          <term>Inferential statistics</term> is a set of technique
+          <term>Inferential statistics</term> is a set of techniques
           that try to draw new information out of a data set. Instead
-          of just displaying or summarizing, these technique try to
+          of just displaying or summarizing, these techniques try to
           understand a deeper, less direct meaing present in the data.
           This starts with a <term>hypothesis</term>: often a
           mathematical statement about some relationship between the
@@ -55,7 +55,7 @@
       From that data, I can look at the <sq>30-Day Event</sq>
       variable. This is a categorical variable with two category:
       <sq>stroke</sq> or <sq>no event</sq>, indicating for each case
-      whether or not a stroke occured within 30 days of the stat of
+      whether or not a stroke occured within 30 days of the start of
       the trial. I can count up the totals for this variable: how many
       cases are in each category. The result is this table. 
     </p>
@@ -101,7 +101,7 @@
         <p>
           A table which displays the counts of the categories of a
           categorical variable is called a <term>frequency
-          table</term>
+          table</term>.
         </p>
       </statement>
     </definition>
@@ -161,7 +161,10 @@
     <p>
       The percentages are just the count divided by the total number
       of cases. The total at the end, of course, should be all the
-      cases: 100%. 
+      cases: 100%. Thoughout this course, and throughout statistics,
+      the word <sq>proportions</sq> is roughly synonymous with
+      <sq>perdcentages</sq>, so this can also be called a frequency
+      table of proportions. 
     </p>
     <p>
       A table can also be used to look at the interaction of
@@ -219,9 +222,9 @@
       The example shows a contingency table. There are two variables:
       the group and the 30-day event or non-event. Each cell is an
       interaction of these two variables. There were 13 cases in the
-      contronl group which had a stroke within 30 days. This is a
+      control group which had a stroke within 30 days. This is a
       great visauzliations of the data, since it points to the very
-      poitn of the study: the researchers want to know the
+      point of the study: the researchers want to know the
       difference in the rate of strokes between the control group and
       the treatment groups. A contingency table can show this
       difference. It is more subtle than a frequency table, since it
@@ -284,7 +287,7 @@
       in the previous paragraph, leads to a hypotheses: that the data
       shows that stents are actually counter-productive and increase
       the risk of strokes. Hypotheses are the domain is inferential
-      statistics. Whether or not the data actually support this data
+      statistics. Whether or not the data actually supports this data
       remains to be seen. You might argue that the descriptive table
       here is enough: it's clear that the stents were worse for stroke
       preventions. That's true about the sample, sure. But a

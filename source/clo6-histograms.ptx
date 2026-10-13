@@ -24,7 +24,7 @@
     about loans and interest rates. This data set has 50 cases and one
     of the variables is interest rate in percentage. This is a numeric
     variable. The possible values range from 5 to 25 percent. To make
-    a hisogram, I need to divide this into smalle rranges. I'll use an
+    a hisogram, I need to divide this into smalle ranges. I'll use an
     interval of 2.5, so that the groups are as follows: 5 to 7.5, 7.5
     to 10, 10 to 12.5 and so on. Then I count how many cases fall into
     each range and made a bar graph of that count. The result is a the
@@ -91,7 +91,7 @@
     </image>
   </figure>
   <p>
-    In this historgraph, it's clear that there are more cases in the
+    In this historgram, it's clear that there are more cases in the
     lower range than the higher range. That's already interesting
     information about the data and how it behaves. 
   </p>
@@ -511,12 +511,12 @@
   </p>
   <p>
     You may be familiar with a bell curve from high school, or just
-    from general knowlwedge. It is an extremely common model for data.
+    from general knowledge. It is an extremely common model for data.
     Many kinds of data are, indeed, normally distributed. But there is
     also a tendency, in some places, to assume a normal distribution
     where it really doesn't fit. This is dangerous. It is good to
     understand that the normal distribution is very common, but also
-    good to understand that not all data is normal.
+    good to understand that not all data is normally distributed
   </p>
   <p>
     A nice example of this is grades in courses. Often, it is assumed
@@ -854,10 +854,10 @@
   </figure>
   <p>
     Almost all of the cities in this data set are in the 0 - 2 million
-    population range. There are two outlier with higher population.
-    Such a situation might be reasonsable: it can easily imagine a set
+    population range. There are two outliers with higher population.
+    Such a situation might be reasonable: I can easily imagine a set
     of cases that represent cities where most at in the 0 - 2 million
-    range and only a couple exceed this. These outliner are probably a
+    range and only a couple exceed this. These outliers are probably a
     reasonable part of the data set. But having the outliers present
     another problem: since the histogram needs to be wider to display
     the outliers, the rest of the data gets more tightly grouped
@@ -872,11 +872,12 @@
   </p>
   <p>
     The next diagram is the same poluation after applying the
-    logarithm. The two outliers are still here, but the rest of the
-    population is now spread out over seven piece of the histogram,
-    not just three. I get a better sense of the data and its
-    distribution after applying the logarithm.  This is one of the
-    things that a transformation can do: lead to more readable data.
+    logarithm (the base ten logarithm, to be specific). The two
+    outliers are still here, but the rest of the population is now
+    spread out over seven piece of the histogram, not just three. I
+    get a better sense of the data and its distribution after applying
+    the logarithm.  This is one of the things that a transformations
+    can do: lead to more readable data.
   </p>
   <figure xml:id="figure-histogram-logarithm">
     <caption>Histogram with a lograithm transformation</caption>

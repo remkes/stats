@@ -23,9 +23,9 @@
         The <term>mean</term> or <term>average</term> of a numeric
         variable in a data set is the central tendency calcluated by
         adding up all of the cases and dividing by the number of
-        cases. I can number the cases $x_1, x_2, \ldots x_n$, where
-        $n$ is the number of cases. The mean is usually written with a
-        bar notation.
+        cases. I can number the cases <m>x_1, x_2, \ldots x_n</m>,
+        where <m>n</m> is the number of cases. The mean is usually
+        written with a bar notation.
         <md>
           \bar{x} = \frac{x_1 + x_2 + \ldots + x_n}{n} 
         </md>
@@ -33,9 +33,9 @@
     </statement>
   </definition>
   <p>
-    Let's go back to the same Loans data set and interest rate
+    Let's go back to the same loans data set and interest rate
     variable as before. Recall <xref ref="figure-histogram1"/>, the
-    histogram of this data.  For the Loans data, there are 50 cases.
+    histogram of this data.  For the loans data, there are 50 cases.
     Adding up the interest rate in percentage for all 50 and dividing
     by 50 gives a mean interest rate of 11.57 percent. You can see, in
     the histogram, that 11.57 percent falls fairly nicely in the
@@ -47,7 +47,7 @@
     tendency? There are two important words to define here: deviation
     and variance. Both capture the idea of an individual case being
     different from the mean. Visually, both relate to how the values,
-    shown here group in a histogram, spread out.  Let me get to the
+    shown in a histogram, spread out.  Let me get to the
     first definition. 
   </p>
   <definition>
@@ -127,15 +127,15 @@
     this spread. This is typical. 
   </p>
   <p>
-    As a rule of thumb, about two thirds of a dataset typically fall
+    As a rule of thumb, about two thirds of a dataset typically falls
     within one standard devition from the mean. (There are certainly
     exceptions to this rule of thumb, but they typically come from
     strange and unusually distributed data). In this sense, most of
     the time, the standard deviation indicates how far from the mean
     you have to go to capture most (two-thirds) of the data. Even
-    most, almost all of the data will fall within two standard
-    deviations. Again in the histogram, almost all of this data is
-    within 10 unit, 2 standard deviations, from the mean. 
+    more, almost all of the data will fall within two standard
+    deviations. Again in the histogram for the loan datq, almost all
+    of this data is within 10 unit, 2 standard deviations, from the mean. 
   </p>
   <p>
     That was a discussion of mean or average, and the associated ideas
@@ -238,12 +238,13 @@
   </p>
   <p>
     The median is also a central tendency. One of the strange things
-    about statistics is that multiple different things align with the
-    normal language sense of <sq>usual</sq> or <sq>normal</sq>. Both
-    the mean and the median are some measure of what it typical in the
-    sample. I'll talk more later about the different between these
-    central tendency and how statistician decide which one to use. For
-    now, I can use the median and its setup to make some more
+    about statistics is that multiple different mathematics
+    constructions align with the normal language sense of
+    <sq>usual</sq> or <sq>normal</sq>. Both the mean and the median
+    are some measure of what it typical in the data set. I'll talk more
+    later about the different between these central tendencies and how
+    statisticians decide which one to use. For now, I can use the
+    median and its setup to make some more
     definitions.
   </p>
   <definition>
@@ -251,22 +252,24 @@
       <p>
         Let <m>x</m> be a numeric variable in a dataset. The median
         was found by taking a value exactly halfway through the cases,
-        when they were order. I'll keep that setup, but now insist
-        that the cases are ordered in increasing value.
+        when the data is ordered. For the following, I'll insist that
+        the data is ordered in increasing value.
         <ul>
-          The value of the cases that is one quarter of the way
-          through the count is the <term>first quartile</term>. 
-        </ul>
-        <ul>
-          The value of the cases that is three quarters of the way
-          through the count is the <term>third quartile</term>. 
-        </ul>
-        <ul>
-          For any percentage <m>p</m>, the value of the case that is
-          <m>p\%</m> of the way through the dataset is the <m>p</m>th
-          percentile. (So the first quartile is the 25th percentile,
-          the median is the 50th percentile, and the third quartile is
-          the 75% percentile). 
+          <li>
+            The value of the case that is one quarter of the way
+            through the count is the <term>first quartile</term>. 
+          </li>
+          <li>
+            The value of the case that is three quarters of the way
+            through the count is the <term>third quartile</term>. 
+          </li>
+          <li>
+            For any percentage <m>p</m>, the value of the case that is
+            <m>p\%</m> of the way through the dataset is the
+            <m>p</m>th percentile. (So the first quartile is the 25th
+            percentile, the median is the 50th percentile, and the
+            third quartile is the 75% percentile). 
+          </li>
         </ul>
       </p>
       <p>
@@ -284,10 +287,10 @@
     values below the value of the 93rd percentile. 
   </p> 
   <p>
-    Now I can look back at the table. There are 50 cases, to one
+    Now I can look back at the table. There are 50 cases, so one
     quarter is 12.5. Looking at the upper bounds, I look at the 13th
     case. Countintg through the table, the 13th case in increasing
-    order has value 7.96, so the first quartile is 10.90. Likewise,
+    order has value 7.96, so the first quartile is 7.96. Likewise,
     three quarters of 50 is 37.5, so I look at the 38th case. Again
     counting through the cases, the 38th case is 14.08, so the third
     quartile value is 14.08. I could similarly calculate percentiles
@@ -319,7 +322,7 @@
   <p>
     In general, when working with the median, IQR does something
     similar to standard devition for means. A low IQR means data that
-    is tightly bunches around the median. A high IQR means data that is
+    is tightly bunched around the median. A high IQR means data that is
     quite spread out around the median. The precise measure of this
     differs: roughly two-thirds of the data typically is within one
     standrad deviation of the mean, and exactly half of the data is
@@ -363,9 +366,9 @@
     <md>
       7.96 - (1.5)6.12 = 7.96 - 9.18 = -1.22
     </md>
-    This is below all of the data: there are no negativ interest
+    This is below all of the data: there are no negative interest
     rates here. By this rule of thumb, there are no outliers on the
-    lower end of this data. HOwever, the third quartile was 14.08, so
+    lower end of this data. However, the third quartile was 14.08, so
     I can again calcualte 1.5(IQR) above the third quartile.
     <md>
       14.08 + (1.5)6.12 = 14.08 + 9.18 = 23.26
@@ -398,7 +401,7 @@
             are called the <term>whiskers</term>). 
           </li>
           <li>
-            Isolate dots for the outliers. 
+            Isolated dots for the outliers. 
           </li>
         </ul>
       </p>
@@ -468,24 +471,24 @@
       <p>
         A statistic or visualiztion is called <term>robust</term> if
         changes to just a small number of data points have a minimal
-        effect on the statistic or visualization
+        effect on the statistic or visualization.
       </p>
     </statement>
   </definition>
   <p>
-    Robust statistics or visualizations are often desirable. If I only
-    one data point out of 200, probably the analysis should be almost
-    the same. The mean and associated sample variance and standard
-    deviation are useful measure and necessary for some tests and
-    calculations, but they are not necessarily robust. Outliers can
-    have a great effect on the mean, and moving an outlier further out
-    will show up, even if it is only one data point among many. In
-    contrast, medians and the rest of the information in a box plot is
-    robust. If I move the two outliers in the loans data even further
-    out, nothing else in the box plot will change. Box plots are less
-    sensitive to outliers, and often that is a desirable trait. We'll
-    talk more about these judgement calls in the future<mdash/>indeed,
-    as you should be aware of by now, such judgement calls are oen of
-    the main themes of the course.
+    Robust statistics or visualizations are often desirable. If I
+    change only one data point out of 200, probably the analysis
+    should be almost the same. The mean and associated sample variance
+    and standard deviation are useful measures and necessary for some
+    tests and calculations, but they are not necessarily robust.
+    Outliers can have a great effect on the mean, and moving an
+    outlier further out will show up, even if it is only one data
+    point among many. In contrast, medians and the rest of the
+    information in a box plot is robust. If I move the two outliers in
+    the loans data even further out, nothing else in the box plot will
+    change. Box plots are less sensitive to outliers, and often that
+    is a desirable trait. We'll talk more about these judgement calls
+    in the future<mdash/>indeed, as you should be aware of by now,
+    such judgement calls are one of the main themes of the course.
   </p>
 </section>

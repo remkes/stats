@@ -13,7 +13,7 @@
         Let <m>x</m> and <m>y</m> be two numeric variables in a
         dataset. A <term>scatterplot</term> is a graph where the
         values of each variable in a case, <m>x_i</m> and <m>y_i</m>,
-        are indicated as a dot with coordinates <m>(x_i, y_i</m>. 
+        are indicated as a dot with coordinates <m>(x_i, y_i)</m>. 
       </p>
     </statement>
   </definition>

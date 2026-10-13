@@ -444,7 +444,7 @@ head_l,total_l\\
     residuals of each data point. I'll use the letter <m>e</m> for
     these residuals (short for the error of the approximation). 
     <md>
-      e_i = y_i - \hay{y}(x_i)  
+      e_i = y_i - \hat{y}(x_i)  
     </md>
     This gives me a list of residuals, each measuring how far the data
     point is away from the line. 

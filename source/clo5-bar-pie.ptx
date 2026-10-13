@@ -8,13 +8,13 @@
   </p>
   <p>
     I want to strongly state one important theme as the start of this
-    section. Visualizaiton are powerful, since they can display data
+    section. Visualizaitons are powerful, since they can display data
     in much more readable way. But they always also come with some
     amount of risk. The choice of a visualization, much like
     everything in this course, always comes down to a judgment call. 
     Every choice of visualization emphasizes something about the data
     and hides something else. There is no such thing as a neutral
-    visualizations<mdash/>they are always informed by a goal. 
+    visualization<mdash/>they are always informed by a goal. 
   </p>
   <p>
     Now let me get started with the definition. In this section, I'll
@@ -23,7 +23,7 @@
     data and three variables. One variable is the current home
     ownership status of the application: whether they already own a
     home outright, have a mortgage, or rent. Another variable is the
-    applition type: individual or joint. The final variable is the
+    application type: individual or joint. The final variable is the
     rating the bank gave to the application, which is a letter from A
     to G with A being the safest loan to aware and G being the most
     risky.
@@ -58,7 +58,7 @@
             1353
           </cell>
         </row>
-        <row>
+        <row bottom="medium">
           <cell>
             Rent 
           </cell>
@@ -76,7 +76,7 @@
         </row>
       </tabular>
     </table>
-    <href red="table-loans-ownership"/> is not a bad way to get a
+    <xref ref="table-loans-ownership"/> is not a bad way to get a
     sense of the data from the table, but I want to visualize the
     data to make the breakdown more readiable. To do this, I'm going
     to make a bar plot. 
@@ -120,8 +120,8 @@
     </image>
   </figure>
   <p>
-    This is the same data, but now the bar plots gives a qualitative
-    sense of the relationship between the variable<mdash/>a sense that
+    This is the same data, but now the bar plot gives a qualitative
+    sense of the relationship between the categories<mdash/>a sense that
     might have been missing from the raw numbers. It's easy to see, at
     a glance, the relative sizes of the categories. 
   </p>
@@ -159,7 +159,7 @@
     In <xref ref="figure-ownership-bar-proportions"/>, the proportions
     are represented as decimals. This is probably the more common
     notation in statistics, but I certainly could have written these
-    also as percentages: <m>48.9\%</m> instead of <m>0.479</m>.
+    also as percentages: <m>47.9\%</m> instead of <m>0.479</m>.
     Ultimately, both notations are used and switched between
     frequently, so you should be comfortable with both. 
   </p>
@@ -174,13 +174,13 @@
         There are three variants of a bar plot that display
         information about two different categorical variables in a
         data set. A <term>stacked bar plot</term> is a usual bar plot
-        but the bars are colour in different colours corresponding to
+        but the bars are coloured in different colours corresponding to
         the counts of a second categorical variable. A <term>dodged
         bar plot</term> is a bar plot where each original bar is split
         into several smaller bars by the second categorical variable.
         Finally a <term>standardized bar plot</term> is a bar plot
         where the heights of all the bars are fixed and the bars are
-        colour by the proportions of the second variable. 
+        coloured by the proportions of the second variable. 
       </p>
     </statement>
   </definition>
@@ -204,13 +204,13 @@
         <cell> 812 </cell>
         <cell> 4789 </cell>
       </row>
-      <row bottom="minor">
+      <row>
         <cell> Own </cell>
         <cell> 1242 </cell>
         <cell> 111 </cell>
         <cell> 1353 </cell>
       </row>
-      <row>
+      <row bottom="minor">
         <cell> Rent </cell>
         <cell> 3494 </cell>
         <cell> 364 </cell>
@@ -228,13 +228,13 @@
     Previously, I turned a frequency table into a bar graph. Now I
     want to turn this contingency table into one of these three new
     bar graphs. I want to show the interaction: not just that there
-    are 4789 applicatnts who previous had a mortgage, but that 3977 of
+    are 4789 applicants who previously had a mortgage, but that 3977 of
     them were solo applicants and 812 were joint applicants. Again,
-    the data is here but seeing what is all means in just the number
-    is getting more difficult. 
+    the data is here in the table but seeing what is all means in just
+    the numbers is getting more difficult. 
   </p>
   <figure xml:id="figure-stacked-bar">
-    <caption></caption>
+    <caption>A Stacked Bar Plot</caption>
     <image witdh="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -270,7 +270,7 @@
     many of each bar are individual or joint applicants.
   </p>
   <figure xml:id="figure-dodged-bar">
-    <caption></caption>
+    <caption>A Dodged bar plot</caption>
     <image witdh="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -295,11 +295,11 @@
     </image>
   </figure>
   <p>
-    <href ref="figure-dodged-bar"/> is a dodged bar plot. It shows the
+    <xref ref="figure-dodged-bar"/> is a dodged bar plot. It shows the
     same information, but shows the breakdown side-by-side instead in
     one bar. The total of the mortgage category is now the sum of
     these two bars, and each subset is its own side-by-side bar. This
-    makes the total of each category, mortgage, onw and rent, a little
+    makes the total of each category, mortgage, own and rent, a little
     bit less visable, but it makes the comparison in each part between
     individual and joint more clear. As I said before, visualization
     is always about trade-offs: what you want to show, what you are
@@ -308,7 +308,7 @@
     a good choice.
   </p>
   <figure xml:id="figure-standardized-bar">
-    <caption></caption>
+    <caption>A Standardized bar plot</caption>
     <image witdh="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -333,7 +333,7 @@
     </image>
   </figure>
   <p>
-    <href ref="figure-standardized-bar"/> is a standardized bar plot.
+    <xref ref="figure-standardized-bar"/> is a standardized bar plot.
     Here, the count of the mortgage, own and rent categories is
     completely gone. All that this plot tries to show is the relative
     percentages of individual and joint applications inside each
@@ -359,13 +359,13 @@
   </definition> 
   <p>
     Pie charts are exclusively for proportions: the pie of always
-    consider as a whole and each section of the pie is a portion of
+    considereed as a whole and each section of the pie is a portion of
     the whole. Pie charts are also only about a single variable, so I
     am going back to visualizing the data in the frequency table, for
     one variable, instead of the contingency table, for two variables. 
   </p>
   <figure xml:id="figure-pie1">
-    <caption></caption>
+    <caption>A pie chart</caption>
     <image witdh="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -391,7 +391,7 @@
     this variable. 
   </p>
   <figure xml:id="figure-pie2">
-    <caption></caption>
+    <caption>A pie chart for loan grades</caption>
     <image witdh="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -410,7 +410,7 @@
     <xref ref="figure-pie2"/> is pretty clear for
     the early letters, but readinng this for E, F and G is not
     pleasant, even if I were to take away the overlaping percentage
-    text. Pie chart work well for large percentages, but showing very
+    text. Pie charts work well for large percentages, but showing very
     small slices can be a problem.  Again, in addition to knowing
     terms for these visualization tools, the main theme of this
     section is that visualizations are also about choice: choosing the
