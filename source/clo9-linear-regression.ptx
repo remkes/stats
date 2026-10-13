@@ -4,10 +4,10 @@
   <p> 
     The methods of the previous few sections were descriptive
     statistics: ways to summarize and display information from a data
-    set. Now I want to slowly move into inferential statistics. Now,
-    instead of summarizing or displaying, I want to try to use the
-    data in a data set to try to uncover some underlying truth about
-    that data. I want to try to infer something. 
+    set. Now I want to slowly move into inferential statistics.
+    Instead of just summarizing or displaying, I want to try to use
+    the information in a data set to try to uncover some underlying
+    truth about that data. I want to try to infer something. 
   </p>
   <p>
     There are many ways to do this, and we will devote the remainder
@@ -16,7 +16,7 @@
     regression. This is a category that applies to two numeric
     variables. A regression puts forward the idea that the two numeric
     variables are related by a mathematical function, where one is the
-    independent variable and the other is the independent variable. In
+    independent variable and the other is the dependent variable. In
     principle, any mathematical function can be chosen in a
     regression, and regression is commonly performed for many such
     functions: polynomials, trigonometric functions, exponentials
@@ -27,16 +27,16 @@
     Before stating the definition that I want to work with in this
     course, let me remind you about the mathematical structure of a
     line. The most common equation of a line, where <m>x</m> and
-    <m>y</m> are the variable, is called the
+    <m>y</m> are the variables, is called the
     <term>slope-intercept</term> form of the line. 
     <md>
       y = mx + b
     </md>
     In this setup, <m>x</m> is the independent variable, the input,
-    and <m>y</m> is the dependent variatible, the output. <m>m</m> is
+    and <m>y</m> is the dependent variable, the output. <m>m</m> is
     the slope of the line, showing how steep the line is, with
-    positive slope for upward moving lines and negative slope for
-    downward moving lines. <m>b</m> is the <m>y</m>-intercept of the
+    positive slopes for ascending lines, and negative slopes for
+    descending moving lines. <m>b</m> is the <m>y</m>-intercept of the
     line: it shows where the line crosses the <m>y</m> axis. 
   </p>
   <p>
@@ -55,22 +55,24 @@
         The variable <m>x</m> is called the <term>explanatory
         variable</term>. The variable <m>y</m> is called the
         <term>dependent variable</term>. The notation <m>\hat{y}</m>
-        indicates that the mdoel is an approximation of the data:
-        individual data point are hopefully near the line, but the
+        indicates that the model is an approximation of the data:
+        individual data points are hopefully near the line, but the
         <m>y</m> values of the data points don't exactly match the
-        <m>y</m> values of th eline. The coefficient <m>b</m> is the
+        <m>y</m> values of the line. The coefficient <m>b</m> is the
         <term>intercept</term> and the coefficient <m>m</m> is the
-        slope
+        <term>slope</term>.
       </p>
       <p>
-        If the slope is positive, we say that the linear model
-        demonstrates <term>positive correlation</term>. Likewise, if
-        the slope is egative, there is <term>negative
-        correlation</term> or <term>inverse correlation</term>.
-        Positive correlations means an increase in the explanatory
-        variable causes an increase in the dependent variable; inverse
-        correlation is the opposite, where increasing the explanatory
-        variable decreases the dependent variable. 
+        To elaborate on a previous definition, if the slope is
+        positive, we say that the linear model demonstrates
+        <term>positive linear correlation</term>. Likewise, if
+        the slope is negative, there is <term>negative
+        linear correlation</term> or <term>inverse linear
+        correlation</term>.  Positive correlations means an increase
+        in the explanatory variable causes an increase in the
+        dependent variable; inverse correlation is the opposite, where
+        increasing the explanatory variable decreases the dependent
+        variable. 
       </p>
     </statement>
   </definition>
@@ -79,15 +81,15 @@
     most important of the two coefficients. The slope indicates the
     strength of the effect of the explanatory variable. A high slope
     means that a small change in <m>x</m> produces a large change
-    in<m>y</m>. Likewise, a small slope means that change in <m>x</m>
+    in <m>y</m>. Likewise, a small slope means that change in <m>x</m>
     have a pretty small effect. 
   </p>
   <p>
-    Visually, we fit linear models to scatter plots. <xref
+    Visually, we fit linear models to scatterplots. <xref
     ref="figure-scatterplot6"/> is a
     scatterplot of two numeric variables in a data set about 
     possums. The <m>x</m> variable is the length of the whole animal
-    (including the long tail)in centimeters, and the <m>y</m> variable
+    (including the long tail) in centimeters, and the <m>y</m> variable
     is the length of just the head, in milimeters. As usual, the dots
     are the cases, representing the measurements of one specific
     possum. 
@@ -107,119 +109,118 @@
               col sep=comma,
               row sep=crcr
             ] {
-head_l,total_l\\
-94.1,89\\
-92.5,91.5\\
-94,95.5\\
-93.2,92\\
-91.5,85.5\\
-93.1,90.5\\
-95.3,89.5\\
-94.8,91\\
-93.4,91.5\\
-91.8,89.5\\
-93.3,89.5\\
-94.9,92\\
-95.1,89.5\\
-95.4,91.5\\
-92.9,85.5\\
-91.6,86\\
-94.7,89.5\\
-93.5,90\\
-94.4,90.5\\
-94.8,89\\
-95.9,96.5\\
-96.3,91\\
-92.5,89\\
-94.4,84\\
-95.8,91.5\\
-96,90\\
-90.5,85\\
-93.8,87\\
-92.8,88\\
-92.1,84\\
-92.8,93\\
-94.3,94\\
-91.4,89\\
-90.6,85.5\\
-94.4,85\\
-93.3,88\\
-89.3,82.5\\
-92.4,80.5\\
-84.7,75\\
-91,84.5\\
-88.4,83\\
-85.3,77\\
-90,81\\
-90.7,81\\
-90.1,89\\
-98.6,85\\
-95.4,85\\
-91.6,88\\
-95.6,85\\
-97.6,93.5\\
-93.1,91\\
-96.9,91.5\\
-103.1,92.5\\
-99.9,93.7\\
-95.1,93\\
-94.5,91\\
-102.5,96\\
-91.3,88\\
-95.7,86\\
-91.3,90.5\\
-92,88.5\\
-96.9,89.5\\
-93.5,88.5\\
-90.4,86\\
-93.3,85\\
-94.1,88.5\\
-98,88\\
-91.9,87\\
-92.8,90\\
-85.9,80.5\\
-82.5,82\\
-88.7,83\\
-93.8,89\\
-92.4,89\\
-93.6,84\\
-86.5,81\\
-85.8,81\\
-86.7,84\\
-90.6,85.5\\
-86,82\\
-90,81.5\\
-88.4,80.5\\
-89.5,92\\
-88.2,86.5\\
-98.5,93\\
-89.6,87.5\\
-97.7,84.5\\
-92.6,85\\
-97.8,89\\
-90.7,85\\
-89.2,82\\
-91.8,84\\
-91.6,88.5\\
-94.8,83\\
-91,86\\
-93.2,84\\
-93.3,86.5\\
-89.5,81.5\\
-88.6,82.5\\
-92.4,89\\
-91.5,82.5\\
-93.6,89\\
+              head_l,total_l\\
+              94.1,89\\
+              92.5,91.5\\
+              94,95.5\\
+              93.2,92\\
+              91.5,85.5\\
+              93.1,90.5\\
+              95.3,89.5\\
+              94.8,91\\
+              93.4,91.5\\
+              91.8,89.5\\
+              93.3,89.5\\
+              94.9,92\\
+              95.1,89.5\\
+              95.4,91.5\\
+              92.9,85.5\\
+              91.6,86\\
+              94.7,89.5\\
+              93.5,90\\
+              94.4,90.5\\
+              94.8,89\\
+              95.9,96.5\\
+              96.3,91\\
+              92.5,89\\
+              94.4,84\\
+              95.8,91.5\\
+              96,90\\
+              90.5,85\\
+              93.8,87\\
+              92.8,88\\
+              92.1,84\\
+              92.8,93\\
+              94.3,94\\
+              91.4,89\\
+              90.6,85.5\\
+              94.4,85\\
+              93.3,88\\
+              89.3,82.5\\
+              92.4,80.5\\
+              84.7,75\\
+              91,84.5\\
+              88.4,83\\
+              85.3,77\\
+              90,81\\
+              90.7,81\\
+              90.1,89\\
+              98.6,85\\
+              95.4,85\\
+              91.6,88\\
+              95.6,85\\
+              97.6,93.5\\
+              93.1,91\\
+              96.9,91.5\\
+              103.1,92.5\\
+              99.9,93.7\\
+              95.1,93\\
+              94.5,91\\
+              102.5,96\\
+              91.3,88\\
+              95.7,86\\
+              91.3,90.5\\
+              92,88.5\\
+              96.9,89.5\\
+              93.5,88.5\\
+              90.4,86\\
+              93.3,85\\
+              94.1,88.5\\
+              98,88\\
+              91.9,87\\
+              92.8,90\\
+              85.9,80.5\\
+              82.5,82\\
+              88.7,83\\
+              93.8,89\\
+              92.4,89\\
+              93.6,84\\
+              86.5,81\\
+              85.8,81\\
+              86.7,84\\
+              90.6,85.5\\
+              86,82\\
+              90,81.5\\
+              88.4,80.5\\
+              89.5,92\\
+              88.2,86.5\\
+              98.5,93\\
+              89.6,87.5\\
+              97.7,84.5\\
+              92.6,85\\
+              97.8,89\\
+              90.7,85\\
+              89.2,82\\
+              91.8,84\\
+              91.6,88.5\\
+              94.8,83\\
+              91,86\\
+              93.2,84\\
+              93.3,86.5\\
+              89.5,81.5\\
+              88.6,82.5\\
+              92.4,89\\
+              91.5,82.5\\
+              93.6,89\\
             };
-            
           \end{axis}
         \end{tikzpicture}
       </latex-image>
     </image>
   </figure>
   <p>
-    Regression looks at a scatter plot and asks: what relationship is
-    demonstrated by this data. In this scatter plot, it looks like
+    Regression looks at a scatte plot and asks: what relationship is
+    demonstrated by this data? In this scatterplot, it looks like
     their might be linear relationship with a positive correlation.
     This also intuitively makes some sense: the larger animals can be
     reasonably expected to also have larger heads. 
@@ -379,12 +380,14 @@ head_l,total_l\\
     This obviously doesn't make much sense: a body length of 0 is not
     actually a possum at all. However, the data here doesn't really
     care about (relatively) very small body lengths. The data is
-    studying grown possums, not developmental data. So there is an
-    interpretation here, but it's not much of a problem that the
-    interpretation isn't very sensical. The dataset isn't really
-    concerned with very small <m>x</m> values. (Of course, other data
-    sets may care about the intercept, if the data does include values
-    of the explanatory variable which are near zero.) 
+    studying grown possums, not developmental data. You can see this
+    in the range of the <m>x</m> variable: all the data is between 75
+    and 100 centimeres. So there is an interpretation of the intercept
+    here, but it's not much of a problem that the interpretation isn't
+    very sensical. The dataset isn't really concerned with very small
+    <m>x</m> values. (Of course, other data sets may care about the
+    interceptc coefficient, if the data does include values of the
+    explanatory variable which are near zero.) 
   </p>
   <p>
     The slope coefficient is more useful here. The number <m>0.59</m>
@@ -411,21 +414,21 @@ head_l,total_l\\
   <definition>
     <statement>
       <p>
-        Let <m>\hat y{y}</m> be a linear model of a data set. For each
-        data point, the difference <m>y - \hat{y}</m> is called the
+        Let <m>\hat{y}</m> be a linear model of a data set. For each
+        data point, the difference <m>y_i - \hat{y}</m> is called the
         <term>residual</term> of the data point. 
       </p>
     </statement>
   </definition>
   <p>
     Using the previous example, consider the datapoint <m>(75,
-    94.7)</m>. If I put x=75 into the line, it predicts 85.25 mm. The
+    94.7)</m>. If I put <m>x=75</m> into the line, it predicts 85.25 mm. The
     actual value is 84.7. The different, <m>y</m> minus
     <m>\hat{y}</m>, is the residual for this data point. In this case,
     the data is -.55 below the line: the residual is -0.55.
   </p>
   <p>
-    Must can be done with residuals, and we will return to them in
+    Much can be done with residuals, and we will return to them in
     <xref ref="section-linear-analysis"/>. For now, though, I can use
     residuals to answer an important questions. I've talked about
     linear models, but I haven't yet said anything about how they are
@@ -458,20 +461,21 @@ head_l,total_l\\
     <md>
       e_1^2 + e_2^2 + \ldots + e_n^2
     </md>
-    For any line, this sum of the squares of the residuals. I want the
-    specific line for which this number is as small as possible. Such
+    For any line, I can calculate this sum of the squares of the
+    residuals. To find the best line, I want the specific line for
+    which this number is as small as possible. Such
     a line will be considered the best linear model. Since I have a
-    bunch of squares and I want to minimie them, this is called the
-    method of least squares.
+    bunch of squares and I want to minimize them, this is called the
+    <sq>method of least squares</sq>.
   </p>
   <p>
     Why do we use squares? There are a number of reasons, some which
-    require more mathematics to discussn. One important effect,
+    require more mathematics to discuss. One important effect,
     though, is that it makes all the errors positive. Residuals can be
     positive or negative: above or below the line. By squaring them,
     I get a positive numbers for each error. A second important effect
     comes from the fact that squaring has a larger effect on larger
-    numbers. Therefore, this method exagerated large errors: points
+    numbers. Therefore, this method exagerates large errors: points
     which are very far away from the line. This method is quite
     sensitive to major outliers, which is desirable in this context. 
   </p>
@@ -488,7 +492,7 @@ head_l,total_l\\
     go into the minimization methods. 
   </p>
   <p>
-    This covers the basic ideas of linear regression, but I want to
+    I've now covered the basic ideas of linear regression, but I want to
     introduce one more important idea in this section. The linear
     model so far had one explanatory variable. It is possible that we
     want to consider more than one explanatory variable. This leads to
@@ -506,12 +510,15 @@ head_l,total_l\\
         <md>
           \hat{y} = b + m_1x_2 + m_2x_2 + m_3x_3
         </md>
+        All three of the variables on the rigth side of the equation
+        are called <term>explanatory variable</term> in the mulitple
+        regression. 
       </p>
     </statement>
   </definition>
   <p>
-    Those I have stated it for three variables, a multiple linear
-    regression could have any number of variable. Notice that there is
+    Though I have stated it for three variables, a multiple linear
+    regression could have any number of variables. Notice that there is
     still only one intercept coefficient, but that each explanatory
     variable has its own slope coefficient. Each of those slope
     coefficients measures the way in which <m>y</m> depends on each of
@@ -521,7 +528,7 @@ head_l,total_l\\
     I can no longer graphs a multiple regression, since there are too
     many variables (hence too many axes) to draw. But the principles
     are exactly the same: there are still residuals, I still can find
-    a model by least squares, the coefficients still explains the
+    a model by least squares, and the coefficients still explains the
     relationship. I am just allowing multiple variables to have an
     effect on my dependent variable. 
   </p>
@@ -539,7 +546,7 @@ head_l,total_l\\
     intercept is not terribly importnat here, but the other three are
     important. 0.56 means that each centimeter increase in total body
     length corresponds with a 0.56mm increase in head length. The 0.30
-    say that each year older corresponds to 0.3mm increase in head
+    says that each year older corresponds to 0.3mm increase in head
     length. Finally, there is also the sex variable. This requires
     some more discussion. 
   </p>
@@ -553,15 +560,16 @@ head_l,total_l\\
     <statement>
       <p>
         If I have a categorical variable in a dataset and I assign
-        numbers to each category, the result is called an
-        <term>indicator variable</term>
+        numbers to each category, the resulting numeric variable  is
+        called an<term>indicator variable</term>.
       </p>
     </statement>
   </definition>
   <p>
     The assignment of numbers usually arbitrary (though for ordinal
     categorical variable, we would usually try to preserve the natural
-    order). In this case, the researches made this assignment. 
+    order). In this case, the researches made the following assignment
+    of number to categories:
     <md>
       \text{male} \mapsto 0 \text{ and } \text{female} \mapsto 1.
     </md>
@@ -581,7 +589,7 @@ head_l,total_l\\
     indicator variable. Let me show you how. If I ignore the age
     category and just do regression with the body length and sex
     variables, I can treat each instance of the indicator variable as
-    a new line. The coefficient <m>-1.66</m> move the line for female
+    a new line. The coefficient <m>-1.66</m> moves the line for female
     possums below the line for the male possums. <xref
     ref="figure-indicator-variable"/> show the result. In the figure,
     the cases are colour coded: red for male and blue for female. I

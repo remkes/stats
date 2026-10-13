@@ -6,7 +6,7 @@
     regression.  Having defined what a linear regression is, I want to
     do some analysis of the quality of a regression. What is a good
     fit and how do we know? In this section, I will define three
-    measures of the strength of a linear regression.
+    measures of the strength of a linear regression. 
   </p>
   <definition>
     <statement>
@@ -17,13 +17,13 @@
         value of <m>r=-1</m> indicates a perfect match with a line of
         negative slope. As the value of <m>r</m> gets closer to zero,
         it indicates a weaker and weaker match with the line. (In some
-        context, this number is more specifically called the
+        contexts, this number is more specifically called the
         <term>Pearson correlation coefficient</term>.) 
       </p>
     </statement>
   </definition>
   <p>
-    The term here is a bit annoying. We use <sq>correlation</sq>
+    The term here is a bit annoying. We used <sq>correlation</sq>
     already to indicate a relationship, with positive correlation
     indicating that both variable grow goether and negative
     correlation indicating an inverse relationship. Now
@@ -32,7 +32,7 @@
   </p>
   <p>
     Let me use some diagrams to visualize correlation. What follows is
-    a sequence of figure. The caption of each gives the correlation
+    a sequence of figures. The caption of each gives the correlation
     value, and you can see how the data becomes more scattered and
     less aligned to the linear model as the correlation gets close to
     zero. 
@@ -397,16 +397,17 @@
     </image>
   </figure>
   <p>
-    This scatter plot has low positive correlation, r=0.14. There is a
-    very slight positive correlation. However, the correlation
-    entirely misses the fact that there is another kind of
-    relationship here. A better model for this data would be a
-    function that rises and then falls.  is not a linear model, so the
-    correlation number doesn't see it at all. 
+    This scatter plot <xref ref="figure-correlation8"/> has low
+    positive correlation, r=0.14. There is a very slight positive
+    correlation. However, the correlation coefficiententirely misses
+    the fact that there is another kind of relationship here. A better
+    model for this data would be a function that rises and then falls.
+    Such a function is not a linear model, so the correlation number
+    doesn't see it at all. 
   </p>
   <p>
     In statistics, linear regression is almost always the first thing
-    to try. But some data has relationship which are not linear. It's
+    to try. But some data has relationships which are not linear. It's
     very valuable to remember that linear models are only one of many
     kind of models of relationship between data. 
   </p>
@@ -418,18 +419,18 @@
     <statement>
       <p>
         The square of the correlation is simply called the <m>R^2</m>
-        measure. (In some context, this is called the
+        measure. In some contexts, this is called the
         <term>coefficient of determination</term>. However, simply
         referring to it as <m>R^2</m> is so common that I'll stick
-        with that convention. Also, the fact that we've change from a
+        with that convention. The fact that we've changed from a
         lower case <sq>r</sq> to an upper case <sq>R</sq> is annoying,
-        but again is the conventional notation.) 
+        but again this is the conventional notation.
       </p>
     </statement>
   </definition>
   <p>
     By squaring the correlation, a couple things happen. First, the
-    value of <m>R^2</m> is always positive, so it ignore the
+    value of <m>R^2</m> is always positive, so it ignores the
     difference between positive and negative slopes. Close to 0 means
     that the data probably doesn't fit a linear model well, and close
     to 1 means a good fit. In this way, <m>R^2</m> is a slightly more
@@ -438,13 +439,13 @@
     (If you square a number less than 1, it gets closer to zero).
     Therefore, <m>R^2</m> is a bit of a finer measure: <m>R^2 =
     0.9</m> is a stronger indication of a good linear fit than
-    correlation of the same value. 
+    a correlation of the same value. 
   </p>
   <p>
-    In the previous section, I also talked multiple regression: making
-    linear models with multiple explanatory variables. There are
-    extension of <m>R^2</m> to multiple regression as well. The one
-    which we will use in the classroom activities is called
+    In the previous section, I also talked about multiple regression:
+    making linear models with multiple explanatory variables. There
+    are extension of <m>R^2</m> to multiple regression as well. The
+    one which we will use in the classroom activities is called
     <term>adjusted <m>R^2</m></term>. You can assume that adjusted
     <m>R^2</m> means that we must be dealing with several explanatory
     variables. 
@@ -471,11 +472,15 @@
     <m>y</m> value of each data point is simpliy how far it was, in
     the original diagram, away from the line. 
   </p>
-  <p>
-    A scatterplot where the <m>y</m> axis is the residual of a linear
-    regression, instead of the original <m>y</m> value of the data
-    point, is called a <term>residual plot</term>.
-  </p>
+  <definition>
+    <statement>
+      <p>
+        A scatterplot where the <m>y</m> axis is the residual of a
+        linear regression, instead of the original <m>y</m> value of
+        the data point, is called a <term>residual plot</term>.
+      </p>
+    </statement>
+  </definition>
   <figure xml:id="figure-residuals">
     <caption>A Residual Plot</caption>
     <image xml:id="image-residuals" width="80%">
@@ -491,117 +496,117 @@
             col sep=comma,
             row sep=crcr
           ] {
-total_l,residual\\
-89,0.59\\
-91.5,-2.485\\
-95.5,-3.345\\
-92,-2.08\\
-85.5,0.055\\
-90.5,-1.295\\
-89.5,1.495\\
-91,0.11\\
-91.5,-1.585\\
-89.5,-2.005\\
-89.5,-0.505\\
-92,-0.38\\
-89.5,1.295\\
-91.5,0.415\\
-85.5,1.455\\
-86,-0.14\\
-89.5,0.895\\
-90,-0.6\\
-90.5,0.005\\
-89,1.29\\
-96.5,-2.035\\
-91,1.61\\
-89,-1.01\\
-84,3.84\\
-91.5,0.815\\
-90,1.9\\
-85,-0.65\\
-87,1.47\\
-88,-0.12\\
-84,1.54\\
-93,-3.07\\
-94,-2.16\\
-89,-2.11\\
-85.5,-0.845\\
-85,3.25\\
-88,0.38\\
-82.5,-0.375\\
-80.5,3.905\\
-75,-0.55\\
-84.5,0.145\\
-83,-1.57\\
-77,-1.13\\
-81,1.21\\
-81,1.91\\
-89,-3.41\\
-85,7.45\\
-85,4.25\\
-88,-1.32\\
-85,4.45\\
-93.5,1.435\\
-91,-1.59\\
-91.5,1.915\\
-92.5,7.525\\
-93.7,3.617\\
-93,-0.77\\
-91,-0.19\\
-96,4.86\\
-88,-1.62\\
-86,3.96\\
-90.5,-3.095\\
-88.5,-1.215\\
-89.5,3.095\\
-88.5,0.285\\
-86,-1.34\\
-85,2.15\\
-88.5,0.885\\
-88,5.08\\
-87,-0.43\\
-90,-1.3\\
-80.5,-2.595\\
-82,-6.88\\
-83,-1.27\\
-89,0.29\\
-89,-1.11\\
-84,3.04\\
-81,-2.29\\
-81,-2.99\\
-84,-3.86\\
-85.5,-0.845\\
-82,-3.38\\
-81.5,0.915\\
-80.5,-0.095\\
-92,-5.78\\
-86.5,-3.835\\
-93,2.63\\
-87.5,-3.025\\
-84.5,6.845\\
-85,1.45\\
-89,4.29\\
-85,-0.45\\
-82,-0.18\\
-84,1.24\\
-88.5,-1.615\\
-83,4.83\\
-86,-0.74\\
-84,2.64\\
-86.5,1.265\\
-81.5,0.415\\
-82.5,-1.075\\
-89,-1.11\\
-82.5,1.825\\
-89,0.09\\
+            total_l,residual\\
+            89,0.59\\
+            91.5,-2.485\\
+            95.5,-3.345\\
+            92,-2.08\\
+            85.5,0.055\\
+            90.5,-1.295\\
+            89.5,1.495\\
+            91,0.11\\
+            91.5,-1.585\\
+            89.5,-2.005\\
+            89.5,-0.505\\
+            92,-0.38\\
+            89.5,1.295\\
+            91.5,0.415\\
+            85.5,1.455\\
+            86,-0.14\\
+            89.5,0.895\\
+            90,-0.6\\
+            90.5,0.005\\
+            89,1.29\\
+            96.5,-2.035\\
+            91,1.61\\
+            89,-1.01\\
+            84,3.84\\
+            91.5,0.815\\
+            90,1.9\\
+            85,-0.65\\
+            87,1.47\\
+            88,-0.12\\
+            84,1.54\\
+            93,-3.07\\
+            94,-2.16\\
+            89,-2.11\\
+            85.5,-0.845\\
+            85,3.25\\
+            88,0.38\\
+            82.5,-0.375\\
+            80.5,3.905\\
+            75,-0.55\\
+            84.5,0.145\\
+            83,-1.57\\
+            77,-1.13\\
+            81,1.21\\
+            81,1.91\\
+            89,-3.41\\
+            85,7.45\\
+            85,4.25\\
+            88,-1.32\\
+            85,4.45\\
+            93.5,1.435\\
+            91,-1.59\\
+            91.5,1.915\\
+            92.5,7.525\\
+            93.7,3.617\\
+            93,-0.77\\
+            91,-0.19\\
+            96,4.86\\
+            88,-1.62\\
+            86,3.96\\
+            90.5,-3.095\\
+            88.5,-1.215\\
+            89.5,3.095\\
+            88.5,0.285\\
+            86,-1.34\\
+            85,2.15\\
+            88.5,0.885\\
+            88,5.08\\
+            87,-0.43\\
+            90,-1.3\\
+            80.5,-2.595\\
+            82,-6.88\\
+            83,-1.27\\
+            89,0.29\\
+            89,-1.11\\
+            84,3.04\\
+            81,-2.29\\
+            81,-2.99\\
+            84,-3.86\\
+            85.5,-0.845\\
+            82,-3.38\\
+            81.5,0.915\\
+            80.5,-0.095\\
+            92,-5.78\\
+            86.5,-3.835\\
+            93,2.63\\
+            87.5,-3.025\\
+            84.5,6.845\\
+            85,1.45\\
+            89,4.29\\
+            85,-0.45\\
+            82,-0.18\\
+            84,1.24\\
+            88.5,-1.615\\
+            83,4.83\\
+            86,-0.74\\
+            84,2.64\\
+            86.5,1.265\\
+            81.5,0.415\\
+            82.5,-1.075\\
+            89,-1.11\\
+            82.5,1.825\\
+            89,0.09\\
           };
-            \addplot+ [
-              black,
-              mark=|
-              sharp plot,
-            ]
-            coordinates { (74,0) (99,0) };
-          \end{axis}
+          \addplot+ [
+            black,
+            mark=|
+            sharp plot,
+          ]
+          coordinates { (74,0) (99,0) };
+        \end{axis}
         \end{tikzpicture}
       </latex-image>
     </image>
@@ -613,12 +618,13 @@ total_l,residual\\
     can give information.
   </p>
   <p>
-    In general, if there is not pattern to the residual plot (and the
+    In general, if there is no pattern to the residual plot (and the
     residuals are not too large), that is good evidence that the
-    original regression was pretty good. For this data, from the last
-    video, there isn't much of a pattern to the residual plot, so the
-    linear regression is probably a decent model of the relationship
-    between the variables. 
+    original regression was pretty good. For the data shown in <xref
+    ref="figure-residuals"/>, from the previous section, there isn't
+    much of a pattern to the residual plot, so the linear regression
+    is probably a decent model of the relationship between the
+    variables. 
   </p>
   <p>
     <xref ref="figure-linear-model-2"/> is another scatter plot with a
@@ -671,7 +677,7 @@ total_l,residual\\
     residual plot. 
   </p>
   <figure xml:id="figure-residual-plot-2">
-    <caption>Caption</caption>
+    <caption>The associated residual plot</caption>
     <image xml:id="image-residual-plot-2" width="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -824,12 +830,12 @@ total_l,residual\\
   <p>
     This residual plot is a bit different. There seems to be a pattern
     to the residuals: starting below, then moving above, then moving
-    below. In the original scatter plot, the variance of the data from
+    below. In the original scatterplot, the variance of the data from
     the line was difficult to read, visually. Here, the residual plot
     makes that much easier to read. This is the strength of a residual
     plot: it zooms in on the relationship between the data and the
     line, and can clearly show things that were present in the
-    original scatterplot, but much harder to see. In this case, the
+    original scatterplot but were much harder to see. In this case, the
     relationship is still close to linear, but this pattern means that
     there is probably something else going on here as well, something
     non-linear between the two variables.
