@@ -1,7 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-sampling-distributions" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
-  <p> 
-    Test
+  <title>Sampling Distributions</title>
+    <p>
+      We now have the setup of hypothesis testing. We make the
+      hypotheses: null and alternative. We assume the null hypothesis.
+      Then, so far by simulation, we generate random samples to
+      compare with our own sample statistics. This lets us assign a
+      <m>p</m>-value, which is a measure of how unlikely it would be
+      generate the sample statistic under the null hypothesis.
+      Finally, we compare the <m>p</m>-value against a threshold of
+      significant to determine whether or not we rejec the null
+      hypothesis.
+  </p>
+  <p>
+    In this section, I want to focus in on one important part of this
+    process: the random sample generate to compare to the sample
+    statistic. In the previous section, we used simulation, but
+    eventually we do want to rely on the statistical theory. In order
+    to do that, we need some development of this important step, so
+    that we no longer have to run simulations. This leads to the
+    important definition of this section.
+  </p>
+    <definition>
+      <statement>
+        <p>
+          As always, we are in a situation where we are researching a
+          particular population parameter (difference of means or
+          proportions, single mean or proportion, some other similar
+          calculation). We have a sample statistics which is the same
+          calculation as the population paramere but drawn just from
+          your sample statistics. We have hypotheses: null and
+          alternative.
+        </p>
+        <p>
+          We assume the null hypothesis to be true. Under that
+          assumption, we can generate random samples: fake data sets
+          created by random choices under the assumption of the null
+          hypothesis. From each of these samples, we can calculate the
+          sample statistic, so we get a bunch of fake, randomly
+          generated sample statistics.
+        </p>
+        <p>
+          The result is a new dataset with only one numeric variable:
+          the list of values of all these randomly generated sample
+          statistics. This new dataset is called the sampling
+          distribution.
+        </p>
+      </statement>
+    </definition>
+  <p>
+    I believe the sampling distribution is possibly the trickiest
+    single concept in this course. It’s layered deep below other
+    concepts, all of which have to be clear to understand the sampling
+    distribution. It also suffers from a difficult name: the word
+    ‘sample’ is pretty heavily overused word in introductory
+    statistics, so its quite unclear what ‘sampling’ really refers to
+    in this definition. I want to spend this section trying to really
+    clarify this important definition.
+  </p>
+  <p>
+    To that end, let me go over the process once more in general, and
+    the apply this to an example.
+    <ul>
+      <li>
+        We have a research questions. Mathematically, the research
+        question is some equation or inequality concerning the
+        population parameter.
+      </li>
+      <li>
+        We write down the null hypothesis and the alternative
+        hypothesis.
+      </li>
+      <li>
+        We gather data for the variable involved in the parameter.
+        That data is our sample, or simply ‘the sample’.
+      </li>
+      <li>
+        From that data, we do the calculation from the research
+        question. This produces our sample statistics, or simply ‘the
+        sample statistics’.
+      </li>
+      <li>
+        We assume the null hypothesis.
+      </li>
+      <li>
+        Under that assumption, we randomly generate samples. These do
+        not replace our sample: they are random samples to be used in
+        comparison.
+      </li>
+      <li>
+        From the randomly generate samples, we calclate the sample
+        statistic for each. These do not replace our sample
+        statistics: again, they are random sample statistics to be
+        used in comparsion.
+      </li>
+      <li>
+        We gather all these sample statistics into a collection called
+        the sampling distribution.
+      </li>
+      <li>
+        We use the sampling distribution to determine the probability
+        of producing our sample under the null hypothesis: the
+        <m>p</m>-value.
+      </li>
+      <li>
+      </li>
+      <li>
+        We compare that probability with a threshold of signifigance.
+      </li>
+      <li>
+        If our sample statistics is sufficiently unlikely, we reject
+        the null hypothesis and say that our sample statistic is
+        significant and can be use to support the alternative
+        hypothesis.
+      </li>
+    </ul>
+  </p>
+  <p>
+    In <xref ref="section-probability-theory"/>, I have already
+    calculated a sample distribution. In the main exmaple in that
+    section, we were looking at promotion decision. The population
+    paramers was the difference in promotion rates between men and
+    women under a male manager. The null hypothesis said that there
+    was no difference. I ran ten simulations, each generating
+  </p>
+  <p>
+    In <xref ref="section-randomness"/> I said that continuous
+    probability is normally used to model discrete probability in
+    statistics. The same is true for the sampling distribution.
+    Instead of doing simulations, I want to rely on the mathematical
+    theory of probability, specifically continuous probability.
   </p>
 </section>

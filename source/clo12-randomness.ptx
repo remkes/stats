@@ -1,7 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-randomness" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
-  <p> 
-    Test
+  <title>Probability and Hypothesis Testing</title>
+  <p>
+    Now I have defined a null hypothesis and an alternative hypothesis
+    are. A research study wants to determine if the alternative
+    hypothesis holds—if the alternative hypothesis can be rejected.
+    The way to do this is using probability. This section explains
+    that setup.
+  </p>
+  <p>
+    I’ll use the same example as in <xref ref="section-hypotheses"/>
+    about promotion decisions and gender. This was the research
+    question: under a male manager, is there a prejudice against women
+    in promotion decisions? From the data, there was a a sample
+    statistic: men were promoted at at rate of <m>87.5%</m> and women
+    at a rate of <m>58.3%</m>. The difference was <m>29.2</m>, or
+    <m>0.292</m> as a proportion.
+  </p>
+  <p>
+    So here is the main question: what is the probability that the
+    sample statistics was just due to randomness? The sample
+    statistics shows a difference, but maybe this difference is just
+    random variance. If I flip a fair coin ten times, I might very
+    well get <m>7</m> heads and <m>3</m> tails. That would be a
+    difference in the sample, but it would just be the product of
+    random variation. The coin is still fair, and flipping the coin
+    more times would eventually demonstrate that (due to the Law of
+    Large Numbers).  Likewise, maybe these particular promotion
+    decisions, which do show a difference, are just some random
+    variation since the sample is not the whole population.
+  </p>
+  <p>
+    This gets back to the hypotheses. The null hypothesis says there
+    is no relationship in the parameter, in the whole population. A
+    sample can still be different, since a sample is a small piece of
+    the population. If the null hypothesis is true, then what is the
+    probability of producing a sample statistics like the one that we
+    have?
+  </p>
+  <p>
+    This is what we do. We assume the null hypothesis is true. Then,
+    under that assumption, we determine the probability of producing
+    the sample statistics. Then we evaluate this probability: if this
+    probability is very small, then it is very unlikely that the
+    sample statistics was randomly produces, which means that it is
+    very unlikely that the null hypothesis is true. Let me give you
+    some definitions for this setup.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A research study has to set a threshold of significance.
+        This is a probability which is small enough to consider it
+        unlikely to have been produced randomly. The conventional
+        value here is <m>5\%</m>, but that is only a convention —
+        the threshold of singnificant can be set as the researches
+        wish). Then, a sample statistics is called significant is
+        the probability of producing the sample statistic, under the
+        assumption of the null hypothesis, is less than the
+        threshold of significant. This probability, that the sample
+        statistics can be produced under the null hypothesis, is
+        called the <m>p</m>-value of the sample statistic.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    If a sample statistics is significant, then we are justified in
+    rejecting the null hypothesis and, therefore, supporting the
+    alternative hypothesis. This is how we test a hypotheiss: we set a
+    threshold of significant, use mathematics to determine the
+    probability of producing the sample statistics under the null
+    hypothesis, and compare to the threshold to determine significant.
+    If significant, we reject the null hypothesis and conclude that
+    the sample supports the alternative hypothesis.
+  </p>
+  <p>
+    In <xref ref="section-probability-theory"/> I said that there were
+    two ways to establish a probability: theory or simulation.
+    Eventually, in this course, we will rely heavily on the
+    mathematical theory of probability. But I do also want to do some
+    simulations, to show you how that works.
+  </p>
+  <p>
+    So let me return to the example. Temporarily ignoring the gender,
+    of the <m>48</m> cases in the study, <m>35</m> were promoted and
+    <m>13</m> not promoted. Of the promotion applicants, <m>24</m>
+    were men and <m>24</m> were women. In the sample statistic,
+    <m>21</m> men were promoted and 14 women (adding together to make
+    the total <m>35</m>).
+  </p>
+  <p>
+    I can make a simulation by randomly assigning these <m>35</m>
+    promotions to the applicants. I asked a random number generate to
+    flip a coin <m>35</m> times. For every <m>1</m>, I recorded a
+    promotion for one of the women. For every <m>0</m>, I recoreded a
+    promotion for one of the men.  (If I happend to get to <m>24</m>
+    promotions for either of the categories, then I assigned the
+    remainder to the other category).  That gives me a random
+    assignment of the promotions. I did this ten times. The follwing
+    table shows the results, including the calculation of the
+    difference: proportion of men promotion minus proportion of women
+    promoted.
+  </p>
+  <table xml:id="table-promotion-random">
+    <title>Ten Random Promotion Simulations</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> Male </cell>
+        <cell> Female </cell>
+        <cell> Promotion </cell>
+        <cell> Difference </cell>
+      </row>
+      <row>
+        <cell> Randomization 1</cell>
+        <cell> 20 </cell>
+        <cell> 15 </cell>
+        <cell> 0.208 </cell>
+      </row>
+      <row>
+        <cell> Randomization 2</cell>
+        <cell> 22 </cell>
+        <cell> 13 </cell>
+        <cell> 0.357 </cell>
+      </row>
+      <row>
+        <cell> Randomization 3</cell>
+        <cell> 15 </cell>
+        <cell> 20 </cell>
+        <cell> -0.208 </cell>
+      </row>
+      <row>
+        <cell> Randomization 4</cell>
+        <cell> 20 </cell>
+        <cell> 15 </cell>
+        <cell> 0.208 </cell>
+      </row>
+      <row>
+        <cell> Randomization 5</cell>
+        <cell> 11 </cell>
+        <cell> 24 </cell>
+        <cell> -0.542 </cell>
+      </row>
+      <row>
+        <cell> Randomization 6</cell>
+        <cell> 19 </cell>
+        <cell> 16 </cell>
+        <cell> 0.125 </cell>
+      </row>
+      <row>
+        <cell> Randomization 7</cell>
+        <cell> 20 </cell>
+        <cell> 15 </cell>
+        <cell> 0.208 </cell>
+      </row>
+      <row>
+        <cell> Randomization 8</cell>
+        <cell> 14 </cell>
+        <cell> 21 </cell>
+        <cell> -0.292 </cell>
+      </row>
+      <row>
+        <cell> Randomization 9</cell>
+        <cell> 18 </cell>
+        <cell> 17 </cell>
+        <cell> 0.042 </cell>
+      </row>
+      <row>
+        <cell> Randomization 10</cell>
+        <cell> 12 </cell>
+        <cell> 23 </cell>
+        <cell> -0.458 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    Then I compare this to the sample statistic: <m>0.292.</m> In nine
+    of these ten randomizations, the difference in proportions was
+    less that <m>0.292</m>.  In one randomization, the second one, the
+    difference in proportions was larger. Therefore, from this
+    particular set of randomizations, I would conclude that there is a
+    <m>10\%</m> chance of producing the sample statistic. If the null
+    hypothesis is true, then my sample statistic has probability
+    <m>10\%</m>. That is the <m>p</m>-value. <m>p = 0.10</m>.  (Like
+    most percentages,<m>p</m> -values are almost always expressed as
+    proportions of one. Then I would consider the threshold of
+    signification and decide if this <m>10\%</m> counted as
+    significant.
+  </p>
+  <p>
+    Now, doing ten randomization is not very many. This is probably
+    not a great simulation and this probability is probably incorrect.
+    However, if I did this randomanization thousands and thousands of
+    times, then the Law of Large Numbers tells me that I should
+    actually get a very accurate idea of the probability.
+  </p>
+  <p>
+    So, I run many, many random trials. Then I look at my sample
+    statistic: a <m>0.292</m> different in the proportion of men and
+    women promoted. Then I ask, how often does this happen? How often
+    do at least <m>29.2%</m> more men get promoted than women if the
+    promotions were split up randomly? I haven’t shown the work of
+    this many randomzation, but the answer, after all the random
+    trials, is about <m>2\%</m>.  The <m>p</m>-value is <m>p =
+    0.02</m>.  If I use the conventional threshold of <m>5\%</m> then
+    <m>p \lt 0.05</m> so this is a significant result. I conclude that
+    I can reject the null hypothesis and support the alternative
+    hypothesis. This sample does support the idea that there is, in
+    fact, a gender bias in bank promotions under male managers.
+  </p>
+  <p>
+    Evaluation of statistics is all about what is likely. We approach
+    truth by probability and approximation. Statistics doesn’t
+    conclude that a claim is true or false; it concludes that a claim
+    is likely or unlike. As such, it always involves a judgement call,
+    yet again.  
+  </p>
+  <p>
+    But this is how hypothesis testing works. A sample statistic is
+    generated from a sample. Some math or random trials are done to
+    figure out if the probability of the sample statistic being just
+    random, just noise. If that probability is low enough, if it is
+    very unlikely that the sample statistic is just random change,
+    then it is called statistcally significant, the null hypothesis is
+    rejected, and the study gives real evidence for the alternative
+    hypothesis.
+  </p>
+  <p>
+    Finally, this whole setup of hypothesis testing only works if the
+    data is good data. All of the constructions here, about
+    probability and randomness and significant, assume that the data
+    is realiable. If the data is compromised, due to bad data
+    collection, human error, bias, or any other cause, then no amount
+    of good mathematics and probability theory will solve that
+    problem. We can only do mathematics to produce significant on good
+    data; bad data remains unrealiable regardless of how excellent our
+    understanding of probability theory is.
   </p>
 </section>
+

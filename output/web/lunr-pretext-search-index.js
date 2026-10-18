@@ -946,6 +946,240 @@ var ptx_lunr_docs = [
   "body": " A matching residual plot     "
 },
 {
+  "id": "section-hypotheses",
+  "level": "1",
+  "url": "section-hypotheses.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "Hypothesis Testing",
+  "body": " Hypothesis Testing  Almost all of inferential statistics is presented as hypothesis testing. This section introduces the main ideas. Let me start with an outline. We have a data set, which is a sample of the population. We can calculate information about the sample: this is information we have. We don’t know information about the parameters, since they are attributes of the whole population. The goal of statistics is to use the sample to infer something about the parameter in the whole population.  The setup to do this is to use the sample to make a hypothesis. Let me give you a definition.    In inferential statistics, a hypothesis is a mathematical statement about one or more population parameters. In hypothesis testing, there are two hypotheses.  A null hypothesis is a hypotheses that, in some way, mathematically captures a default state. Most often, this is a situation where two or more variables are not at all related, or a situation where a particular calculation for a single variable is not above or below an important threshold value.  An alternative hypothesis is a hypotheses that, in some may, mathematically captures some interesting observation. Most often, it will say that there is a relatoinship between two or more variables, or that a particular calculation for a single variable is above or below an important threshold.      The hypothesis is unknown: it is a property of the whole population. Instead, what we know is the sample. Again, let me give you the important definition.    A sample statistics is a calculation based on the values of variables from a sample. In the context of hypothesis testing, the sample statistics should be the same calculation as the hypothesis, but applied to the sample instead of the whole population.    Now I can describe the setup of hypothesis testing.  Based on the goal of a research study, I make two hypothesis: a null hypothesis and an alternative hypothesis. The null hypothesis says that nothing is going on with these variables, while the alternative hypothesis is usually a positive answer to the research question, indicating that something interesting is actually true in the population.  Then I use the sample to calculate a sample statistics.  Finally, I use the mathematics of probability to determine whether the sample statistics supports the alternative hypothesis over the null hypothesis. This is usually phrase, sometome strangely, as a double negative: does the sample statistics allow me to reject the null hypothesis?  This is the setup. For most of the rest of this course, we will be going through these three steps for a wide variety of situations. For now, as usual, I’ll work through an example to demonstrate.  A certain study had this research question: do male bank managers discriminate against female employees in promotion decisions? What is the population? Recall the population for a research question is all of the possible cases. Here, the question is about promotion decisions made by male managers. Therefore, the population is precisely that: all promotion decisions made by all male bank managers. (You could argue that the population be limited, maybe to only banks in Canada. That would also be reasonable.)  That’s the population. What is the sample? Recall that the sample is the actual data: the portion of the population that we know something about. In this study, the sample was 48 specific promotion decisions that the researchers were aware of.  The dataset, then, has 48 cases. Each case was two variables: gender and decision. Both are nominal categorical with two categories: gender split between men and women, and decision split between promoted and not promoted. The gender refers to the gender of the applicant: remember, that study is only about male managers, so that part is fixed.   Bank Promotion Decisions and Gender   > gender  promoted  not promoted  total    men  21  3  24    women  12  12  24    total  35  13  48      is the contingency table for these two variables. Of the cases, exactly half were men and half were women under consideration for promotion. You can see from the table how many were actually promoted. I can read this as proportions: percent of the men were promoted and percent of the women were promoted. The different between these two proportion is or .  Let’s make sense of this proportional difference. Again, the population is all instances of promotion decisions made by a male bank manager. I can use for the value, in the entire population, of how many men were promoted, as a proportion. (Proportion is important here for comparison, since the number of promotion applicants in the entire population is not guaranteed to be perfectly split between men and women.)  Again, I can use for the proportion of the women who were promoted in this situation. Then the difference, in the whole population, is This is a measure of how much men were promoted more often than women. This is a parameter. Now I have two calcluations:   The first is a parameter, which is unknown. The second is the sample statistic, which is know. The question is how much the sample statistic actually can tell us about the parameter.  Now let me setup the hypotheses.   I’ve labeled the null hypothesis . It says that, in the whole population, there is no difference in promotion rates. It’s a default statement, saying that the variables of promotion and gender are not at all related. Then I’ve labelled the alternative hypothesis It says that there is a difference in promotion rates, that the variables are related. In this particular case, the alternative hypothesis says that men are promoted more often than women when evalted by a male manager.  There is often some variety in the statement of the alternative hypothesis. All three of these could be possible versions.   All three of these are negations of the null hypothesis: they all say that there is some relation between the variable. But they each are slightly different versions. The first says that the promotion rates are different, but has now assumption about whether men or women are more likely to be promoted. The second is explicitly looking for the possibility that men are promoted more and the third, likewise, for the possibility that women are promoted more.  Which of these alternative hypotheses should be used? It’s up to the researchers based on the situation and assumptions about the potential outcomes. We’ll have to keep track of this kind of subtlety throughout hypothesis testing, since it can affect the mathematics of the test.  To finish this section, let me give you a list of the four most common types of hypotheses. Certainly not all hypothesis testing is one of these types, but many are.  "
+},
+{
+  "id": "section-hypotheses-4",
+  "level": "2",
+  "url": "section-hypotheses.html#section-hypotheses-4",
+  "type": "Definition",
+  "number": "5.1.1",
+  "title": "",
+  "body": "  In inferential statistics, a hypothesis is a mathematical statement about one or more population parameters. In hypothesis testing, there are two hypotheses.  A null hypothesis is a hypotheses that, in some way, mathematically captures a default state. Most often, this is a situation where two or more variables are not at all related, or a situation where a particular calculation for a single variable is not above or below an important threshold value.  An alternative hypothesis is a hypotheses that, in some may, mathematically captures some interesting observation. Most often, it will say that there is a relatoinship between two or more variables, or that a particular calculation for a single variable is above or below an important threshold.     "
+},
+{
+  "id": "section-hypotheses-6",
+  "level": "2",
+  "url": "section-hypotheses.html#section-hypotheses-6",
+  "type": "Definition",
+  "number": "5.1.2",
+  "title": "",
+  "body": "  A sample statistics is a calculation based on the values of variables from a sample. In the context of hypothesis testing, the sample statistics should be the same calculation as the hypothesis, but applied to the sample instead of the whole population.   "
+},
+{
+  "id": "table-promotion-decisions",
+  "level": "2",
+  "url": "section-hypotheses.html#table-promotion-decisions",
+  "type": "Table",
+  "number": "5.1.3",
+  "title": "Bank Promotion Decisions and Gender",
+  "body": " Bank Promotion Decisions and Gender   > gender  promoted  not promoted  total    men  21  3  24    women  12  12  24    total  35  13  48    "
+},
+{
+  "id": "section-probability-theory",
+  "level": "1",
+  "url": "section-probability-theory.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Probability Theory",
+  "body": " Probability Theory   Hypothesis testing asks whether the sample statistic allows for the rejection of the null hypothesis. This is never a simple yes\/no question. Instead, it is always a probabilistic question. Therefore, answering it comes down to the mathematics of probability. For the most part, in this course, we leave the mathematics in the background. But, in this stretch learning oucomes and in a few other to come, I want to present some of the mathematics lying behind the statistical conclusions that we will reach.  Therefore, this is a very short introduction to the mathematics of probability. This is a whole discipline of mathematics, but it is still possible to make the first definitions in this short section of our course.    Like numeric variables, probability is split into two categoreis: discrete and continuous. This time, ‘discrete’ and ‘continuous’ refer to the possibilities for the probability. If there are only a few possibilities, the situation is discrete. If the possibilities are a whole range of number with arbitrary precision, the situation is continuous.  We’re going to start with discrete probability and then move on to contniuous. Statistics is strange since it can be phrased as discrete probability, but the method of continuous probability turn out to be many of the most useful. We’ll need a little bit of understanding of both.  Here, then, are the basic definitions of discrete probability.    Discrete probability is a situation where there are a finite number of possibilities, expressed usually as numbers . Each possibility has a probability, giving a list of probabilities: . Each probability is a number between and . All of the probailities together have to add up to 1.     Everything that I can know about the probability situation can be eventually calcluated from the possibilities and their probabilities. Let me give some basic examples.    A coin flip is a probability situation. There are two possibilities: heads or tails. I could assignment them numbers if I wished, say: heads and tails . Then, for a fair coin, each has a chance, so the probabilities are and . These probabilities do add up to 1.      A dice roll is a probability situation. For a six-sided dice, the possibilities are the numbers from to . For a fair dice, each probbaility should be equal, and they should all add up to 1. Therefore, all the probabilities have to be one sixth.       For a slightly more interesting example, consider rolling two six-sided dice. Now the the possibilities are the numbers from to : the lowest roll is a on each die, which sums to and the highest roll is a on each die, which sums to . But the probabilities of the possibilities are now not all equal. There is only one way to get a roll of : rolling a on both dice. However, there are three ways to get a roll of  on the first day and on the second; on both dice; and on the first die and on the second. That leads to the following probabilities.     I can draw the probability situation for rolling two six-sided dice as a graph, something like a histogram. shows that probability graph.   Probability for Rolling Two Six-sided Dice      I want to continue with the example of rolling two six-sided dice. Say I didn’t figure out the probabilities by looking at combinations of dice role. Instead, I can just try to figure out the probabilities by rolling a bunch of dice and seeing what happens. is a histogram (an actualy histogram now, from a data set) that I get by rolling two six-sided dice ten times.   Two Six-Sided Dice Histogram       is a histogram that I get by rolling two six-sided dice twenty times.   Two Six-Sided Dice Histogram       is a histogram that I get by rolling two six-sided dice fifty times.   Two Six-Sided Dice Histogram       is a histogram that I get by rolling two six-sided dice five hundred times.   Two Six-Sided Dice Histogram      What I have done here is called a simulation. In general, there are two main ways to determine the outcomes of a (discrete) probability situation.  I can use mathematical theory to predict and prove what the probabilities will be for various possibilities in a probability situation.  I can run a simulation, basically repeating the probability situation over and over again, and use a histogram to record the probability of all the various outcomes.    In the case of rolling two six-sided dice, after two hundred rolls, the histogram of outcomes was starting to look quite similar to the histogram-like graph of probabilities predicted by the theorey. The most times I roll two dice, the closer this similarity will grow. In general, we expect this to happen.     The Law of Large Numbers is a colloquial term for the fact that, as the number of iterations grows, simulations of probability get closer and closer to matching a correct theory of the probability situation.    Basically, if you repeat a probability situation enough times, you can get extremely precise and accurate versions of the probability. The simtulations and the theory converge. This is very useful. Probability theory is a well-developed part of mathematics, but it’s a pretty difficult discipline. With enough capacity (usually computing power) we can avoid a lot of the theory by just running simulations. This is actually done: simulations are a huge part of the development of the theory of probability. Thanks to the Law of Large Numbers, simulations can be used to predict or test the theory of probability.  For our purposes, in statistics we can use simulations to have efficient way to get accurate assessments of the probabilities in a probability situation. We will use this to determine probabilities for hypothesis testing.    Continuous Probability  Discrete probability is about discrete possibilities, like the outcomes of a die roll. Continuous probability is, in contrast, about continuous possibilities, like temperature, weight, lifespan, or other quantities which could, in theory, have aribtray precious. However, continouus probability has a whole set of very useful techinque. These are useful enough that it is often helpful to use continuous probability to model a discrete situation. Let me go back to the dice rolle example. is the same probability graph from the simulation of 500 dice throws, but now I have added a continuous function that matches the probability.   Continuous Model      Obviously, a dice roll cannot fall between whole numbers. But the continuous model is still useful. I want to understand how to measure probability in the continuous model. To do so, think about the bars in this probability graph. The height of the graph is the probability, but notice that the width of each bar is exactly 1. This means that the area of each bar is the probability, height, times the width, which is . To the area is also a precise measure of the probability. For continuous probability, this is the important insight. Now let me give you the definitions we will use.    Consider a continuous probability situation where the possibilities are a range of (real) numbers . Then a probability distribution is a mathematical function with the following properties.  The domain of the function is the range of possibilities .  All outcomes of the function at all positive: .  The total are under the function, for the whole domain, is exactly .      For discrete probability, the possibilities and their probabilities determine everything. For continuous probability, the function, the probability distribution, determines everything. How does it do so? By area.    Let be a probability distribution on domain . Let be a subset of the possibilites (so that it is an interval inside ). Then the probability of having any possibility between an d is precisely the area under the probability distribution that falls between and .    For a continuous probability situation, area is probability. and show how this looks: the probability under the whole distribution, shown in blue, is . The probability of a sub-range of possibilities is the area of the smaller section, shown in the red, which will be smaller than the blue area. In the figure, the area of the red region is the probability of a possibility between and , as a fraction of the whole probability between and . Note that all the possibilities are values on the -axis: in a probability distribution, the -axis is always the possible outcomes of the probability situation.   A Probability Distribution      Probablity of an outcome between and      Finally, it would be nice to have a good notation for this area. To that end, I’m going to give you a definition from calculus. For those who are not familiar with calculus, please just treat this as a piece of new notation. I will not ask you to calculate this — I just want you to understand this notation. (For those who do have some calculus, I hope you enjoy the connections here.)    The integral of a function over an interval is a measure of the area under the graph of between the points and . It has this notation.     Continuous probability is, indeed, a subdiscipline of calculus. Calculus is not required for this statistics course, so I will be very minimal with uses of calculus. Hopefully the notation is not to strange.   "
+},
+{
+  "id": "subsection-discrete-probability-4",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-discrete-probability-4",
+  "type": "Definition",
+  "number": "5.2.1",
+  "title": "",
+  "body": "  Discrete probability is a situation where there are a finite number of possibilities, expressed usually as numbers . Each possibility has a probability, giving a list of probabilities: . Each probability is a number between and . All of the probailities together have to add up to 1.    "
+},
+{
+  "id": "subsection-discrete-probability-6",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-discrete-probability-6",
+  "type": "Example",
+  "number": "5.2.2",
+  "title": "",
+  "body": "  A coin flip is a probability situation. There are two possibilities: heads or tails. I could assignment them numbers if I wished, say: heads and tails . Then, for a fair coin, each has a chance, so the probabilities are and . These probabilities do add up to 1.   "
+},
+{
+  "id": "subsection-discrete-probability-7",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-discrete-probability-7",
+  "type": "Example",
+  "number": "5.2.3",
+  "title": "",
+  "body": "  A dice roll is a probability situation. For a six-sided dice, the possibilities are the numbers from to . For a fair dice, each probbaility should be equal, and they should all add up to 1. Therefore, all the probabilities have to be one sixth.    "
+},
+{
+  "id": "subsection-discrete-probability-8",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-discrete-probability-8",
+  "type": "Example",
+  "number": "5.2.4",
+  "title": "",
+  "body": "  For a slightly more interesting example, consider rolling two six-sided dice. Now the the possibilities are the numbers from to : the lowest roll is a on each die, which sums to and the highest roll is a on each die, which sums to . But the probabilities of the possibilities are now not all equal. There is only one way to get a roll of : rolling a on both dice. However, there are three ways to get a roll of  on the first day and on the second; on both dice; and on the first die and on the second. That leads to the following probabilities.    "
+},
+{
+  "id": "figure-2d6-1",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-2d6-1",
+  "type": "Figure",
+  "number": "5.2.5",
+  "title": "",
+  "body": " Probability for Rolling Two Six-sided Dice     "
+},
+{
+  "id": "figure-2d6-2",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-2d6-2",
+  "type": "Figure",
+  "number": "5.2.6",
+  "title": "",
+  "body": " Two Six-Sided Dice Histogram     "
+},
+{
+  "id": "figure-2d6-3",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-2d6-3",
+  "type": "Figure",
+  "number": "5.2.7",
+  "title": "",
+  "body": " Two Six-Sided Dice Histogram     "
+},
+{
+  "id": "figure-2d6-4",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-2d6-4",
+  "type": "Figure",
+  "number": "5.2.8",
+  "title": "",
+  "body": " Two Six-Sided Dice Histogram     "
+},
+{
+  "id": "figure-2d6-5",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-2d6-5",
+  "type": "Figure",
+  "number": "5.2.9",
+  "title": "",
+  "body": " Two Six-Sided Dice Histogram     "
+},
+{
+  "id": "subsection-discrete-probability-21",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-discrete-probability-21",
+  "type": "Theorem",
+  "number": "5.2.10",
+  "title": "",
+  "body": "   The Law of Large Numbers is a colloquial term for the fact that, as the number of iterations grows, simulations of probability get closer and closer to matching a correct theory of the probability situation.   "
+},
+{
+  "id": "figure-2d6-6",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-2d6-6",
+  "type": "Figure",
+  "number": "5.2.11",
+  "title": "",
+  "body": " Continuous Model     "
+},
+{
+  "id": "subsection-continuous-probability-5",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-continuous-probability-5",
+  "type": "Definition",
+  "number": "5.2.12",
+  "title": "",
+  "body": "  Consider a continuous probability situation where the possibilities are a range of (real) numbers . Then a probability distribution is a mathematical function with the following properties.  The domain of the function is the range of possibilities .  All outcomes of the function at all positive: .  The total are under the function, for the whole domain, is exactly .     "
+},
+{
+  "id": "subsection-continuous-probability-7",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-continuous-probability-7",
+  "type": "Proposition",
+  "number": "5.2.13",
+  "title": "",
+  "body": "  Let be a probability distribution on domain . Let be a subset of the possibilites (so that it is an interval inside ). Then the probability of having any possibility between an d is precisely the area under the probability distribution that falls between and .   "
+},
+{
+  "id": "figure-continuous-probability1",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-continuous-probability1",
+  "type": "Figure",
+  "number": "5.2.14",
+  "title": "",
+  "body": " A Probability Distribution    "
+},
+{
+  "id": "figure-continuous-probability2",
+  "level": "2",
+  "url": "section-probability-theory.html#figure-continuous-probability2",
+  "type": "Figure",
+  "number": "5.2.15",
+  "title": "",
+  "body": " Probablity of an outcome between and     "
+},
+{
+  "id": "subsection-continuous-probability-12",
+  "level": "2",
+  "url": "section-probability-theory.html#subsection-continuous-probability-12",
+  "type": "Definition",
+  "number": "5.2.16",
+  "title": "",
+  "body": "  The integral of a function over an interval is a measure of the area under the graph of between the points and . It has this notation.    "
+},
+{
+  "id": "section-randomness",
+  "level": "1",
+  "url": "section-randomness.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Probability and Hypothesis Testing",
+  "body": " Probability and Hypothesis Testing  Now I have defined a null hypothesis and an alternative hypothesis are. A research study wants to determine if the alternative hypothesis holds—if the alternative hypothesis can be rejected. The way to do this is using probability. This section explains that setup.  I’ll use the same example as in about promotion decisions and gender. This was the research question: under a male manager, is there a prejudice against women in promotion decisions? From the data, there was a a sample statistic: men were promoted at at rate of and women at a rate of . The difference was , or as a proportion.  So here is the main question: what is the probability that the sample statistics was just due to randomness? The sample statistics shows a difference, but maybe this difference is just random variance. If I flip a fair coin ten times, I might very well get heads and tails. That would be a difference in the sample, but it would just be the product of random variation. The coin is still fair, and flipping the coin more times would eventually demonstrate that (due to the Law of Large Numbers). Likewise, maybe these particular promotion decisions, which do show a difference, are just some random variation since the sample is not the whole population.  This gets back to the hypotheses. The null hypothesis says there is no relationship in the parameter, in the whole population. A sample can still be different, since a sample is a small piece of the population. If the null hypothesis is true, then what is the probability of producing a sample statistics like the one that we have?  This is what we do. We assume the null hypothesis is true. Then, under that assumption, we determine the probability of producing the sample statistics. Then we evaluate this probability: if this probability is very small, then it is very unlikely that the sample statistics was randomly produces, which means that it is very unlikely that the null hypothesis is true. Let me give you some definitions for this setup.    A research study has to set a threshold of significance. This is a probability which is small enough to consider it unlikely to have been produced randomly. The conventional value here is , but that is only a convention — the threshold of singnificant can be set as the researches wish). Then, a sample statistics is called significant is the probability of producing the sample statistic, under the assumption of the null hypothesis, is less than the threshold of significant. This probability, that the sample statistics can be produced under the null hypothesis, is called the -value of the sample statistic.    If a sample statistics is significant, then we are justified in rejecting the null hypothesis and, therefore, supporting the alternative hypothesis. This is how we test a hypotheiss: we set a threshold of significant, use mathematics to determine the probability of producing the sample statistics under the null hypothesis, and compare to the threshold to determine significant. If significant, we reject the null hypothesis and conclude that the sample supports the alternative hypothesis.  In I said that there were two ways to establish a probability: theory or simulation. Eventually, in this course, we will rely heavily on the mathematical theory of probability. But I do also want to do some simulations, to show you how that works.  So let me return to the example. Temporarily ignoring the gender, of the cases in the study, were promoted and not promoted. Of the promotion applicants, were men and were women. In the sample statistic, men were promoted and 14 women (adding together to make the total ).  I can make a simulation by randomly assigning these promotions to the applicants. I asked a random number generate to flip a coin times. For every , I recorded a promotion for one of the women. For every , I recoreded a promotion for one of the men. (If I happend to get to promotions for either of the categories, then I assigned the remainder to the other category). That gives me a random assignment of the promotions. I did this ten times. The follwing table shows the results, including the calculation of the difference: proportion of men promotion minus proportion of women promoted.   Ten Random Promotion Simulations   > Male  Female  Promotion  Difference    Randomization 1  20  15  0.208    Randomization 2  22  13  0.357    Randomization 3  15  20  -0.208    Randomization 4  20  15  0.208    Randomization 5  11  24  -0.542    Randomization 6  19  16  0.125    Randomization 7  20  15  0.208    Randomization 8  14  21  -0.292    Randomization 9  18  17  0.042    Randomization 10  12  23  -0.458     Then I compare this to the sample statistic: In nine of these ten randomizations, the difference in proportions was less that . In one randomization, the second one, the difference in proportions was larger. Therefore, from this particular set of randomizations, I would conclude that there is a chance of producing the sample statistic. If the null hypothesis is true, then my sample statistic has probability . That is the -value. . (Like most percentages, -values are almost always expressed as proportions of one. Then I would consider the threshold of signification and decide if this counted as significant.  Now, doing ten randomization is not very many. This is probably not a great simulation and this probability is probably incorrect. However, if I did this randomanization thousands and thousands of times, then the Law of Large Numbers tells me that I should actually get a very accurate idea of the probability.  So, I run many, many random trials. Then I look at my sample statistic: a different in the proportion of men and women promoted. Then I ask, how often does this happen? How often do at least more men get promoted than women if the promotions were split up randomly? I haven’t shown the work of this many randomzation, but the answer, after all the random trials, is about . The -value is . If I use the conventional threshold of then so this is a significant result. I conclude that I can reject the null hypothesis and support the alternative hypothesis. This sample does support the idea that there is, in fact, a gender bias in bank promotions under male managers.  Evaluation of statistics is all about what is likely. We approach truth by probability and approximation. Statistics doesn’t conclude that a claim is true or false; it concludes that a claim is likely or unlike. As such, it always involves a judgement call, yet again.  But this is how hypothesis testing works. A sample statistic is generated from a sample. Some math or random trials are done to figure out if the probability of the sample statistic being just random, just noise. If that probability is low enough, if it is very unlikely that the sample statistic is just random change, then it is called statistcally significant, the null hypothesis is rejected, and the study gives real evidence for the alternative hypothesis.  Finally, this whole setup of hypothesis testing only works if the data is good data. All of the constructions here, about probability and randomness and significant, assume that the data is realiable. If the data is compromised, due to bad data collection, human error, bias, or any other cause, then no amount of good mathematics and probability theory will solve that problem. We can only do mathematics to produce significant on good data; bad data remains unrealiable regardless of how excellent our understanding of probability theory is.  "
+},
+{
+  "id": "section-randomness-7",
+  "level": "2",
+  "url": "section-randomness.html#section-randomness-7",
+  "type": "Definition",
+  "number": "5.3.1",
+  "title": "",
+  "body": "  A research study has to set a threshold of significance. This is a probability which is small enough to consider it unlikely to have been produced randomly. The conventional value here is , but that is only a convention — the threshold of singnificant can be set as the researches wish). Then, a sample statistics is called significant is the probability of producing the sample statistic, under the assumption of the null hypothesis, is less than the threshold of significant. This probability, that the sample statistics can be produced under the null hypothesis, is called the -value of the sample statistic.   "
+},
+{
+  "id": "table-promotion-random",
+  "level": "2",
+  "url": "section-randomness.html#table-promotion-random",
+  "type": "Table",
+  "number": "5.3.2",
+  "title": "Ten Random Promotion Simulations",
+  "body": " Ten Random Promotion Simulations   > Male  Female  Promotion  Difference    Randomization 1  20  15  0.208    Randomization 2  22  13  0.357    Randomization 3  15  20  -0.208    Randomization 4  20  15  0.208    Randomization 5  11  24  -0.542    Randomization 6  19  16  0.125    Randomization 7  20  15  0.208    Randomization 8  14  21  -0.292    Randomization 9  18  17  0.042    Randomization 10  12  23  -0.458    "
+},
+{
+  "id": "section-sampling-distributions",
+  "level": "1",
+  "url": "section-sampling-distributions.html",
+  "type": "Section",
+  "number": "5.4",
+  "title": "Sampling Distributions",
+  "body": " Sampling Distributions  We now have the setup of hypothesis testing. We make the hypotheses: null and alternative. We assume the null hypothesis. Then, so far by simulation, we generate random samples to compare with our own sample statistics. This lets us assign a -value, which is a measure of how unlikely it would be generate the sample statistic under the null hypothesis. Finally, we compare the -value against a threshold of significant to determine whether or not we rejec the null hypothesis.  In this section, I want to focus in on one important part of this process: the random sample generate to compare to the sample statistic. In the previous section, we used simulation, but eventually we do want to rely on the statistical theory. In order to do that, we need some development of this important step, so that we no longer have to run simulations. This leads to the important definition of this section.    As always, we are in a situation where we are researching a particular population parameter (difference of means or proportions, single mean or proportion, some other similar calculation). We have a sample statistics which is the same calculation as the population paramere but drawn just from your sample statistics. We have hypotheses: null and alternative.  We assume the null hypothesis to be true. Under that assumption, we can generate random samples: fake data sets created by random choices under the assumption of the null hypothesis. From each of these samples, we can calculate the sample statistic, so we get a bunch of fake, randomly generated sample statistics.  The result is a new dataset with only one numeric variable: the list of values of all these randomly generated sample statistics. This new dataset is called the sampling distribution.    I believe the sampling distribution is possibly the trickiest single concept in this course. It’s layered deep below other concepts, all of which have to be clear to understand the sampling distribution. It also suffers from a difficult name: the word ‘sample’ is pretty heavily overused word in introductory statistics, so its quite unclear what ‘sampling’ really refers to in this definition. I want to spend this section trying to really clarify this important definition.  To that end, let me go over the process once more in general, and the apply this to an example.  We have a research questions. Mathematically, the research question is some equation or inequality concerning the population parameter.  We write down the null hypothesis and the alternative hypothesis.  We gather data for the variable involved in the parameter. That data is our sample, or simply ‘the sample’.  From that data, we do the calculation from the research question. This produces our sample statistics, or simply ‘the sample statistics’.  We assume the null hypothesis.  Under that assumption, we randomly generate samples. These do not replace our sample: they are random samples to be used in comparison.  From the randomly generate samples, we calclate the sample statistic for each. These do not replace our sample statistics: again, they are random sample statistics to be used in comparsion.  We gather all these sample statistics into a collection called the sampling distribution.  We use the sampling distribution to determine the probability of producing our sample under the null hypothesis: the -value.    We compare that probability with a threshold of signifigance.  If our sample statistics is sufficiently unlikely, we reject the null hypothesis and say that our sample statistic is significant and can be use to support the alternative hypothesis.    In , I have already calculated a sample distribution. In the main exmaple in that section, we were looking at promotion decision. The population paramers was the difference in promotion rates between men and women under a male manager. The null hypothesis said that there was no difference. I ran ten simulations, each generating  In I said that continuous probability is normally used to model discrete probability in statistics. The same is true for the sampling distribution. Instead of doing simulations, I want to rely on the mathematical theory of probability, specifically continuous probability.  "
+},
+{
+  "id": "section-sampling-distributions-4",
+  "level": "2",
+  "url": "section-sampling-distributions.html#section-sampling-distributions-4",
+  "type": "Definition",
+  "number": "5.4.1",
+  "title": "",
+  "body": "  As always, we are in a situation where we are researching a particular population parameter (difference of means or proportions, single mean or proportion, some other similar calculation). We have a sample statistics which is the same calculation as the population paramere but drawn just from your sample statistics. We have hypotheses: null and alternative.  We assume the null hypothesis to be true. Under that assumption, we can generate random samples: fake data sets created by random choices under the assumption of the null hypothesis. From each of these samples, we can calculate the sample statistic, so we get a bunch of fake, randomly generated sample statistics.  The result is a new dataset with only one numeric variable: the list of values of all these randomly generated sample statistics. This new dataset is called the sampling distribution.   "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",

@@ -1,7 +1,1600 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-probability-theory" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
-  <p> 
-    Test
-  </p>
+  <title>Probability Theory</title>
+  <introduction>
+    <p> 
+      Hypothesis testing asks whether the sample statistic allows for
+      the rejection of the null hypothesis. This is never a simple
+      yes/no question. Instead, it is always a probabilistic question.
+      Therefore, answering it comes down to the mathematics of
+      probability. For the most part, in this course, we leave the
+      mathematics in the background.  But, in this stretch learning
+      oucomes and in a few other to come, I want to present some of the
+      mathematics lying behind the statistical conclusions that we will
+      reach.  
+    </p>
+    <p>
+      Therefore, this is a very short introduction to the mathematics of
+      probability. This is a whole discipline of mathematics, but it is
+      still possible to make the first definitions in this short section
+      of our course.
+    </p>
+  </introduction>
+  <subsection xml:id="subsection-discrete-probability"> 
+    <p>
+      Like numeric variables, probability is split into two
+      categoreis: discrete and continuous. This time, ‘discrete’ and
+      ‘continuous’ refer to the possibilities for the probability. If
+      there are only a few possibilities, the situation is discrete.
+      If the possibilities are a whole range of number with arbitrary
+      precision, the situation is continuous.
+    </p>
+    <p>
+      We’re going to start with discrete probability and then move on
+      to contniuous. Statistics is strange since it can be phrased as
+      discrete probability, but the method of continuous probability
+      turn out to be many of the most useful. We’ll need a little bit
+      of understanding of both.
+    </p>
+    <p>
+      Here, then, are the basic definitions of discrete probability.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Discrete probability is a situation where there are a finite
+          number of possibilities, expressed usually as numbers
+          <m>a_1, a_2, \ldots, a_n</m>.  Each possibility has a
+          probability, giving a list of probabilities: <m>p_1, p_2,
+          \ldots, p_m</m>.  Each probability is a number between
+          <m>0</m> and <m>1</m>. All of the probailities together have
+          to add up to 1.
+          <md>
+            p_1 + p_2 + p_3 + \ldots + p_n = 1 
+          </md>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Everything that I can know about the probability situation can
+      be eventually calcluated from the possibilities and their
+      probabilities.  Let me give some basic examples.
+    </p>
+    <example>
+      <statement>
+        <p>
+          A coin flip is a probability situation. There are two
+          possibilities: heads or tails. I could assignment them
+          numbers if I wished, say: heads <m>= 1</m> and tails <m>=
+          0</m>.  Then, for a fair coin, each has a <m>50\%</m>
+          chance, so the probabilities are <m>p_{\text{\heads}} =
+          0.5</m> and <m>p_{\text{tails}} = 0.5</m>. 
+          These probabilities do add up to 1.
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          A dice roll is a probability situation. For a six-sided
+          dice, the possibilities are the numbers from <m>1</m> to
+          <m>6</m>.  For a fair dice, each probbaility should be
+          equal, and they should all add up to 1. Therefore, all the
+          probabilities have to be one sixth.
+          <md>
+            p_1 = p_2 = p_3 = p_4 = p_5 = p_6 = \frac{1}{6}
+          </md>
+        </p>
+      </statement>
+    </example>
+    <example>
+      <statement>
+        <p>
+          For a slightly more interesting example, consider rolling
+          two six-sided dice. Now the the possibilities are the
+          numbers from <m>2</m> to <m>12</m>: the lowest roll is a
+          <m>1</m> on each die, which sums to <m>2</m> and the highest
+          roll is a <m>6</m> on each die, which sums to <m>12</m>.
+          But the probabilities of the possibilities are now not all
+          equal.  There is only one way to get a roll of <m>12</m>:
+          rolling a <m>6</m> on both dice. However, there are three
+          ways to get a roll of <m>4:</m> <m>1</m> on the first day
+          and <m>3</m> on the second; <m>2</m> on both dice; and
+          <m>3</m> on the first die and <m>1</m> on the second. That
+          leads to the following probabilities.
+          <md>
+            <mrow>
+              p_2 = \frac{1}{36} 
+            </mrow>
+            <mrow>
+              p_3 = \frac{2}{36} = \frac{1}{18} 
+            </mrow>
+            <mrow>
+              p_4 = \frac{3}{36} = \frac{1}{12} 
+            </mrow>
+            <mrow>
+              p_5 = \frac{4}{36} = \frac{1}{9} 
+            </mrow>
+            <mrow>
+              p_6 = \frac{5}{36} 
+            </mrow>
+            <mrow>
+              p_7 = \frac{6}{36} = \frac{1}{6} 
+            </mrow>
+            <mrow>
+              p_8 = \frac{5}{36}
+            </mrow>
+            <mrow>
+              p_9 = \frac{4}{36} = \frac{1}{9}
+            </mrow>
+            <mrow>
+              p_{10} = \frac{3}{36} = \frac{1}{12} 
+            </mrow>
+            <mrow>
+              p_{11} = \frac{2}{36} = \frac{1}{18}
+            </mrow>
+            <mrow>
+              p_{12} = \frac{1}{36}
+            </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+    <p>
+      I can draw the probability situation for rolling two six-sided
+      dice as a graph, something like a histogram. <xref
+      ref="figure-2d6-1"/> shows that probability graph. 
+    </p>
+    <figure xml:id="figure-2d6-1">
+      <caption>Probability for Rolling Two Six-sided Dice</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              ybar,
+              xlabel={Roll},
+              ylabel={Probability},
+              symbolic x coords={2,3,4,5,6,7,8,9,10,11,12},
+              xtick=data
+            ]
+            \addplot coordinates {
+              (2,0.028)
+              (3,0.056)
+              (4,0.083)
+              (5,0.111)
+              (6,0.139)
+              (7,0.167)
+              (8,0.136)
+              (9,0.111)
+              (10,0.083)
+              (11,0.056)
+              (12,0.028)
+            };
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      I want to continue with the example of rolling two six-sided
+      dice. Say I didn’t figure out the probabilities by looking at
+      combinations of dice role. Instead, I can just try to figure out
+      the probabilities by rolling a bunch of dice and seeing what
+      happens. <xref ref="figure-2d6-2"/> is a histogram (an actualy
+      histogram now, from a data set) that I get by rolling two
+      six-sided dice ten times.
+    </p>
+    <figure xml:id="figure-2d6-2">
+      <caption>Two Six-Sided Dice Histogram</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              xmin=2,
+              xmax=12,
+              xlabel={Roll},
+              ylabel={Count}
+            ]
+              \addplot+ [
+                hist={bins=11},
+                fill=orange,
+                draw=black,
+                mark=none
+              ]
+              table [
+                y=roll,
+                row sep=crcr
+              ] {
+                roll\\
+                7\\
+                4\\
+                5\\
+                9\\
+                6\\
+                8\\
+                11\\
+                7\\
+                7\\
+                5\\
+              };
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      <xref ref="figure-2d6-3"/> is a histogram that I get by rolling
+      two six-sided dice twenty times.
+    </p>
+    <figure xml:id="figure-2d6-3">
+      <caption>Two Six-Sided Dice Histogram</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              xmin=2,
+              xmax=12,
+              xlabel={Roll},
+              ylabel={Count}
+            ]
+              \addplot+ [
+                hist={bins=11},
+                fill=orange,
+                draw=black,
+                mark=none
+              ]
+              table [
+                y=roll,
+                row sep=crcr
+              ] {
+                roll\\
+                7\\
+                4\\
+                5\\
+                9\\
+                6\\
+                8\\
+                11\\
+                7\\
+                7\\
+                5\\
+                8\\
+                10\\
+                6\\
+                11\\
+                11\\
+                4\\
+                7\\
+                3\\
+                6\\
+                6\\
+              };
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      <xref ref="figure-2d6-4"/> is a histogram that I get by rolling
+      two six-sided dice fifty times.
+    </p>
+    <figure xml:id="figure-2d6-4">
+      <caption>Two Six-Sided Dice Histogram</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              xmin=2,
+              xmax=12,
+              xlabel={Roll},
+              ylabel={Count}
+            ]
+              \addplot+ [
+                hist={bins=11},
+                fill=orange,
+                draw=black,
+                mark=none
+              ]
+              table [
+                y=roll,
+                row sep=crcr
+              ] {
+                roll\\
+                7\\
+                4\\
+                5\\
+                9\\
+                6\\
+                8\\
+                11\\
+                7\\
+                7\\
+                5\\
+                8\\
+                10\\
+                6\\
+                11\\
+                11\\
+                4\\
+                7\\
+                3\\
+                6\\
+                6\\
+                6\\
+                7\\
+                12\\
+                10\\
+                9\\
+                7\\
+                6\\
+                10\\
+                8\\
+                12\\
+                11\\
+                6\\
+                5\\
+                10\\
+                10\\
+                6\\
+                6\\
+                10\\
+                5\\
+                6\\
+                9\\
+                6\\
+                11\\
+                7\\
+                4\\
+                8\\
+                7\\
+                11\\
+                4\\
+                8\\
+              };
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      <xref ref="figure-2d6-5"/> is a histogram that I get by rolling
+      two six-sided dice five hundred times.
+    </p>
+    <figure xml:id="figure-2d6-5">
+      <caption>Two Six-Sided Dice Histogram</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              xmin=2,
+              xmax=12,
+              xlabel={Roll},
+              ylabel={Count}
+            ]
+              \addplot+ [
+                hist={bins=11},
+                fill=orange,
+                draw=black,
+                mark=none
+              ]
+              table [
+                y=roll,
+                row sep=crcr
+              ] {
+                roll\\
+                7\\
+                4\\
+                5\\
+                9\\
+                6\\
+                8\\
+                11\\
+                7\\
+                7\\
+                5\\
+                8\\
+                10\\
+                6\\
+                11\\
+                11\\
+                4\\
+                7\\
+                3\\
+                6\\
+                6\\
+                6\\
+                7\\
+                12\\
+                10\\
+                9\\
+                7\\
+                6\\
+                10\\
+                8\\
+                12\\
+                11\\
+                6\\
+                5\\
+                10\\
+                10\\
+                6\\
+                6\\
+                10\\
+                5\\
+                6\\
+                9\\
+                6\\
+                11\\
+                7\\
+                4\\
+                8\\
+                7\\
+                11\\
+                4\\
+                8\\
+                7\\
+                7\\
+                7\\
+                10\\
+                9\\
+                2\\
+                2\\
+                5\\
+                7\\
+                2\\
+                7\\
+                8\\
+                4\\
+                3\\
+                9\\
+                10\\
+                2\\
+                5\\
+                9\\
+                3\\
+                10\\
+                4\\
+                8\\
+                10\\
+                9\\
+                5\\
+                6\\
+                6\\
+                5\\
+                3\\
+                5\\
+                9\\
+                11\\
+                7\\
+                8\\
+                7\\
+                6\\
+                10\\
+                6\\
+                7\\
+                11\\
+                5\\
+                5\\
+                8\\
+                8\\
+                7\\
+                6\\
+                8\\
+                10\\
+                7\\
+                7\\
+                3\\
+                11\\
+                6\\
+                5\\
+                9\\
+                4\\
+                3\\
+                6\\
+                4\\
+                6\\
+                10\\
+                7\\
+                9\\
+                8\\
+                8\\
+                9\\
+                7\\
+                4\\
+                12\\
+                11\\
+                9\\
+                7\\
+                7\\
+                7\\
+                5\\
+                6\\
+                10\\
+                5\\
+                5\\
+                4\\
+                9\\
+                6\\
+                6\\
+                8\\
+                3\\
+                7\\
+                7\\
+                6\\
+                4\\
+                4\\
+                5\\
+                3\\
+                6\\
+                9\\
+                2\\
+                10\\
+                4\\
+                7\\
+                9\\
+                7\\
+                3\\
+                9\\
+                9\\
+                9\\
+                10\\
+                7\\
+                5\\
+                10\\
+                9\\
+                8\\
+                6\\
+                4\\
+                4\\
+                11\\
+                6\\
+                3\\
+                7\\
+                10\\
+                4\\
+                6\\
+                6\\
+                9\\
+                4\\
+                10\\
+                4\\
+                3\\
+                6\\
+                10\\
+                4\\
+                4\\
+                3\\
+                8\\
+                6\\
+                5\\
+                7\\
+                6\\
+                7\\
+                6\\
+                9\\
+                7\\
+                7\\
+                3\\
+                8\\
+                5\\
+                6\\
+                7\\
+                4\\
+                5\\
+                3\\
+                7\\
+                5\\
+                2\\
+                3\\
+                5\\
+                8\\
+                8\\
+                4\\
+                9\\
+                9\\
+                11\\
+                2\\
+                8\\
+                7\\
+                4\\
+                3\\
+                8\\
+                10\\
+                6\\
+                8\\
+                9\\
+                8\\
+                6\\
+                6\\
+                5\\
+                5\\
+                11\\
+                10\\
+                10\\
+                8\\
+                3\\
+                6\\
+                9\\
+                5\\
+                3\\
+                7\\
+                8\\
+                8\\
+                3\\
+                8\\
+                10\\
+                5\\
+                5\\
+                10\\
+                9\\
+                11\\
+                7\\
+                10\\
+                9\\
+                9\\
+                8\\
+                6\\
+                7\\
+                10\\
+                8\\
+                6\\
+                6\\
+                7\\
+                6\\
+                7\\
+                4\\
+                4\\
+                8\\
+                10\\
+                6\\
+                4\\
+                4\\
+                4\\
+                11\\
+                4\\
+                5\\
+                7\\
+                6\\
+                10\\
+                12\\
+                10\\
+                6\\
+                4\\
+                8\\
+                11\\
+                9\\
+                2\\
+                3\\
+                6\\
+                7\\
+                6\\
+                3\\
+                7\\
+                8\\
+                9\\
+                6\\
+                8\\
+                6\\
+                7\\
+                9\\
+                8\\
+                7\\
+                9\\
+                7\\
+                10\\
+                10\\
+                7\\
+                11\\
+                8\\
+                6\\
+                9\\
+                7\\
+                9\\
+                10\\
+                10\\
+                6\\
+                11\\
+                3\\
+                6\\
+                4\\
+                8\\
+                3\\
+                5\\
+                6\\
+                8\\
+                10\\
+                3\\
+                9\\
+                9\\
+                10\\
+                8\\
+                7\\
+                7\\
+                5\\
+                5\\
+                7\\
+                6\\
+                4\\
+                6\\
+                5\\
+                9\\
+                5\\
+                10\\
+                8\\
+                10\\
+                6\\
+                9\\
+                6\\
+                5\\
+                5\\
+                6\\
+                4\\
+                11\\
+                9\\
+                3\\
+                5\\
+                10\\
+                10\\
+                8\\
+                6\\
+                3\\
+                4\\
+                8\\
+                8\\
+                12\\
+                4\\
+                7\\
+                7\\
+                4\\
+                6\\
+                9\\
+                7\\
+                5\\
+                9\\
+                9\\
+                12\\
+                9\\
+                12\\
+                6\\
+                5\\
+                9\\
+                4\\
+                11\\
+                9\\
+                4\\
+                8\\
+                8\\
+                8\\
+                6\\
+                10\\
+                7\\
+                5\\
+                6\\
+                3\\
+                9\\
+                7\\
+                5\\
+                8\\
+                6\\
+                7\\
+                7\\
+                8\\
+                3\\
+                7\\
+                10\\
+                11\\
+                6\\
+                6\\
+                10\\
+                12\\
+                5\\
+                9\\
+                8\\
+                8\\
+                6\\
+                9\\
+                2\\
+                6\\
+                10\\
+                8\\
+                10\\
+                9\\
+                6\\
+                3\\
+                6\\
+                8\\
+                6\\
+                5\\
+                8\\
+                7\\
+                3\\
+                12\\
+                7\\
+                3\\
+                10\\
+                9\\
+                10\\
+                6\\
+                7\\
+                6\\
+                10\\
+                8\\
+                5\\
+                9\\
+                7\\
+                7\\
+                11\\
+                10\\
+                8\\
+                7\\
+                5\\
+                11\\
+                6\\
+                9\\
+                9\\
+                7\\
+                7\\
+                8\\
+                2\\
+                5\\
+                6\\
+                8\\
+                3\\
+                8\\
+                7\\
+                10\\
+                5\\
+                10\\
+                8\\
+                6\\
+                7\\
+                8\\
+                6\\
+                8\\
+                7\\
+                6\\
+                7\\
+                8\\
+                12\\
+                3\\
+                7\\
+                9\\
+                6\\
+                12\\
+                7\\
+                7\\
+                9\\
+                12\\
+                10\\
+                5\\
+                6\\
+                5\\
+                12\\
+                7\\
+                7\\
+                6\\
+                6\\
+                7\\
+                5\\
+                10\\
+                5\\
+                7\\
+                7\\
+                10\\
+                3\\
+              };
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      What I have done here is called a simulation. In general, there
+      are two main ways to determine the outcomes of a (discrete)
+      probability situation.
+      <ul>
+        <li>
+          I can use mathematical theory to predict and prove what the
+          probabilities will be for various possibilities in a
+          probability situation.
+        </li>
+        <li>
+          I can run a simulation, basically repeating the probability
+          situation over and over again, and use a histogram to record
+          the probability of all the various outcomes.
+        </li>
+      </ul>
+    </p>
+    <p>
+      In the case of rolling two six-sided dice, after two hundred
+      rolls, the histogram of outcomes was starting to look quite
+      similar to the histogram-like graph of probabilities predicted
+      by the theorey. The most times I roll two dice, the closer this
+      similarity will grow. In general, we expect this to happen.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          <term>The Law of Large Numbers</term> is a colloquial term
+          for the fact that, as the number of iterations grows,
+          simulations of probability get closer and closer to matching
+          a correct theory of the probability situation.  
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Basically, if you repeat a probability situation enough times,
+      you can get extremely precise and accurate versions of the
+      probability. The simtulations and the theory converge. This is
+      very useful. Probability theory is a well-developed part of
+      mathematics, but it’s a pretty difficult discipline. With enough
+      capacity (usually computing power) we can avoid a lot of the
+      theory by just running simulations. This is actually done:
+      simulations are a huge part of the development of the theory of
+      probability. Thanks to the Law of Large Numbers, simulations can
+      be used to predict or test the theory of probability.
+    </p>
+    <p>
+      For our purposes, in statistics we can use simulations to have
+      efficient way to get accurate assessments of the probabilities
+      in a probability situation. We will use this to determine
+      probabilities for hypothesis testing.
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-continuous-probability">
+    <title>Continuous Probability</title>
+    <p>
+      Discrete probability is about discrete possibilities, like the
+      outcomes of a die roll. Continuous probability is, in contrast,
+      about continuous possibilities, like temperature, weight,
+      lifespan, or other quantities which could, in theory, have
+      aribtray precious. However, continouus probability has a whole
+      set of very useful techinque. These are useful enough that it is
+      often helpful to use continuous probability to model a discrete
+      situation. Let me go back to the dice rolle example. <xref
+      ref="figure-2d6-6"/> is the same probability graph from the
+      simulation of 500 dice throws, but now I have added a continuous
+      function that matches the probability.
+    </p>
+    <figure xml:id="figure-2d6-6">
+      <caption>Continuous Model</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}
+            \begin{axis}[
+              xmin=1,
+              xmax=12,
+              xlabel={Roll},
+              ylabel={Count}
+            ]
+              \addplot+ [
+                hist={bins=11},
+                fill=orange,
+                draw=black,
+                mark=none
+              ]
+              table [
+                y=roll,
+                row sep=crcr
+              ] {
+                roll\\
+                7\\
+                4\\
+                5\\
+                9\\
+                6\\
+                8\\
+                11\\
+                7\\
+                7\\
+                5\\
+                8\\
+                10\\
+                6\\
+                11\\
+                11\\
+                4\\
+                7\\
+                3\\
+                6\\
+                6\\
+                6\\
+                7\\
+                12\\
+                10\\
+                9\\
+                7\\
+                6\\
+                10\\
+                8\\
+                12\\
+                11\\
+                6\\
+                5\\
+                10\\
+                10\\
+                6\\
+                6\\
+                10\\
+                5\\
+                6\\
+                9\\
+                6\\
+                11\\
+                7\\
+                4\\
+                8\\
+                7\\
+                11\\
+                4\\
+                8\\
+                7\\
+                7\\
+                7\\
+                10\\
+                9\\
+                2\\
+                2\\
+                5\\
+                7\\
+                2\\
+                7\\
+                8\\
+                4\\
+                3\\
+                9\\
+                10\\
+                2\\
+                5\\
+                9\\
+                3\\
+                10\\
+                4\\
+                8\\
+                10\\
+                9\\
+                5\\
+                6\\
+                6\\
+                5\\
+                3\\
+                5\\
+                9\\
+                11\\
+                7\\
+                8\\
+                7\\
+                6\\
+                10\\
+                6\\
+                7\\
+                11\\
+                5\\
+                5\\
+                8\\
+                8\\
+                7\\
+                6\\
+                8\\
+                10\\
+                7\\
+                7\\
+                3\\
+                11\\
+                6\\
+                5\\
+                9\\
+                4\\
+                3\\
+                6\\
+                4\\
+                6\\
+                10\\
+                7\\
+                9\\
+                8\\
+                8\\
+                9\\
+                7\\
+                4\\
+                12\\
+                11\\
+                9\\
+                7\\
+                7\\
+                7\\
+                5\\
+                6\\
+                10\\
+                5\\
+                5\\
+                4\\
+                9\\
+                6\\
+                6\\
+                8\\
+                3\\
+                7\\
+                7\\
+                6\\
+                4\\
+                4\\
+                5\\
+                3\\
+                6\\
+                9\\
+                2\\
+                10\\
+                4\\
+                7\\
+                9\\
+                7\\
+                3\\
+                9\\
+                9\\
+                9\\
+                10\\
+                7\\
+                5\\
+                10\\
+                9\\
+                8\\
+                6\\
+                4\\
+                4\\
+                11\\
+                6\\
+                3\\
+                7\\
+                10\\
+                4\\
+                6\\
+                6\\
+                9\\
+                4\\
+                10\\
+                4\\
+                3\\
+                6\\
+                10\\
+                4\\
+                4\\
+                3\\
+                8\\
+                6\\
+                5\\
+                7\\
+                6\\
+                7\\
+                6\\
+                9\\
+                7\\
+                7\\
+                3\\
+                8\\
+                5\\
+                6\\
+                7\\
+                4\\
+                5\\
+                3\\
+                7\\
+                5\\
+                2\\
+                3\\
+                5\\
+                8\\
+                8\\
+                4\\
+                9\\
+                9\\
+                11\\
+                2\\
+                8\\
+                7\\
+                4\\
+                3\\
+                8\\
+                10\\
+                6\\
+                8\\
+                9\\
+                8\\
+                6\\
+                6\\
+                5\\
+                5\\
+                11\\
+                10\\
+                10\\
+                8\\
+                3\\
+                6\\
+                9\\
+                5\\
+                3\\
+                7\\
+                8\\
+                8\\
+                3\\
+                8\\
+                10\\
+                5\\
+                5\\
+                10\\
+                9\\
+                11\\
+                7\\
+                10\\
+                9\\
+                9\\
+                8\\
+                6\\
+                7\\
+                10\\
+                8\\
+                6\\
+                6\\
+                7\\
+                6\\
+                7\\
+                4\\
+                4\\
+                8\\
+                10\\
+                6\\
+                4\\
+                4\\
+                4\\
+                11\\
+                4\\
+                5\\
+                7\\
+                6\\
+                10\\
+                12\\
+                10\\
+                6\\
+                4\\
+                8\\
+                11\\
+                9\\
+                2\\
+                3\\
+                6\\
+                7\\
+                6\\
+                3\\
+                7\\
+                8\\
+                9\\
+                6\\
+                8\\
+                6\\
+                7\\
+                9\\
+                8\\
+                7\\
+                9\\
+                7\\
+                10\\
+                10\\
+                7\\
+                11\\
+                8\\
+                6\\
+                9\\
+                7\\
+                9\\
+                10\\
+                10\\
+                6\\
+                11\\
+                3\\
+                6\\
+                4\\
+                8\\
+                3\\
+                5\\
+                6\\
+                8\\
+                10\\
+                3\\
+                9\\
+                9\\
+                10\\
+                8\\
+                7\\
+                7\\
+                5\\
+                5\\
+                7\\
+                6\\
+                4\\
+                6\\
+                5\\
+                9\\
+                5\\
+                10\\
+                8\\
+                10\\
+                6\\
+                9\\
+                6\\
+                5\\
+                5\\
+                6\\
+                4\\
+                11\\
+                9\\
+                3\\
+                5\\
+                10\\
+                10\\
+                8\\
+                6\\
+                3\\
+                4\\
+                8\\
+                8\\
+                12\\
+                4\\
+                7\\
+                7\\
+                4\\
+                6\\
+                9\\
+                7\\
+                5\\
+                9\\
+                9\\
+                12\\
+                9\\
+                12\\
+                6\\
+                5\\
+                9\\
+                4\\
+                11\\
+                9\\
+                4\\
+                8\\
+                8\\
+                8\\
+                6\\
+                10\\
+                7\\
+                5\\
+                6\\
+                3\\
+                9\\
+                7\\
+                5\\
+                8\\
+                6\\
+                7\\
+                7\\
+                8\\
+                3\\
+                7\\
+                10\\
+                11\\
+                6\\
+                6\\
+                10\\
+                12\\
+                5\\
+                9\\
+                8\\
+                8\\
+                6\\
+                9\\
+                2\\
+                6\\
+                10\\
+                8\\
+                10\\
+                9\\
+                6\\
+                3\\
+                6\\
+                8\\
+                6\\
+                5\\
+                8\\
+                7\\
+                3\\
+                12\\
+                7\\
+                3\\
+                10\\
+                9\\
+                10\\
+                6\\
+                7\\
+                6\\
+                10\\
+                8\\
+                5\\
+                9\\
+                7\\
+                7\\
+                11\\
+                10\\
+                8\\
+                7\\
+                5\\
+                11\\
+                6\\
+                9\\
+                9\\
+                7\\
+                7\\
+                8\\
+                2\\
+                5\\
+                6\\
+                8\\
+                3\\
+                8\\
+                7\\
+                10\\
+                5\\
+                10\\
+                8\\
+                6\\
+                7\\
+                8\\
+                6\\
+                8\\
+                7\\
+                6\\
+                7\\
+                8\\
+                12\\
+                3\\
+                7\\
+                9\\
+                6\\
+                12\\
+                7\\
+                7\\
+                9\\
+                12\\
+                10\\
+                5\\
+                6\\
+                5\\
+                12\\
+                7\\
+                7\\
+                6\\
+                6\\
+                7\\
+                5\\
+                10\\
+                5\\
+                7\\
+                7\\
+                10\\
+                3\\
+              };
+              \addplot[black,thick,domain=2:7] {11*x-7};
+              \addplot[black,thick,domain=7:12] {126-8*x};
+            \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      Obviously, a dice roll cannot fall between whole numbers. But
+      the continuous model is still useful. I want to understand how
+      to measure probability in the continuous model. To do so, think
+      about the bars in this probability graph. The height of the
+      graph is the probability, but notice that the width of each bar
+      is exactly 1. This means that the area of each bar is the
+      probability, height, times the width, which is <m>1</m>. To the
+      area is also a precise measure of the probability. For
+      continuous probability, this is the important insight. Now let
+      me give you the definitions we will use.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Consider a continuous probability situation where the
+          possibilities are a range of (real) numbers <m>[a,b]</m>. 
+          Then a probability distribution is a mathematical function
+          <m>p(x)</m> with the following properties.
+          <ul>
+            <li>
+              The domain of the function is the range of possibilities
+              <m>[a,b]</m>.
+            </li>
+            <li>
+              All outcomes of the function at all positive: <m>p(x)
+              \geq 0</m>. 
+            </li>
+            <li>
+              The total are under the function, for the whole domain,
+              is exactly <m>1</m>.
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For discrete probability, the possibilities and their
+      probabilities determine everything. For continuous probability,
+      the function, the probability distribution, determines
+      everything. How does it do so? By area.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          Let <m>p(x)</m> be a probability distribution on domain
+          <m>[a,b]</m>.  Let <m>[c.d]</m> be a subset of the
+          possibilites (so that it is an interval inside
+          <m>[a,b]</m>). Then the probability of having any
+          possibility between <m>c</m> an d<m>d</m> is precisely the
+          area under the probability distribution that falls between
+          <m>c</m> and <m>d</m>. 
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      For a continuous probability situation, area is probability.
+      <xref ref="figure-continuous-probability1"/> and <xref
+      ref="figure-continuous-probability2"/> show how this looks: the
+      probability under the whole distribution, shown in blue, is
+      <m>1</m>. The probability of a sub-range of possibilities is the
+      area of the smaller section, shown in the red, which will be
+      smaller than the blue area. In the figure, the area of the red
+      region  is the probability of a possibility between <m>4</m> and
+      <m>8</m>, as a fraction of the whole probability between
+      <m>0</m> and <m>10</m>. Note that all the possibilities are
+      values on the <m>x</m>-axis: in a probability distribution, the
+      <m>x</m>-axis is always the possible outcomes of the probability
+      situation.
+    </p>
+    <figure xml:id="figure-continuous-probability1">
+      <caption>A Probability Distribution</caption>
+      <image source="images/image1.png" width="80%">
+      </image>
+    </figure>
+    <figure xml:id="figure-continuous-probability2">
+      <caption>
+        Probablity of an outcome between <m>4</m> and <m>8</m>
+      </caption>
+      <image source="images/image2.png" width="80%">
+      </image>
+    </figure>
+    <p>
+      Finally, it would be nice to have a good notation for this area.
+      To that end, I’m going to give you a definition from calculus.
+      For those who are not familiar with calculus, please just treat
+      this as a piece of new notation. I will not ask you to calculate
+      this — I just want you to understand this notation. (For those
+      who do have some calculus, I hope you enjoy the connections
+      here.) 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          The integral of a function <m>p(x)</m> over an interval
+          <m>[a.b]</m> is a measure of the area under the graph of
+          <m>p(x)</m> between the points <m>a</m> and <m>b</m>. It has
+          this notation. 
+          <md>
+            \int_a^b p(x) dx 
+          </md>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Continuous probability is, indeed, a subdiscipline of calculus.
+      Calculus is not required for this statistics course, so I will
+      be very minimal with uses of calculus. Hopefully the notation is
+      not to strange.
+    </p>
+  </subsection>
 </section>

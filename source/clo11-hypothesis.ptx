@@ -1,7 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-hypotheses" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Hypothesis Testing</title>
   <p> 
-    Test
+    Almost all of inferential statistics is presented as hypothesis
+    testing. This section introduces the main ideas. Let me start with
+    an outline. We have a data set, which is a sample of the
+    population. We can calculate information about the sample: this is
+    information we have. We don’t know information about the
+    parameters, since they are attributes of the whole population. The
+    goal of statistics is to use the sample to infer something about
+    the parameter in the whole population.
+  </p>
+  <p>
+    The setup to do this is to use the sample to make a hypothesis.
+    Let me give you a definition.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        In inferential statistics, a <term>hypothesis</term> is a
+        mathematical statement about one or more population
+        parameters. In hypothesis testing, there are two hypotheses.
+        <ul>
+          <li>
+            A <term>null hypothesis</term> is a hypotheses that, in
+            some way, mathematically captures a default state. Most
+            often, this is a situation where two or more variables are
+            not at all related, or a situation where a particular
+            calculation for a single variable is not above or below an
+            important threshold value.
+          </li>
+          <li>
+            An <term>alternative hypothesis</term> is a hypotheses
+            that, in some may, mathematically captures some
+            interesting observation. Most often, it will say that
+            there is a relatoinship between two or more variables, or
+            that a particular calculation for a single variable is
+            above or below an important threshold.
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    The hypothesis is unknown: it is a property of the whole
+    population. Instead, what we know is the sample. Again, let me
+    give you the important definition.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A <term>sample statistics</term> is a calculation based on the
+        values of variables from a sample.  In the context of
+        hypothesis testing, the sample statistics should be the same
+        calculation as the hypothesis, but applied to the sample
+        instead of the whole population. 
+      </p>
+    </statement>
+  </definition>
+  <p>
+    Now I can describe the setup of hypothesis testing. 
+    <ul>
+      <li>
+        Based on the goal of a research study, I make two hypothesis:
+        a null hypothesis and an alternative hypothesis. The null
+        hypothesis says that nothing is going on with these variables,
+        while the alternative hypothesis is usually a positive answer
+        to the research question, indicating that something
+        interesting is actually true in the population.  
+      </li>
+      <li>
+        Then I use the sample to calculate a sample statistics.
+      </li>
+      <li>
+        Finally, I use the mathematics of probability to determine
+        whether the sample statistics supports the alternative
+        hypothesis over the null hypothesis. This is usually phrase,
+        sometome strangely, as a double negative: does the sample
+        statistics allow me to reject the null hypothesis?
+      </li>
+    </ul>
+    This is the setup. For most of the rest of this course, we will be
+    going through these three steps for a wide variety of situations.
+    For now, as usual, I’ll work through an example to demonstrate.
+  </p>
+  <p>
+    A certain study had this research question: do male bank managers
+    discriminate against female employees in promotion decisions? What
+    is the population? Recall the population for a research question
+    is all of the possible cases. Here, the question is about
+    promotion decisions made by male managers. Therefore, the
+    population is precisely that: all promotion decisions made by all
+    male bank managers. (You could argue that the population be
+    limited, maybe to only banks in Canada. That would also be
+    reasonable.)
+  </p>
+  <p>
+    That’s the population. What is the sample? Recall that the sample
+    is the actual data: the portion of the population that we know
+    something about. In this study, the sample was 48 specific
+    promotion decisions that the researchers were aware of.
+  </p>
+  <p>
+    The dataset, then, has 48 cases. Each case was two variables:
+    gender and decision. Both are nominal categorical with two
+    categories: gender split between men and women, and decision split
+    between promoted and not promoted. The gender refers to the gender
+    of the applicant: remember, that study is only about male
+    managers, so that part is fixed.
+  </p>
+  <table xml:id="table-promotion-decisions">
+    <title>Bank Promotion Decisions and Gender</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> gender </cell>
+        <cell> promoted </cell>
+        <cell> not promoted </cell>
+        <cell> total </cell>
+      </row>
+      <row>
+        <cell> men </cell>
+        <cell> 21 </cell>
+        <cell> 3 </cell>
+        <cell> 24 </cell>
+      </row>
+      <row bottom="medium">
+        <cell> women </cell>
+        <cell> 12 </cell>
+        <cell> 12</cell>
+        <cell> 24 </cell>
+      </row>
+      <row>
+        <cell> total </cell>
+        <cell> 35 </cell>
+        <cell> 13 </cell>
+        <cell> 48 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    <xref ref="table-promotion-decisions"/> is the contingency table
+    for these two variables. Of the <m>48</m> cases, exactly half were
+    men and half were women under consideration for promotion. You can
+    see from the table how many were actually promoted. I can read
+    this as proportions: <m>87.5</m> percent of the men were promoted and
+    <m>58.3</m> percent of the women were promoted. The different between
+    these two proportion is <m>0.292</m> or <m>29.2</m>.
+  </p>
+  <p>
+    Let’s make sense of this <m>0.292</m> proportional difference.
+    Again, the population is all instances of promotion decisions made
+    by a male bank manager. I can use <m>p_m</m> for the value, in the
+    entire population, of how many men were promoted, as a proportion.
+    (Proportion is important here for comparison, since the number of
+    promotion applicants in the entire population is not guaranteed to
+    be perfectly split between men and women.)
+  </p>
+  <p>
+    Again, I can use <m>p_f</m> for the proportion of the women who
+    were promoted in this situation. Then the difference, in the whole
+    population, is <m>p_m - p_f</m> This is a measure of how much men
+    were promoted more often than women. This is a parameter. Now I
+    have two calcluations:
+  </p>
+  <md>
+    <mrow>
+      p_m - p_f = ? 
+    </mrow>
+    <mrow>
+      \hat{p}_m - \hat{p}_f = 0.292
+    </mrow>
+  </md>
+  <p>
+    The first is a parameter, which is unknown. The second is the
+    sample statistic, which is know. The question is how much the
+    sample statistic actually can tell us about the parameter.
+  </p>
+  <p>
+    Now let me setup the hypotheses.
+  </p>
+  <md>
+    <mrow>
+      H_0: p_m - p_f = 0 
+    </mrow>
+    <mrow>
+      H_A: p_m - p_f \gt 0 
+    </mrow>
+  </md>
+  <p>
+    I’ve labeled the null hypothesis <m>H_0</m>.  It says that, in the
+    whole population, there is no difference in promotion rates. It’s
+    a default statement, saying that the variables of promotion and
+    gender are not at all related. Then I’ve labelled the alternative
+    hypothesis <m>H_A</m> It says that there is a difference in
+    promotion rates, that the variables are related. In this
+    particular case, the alternative hypothesis says that men are
+    promoted more often than women when evalted by a male manager.
+  </p>
+  <p>
+    There is often some variety in the statement of the alternative
+    hypothesis. All three of these could be possible versions.
+  </p>
+  <md>
+    <mrow>
+      H_A: p_m - p_f \neq 0 
+    </mrow>
+    <mrow>
+      H_A: p_m - p_f \gt 0 
+    </mrow>
+    <mrow>
+      H_A: p_m - p_f \lt 0 
+    </mrow>
+  </md>
+  <p>
+    All three of these are negations of the null hypothesis: they all
+    say that there is some relation between the variable. But they
+    each are slightly different versions. The first says that the
+    promotion rates are different, but has now assumption about
+    whether men or women are more likely to be promoted. The second is
+    explicitly looking for the possibility that men are promoted more
+    and the third, likewise, for the possibility that women are
+    promoted more.
+  </p>
+  <p>
+    Which of these alternative hypotheses should be used? It’s up to
+    the researchers based on the situation and assumptions about the
+    potential outcomes. We’ll have to keep track of this kind of
+    subtlety throughout hypothesis testing, since it can affect the
+    mathematics of the test.
+  </p>
+  <p>
+    To finish this section, let me give you a list of the four most
+    common types of hypotheses. Certainly not all hypothesis testing
+    is one of these types, but many are.
   </p>
 </section>
