@@ -20,8 +20,8 @@
   <xi:include href="slo1-probability-theory.ptx" />
   <xi:include href="clo12-randomness.ptx" />
   <xi:include href="clo13-sampling-distributions.ptx" />
-  <!--
   <xi:include href="clo14-normal-distributions.ptx" />
+  <!--
   <xi:include href="slo2-mathematics-sampling-distributions.ptx" />
   <xi:include href="slo3-areas-under-curves.ptx" />
   <xi:include href="slo4-mathematics-normal-distributions.ptx" />

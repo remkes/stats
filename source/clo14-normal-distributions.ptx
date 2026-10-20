@@ -1,7 +1,364 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-normal-distributions" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Normal Distributions</title>
   <p> 
-    Test
+    I defined a probability distribution in <xref
+    ref="section-probability-theory"/>. There is one type of
+    probability distribution that is, by far, the most prevalant and
+    most commonly used: the normal distribution. In this section, I
+    want to define the normal distribution, talk about its properties,
+    and relate it to sampling distributions for hypothesis testing. 
+  </p>
+  <definition>
+    <statement>
+      <p> 
+        The <term>normal distribution</term> is a bell-shaped
+        probability distribution. It is also called the <term>bell
+        curve</term> or <term>Gaussian distribution</term>. 
+      </p>
+      <p>
+        A normal distribution is determined by two pieces of
+        information: a mean and a standard deviation. There is exactly
+        one normal distribution, one bell curve, for any fixed choice
+        of a mean and standard deviation. 
+      </p>
+      <p>
+        In formal mathematics, if <m>\mu</m> is the mean and
+        <m>\sigma</m> is the standard deviation, the normal
+        distribution is the following function.
+        <md>
+          p(x) = \frac{1}{\sigma\sqrt{2\pi}}
+          e^{\frac{-(x-\mu)^2}{2\sigma^2}}
+        </md>
+      </p>
+    </statement>
+  </definition>
+  <figure xml:id="figure-normal-distribution1">
+    <caption>A Normal Distribution</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}
+        \begin{axis}[
+            ytick=\empty,
+            xlabel=$\frac{1}{\sqrt{8\pi}} e^{\frac{-x^2}{8}}$,
+          ]
+          \addplot [
+            domain=-6:6,
+            samples=201,
+          ]
+          {exp(-x^2 / (2*2^2)) / (sqrt(2*pi*2^2))};
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <xref ref="figure-normal-distribution1"/> shows a normal
+    distribution: the familiar bell-shaped graph. The distribution in
+    the figure has a mean of <m>\mu = 0</m> and a standard deviation
+    of <m>\sigma = 2</m>. 
+  </p>
+  <figure xml:id="figure-normal-distribution2">
+    <caption>Caption</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}
+        \begin{axis}[
+            ytick=\empty,
+            xlabel=$
+            \frac{1}{\sqrt{2\pi}} e^{\frac{-x^2}{2}} \hspace{1cm}
+            \frac{1}{\sqrt{2\pi (3)^2}} e^{\frac{-(x-4)^2}{(2)(3)^2}}
+            \hspace{1cm}
+            \frac{1}{\sqrt{2\pi (5)^2}} e^{\frac{-(x+3)x^2}{(2)(5)^3}}
+            $,
+          ]
+          \addplot [
+            domain=-14:11,
+            samples=201,
+          ]
+          {exp(-(x-4)^2 / (2*3^2)) / (sqrt(2*pi*3^2))};
+          \addplot [
+            domain=-14:11,
+            samples=201,
+          ]
+          {exp(-x^2 / 2) / (sqrt(2*pi))};
+          \addplot [
+            domain=-14:11,
+            samples=201,
+          ]
+          {exp(-(x+3)^2 / (2*5^2)) / (sqrt(2*pi*5^2))};
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <xref ref="figure-normal-distribution2"/> shows three more normal
+    distribution with different means and standard deviations. The
+    mean is always the centre of the graph, and the standard deviation
+    controls how wide or narrow the distribution is. Normal
+    distributions can be either tall and narrow or short and wide. 
+  </p>
+  <p>
+    Let me go through some of the most important properties of the
+    normal distribution. 
+    <ul>
+      <li>
+        The normal distribution is a unimodal distribution with
+        equally sized left and right tails.
+      </li>
+      <li>
+        The mean of the normal distribution is, indeed, the input
+        <m>\mu</m>. 
+      </li>
+      <li>
+        The standard deviation of the normal distribution is, indeed,
+        the input <m>\sigma</m>. 
+      </li>
+      <li>
+        The rules of thumb for standard deviation can be formallized:
+        <m>68\%</m> of the distribution falls within one standard
+        deviation of the mean and <m>95\%</m> of the distribution
+        falls within two standard deviations of the mean. 
+      </li>
+      <li>
+        The median of the distribution is also <m>\mu</m>. The normal
+        distribution is a distribution where basically any central
+        tendency you can define will be <m>\mu</m>, which is a very
+        nice property to have. 
+      </li>
+    </ul>
+  </p>
+  <p>
+    As I have discussed before, data that fits a normal distribution
+    is called <term>normally distributed</term>. To repeat a bit of
+    earlier discussion, it's valuable to be aware of both the ubiquity
+    and the limitations of the normal distribution. Many kinds of
+    data, over large sample sizes at least, term to be normally
+    distributed as they are or normally distributed after a logarithm
+    transformation. 
+    <ul>
+      <li>
+        Physical features in biology like height or length tend to be
+        normally distributed over a population (though this does often
+        require a logarithm transformation). 
+      </li>
+      <li>
+        Abilities and talents, at least as well as we can measure
+        them, tend to be normally distributed over a population.
+      </li>
+      <li>
+        Grade scores on exams tend to be normally distributed over a
+        population. (This tends to be only visibule in very large
+        sample sizes). 
+      </li>
+    </ul>
+    All of these normality assertions are only for usual data. For any
+    category, you can find exception. Moreover, some measures are
+    normal by definition, such as IQ. What I mean is that it is
+    assumed, before any data, that IQ must be normal and scores are
+    assigned to the population of test-takers to ensure that a normal
+    distribution results. 
+  </p>
+  <p>
+    Like the IQ situation, data can often be
+    <term>normalized</term>: scaled and ajusted to make sure its fits
+    a normal distribution. This is often done in testing, particularly
+    for very large tests like national standardized tests and
+    provincial graudation exams. Such grading of tests is called
+    <term>grading on a curve</term>, the <sq>curve</sq> being the bell
+    curve. Historically, this was quite common in many context,
+    including university classes. Over recent decades, this has become
+    a lot less common, since there are good reasons to expect classes
+    not to be normally distributed. I'm sure you can still find
+    university classes out there somewhere which are graded on a
+    curve, but you might have to look a while. 
+  </p>
+  <p>
+    In general, the assumption of normality is a dangerous one. The
+    normal distribution is lovely to work with: it is the most well
+    understood and commonly used probability distribution. It has very
+    nice properties. It's really lovely if your data is normally
+    distributed. But the assumption of normality is a major
+    assumption, and making the assumption falsely will lead to poor
+    data analysis and poor statistics. 
+  </p>
+  <p>
+    All this discussion is about the use of the normal distribution as
+    a model relates to matching a normal distribution to a set of real
+    word data. This is certainly useful, but it's not actually why we
+    really need the normal distribution in this course. For use, the
+    normal distribution is useful because of how it relates to the
+    sampling distribution defined in the previous section. There is a
+    major result here, one of the most important pieces of
+    mathematical theory that we need to do statistics.
+  </p>
+  <theorem>
+    <statement>
+      <p>
+        The <term>Central Limit Theorem</term> says the following.
+        Under some technical continuous, the sampling distribution
+        will become closer and closer to a normal distribution as the
+        number of randomly generated samples gets larger. 
+      </p>
+    </statement>
+  </theorem>
+  <p>
+    This is a lovely result for us. We need to understand the sampling
+    distribution to do hypothesis testing. The central limit theorem
+    says that we can always assume that the sampling distribution will
+    be normal. This lets us use the well-develope theorem of the
+    normal distribution to proceed with hypothesis testing. 
+  </p>
+  <p>
+    I need to make a very important clarification here. The central
+    limit doesn't say anything about the distribution of our original
+    data. Our original data might even be categorical variables, which
+    don't have a distribution at all. Even if it is numeric, our
+    original sample data, or the numeric variable in the whole
+    population, might have absolutely nothing to do with a normal
+    distribution. The central limit theorem (as we are using it) is
+    entirely about the <em>sampling distribution</em>. This is a very
+    key distinction and without it, we will be in deep confusion. 
+  </p>
+  <p>
+    The statement mentions conditions. What are these? Mathematically,
+    this can get quite technical, but being a little bit informal,
+    these are the main idea of the condintuous.
+    <ul>
+      <li>
+        The randomization process that produces the samples need to be
+        actually random. 
+      </li>
+      <li>
+        Each randomly generated sample needs to be independent of the
+        others. That is, when I generate a random sample, I don't know
+        anything about the other samples
+      </li>
+      <li>
+        The sample size needs to be reasonably large. 
+      </li>
+    </ul>
+    In the context of our hypothesis testing, we can basically always
+    satisfy the first two conditions. If we are making random samples,
+    we do want a real random process and we want each sample to be
+    drawn independently. For the third condition is a bit trickier. In
+    our randomization for the sampling distribution, the size the
+    random samples is the same as the size of our original data set.
+    If our original sample was small, then we already have challenges.
+    The fact that the central limit theorem also might not work is
+    just another of the problems that small sample sizes lead to.
+  </p>
+  <p>
+    Now let's press on with actually using the central limit theorem.
+    In <xref ref="section-randomness"/>, we build a sampling
+    distribution by doing a simulation and then comparing the
+    simulation with our sample statistics. Now that we know the
+    central limit theorem, we can assume that the sampling
+    distribution is normal. But how do we calculate it?
+  </p>
+  <p>
+    Well, a normal distribution is entirely determined by two pieces
+    of information: the mean and the standard deviation. Therefore, to
+    determine the sampling distribution, I need these two pieces of
+    information. 
+    <ul>
+      <li>
+        The mean will determined by the null hypothesis. 
+      </li>
+      <li>
+        The standard deviation is tricker to determine. The
+        calculation for standard deviation of the sampling
+        distribution will be unique to each situation. If the sample
+        statistics is a difference of means, there will be one
+        calculation, but if the sample statistics is a single
+        proportion, an entirely different calculation will be used.
+        I'll talk about these as we go through the various kinds of
+        hypothesis testing throughout the rest of the course. 
+      </li>
+    </ul>
+  </p>
+  <p>
+    After this discussion of standard deviation, I need one more
+    definition. 
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The standard deviation of the sampling distribution is often
+        referred to as the <term>standard error</term>.
+      </p>
+    </statement>
+  </definition>
+  <p>
+    It's frustrating to have another term for something we already
+    understand, but this is very common vocabulary for working with
+    smapling distributions, so I will adopt it. 
+  </p>
+  <p>
+    Finally, once we have a normal distribution model of the sampling
+    distribution, what do we do with it? Well, we use it to test the
+    sample statistic. I'll leave the details of this to the next
+    stretch outcome, but there are two steps.
+    <ul>
+      <li>
+        From the sample statistics and the standard error, we can
+        calculate something called a <m>z</m>-score. A <m>z</m>-score
+        tells where the sample statistic falls in the sampling
+        distribution. It does this using the standard error: the
+        <m>z</m>-score a multiple of the standard error and identifies
+        how far the sample statistic is awya from the mean using the
+        standard error as a unit. For example, a <m>z-</m>score of
+        <m>1.7</m> means that the sample statistics is eactly
+        <m>1.7</m> times the standard error away from the mean. A
+        <m>z</m>-score can be positive or negative to indicate above
+        or below the mean. 
+      </li>
+      <li>
+        From the <m>z</m>-score, we calculate the <m>p</m>-value. This
+        is, as before, a measure of the probability that our sample
+        statistic was the result of random variance under the
+        assumption of the null hypothesis. 
+      </li>
+    </ul>
+  </p>
+  <figure xml:id="figure-normal-distribution3">
+    <caption>Sampling Distribution and Z-Scores</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}
+        \begin{axis}[
+            ytick=\empty,
+          ]
+          \addplot [
+            domain=0:30,
+            samples=201,
+          ]
+          {exp(-(x-15)^2 / (2*(6)^2)) / (sqrt(2*pi*(6)^2))};
+          \draw (18,0) -- (18,0.4);
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    To end this section, let me visualize all of this. <xref
+    ref="figure-normal-distribution3"/> shows the position of sample
+    statistic in a sampling distribution. The mean of this sampling
+    distribution is <m>15</m> and the sample statistic is <m>18</m>.
+    It's <m>z</m>-score is <m>0.5</m>, meaning it is half of a
+    standard error away from the mean. Its <m>p</m>-value is
+    <m>0.309</m>, meaning that there is a <m>30.9\%</m> chance of
+    randomly generating this sample or something larger. This is
+    unlikely to be below any threshold of significance. 
   </p>
 </section>
+
+<!--
+
+
+
+
+
+
+-->

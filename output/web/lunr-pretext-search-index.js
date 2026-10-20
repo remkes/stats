@@ -1180,6 +1180,87 @@ var ptx_lunr_docs = [
   "body": "  As always, we are in a situation where we are researching a particular population parameter (difference of means or proportions, single mean or proportion, some other similar calculation). We have a sample statistics which is the same calculation as the population paramere but drawn just from your sample statistics. We have hypotheses: null and alternative.  We assume the null hypothesis to be true. Under that assumption, we can generate random samples: fake data sets created by random choices under the assumption of the null hypothesis. From each of these samples, we can calculate the sample statistic, so we get a bunch of fake, randomly generated sample statistics.  The result is a new dataset with only one numeric variable: the list of values of all these randomly generated sample statistics. This new dataset is called the sampling distribution.   "
 },
 {
+  "id": "section-normal-distributions",
+  "level": "1",
+  "url": "section-normal-distributions.html",
+  "type": "Section",
+  "number": "5.5",
+  "title": "Normal Distributions",
+  "body": " Normal Distributions  I defined a probability distribution in . There is one type of probability distribution that is, by far, the most prevalant and most commonly used: the normal distribution. In this section, I want to define the normal distribution, talk about its properties, and relate it to sampling distributions for hypothesis testing.    The normal distribution is a bell-shaped probability distribution. It is also called the bell curve or Gaussian distribution .  A normal distribution is determined by two pieces of information: a mean and a standard deviation. There is exactly one normal distribution, one bell curve, for any fixed choice of a mean and standard deviation.  In formal mathematics, if is the mean and is the standard deviation, the normal distribution is the following function.      A Normal Distribution       shows a normal distribution: the familiar bell-shaped graph. The distribution in the figure has a mean of and a standard deviation of .   Caption       shows three more normal distribution with different means and standard deviations. The mean is always the centre of the graph, and the standard deviation controls how wide or narrow the distribution is. Normal distributions can be either tall and narrow or short and wide.  Let me go through some of the most important properties of the normal distribution.  The normal distribution is a unimodal distribution with equally sized left and right tails.  The meano of the normal distribution is, indeed, the input .  The standard deviation of the normal distribution is, indeed, the input . The rules of thump for standard deviation can be formallized: approximately of the distribution falls within one standard deviation of the mean and approximately of the distribution falls within two standard deviations of the mean.  The median of the distribution is also . The normal distribution is a distribution where basically any central tendency you can define will be , which is a very nice property to have.    As I have discussed before, data that fits a normal distribution is called normally distributed . To repeat a bit of earlier discussion, it's valuable to be aware of both the ubiquity and the limitations of the normal distribution. Many kinds of data, over large sample sizes at least, term to be normally distributed as they are or normally distributed after a logarithm transformation.  Physical features in biology like height or length tend to be normally distributed over a population (though this does often require a logarithm transformation).  Abilities and talents, at least as well as we can measure them, tend to be normally distributed over a population.  Grade scores on exams tend to be normally distributed over a population. (This tends to be only visibule in very large sample sizes).  All of these normality assertions are only for usual data. For any category, you can find exception. Moreover, some measures are normal by definition, such as IQ. What I mean is that it is assumed, before any data, that IQ must be normal and scores are assigned to the population of test-takers to ensure that a normal distribution results.  Like the IQ situation, data can often be normalized : scaled and ajusted to make sure its fits a normal distribution. This is often done in testing, particularly for very large tests like national standardized tests and provincial graudation exams. Such grading of tests is called grading on a curve , the curve being the bell curve. Historically, this was quite common in many context, including university classes. Over recent decades, this has become a lot less common, since there are good reasons to expect classes not to be normally distributed. I'm sure you can still find university classes out there somewhere which are graded on a curve, but you might have to look a while.  In general, the assumption of normality is a dangerous one. The normal distribution is lovely to work with: it is the most well understood and commonly used probability distribution. It has very nice properties. It's really lovely if your data is normally distributed. But the assumption of normality is a major assumption, and making the assumption falsely will lead to poor data analysis and poor statistics.  All this discussion is about the use of the normal distribution as a model relates to matching a normal distribution to a set of real word data. This is certainly useful, but it's not actually why we really need the normal distribution in this course. For use, the normal distribution is useful because of how it relates to the sampling distribution defined in the previous section. There is a major result here, one of the most important pieces of mathematical theory that we need to do statistics.    The Central Limit Theorem says the following. Under some technical continuous, the sampling distribution will become closer and closer to a normal distribution as the number of randomly generated samples gets larger.    This is a lovely result for us. We need to understand the sampling distribution to do hypothesis testing. The central limit theorem says that we can always assume that the sampling distribution will be normal. This lets us use the well-develope theorem of the normal distribution to proceed with hypothesis testing.  I need to make a very important clarification here. The central limit doesn't say anything about the distribution of our original data. Our original data might even be categorical variables, which don't have a distribution at all. Even if it is numeric, our original sample data, or the numeric variable in the whole population, might have absolutely nothing to do with a normal distribution. The central limit theorem (as we are using it) is entirely about the sampling distribution . This is a very key distinction and without it, we will be in deep confusion.  The statement mentions conditions. What are these? Mathematically, this can get quite technical, but being a little bit informal, these are the main idea of the condintuous.  The randomization process that produces the samples need to be actually random.  Each randomly generated sample needs to be independent of the others. That is, when I generate a random sample, I don't know anything about the other samples  The sample size needs to be reasonably large.  In the context of our hypothesis testing, we can basically always satisfy the first two conditions. If we are making random samples, we do want a real random process and we want each sample to be drawn independently. For the third condition is a bit trickier. In our randomization for the sampling distribution, the size the random samples is the same as the size of our original data set. If our original sample was small, then we already have challenges. The fact that the central limit theorem also might not work is just another of the problems that small sample sizes lead to.  Now let's press on with actually using the central limit theorem. In , we build a sampling distribution by doing a simulation and then comparing the simulation with our sample statistics. Now that we know the central limit theorem, we can assume that the sampling distribution is normal. But how do we calculate it?  Well, a normal distribution is entirely determined by two pieces of information: the mean and the standard deviation. Therefore, to determine the sampling distribution, I need these two pieces of information.  The mean will determined by the null hypothesis.  The standard deviation is tricker to determine. The calculation for standard deviation of the sampling distribution will be unique to each situation. If the sample statistics is a difference of means, there will be one calculation, but if the sample statistics is a single proportion, an entirely different calculation will be used. I'll talk about these as we go through the various kinds of hypothesis testing throughout the rest of the course.    After this discussion of standard deviation, I need one more definition.    The standard deviation of the sampling distribution is often referred to as the standard error .    It's frustrating to have another term for something we already understand, but this is very common vocabulary for working with smapling distributions, so I will adopt it.  Finally, once we have a normal distribution model of the sampling distribution, what do we do with it? Well, we use it to test the sample statistic. I'll leave the details of this to the next stretch outcome, but there are two steps.  From the sample statistics and the standard error, we can calculate something called a -score. A -score tells where the sample statistic falls in the sampling distribution. It does this using the standard error: the -score a multiple of the standard error and identifies how far the sample statistic is awya from the mean using the standard error as a unit. For example, a score of means that the sample statistics is eactly times the standard error away from the mean. A -score can be positive or negative to indicate above or below the mean.  From the -score, we calculate the -value. This is, as before, a measure of the probability that our sample statistic was the result of random variance under the assumption of the null hypothesis.     Sampling Distribution and Z-Scores      To end this section, let me visualize all of this. shows the position of sample statistic in a sampling distribution. The mean of this sampling distribution is and the sample statistic is . It's -score is , meaning it is half of a standard error away from the mean. Its -value is , meaning that there is a chance of randomly generating this sample or something larger. This is unlikely to be below any threshold of significance.  "
+},
+{
+  "id": "section-normal-distributions-3",
+  "level": "2",
+  "url": "section-normal-distributions.html#section-normal-distributions-3",
+  "type": "Definition",
+  "number": "5.5.1",
+  "title": "",
+  "body": "  The normal distribution is a bell-shaped probability distribution. It is also called the bell curve or Gaussian distribution .  A normal distribution is determined by two pieces of information: a mean and a standard deviation. There is exactly one normal distribution, one bell curve, for any fixed choice of a mean and standard deviation.  In formal mathematics, if is the mean and is the standard deviation, the normal distribution is the following function.    "
+},
+{
+  "id": "figure-normal-distribution1",
+  "level": "2",
+  "url": "section-normal-distributions.html#figure-normal-distribution1",
+  "type": "Figure",
+  "number": "5.5.2",
+  "title": "",
+  "body": " A Normal Distribution     "
+},
+{
+  "id": "figure-normal-distribution2",
+  "level": "2",
+  "url": "section-normal-distributions.html#figure-normal-distribution2",
+  "type": "Figure",
+  "number": "5.5.3",
+  "title": "",
+  "body": " Caption     "
+},
+{
+  "id": "section-normal-distributions-9",
+  "level": "2",
+  "url": "section-normal-distributions.html#section-normal-distributions-9",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "normally distributed "
+},
+{
+  "id": "section-normal-distributions-10",
+  "level": "2",
+  "url": "section-normal-distributions.html#section-normal-distributions-10",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "normalized grading on a curve "
+},
+{
+  "id": "section-normal-distributions-13",
+  "level": "2",
+  "url": "section-normal-distributions.html#section-normal-distributions-13",
+  "type": "Theorem",
+  "number": "5.5.4",
+  "title": "",
+  "body": "  The Central Limit Theorem says the following. Under some technical continuous, the sampling distribution will become closer and closer to a normal distribution as the number of randomly generated samples gets larger.   "
+},
+{
+  "id": "section-normal-distributions-20",
+  "level": "2",
+  "url": "section-normal-distributions.html#section-normal-distributions-20",
+  "type": "Definition",
+  "number": "5.5.5",
+  "title": "",
+  "body": "  The standard deviation of the sampling distribution is often referred to as the standard error .   "
+},
+{
+  "id": "figure-normal-distribution3",
+  "level": "2",
+  "url": "section-normal-distributions.html#figure-normal-distribution3",
+  "type": "Figure",
+  "number": "5.5.6",
+  "title": "",
+  "body": " Sampling Distribution and Z-Scores     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
