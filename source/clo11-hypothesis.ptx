@@ -34,7 +34,7 @@
             An <term>alternative hypothesis</term> is a hypotheses
             that, in some may, mathematically captures some
             interesting observation. Most often, it will say that
-            there is a relatoinship between two or more variables, or
+            there is a relationship between two or more variables, or
             that a particular calculation for a single variable is
             above or below an important threshold.
           </li>
@@ -70,14 +70,15 @@
         interesting is actually true in the population.  
       </li>
       <li>
-        Then I use the sample to calculate a sample statistics.
+        Then I use the sample to calculate a sample statistic that
+        matches the hypotheses.
       </li>
       <li>
         Finally, I use the mathematics of probability to determine
         whether the sample statistics supports the alternative
-        hypothesis over the null hypothesis. This is usually phrase,
+        hypothesis over the null hypothesis. This is usually phrased,
         sometome strangely, as a double negative: does the sample
-        statistics allow me to reject the null hypothesis?
+        statistic allow me to reject the null hypothesis?
       </li>
     </ul>
     This is the setup. For most of the rest of this course, we will be
@@ -98,11 +99,11 @@
   <p>
     That’s the population. What is the sample? Recall that the sample
     is the actual data: the portion of the population that we know
-    something about. In this study, the sample was 48 specific
+    something about. In this study, the sample was <m>48</m> specific
     promotion decisions that the researchers were aware of.
   </p>
   <p>
-    The dataset, then, has 48 cases. Each case was two variables:
+    The dataset, then, has <m>48</m> cases. Each case was two variables:
     gender and decision. Both are nominal categorical with two
     categories: gender split between men and women, and decision split
     between promoted and not promoted. The gender refers to the gender
@@ -159,7 +160,7 @@
   <p>
     Again, I can use <m>p_f</m> for the proportion of the women who
     were promoted in this situation. Then the difference, in the whole
-    population, is <m>p_m - p_f</m> This is a measure of how much men
+    population, is <m>p_m - p_f</m>. This is a measure of how much men
     were promoted more often than women. This is a parameter. Now I
     have two calcluations:
   </p>
@@ -195,7 +196,7 @@
     hypothesis <m>H_A</m> It says that there is a difference in
     promotion rates, that the variables are related. In this
     particular case, the alternative hypothesis says that men are
-    promoted more often than women when evalted by a male manager.
+    promoted more often than women when evaluated by a male manager.
   </p>
   <p>
     There is often some variety in the statement of the alternative
@@ -214,9 +215,9 @@
   </md>
   <p>
     All three of these are negations of the null hypothesis: they all
-    say that there is some relation between the variable. But they
+    say that there is some relation between the variables. But they
     each are slightly different versions. The first says that the
-    promotion rates are different, but has now assumption about
+    promotion rates are different, but has no assumption about
     whether men or women are more likely to be promoted. The second is
     explicitly looking for the possibility that men are promoted more
     and the third, likewise, for the possibility that women are
@@ -233,5 +234,36 @@
     To finish this section, let me give you a list of the four most
     common types of hypotheses. Certainly not all hypothesis testing
     is one of these types, but many are.
+    <ul>
+      <li>
+        A difference in proportions, like the example in the section.
+        the null hypothesis would state that the two proportions are
+        the same, that there is no difference.
+      </li>
+      <li>
+        A difference in means. Like the previous, but for numeric data
+        where averages from two different categories are compared.
+        Again, the null hypothesis would state that the two means are
+        the same. This would suit a research question such as: is
+        the average height of cedars growing at either low or high
+        elevation in the Coast Mountains the same?
+      </li>
+      <li>
+        A single proportion. This is a research question that is not
+        about comparing categories, but about meeting a threshold. The
+        null hypothesis would say that the proportion does not meet
+        some important threshold, and the alternative hypothesis would
+        say that it does. This would suit a research question such as:
+        do <m>75\%</m> of Canadian statistics student retain important
+        definitions a year after they finish a statistics course?
+      </li>
+      <li>
+        Finally, a single means. Like proportions, but for numeric
+        data. Again, the null hypothesis would state that the mean
+        does not meet a certain threshold. This would suit a research
+        question like: is the average Canadian consumption of refined
+        sugar higher than it was in 1990?
+      </li>
+    </ul>
   </p>
 </section>
