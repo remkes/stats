@@ -14,12 +14,12 @@
   </p>
   <p>
     In this section, I want to focus in on one important part of this
-    process: the random sample generate to compare to the sample
+    process: the random sample generated to compare to the sample
     statistic. In the previous section, we used simulation, but
-    eventually we do want to rely on the statistical theory. In order
+    eventually we do want to rely on the theory of probability. In order
     to do that, we need some development of this important step, so
     that we no longer have to run simulations. This leads to the
-    important definition of this section.
+    key definition of this section.
   </p>
     <definition>
       <statement>
@@ -27,10 +27,9 @@
           As always, we are in a situation where we are researching a
           particular population parameter (difference of means or
           proportions, single mean or proportion, some other similar
-          calculation). We have a sample statistics which is the same
+          calculation). We have a sample statistic, which is the same
           calculation as the population paramere but drawn just from
-          your sample statistics. We have hypotheses: null and
-          alternative.
+          the sample. We have hypotheses: null and alternative.
         </p>
         <p>
           We assume the null hypothesis to be true. Under that
@@ -63,7 +62,7 @@
     the apply this to an example.
     <ul>
       <li>
-        We have a research questions. Mathematically, the research
+        We have a research question. Mathematically, the research
         question is some equation or inequality concerning the
         population parameter.
       </li>
@@ -73,12 +72,11 @@
       </li>
       <li>
         We gather data for the variable involved in the parameter.
-        That data is our sample, or simply ‘the sample’.
+        That data is the sample.
       </li>
       <li>
         From that data, we do the calculation from the research
-        question. This produces our sample statistics, or simply ‘the
-        sample statistics’.
+        question. This produces the sample statistic.
       </li>
       <li>
         We assume the null hypothesis.
@@ -91,19 +89,18 @@
       <li>
         From the randomly generate samples, we calclate the sample
         statistic for each. These do not replace our sample
-        statistics: again, they are random sample statistics to be
+        statistic: again, they are random sample statistics to be
         used in comparsion.
       </li>
       <li>
-        We gather all these sample statistics into a collection called
+        We gather all these sample statistics into a new data set with
+        one numeric variable. This data set is called
         the sampling distribution.
       </li>
       <li>
         We use the sampling distribution to determine the probability
-        of producing our sample under the null hypothesis: the
-        <m>p</m>-value.
-      </li>
-      <li>
+        of producing our sample under the assumption of the null
+        hypothesis. This probability is called the <m>p</m>-value.
       </li>
       <li>
         We compare that probability with a threshold of signifigance.
@@ -118,17 +115,41 @@
   </p>
   <p>
     In <xref ref="section-probability-theory"/>, I have already
-    calculated a sample distribution. In the main exmaple in that
-    section, we were looking at promotion decision. The population
-    paramers was the difference in promotion rates between men and
+    calculated a sample distribution. In the main example in that
+    section, we were looking at promotion decisions. The population
+    parameters was the difference in promotion rates between men and
     women under a male manager. The null hypothesis said that there
-    was no difference. I ran ten simulations, each generating
+    was no difference. I ran ten simulations, each generating a
+    difference in promotion proportions. This set of ten numbers was
+    the sampling distribution for my simulation. I used it to compare
+    with the sample statistics. Only one of the ten values exceeded
+    the sample statistics, so this sampling distribution told me that
+    there was a <m>10\%</m> probability of having the difference in
+    promotions of men over women equal to <m>0.292</m> or more. 
+  </p>
+  <p>
+    Then I said, without showing the work, that I generate many more
+    random samples. With many more such samples, I found that only
+    <m>2\%</m> of them shows a difference in proportions of
+    <m>0.292</m> or more. Therefore, I concluded with this most robust
+    simluation that the <m>p</m>-value was <m>0.02</m>. 
+  </p>
+  <p>
+    In this way, simulation can always generate a sampling
+    distribution. There are various randomization methods depending on
+    the situation, but they all assume the truth of the null
+    hypothesis and then use that truth to design the randomization.
+    Simulation is always an option, but can be laborious to setup. I'd
+    like another approach. 
   </p>
   <p>
     In <xref ref="section-randomness"/> I said that continuous
     probability is normally used to model discrete probability in
     statistics. The same is true for the sampling distribution.
     Instead of doing simulations, I want to rely on the mathematical
-    theory of probability, specifically continuous probability.
+    theory of probability, specifically continuous probability. I want
+    to model the sampling distribution as a mathematical function and
+    use properties of that function to calculate the <m>p</m>-value of
+    the sample statistic. 
   </p>
 </section>

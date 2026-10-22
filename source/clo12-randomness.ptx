@@ -51,16 +51,18 @@
     <statement>
       <p>
         A research study has to set a threshold of significance.
+        (<m>\alpha)</m> is the sympbol often used for this quantity.) 
         This is a probability which is small enough to consider it
         unlikely to have been produced randomly. The conventional
-        value here is <m>5\%</m>, but that is only a convention —
-        the threshold of singnificant can be set as the researches
-        wish). Then, a sample statistics is called significant is
-        the probability of producing the sample statistic, under the
-        assumption of the null hypothesis, is less than the
-        threshold of significant. This probability, that the sample
-        statistics can be produced under the null hypothesis, is
-        called the <m>p</m>-value of the sample statistic.
+        value here is <m>\alpha = 5\%</m>, but that is only a
+        convention — the threshold of singnificance can be set as the
+        researchers wish). Then, a sample statistics is called
+        significant is the probability of producing the sample
+        statistic, under the assumption of the null hypothesis, is
+        less than the threshold of significance. This probability, that
+        the sample statistics can be produced under the null
+        hypothesis is called the <m>p</m>-value of the sample
+        statistic.
       </p>
     </statement>
   </definition>
@@ -68,9 +70,9 @@
     If a sample statistics is significant, then we are justified in
     rejecting the null hypothesis and, therefore, supporting the
     alternative hypothesis. This is how we test a hypotheiss: we set a
-    threshold of significant, use mathematics to determine the
+    threshold of significance, use mathematics to determine the
     probability of producing the sample statistics under the null
-    hypothesis, and compare to the threshold to determine significant.
+    hypothesis, and compare to the threshold to determine significance.
     If significant, we reject the null hypothesis and conclude that
     the sample supports the alternative hypothesis.
   </p>
@@ -91,7 +93,7 @@
   </p>
   <p>
     I can make a simulation by randomly assigning these <m>35</m>
-    promotions to the applicants. I asked a random number generate to
+    promotions to the applicants. I asked a random number generator to
     flip a coin <m>35</m> times. For every <m>1</m>, I recorded a
     promotion for one of the women. For every <m>0</m>, I recoreded a
     promotion for one of the men.  (If I happend to get to <m>24</m>
@@ -106,9 +108,9 @@
     <title>Ten Random Promotion Simulations</title>
     <tabular>
       <row bottom="medium">>
-        <cell> Male </cell>
-        <cell> Female </cell>
-        <cell> Promotion </cell>
+        <cell> </cell>
+        <cell> Men </cell>
+        <cell> Women </cell>
         <cell> Difference </cell>
       </row>
       <row>
@@ -179,41 +181,43 @@
     less that <m>0.292</m>.  In one randomization, the second one, the
     difference in proportions was larger. Therefore, from this
     particular set of randomizations, I would conclude that there is a
-    <m>10\%</m> chance of producing the sample statistic. If the null
-    hypothesis is true, then my sample statistic has probability
-    <m>10\%</m>. That is the <m>p</m>-value. <m>p = 0.10</m>.  (Like
-    most percentages,<m>p</m> -values are almost always expressed as
-    proportions of one. Then I would consider the threshold of
-    signification and decide if this <m>10\%</m> counted as
+    <m>10\%</m> chance of producing the sample statistic or a greater
+    difference. If the null hypothesis is true, then my sample
+    statistic has probability <m>10\%</m> in this simulation. That is
+    the <m>p</m>-value. <m>p = 0.10</m>.  (Like most
+    percentages,<m>p</m> -values are almost always expressed as
+    proportions of one.) Then I would consider the threshold of
+    significance and decide if this <m>10\%</m> counted as
     significant.
   </p>
   <p>
-    Now, doing ten randomization is not very many. This is probably
+    Now, doing ten randomizations is not very many. This is probably
     not a great simulation and this probability is probably incorrect.
-    However, if I did this randomanization thousands and thousands of
+    However, if I did this randomanization many thousands of
     times, then the Law of Large Numbers tells me that I should
     actually get a very accurate idea of the probability.
   </p>
   <p>
     So, I run many, many random trials. Then I look at my sample
-    statistic: a <m>0.292</m> different in the proportion of men and
+    statistic: a <m>0.292</m> difference in the proportion of men and
     women promoted. Then I ask, how often does this happen? How often
     do at least <m>29.2%</m> more men get promoted than women if the
     promotions were split up randomly? I haven’t shown the work of
     this many randomzation, but the answer, after all the random
     trials, is about <m>2\%</m>.  The <m>p</m>-value is <m>p =
-    0.02</m>.  If I use the conventional threshold of <m>5\%</m> then
-    <m>p \lt 0.05</m> so this is a significant result. I conclude that
-    I can reject the null hypothesis and support the alternative
-    hypothesis. This sample does support the idea that there is, in
-    fact, a gender bias in bank promotions under male managers.
+    0.02</m>.  If I use the conventional threshold of <m>\alpha =
+    5\%</m> then <m>p \lt 0.05</m> so this is a significant result. I
+    conclude that I can reject the null hypothesis and support the
+    alternative hypothesis. This sample does support the idea that
+    there is, in fact, a gender bias in bank promotions under male
+    managers.
   </p>
   <p>
-    Evaluation of statistics is all about what is likely. We approach
-    truth by probability and approximation. Statistics doesn’t
-    conclude that a claim is true or false; it concludes that a claim
-    is likely or unlike. As such, it always involves a judgement call,
-    yet again.  
+    Statistics considers what is likely, not what is strictly true. We
+    approach truth by probability and approximation. Statistics
+    doesn’t conclude that a claim is true or false; it concludes that
+    a claim is likely or unlike. As such, it always involves a
+    judgement call, yet again.  
   </p>
   <p>
     But this is how hypothesis testing works. A sample statistic is
@@ -228,11 +232,11 @@
   <p>
     Finally, this whole setup of hypothesis testing only works if the
     data is good data. All of the constructions here, about
-    probability and randomness and significant, assume that the data
+    probability and randomness and significance, assume that the data
     is realiable. If the data is compromised, due to bad data
     collection, human error, bias, or any other cause, then no amount
     of good mathematics and probability theory will solve that
-    problem. We can only do mathematics to produce significant on good
+    problem. We can only do mathematics to produce significance on good
     data; bad data remains unrealiable regardless of how excellent our
     understanding of probability theory is.
   </p>

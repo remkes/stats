@@ -34,7 +34,8 @@
     </statement>
   </definition>
   <figure xml:id="figure-normal-distribution1">
-    <caption>A Normal Distribution</caption>
+    <caption>A normal distribution with mean <m>0</m> and standard
+    deviation <m>2</m></caption>
     <image width="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -59,7 +60,7 @@
     of <m>\sigma = 2</m>. 
   </p>
   <figure xml:id="figure-normal-distribution2">
-    <caption>Caption</caption>
+    <caption>Three normal distributions</caption>
     <image width="80%">
       <latex-image>
         \begin{tikzpicture}
@@ -94,7 +95,7 @@
   </figure>
   <p>
     <xref ref="figure-normal-distribution2"/> shows three more normal
-    distribution with different means and standard deviations. The
+    distributions with different means and standard deviations. The
     mean is always the centre of the graph, and the standard deviation
     controls how wide or narrow the distribution is. Normal
     distributions can be either tall and narrow or short and wide. 
@@ -152,13 +153,19 @@
         population. (This tends to be only visibule in very large
         sample sizes). 
       </li>
+      <li>
+        Rolling several dice and adding the sum produces something
+        close to a normal distribution. This becomes closer and closer
+        to normal the more dice that are rolled. (All the dice need to
+        be dice with the same number of sides for this to work.) 
+      </li>
     </ul>
-    All of these normality assertions are only for usual data. For any
-    category, you can find exception. Moreover, some measures are
-    normal by definition, such as IQ. What I mean is that it is
-    assumed, before any data, that IQ must be normal and scores are
-    assigned to the population of test-takers to ensure that a normal
-    distribution results. 
+    All of these normality assertions are only for usual data. For
+    almost any category, you can find exceptions. Moreover, some
+    measures are normal by definition, such as IQ. <sq>Normal by
+    definition</sq> means that it is assumed, before any data, that IQ
+    must be normal and scores are assigned to the population of
+    test-takers to ensure that a normal distribution results. 
   </p>
   <p>
     Like the IQ situation, data can often be
@@ -167,7 +174,7 @@
     for very large tests like national standardized tests and
     provincial graudation exams. Such grading of tests is called
     <term>grading on a curve</term>, the <sq>curve</sq> being the bell
-    curve. Historically, this was quite common in many context,
+    curve. Historically, this was quite common in many contexts,
     including university classes. Over recent decades, this has become
     a lot less common, since there are good reasons to expect classes
     not to be normally distributed. I'm sure you can still find
@@ -184,22 +191,24 @@
     data analysis and poor statistics. 
   </p>
   <p>
-    All this discussion is about the use of the normal distribution as
-    a model relates to matching a normal distribution to a set of real
-    word data. This is certainly useful, but it's not actually why we
-    really need the normal distribution in this course. For use, the
-    normal distribution is useful because of how it relates to the
-    sampling distribution defined in the previous section. There is a
-    major result here, one of the most important pieces of
-    mathematical theory that we need to do statistics.
+    All this discussion so far is about the use of the normal
+    distribution as a model relates to matching a normal distribution
+    to a set of real word data. This is certainly useful in general,
+    but it's not actually the purpose of introducting the normal
+    distribution at this point in the course.  For use, the normal
+    distribution is useful because of how it relates to the sampling
+    distribution defined in the previous section. There is a major
+    result here, one of the most important pieces of mathematical
+    theory that we need to do statistics.
   </p>
   <theorem>
     <statement>
       <p>
-        The <term>Central Limit Theorem</term> says the following.
-        Under some technical continuous, the sampling distribution
-        will become closer and closer to a normal distribution as the
-        number of randomly generated samples gets larger. 
+        The <term>Central Limit Theorem</term> says the following:
+        under some technical continuous, the sampling distribution in
+        hypothesis testing will become closer and closer to a normal
+        distribution as the number of randomly generated samples gets
+        larger. 
       </p>
     </statement>
   </theorem>
@@ -207,19 +216,24 @@
     This is a lovely result for us. We need to understand the sampling
     distribution to do hypothesis testing. The central limit theorem
     says that we can always assume that the sampling distribution will
-    be normal. This lets us use the well-develope theorem of the
+    be normal. This lets us use the well-developed theorey of the
     normal distribution to proceed with hypothesis testing. 
   </p>
   <p>
     I need to make a very important clarification here. The central
     limit doesn't say anything about the distribution of our original
-    data. Our original data might even be categorical variables, which
-    don't have a distribution at all. Even if it is numeric, our
+    data or the population our sample is trying to understand. Our
+    original data might even be about a categorical variable, which
+    doesn't have a distribution at all. Even if it is numeric, our
     original sample data, or the numeric variable in the whole
     population, might have absolutely nothing to do with a normal
     distribution. The central limit theorem (as we are using it) is
     entirely about the <em>sampling distribution</em>. This is a very
-    key distinction and without it, we will be in deep confusion. 
+    key distinction. The sample statistics we get from randomly
+    generate samples, under the assumption of the null hypothesis, are
+    a numeric data set with one numeric variable. The distribution of
+    this data will look more and more like a normal distribution the
+    more random samples we generate. 
   </p>
   <p>
     The statement mentions conditions. What are these? Mathematically,
@@ -233,10 +247,13 @@
       <li>
         Each randomly generated sample needs to be independent of the
         others. That is, when I generate a random sample, I don't know
-        anything about the other samples
+        anything about the other samples. 
       </li>
       <li>
-        The sample size needs to be reasonably large. 
+        The sample size (of both the original sample and the randomly
+        generated samples, since the randomly generated samples are
+        all made the same size as the original sample) needs to be
+        reasonably large. 
       </li>
     </ul>
     In the context of our hypothesis testing, we can basically always
@@ -247,10 +264,12 @@
     random samples is the same as the size of our original data set.
     If our original sample was small, then we already have challenges.
     The fact that the central limit theorem also might not work is
-    just another of the problems that small sample sizes lead to.
+    just another of problem to add to the problems of small sample
+    sizes. 
   </p>
   <p>
-    Now let's press on with actually using the central limit theorem.
+    Now let's press on with actually using the central limit
+    theorem.to add to the problems of small sample sizes. 
     In <xref ref="section-randomness"/>, we build a sampling
     distribution by doing a simulation and then comparing the
     simulation with our sample statistics. Now that we know the
@@ -293,7 +312,7 @@
   <p>
     It's frustrating to have another term for something we already
     understand, but this is very common vocabulary for working with
-    smapling distributions, so I will adopt it. 
+    sampling distributions, so I will adopt it. 
   </p>
   <p>
     Finally, once we have a normal distribution model of the sampling
@@ -307,7 +326,7 @@
         tells where the sample statistic falls in the sampling
         distribution. It does this using the standard error: the
         <m>z</m>-score a multiple of the standard error and identifies
-        how far the sample statistic is awya from the mean using the
+        how far the sample statistic is away from the mean using the
         standard error as a unit. For example, a <m>z-</m>score of
         <m>1.7</m> means that the sample statistics is eactly
         <m>1.7</m> times the standard error away from the mean. A
@@ -342,7 +361,7 @@
     </image>
   </figure>
   <p>
-    To end this section, let me visualize all of this. <xref
+    Let me visualize all of this. <xref
     ref="figure-normal-distribution3"/> shows the position of sample
     statistic in a sampling distribution. The mean of this sampling
     distribution is <m>15</m> and the sample statistic is <m>18</m>.
@@ -353,12 +372,3 @@
     unlikely to be below any threshold of significance. 
   </p>
 </section>
-
-<!--
-
-
-
-
-
-
--->
