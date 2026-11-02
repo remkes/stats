@@ -1,7 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-mahtmeatics-sampling-distributions" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
-  <p> 
-    Test
-  </p>
+  <title>Mathematics of the Normal Distribution</title>
+  <introduction>
+    <p> 
+      The previous section introduces the normal distribution and its
+      important to hypothesis testing. In particular, the need to
+      calculate <m>z</m>-scores of sample statistics relative to a
+      normal sampling distribution. In this section, I want to give the
+      mathematics behind the <m>z</m>-score and some related ideas. 
+    </p>
+    <p>
+      Recall that, for mean <m>\mu</m> and standard
+      deviation</m>\sigma</m>, the normal distribution has this
+      presentation as a mathematical function.
+      <md>
+        p(x) = \frac{1}{\sigma \sqrt{2\pi}}
+        e^{\frac{-(x-\mu)^2}{2\sigma^2}} 
+      </md>
+      I'll use this mathematical function throught this ection.
+    </p>
+  </introduction>
+  <subsection xml:id="subsection-root-pi"/>
+    <title>The Square Root of <m>\pi</m></title>
+    <p>
+      Before getting too deep into the calcluations that we need for
+      hypothesis testing, I want to take a bit of a detour to talk
+      about one very strange reality: why is there a square root of
+      <m>\pi</m> in this definition? This is very odd. The number
+      <m>\pi</m> is associated with circle and trigonometry. The bell
+      curve is exponential decay. It doesn't seem to have anything to
+      do with circle or trigonometry. Even if it did, the square root
+      of <m>\pi</m> never shows up in trig at all. There aren't really
+      any natural situations in circle geometry where taking the
+      square root of <m>\pi</m> is a natural piece of arithmetic to
+      do. This is really very odd.
+    </p>
+    <p>
+      I'm going to give a partial explanation here, but not a full
+      proof. Such a proof does exist and, if you are interesting, I
+      usually do this proof in Math 315, the multi-variable calculus
+      course. But for now, let me at least give you the setup. I'll
+      return to the definition of a probability distribution. This was
+      a function with three properties: it was never negative, it was
+      defined on a range of values matching the probability outcomes,
+      and the area under the curve was zero.
+    </p>
+    <p>
+      When buliding mathematical functions to model probability, often
+      we start with a known function an try to adopt it. I can take
+      this approach to the bell curve. I'll start with the easiest
+      verion of the function.
+      <md>
+        f(x) = e^{-x^2}
+      </md>
+      I know I want this double exponential decay that this function
+      provides. This is already the bell-curve shape, as show in <xref
+      ref="figure-simple-bell"/>.
+    </p>
+    <figure xml:id="figure-simple-bell">
+      <caption>Sampling Distribution and Z-Scores</caption>
+      <image width="80%">
+        <latex-image>
+          \begin{tikzpicture}
+          \begin{axis}[
+              ytick=\empty,
+            ]
+            \addplot [
+              domain=0:30,
+              samples=201,
+            ]
+            {exp(-(x)^2};
+          \end{axis}
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+    <p>
+      This function has a domain of all real numbers: I can put any
+      number into this function, positive or negative, and get a
+      result. This is fine for probability, even if in practice I only
+      need a smaller range. This function is also always positive,
+      since any exponential function will always output a positive
+      number. The only issue is the area. 
+    </p>
+    <p>
+      So I need the are under this function. In the notation and
+      terminology I introduced in <xref
+      ref="section-probability-theory"/>, I need to calculate an
+      integral. 
+      <md>
+        \int_{-\infty}^\infty e^{-x^2} dx
+      </md>
+      I'm not going to calculate this integral today. This is a
+      problematic integral even for a first-year calculus class, since
+      none of the usual techniques help to solve it. However, I will
+      give its value. 
+      <md>
+        \int_{-\infty}^\infty e^{-x^2} dx = \sart{2pi}
+      </md>
+      This is where the <M>\sqrt{2pi}</m> comes from. As for the
+      myster, the connection to trig, I have to leave that aside for
+      this course. 
+    </p>
+    <p>
+      Knowing the area under the curve, I can then scale the function
+      by dividing by this area. 
+      <md>
+        p(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2}
+      </md>
+      This is now a probability distribution. It is positive, covers a
+      probability range (more or less), and the area under the curve
+      is now exactly <m>1</m>. 
+    </p>
+    <definition>
+      <statement>
+        <p>
+          If <m>f(x)</m> is a positive function defined on an interval
+          <m>[a,b]</m> then let <m>M</m> be the area under the curve.
+          That is, <m>M</m> is the value of this integral.
+          <md>
+            \int_a^b f(x) dx - M
+          </md>
+          Then the <term>normalization</term> of the function is the
+          probability distribution obtained by dividing by this
+          constant. 
+          <md>
+            p(x) = \frac{1}{M} f(x) 
+          </md>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The word <sq>normalization</sq> is pretty heavily overused in
+      mathematics. This is another use. The function here doesn't have
+      to be a bell curve at all, so this use doesn't really have
+      anything to do with the normal distribution. Which is
+      frustrating, but is it standard terminology. 
+    </p>
+  </subsection>
 </section>

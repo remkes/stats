@@ -70,7 +70,7 @@
             \frac{1}{\sqrt{2\pi}} e^{\frac{-x^2}{2}} \hspace{1cm}
             \frac{1}{\sqrt{2\pi (3)^2}} e^{\frac{-(x-4)^2}{(2)(3)^2}}
             \hspace{1cm}
-            \frac{1}{\sqrt{2\pi (5)^2}} e^{\frac{-(x+3)x^2}{(2)(5)^3}}
+            \frac{1}{\sqrt{2\pi (5)^2}} e^{\frac{-(x+3)x^2}{(2)(5)^2}}
             $,
           ]
           \addplot [
