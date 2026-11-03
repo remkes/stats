@@ -1261,6 +1261,69 @@ var ptx_lunr_docs = [
   "body": " Sampling Distribution and Z-Scores     "
 },
 {
+  "id": "section-mahtmeatics-sampling-distributions",
+  "level": "1",
+  "url": "section-mahtmeatics-sampling-distributions.html",
+  "type": "Section",
+  "number": "5.6",
+  "title": "Mathematics of the Normal Distribution",
+  "body": " Mathematics of the Normal Distribution   The previous section introduces the normal distribution and its important to hypothesis testing. In particular, the need to calculate -scores of sample statistics relative to a normal sampling distribution. In this section, I want to give the mathematics behind the -score and some related ideas.  Recall that, for mean and standard deviation , the normal distribution has this presentation as a mathematical function. I'll use this mathematical function throught this ection.    The Square Root of  Before getting too deep into the calcluations that we need for hypothesis testing, I want to take a bit of a detour to talk about one very strange reality: why is there a square root of in this definition? This is very odd. The number is associated with circle and trigonometry. The bell curve is exponential decay. It doesn't seem to have anything to do with circle or trigonometry. Even if it did, the square root of never shows up in trig at all. There aren't really any natural situations in circle geometry where taking the square root of is a natural piece of arithmetic to do. This is really very odd.  I'm going to give a partial explanation here, but not a full proof. Such a proof does exist and, if you are interesting, I usually do this proof in Math 315, the multi-variable calculus course. But for now, let me at least give you the setup. I'll return to the definition of a probability distribution. This was a function with three properties: it was never negative, it was defined on a range of values matching the probability outcomes, and the area under the curve was zero.  When buliding mathematical functions to model probability, often we start with a known function an try to adopt it. I can take this approach to the bell curve. I'll start with the easiest verion of the function. I know I want this double exponential decay that this function provides. This is already the bell-curve shape, as show in .   Simple Bell Curve      This function has a domain of all real numbers: I can put any number into this function, positive or negative, and get a result. This is fine for probability, even if in practice I only need a smaller range. This function is also always positive, since any exponential function will always output a positive number. The only issue is the area.  So I need the are under this function. In the notation and terminology I introduced in , I need to calculate an integral. I'm not going to calculate this integral today. This is a problematic integral even for a first-year calculus class, since none of the usual techniques help to solve it. However, I will give its value. This is where the comes from. As for the myster, the connection to trig, I have to leave that aside for this course.  Knowing the area under the curve, I can then scale the function by dividing by this area. This is now a probability distribution. It is positive, covers a probability range (more or less), and the area under the curve is now exactly .    If is a positive function defined on an interval then let be the area under the curve. That is, is the value of this integral. Then the normalization of the function is the probability distribution obtained by dividing by this constant.     The word normalization is pretty heavily overused in mathematics. This is another use. The function here doesn't have to be a bell curve at all, so this use doesn't really have anything to do with the normal distribution. Which is frustrating, but is it standard terminology.  This explains the in the normal distribution, as well as the division by the standard deviation in the general form. This is done to force the area under the distribution to be 1, which is necessary.    Identifying Points  For hypothesis testing, I need two things from the sampling distribution. First, I need to know what it looks like. The Central Limit Theorem answers this, telling me that that sampling distribution will be a normal distribution, with a mean and a standard deviation calcluted from the sample data and the hypotheses. Second, I need to know where the sample statistic falls in the sampling distribution. I need to identify a point in the distribution.  There are two ways to do this, and both have been mentioned already in previous sections. These are the -score and the -value. In this section, I'll go over some mathematical details of both.  I'll start with -scores. As defined before, a -score is a measure of how far a point is away from the mean, with the unit being standard deviation. A -score can be positibe or negative, since a point can be below or above the mean.  The calculation of a -score is, in fact, quite straightforward. If is a point in the probability domain, the its -score is given by this calculation. The numeratori here is the distance to the mean, again with positive or negative values indicating above or below the mean. Then I want this distance to use the units of standard deviation. Dividing by the standard deviation makes this true. If I know the mean and standard deviation of a distribution, then calculating a -score is just a bit of arithmetic.  Typically, in a hypothesis test, -score is calculated first, since it is just this arithmetic. Then, the -score can be use to calculation a -value. Historically, this was done with pre-produced tables: you would take your -score and look up thte matching -value. However, since the advent of modern statistical software, we can now use more mathematically direct ways of calcluation. With that in mind, I'll move on -values.  The -value is a probability. The sampling distribution is a probability distribution. This all can be presented in the mathematical language of probability distribution. In that language, area is probability. The probability of a value in some range is the area under the curve for that range. Consider the situation in , where I am using a normal distribution with mean and standard deviation .   Areas and -values      In the figure, I've indicated a point at . I want to know the probability of that point or greater. Therefore, I am looking for area: specifically, the small area under the curve past the point . That small area, as a proportion of 1, will be my -value. In mathematics, area under curves is an integral. Therefore, this is the formal calculation for -value of the point sample statistic , where is the normal sampling distribution. Formally, calculating -value is calculating an integral. Moreover, and integral of the normal distribution, which even for calculus students is an inaccesible integral. This is why tables were important historically: this integral isn't accessible. For us, istead of tables we have software. The important point of this outcomes is the connection of -value to areas to integrals, conceptually.    Sided Tests  This is finally the place to discuss one of the subtleties of hypothesis testing that has lingered for a while now. When we made alternative hypotheses, we had a choice: do we take less than, greater than, or both (expressed as not equal). This choice affects the mathematics.  In the analysis about about , I was looking specifically at the are above . This only works for an alternative hypothesis that assume the sample statistic will be above the null hypothesis. This is the greater-than situation. What if the sample statistic is below the mean? In this situation, the figure looks more like \/   Areas and -values      In this figure, the -value will be the small area below the vertical line, not above, matching an alternative hypothesis that expects something below the mean, the less than situation. In this case, the formal calculation is also different. I'm measuing the area below the sample statistic, not above.  Finally, what if I had no idea about what to expect with the sample statistic, whether it was above or below? Well, then I'd consider both. In , I've drawn the line for the sample statistics as well as the matching line in mirror image on the other side of the distribution.   Areas and -values      In this situation, I want the sum of the two outside areas, since I am consider the probability away from the mean on both sides. I can formalize all this in an important definition.    In hypothesis testing, there are two kinds of tests using the normal distribution. A one-sided test is a test that assume the sample statistic must fall on one side of the mean. These are tests that use an alternative hypothesis with a one-directional inequality. They look at the area of one tail of the probability distrituion past the sample statistic.  A two-sided test is a test that does not assume anything about which side of the mean to find the sample statistic. These are test that use an alternative hypothesis with a simple negation of equality. They look at the area of both tails of the probability distribution outside of the sample statistic.     When designing a research study, a researcher again has to make this choice. Is this a one-sided test or two-sided test? It comes back, again, to judgement.  Finally, one last important observation. The different between one-sided tests and two-sided tests is whether or not to include the other tail. The normal distribution is symmetric: both tails have the same area. Therefore, the -value for a two-sided test will be exactly twice the -value for a one-sided test. In particularly, we can always just calculate the one-sided -value and double it if we want a two sided test.   "
+},
+{
+  "id": "figure-simple-bell",
+  "level": "2",
+  "url": "section-mahtmeatics-sampling-distributions.html#figure-simple-bell",
+  "type": "Figure",
+  "number": "5.6.1",
+  "title": "",
+  "body": " Simple Bell Curve     "
+},
+{
+  "id": "subsection-root-pi-9",
+  "level": "2",
+  "url": "section-mahtmeatics-sampling-distributions.html#subsection-root-pi-9",
+  "type": "Definition",
+  "number": "5.6.2",
+  "title": "",
+  "body": "  If is a positive function defined on an interval then let be the area under the curve. That is, is the value of this integral. Then the normalization of the function is the probability distribution obtained by dividing by this constant.    "
+},
+{
+  "id": "figure-area-p-value",
+  "level": "2",
+  "url": "section-mahtmeatics-sampling-distributions.html#figure-area-p-value",
+  "type": "Figure",
+  "number": "5.6.3",
+  "title": "",
+  "body": " Areas and -values     "
+},
+{
+  "id": "figure-area-p-value2",
+  "level": "2",
+  "url": "section-mahtmeatics-sampling-distributions.html#figure-area-p-value2",
+  "type": "Figure",
+  "number": "5.6.4",
+  "title": "",
+  "body": " Areas and -values     "
+},
+{
+  "id": "figure-area-p-value3",
+  "level": "2",
+  "url": "section-mahtmeatics-sampling-distributions.html#figure-area-p-value3",
+  "type": "Figure",
+  "number": "5.6.5",
+  "title": "",
+  "body": " Areas and -values     "
+},
+{
+  "id": "sided-tests-9",
+  "level": "2",
+  "url": "section-mahtmeatics-sampling-distributions.html#sided-tests-9",
+  "type": "Definition",
+  "number": "5.6.6",
+  "title": "",
+  "body": "  In hypothesis testing, there are two kinds of tests using the normal distribution. A one-sided test is a test that assume the sample statistic must fall on one side of the mean. These are tests that use an alternative hypothesis with a one-directional inequality. They look at the area of one tail of the probability distrituion past the sample statistic.  A two-sided test is a test that does not assume anything about which side of the mean to find the sample statistic. These are test that use an alternative hypothesis with a simple negation of equality. They look at the area of both tails of the probability distribution outside of the sample statistic.    "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
