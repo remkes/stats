@@ -22,8 +22,8 @@
   <xi:include href="clo13-sampling-distributions.ptx" />
   <xi:include href="clo14-normal-distributions.ptx" />
   <xi:include href="slo2-mathematics-sampling-distributions.ptx" />
-  <!--
   <xi:include href="clo15-confidence-intervals.ptx" />
+  <!--
   <xi:include href="clo16-errors.ptx" />
   -->
 </chapter>

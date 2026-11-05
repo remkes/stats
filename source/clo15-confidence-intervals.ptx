@@ -1,7 +1,319 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-confidence-intervals" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Confidence Intervals</title>
   <p> 
-    Test
+    Over the last few sections, we've built up a process of hypothesis
+    testing. In that process, we've defined a bunch of new tools. I
+    now want to apply those tools to a similar, parallel process: the
+    creation of confidence intervals. 
+  </p>
+  <p>
+    Think, again, on the question of hypothesis testing. We have a
+    sample and, from it, a sample statistic. We want to know what this
+    sample statistic means. We want to understand what it says about
+    a population parameter. So we made a hypothesis and tested it.
+    This is a good approach, but not the only approach.
+  </p>
+  <p>
+    Confidence intervals start from the same place: we have a sample
+    and a sample statistic and we want to know about the population
+    parameter. But now, instead of using hypothesis, we take a
+    different approach. Instead, I want to ask, mathematically, how
+    confidence I am in the sample statistic. How likely is it to be
+    close to the population paramater? Could I make a range around the
+    sample statistic in which the population parameter might fall? If
+    I can, such a range is called a confidence interval.
+  </p>
+  <p>
+    Before starting with the definitions, let me use a very common
+    example: opinion polls. Nanos Research did poll in October 2026
+    with a sample of 1014 Canadian asking about their preferred
+    federal political party. The results of this poll were <m>45\%</m>
+    for the Liberal party and  <m>29\%</m> for the Conservative party, and
+    other values for the remaining parties. When they reported this
+    poll, it came with this caveat: the poll is expected to be
+    correct within plus of minus 3.1 percent, 19 times out of 20. If
+    you haven't ever interacted with opinion polls before, you've
+    likely heard similar things. 
+  </p>
+  <p>
+    This is a confidence interval. It says that these pollsters are
+    confidence that their numbers will be within <m>3.1\%</m> of the
+    actually population most of the time, with <m>19</m> times out of
+    <m>20</m> being their measure of most of the time. <m>19</m> out
+    of <m>20</m> is <m>95\%</m>, so they are <m>95\%</m> confident.
+    This is a <m>95%</m> confidence interval. In the actual population
+    of all Canadian, the Liberal support should be between
+    <m>41.9</m> and <m>48.1</m>. 
+  </p>
+  <p>
+    This is all probability. Saying <m>19</m> times out of <m>20</m>
+    means that if the same poll was run many times, these pollsters
+    expect that the poll would fall within their error <m>95\%</m> of
+    the time. 
+  </p>
+  <p>
+    This is what we want to formalize in this section. How did they
+    calculate this <m>\pm 3.1\%</m>? Why are the <m>95\%</m> confident
+    in this number?
+  </p>
+  <p>
+    I'll work through example and give the general structure along the
+    way. The example here is a psychology experiment about two ways of
+    asking a purchasing question. This is a controled trial: there is a
+    control group and a treatment group, and each group has a
+    percentage of buying and not buying. The topic is purchasing a DVD
+    that, by assumption, all participants actually want to see. 
+    (obviously, this is old data about purchasing physical media). The
+    control group is asked a simple question: do you want to purchase
+    the film? The treatment group was asked a slightly more
+    complicated quesiton: do you want to purchase the film or save the
+    money for something else later? The psychologists wanted to know if the
+    additional <sq>save the money for something else later</sq>
+    addition to the question made a difference. 
+  </p>
+  <table xml:id="table-dvd-purchase">
+    <title>DVD Purchasing Data</title>
+    <tabular>
+      <row bottom="medium">>
+      <cell> Group </cell>
+      <cell> Buy </cell>
+      <cell> Do Not Buy </cell>
+      <cell> Total </cell>
+      </row>
+      <row>
+      <cell> Control </cell>
+      <cell> 56 </cell>
+      <cell> 19 </cell>
+      <cell> 75 </cell>
+      </row>
+      <row>
+      <cell> Treatment </cell>
+      <cell> 41 </cell>
+      <cell> 34 </cell>
+      <cell> 75 </cell>
+      </row>
+      <row>
+      <cell> Total </cell>
+      <cell> 97 </cell>
+      <cell> 53 </cell>
+      <cell> 150 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    <xref ref="table-dvd-purchase"/> is the data for this study. Not
+    that there are 150 subject, 75 in each group, since we will need
+    that data for later. At a glance, more people in the treatment
+    group chose not to purchase. So, at least in the sample, the
+    different question had an effect. 
+  </p>
+  <p>
+    To find a confidence interval, I start the same way: with the
+    sample statistic. The sample statistic is a different
+    inproportion: the number of people in the treatment group who
+    chose not to purchase minute the number of people in the control
+    group who chose not to purchse. From the table, I can calculate
+    this. 
+    <md>
+      \hat{p}_T - \hat{p}_C = \frac{34}{75} - \frac{19}{75} = 0.453 -
+      0.253 = 0.200
+    </md>
+  </p>
+  <p>
+    A hypothesis test would wonter if this sample statistic was
+    significant. Now, instead, we want a confidence interval. What
+    does that mean? It means that around this <m>20</m> percentage points
+    difference, we want to know where the population parameter
+    actually lies.
+    That population parameter is stil a difference in proportions, but
+    it is unknown. We think this reminder of opportunity cost does affect
+    people's decision making, but we don't know by how much. The
+    sample statistic gives us a starting point. We make a range aroung 
+    the sample statistic: a confidence range. It might be pretty
+    close: we might be 95% confident that the population parameter is
+    between 0.190 and 0.210. If might be very precise, between 0.199
+    and 0.201. If might be less precise, between 0.150 and 0.250. It
+    might be quite wide, between 0 and 0.4, including the possibility
+    that there is no diffrence at all.
+  </p>
+  <p>
+    I could run a randomization process here, as we did with
+    hypothesis testing. But now that we've built up all this theory of
+    the normal distribution and <m>z</m>-score, it makes sense to use
+    that. Therefore, I'm going to make a new sampling distribution. 
+    The central limit theorem will tell me that, under certain
+    reasonable condition, the sampling distribution is normal. This
+    makes all the mathematic here work: we can work with a normal
+    distribution and its properties. 
+  </p>
+  <p>
+    For the sampling distribution, I need the mean and the standard
+    deviation. Let me start with the mean. In hypothesis testing for a
+    difference in proportions, the mean was zero. This was from the
+    null hypothesis, which claims no difference at all. However, now I
+    don't have a null hypothesis. So what is the mean? Well, for
+    confidence intervals, the mean is set to be exactly the sample
+    statistic. I want a distribution of random samples centred on my
+    sample statistic. This is the first big difference: how to set the
+    mean. In this example, the mean is <m>\mu = 0.200</m>, since that
+    was the sample statistic. 
+  </p>
+  <p>
+    Then I need the standard error, the standard deviation of this
+    sampling distribution. Let me first fill in a detail I omited from
+    previous videos: how to calculate this for hypothesis testing. If
+    I was doing hypothesis testing for a different in proportion, I
+    calculate the stadard in several step. First I calculate the total
+    success proprotion, also called the <sq>pooled proportion</sq> in
+    some texts. This is the total number of successes divided by the
+    total number of cases. This study is counting <sq>not
+    purchasing</sq> as a success. From the table, here is the
+    calculation.
+    <md>
+      P = \frac{19 + 34}{75 + 75} = \frac{53}{150} = 0.3533
+    </md>
+    Then if <m>n_1</m> and <m>n_2</m> are the sizes of each of the
+    groups being compared (in this case, treatment and control), then
+    the following calculations gives the sandard error. 
+    <md>
+      SE = \sqrt{P(1-P)\left( \frac{1}{n_1} + \frac{1}{n_2} \right) }
+    </md>
+    I can plug the numbers into this example. 
+    <md>
+      SE = \sqrt{0.3533(1-0.3533)\left( \frac{1}{75} + \frac{1}{75}
+      \right)} = 0.0781
+    </md>
+    This is the sandard error I would use for hypothesis testing. 
+  </p>
+  <p>
+    For confidence intervals, due to some subtleties in the
+    mathematical modelling, there is a different standard error. There
+    is no need to calculate the proportion of total successes.
+    Instead, using <m>p_1</m> as the proportion of success in the
+    treatment group and <m>p_2</m> as the propostion of successes in
+    the control group, this is the formula for standard error. 
+    <md>
+      SE = \sqrt{ \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}
+    </md>
+    This is pretty similar to the previouis formula. The only
+    different is that the two cases are kept separate and not pooled
+    together.  In this case <m>p_1 = \frac{34}{75} = 0.453</m> and <m>
+    p_2 = \frac{19}{75} = 0.253</m>. I can then put all the number in
+    and calculate. 
+    <md>
+      SE = \sqrt{ \frac{0.453(1-0.453)}{75} +
+      \frac{0.253(1-0.253)}{75}} = 0.0763
+    </md>
+    Now I have the standard errror. Since I know a mean and a standard
+    error, I know the sampling distribution entirely. 
+  </p>
+  <p>
+    Now how do I use this? Well, let me things about the normal
+    distribution again. My sample is in the middle of the normal
+    distribution, and these randomly generated samples sptread out
+    from the normal distribution. The big idea is this: the
+    probability of the population parameter actually being in some
+    range is given by the area under the curve of this sampling
+    distribution. Again, areas are probabilities. Now say I want a
+    <m>95\%</m> confidence. That means I want <m>95\%</m> of the area.
+    <xref ref="figure-confidence-area"/> shows this: I've drawn a box
+    beneath with exactly <m>95\%</m> of the area of the normal
+    distribution falls. 
+  </p>
+  <figure xml:id="figure-confidence-area">
+    <caption>Area for a Confidence Interval</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+              ytick=\empty,
+            ]
+            \addplot [
+              domain=-3:3,
+              samples=200,
+            ]
+            {exp(-x^2 / (2)) / (sqrt(2*pi))};
+            \draw (-2,0) -- (-2,0.4) -- (2,0.4) -- (2,0);
+          \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    I want a range: remember that confidence intervals are a range
+    around the sample statistic. So how far out did I actually have to
+    go to get this <m>95\%</m> area? It turns out I had to go out
+    <m>1.96</m> standard deviations. Much like <m>z</m>-scores, I use
+    standard deviations as the units, since they will always work for
+    any normal distribution.
+  </p>
+  <p>
+    This lets met finish the calculation. I know my mean, which is
+    <m>0.200</m>. I know my standard deviation, which is <m>0.076</m>.
+    I calculate the mean minus <m>1.96</m> standard deviations.
+    <md>
+      0.200 - (1.96)(0.076) = 0.051
+    </md>
+    Then I calculate the mean plut <m>1.96</m> standard deviations.
+    <md>
+      0.200 + (1.96)(0.076) = 0.349
+    </md>
+    Then I have my interval. In this situation, I can be <m>95\%</m>
+    confident that the population parameter falls in the interval
+    <m>[0.051,0.349]</m>. Of note, this interval does not include
+    zero, so in particular, I can be <m>95\%</m> confident that my
+    samples actually shows some real difference in the population.
+    <xref ref="figure-confidence-area2"/> shows the specific normal
+    distribution for this situation with its confidence interval. 
+  </p>
+  <figure xml:id="figure-confidence-area2">
+    <caption>Area for the Example Confidence Interval</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+              ytick=\empty,
+            ]
+            \addplot [
+              domain=0:0.4,
+              samples=200,
+            ]
+            {exp(-(x-0.2)^2 / (2*((0.076)^2))) / (sqrt(2*pi*((0.076)^2)))};
+            \draw (0.051,0) -- (0.051,5.25) -- (0.349,5.25) -- (0.349,0);
+          \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    Let me recap the process
+    <ul>
+      <li>
+        We have a sample statistic. 
+      </li>
+      <li>
+        That sample statistic becomes the mean of the sampling
+        distribution. 
+      </li>
+      <li>
+        The central limit theorem says that the sampling distribution
+        is normal (again, under reasonable conditions). 
+      </li>
+      <li>
+        We calculate the standard deviation, also called standard
+        error, using the formula given in this section.
+      </li>
+      <li>
+        Then, for each standard of confidence, there is a confidence
+        interval defined in terms of standard deviations. In this
+        case, it was <m>1.96</m> standard deviation.
+      </li>
+      <li>
+        We use <m>1.96</m>, the mean, and standard error to calculate
+        the confidence interval. 
+      </li>
+    </ul>
   </p>
 </section>
+
