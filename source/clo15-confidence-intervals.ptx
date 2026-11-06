@@ -17,9 +17,9 @@
   <p>
     Confidence intervals start from the same place: we have a sample
     and a sample statistic and we want to know about the population
-    parameter. But now, instead of using hypothesis, we take a
-    different approach. Instead, I want to ask, mathematically, how
-    confidence I am in the sample statistic. How likely is it to be
+    parameter. But now, instead of using hypotheses, we take a
+    different approach. Instead, I want to ask, mathematically: how
+    confidence I am in the sample statistic? How likely is it to be
     close to the population paramater? Could I make a range around the
     sample statistic in which the population parameter might fall? If
     I can, such a range is called a confidence interval.
@@ -29,22 +29,22 @@
     example: opinion polls. Nanos Research did poll in October 2026
     with a sample of 1014 Canadian asking about their preferred
     federal political party. The results of this poll were <m>45\%</m>
-    for the Liberal party and  <m>29\%</m> for the Conservative party, and
-    other values for the remaining parties. When they reported this
-    poll, it came with this caveat: the poll is expected to be
+    for the Liberal party and <m>29\%</m> for the Conservative party,
+    with other values for the remaining parties. When they reported
+    this poll, it came with this caveat: the poll is expected to be
     correct within plus of minus 3.1 percent, 19 times out of 20. If
-    you haven't ever interacted with opinion polls before, you've
-    likely heard similar things. 
+    you have ever interacted with opinion polls before, you've likely
+    seen similar caveats. 
   </p>
   <p>
-    This is a confidence interval. It says that these pollsters are
-    confidence that their numbers will be within <m>3.1\%</m> of the
-    actually population most of the time, with <m>19</m> times out of
-    <m>20</m> being their measure of most of the time. <m>19</m> out
-    of <m>20</m> is <m>95\%</m>, so they are <m>95\%</m> confident.
-    This is a <m>95%</m> confidence interval. In the actual population
-    of all Canadian, the Liberal support should be between
-    <m>41.9</m> and <m>48.1</m>. 
+    This caveat is a confidence interval. It says that these pollsters
+    are confidence that their numbers will be within <m>3.1\%</m> of
+    the actually population most of the time, with <m>19</m> times out
+    of <m>20</m> being their measure of most of the time. <m>19</m>
+    out of <m>20</m> is <m>95\%</m>, so they are <m>95\%</m>
+    confident.  This is a <m>95%</m> confidence interval. In the
+    actual population of all Canadian, the Liberal support should be
+    between <m>41.9\%</m> and <m>48.1\%</m>. 
   </p>
   <p>
     This is all probability. Saying <m>19</m> times out of <m>20</m>
@@ -53,24 +53,25 @@
     the time. 
   </p>
   <p>
-    This is what we want to formalize in this section. How did they
-    calculate this <m>\pm 3.1\%</m>? Why are the <m>95\%</m> confident
+    This is what I want to formalize in this section. How did they
+    calculate this <m>\pm 3.1\%</m>? Why are they <m>95\%</m> confident
     in this number?
   </p>
   <p>
-    I'll work through example and give the general structure along the
-    way. The example here is a psychology experiment about two ways of
-    asking a purchasing question. This is a controled trial: there is a
-    control group and a treatment group, and each group has a
-    percentage of buying and not buying. The topic is purchasing a DVD
-    that, by assumption, all participants actually want to see. 
-    (obviously, this is old data about purchasing physical media). The
+    I'll work through an example and give the general structure along
+    the way. The example here is a psychology experiment about two
+    ways of asking a purchasing question. This is a controled trial:
+    there is a control group and a treatment group, and each group has
+    a percentage of buying and not buying. The topic is purchasing a
+    DVD that, by assumption, all participants actually want to see.
+    (Obviously, this is old data about purchasing physical media). The
     control group is asked a simple question: do you want to purchase
     the film? The treatment group was asked a slightly more
     complicated quesiton: do you want to purchase the film or save the
-    money for something else later? The psychologists wanted to know if the
-    additional <sq>save the money for something else later</sq>
-    addition to the question made a difference. 
+    money for something else later? The psychologists wanted to know
+    if the <sq>save the money for something else later</sq>
+    addition to the question made a difference in purchasing
+    decisions.
   </p>
   <table xml:id="table-dvd-purchase">
     <title>DVD Purchasing Data</title>

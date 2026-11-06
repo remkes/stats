@@ -3,8 +3,8 @@
   <title>Mathematics of the Normal Distribution</title>
   <introduction>
     <p> 
-      The previous section introduces the normal distribution and its
-      important to hypothesis testing. In particular, the need to
+      The previous section introduced the normal distribution and its
+      importance to hypothesis testing. In particular, the need to
       calculate <m>z</m>-scores of sample statistics relative to a
       normal sampling distribution. In this section, I want to give the
       mathematics behind the <m>z</m>-score and some related ideas. 
@@ -17,19 +17,19 @@
         p(x) = \frac{1}{\sigma \sqrt{2\pi}}
         e^{\frac{-(x-\mu)^2}{2\sigma^2}} 
       </md>
-      I'll use this mathematical function throught this ection.
+      I'll use this mathematical function throught this section.
     </p>
   </introduction>
   <subsection xml:id="subsection-root-pi">
     <title>The Square Root of <m>\pi</m></title>
     <p>
-      Before getting too deep into the calcluations that we need for
+      Before getting too deep into the calculations that we need for
       hypothesis testing, I want to take a bit of a detour to talk
       about one very strange reality: why is there a square root of
       <m>\pi</m> in this definition? This is very odd. The number
-      <m>\pi</m> is associated with circle and trigonometry. The bell
+      <m>\pi</m> is associated with circles and trigonometry. The bell
       curve is exponential decay. It doesn't seem to have anything to
-      do with circle or trigonometry. Even if it did, the square root
+      do with circles or trigonometry. Even if it did, the square root
       of <m>\pi</m> never shows up in trig at all. There aren't really
       any natural situations in circle geometry where taking the
       square root of <m>\pi</m> is a natural piece of arithmetic to
@@ -47,15 +47,15 @@
     </p>
     <p>
       When buliding mathematical functions to model probability, often
-      we start with a known function an try to adopt it. I can take
-      this approach to the bell curve. I'll start with the easiest
+      we start with a known function and try to adopt it. I can take
+      this approach to the bell curve. I'll start with the most basic
       verion of the function.
       <md>
         f(x) = e^{-x^2}
       </md>
-      I know I want this double exponential decay that this function
-      provides. This is already the bell-curve shape, as show in <xref
-      ref="figure-simple-bell"/>.
+      I choose this basic form for the double exponential decay that
+      it provides. This is already the bell-curve shape, as show in
+      <xref ref="figure-simple-bell"/>.
     </p>
     <figure xml:id="figure-simple-bell">
       <caption>Simple Bell Curve</caption>
@@ -81,11 +81,12 @@
       result. This is fine for probability, even if in practice I only
       need a smaller range. This function is also always positive,
       since any exponential function will always output a positive
-      number. The only issue is the area. 
+      number. The only issue with using this function as a probability
+      distribution is the area. 
     </p>
     <p>
-      So I need the are under this function. In the notation and
-      terminology I introduced in <xref
+      So I need to calculate the  are under this function. In the
+      notation and terminology I introduced in <xref
       ref="section-probability-theory"/>, I need to calculate an
       integral. 
       <md>
@@ -98,9 +99,11 @@
       <md>
         \int_{-\infty}^\infty e^{-x^2} dx = \sart{2pi}
       </md>
-      This is where the <m>\sqrt{2pi}</m> comes from. As for the
-      myster, the connection to trig, I have to leave that aside for
-      this course. 
+      This is where the <m>\sqrt{2pi}</m> comes from: the techniques
+      to calculate this integral end up using trigonomery in a clever
+      way and produce this result. As for the detail of this mystery,
+      the connection to trig, I have to leave that aside for this
+      course. 
     </p>
     <p>
       Knowing the area under the curve, I can then scale the function
@@ -116,8 +119,9 @@
       <statement>
         <p>
           If <m>f(x)</m> is a positive function defined on an interval
-          <m>[a,b]</m> then let <m>M</m> be the area under the curve.
-          That is, <m>M</m> is the value of this integral.
+          <m>[a,b]</m> then let <m>M</m> be the area under the the
+          graph of <m>f(x)</m> on its domain.  That is, <m>M</m> is
+          the value of this integral.
           <md>
             \int_a^b f(x) dx - M
           </md>
@@ -134,21 +138,22 @@
       The word <sq>normalization</sq> is pretty heavily overused in
       mathematics. This is another use. The function here doesn't have
       to be a bell curve at all, so this use doesn't really have
-      anything to do with the normal distribution. Which is
+      anything to do with the normal distribution. This is 
       frustrating, but is it standard terminology. 
     </p>
     <p>
-      This explains the <m>\sqrt{2\pi}</m> in the normal distribution,
-      as well as the division by the standard deviation in the general
-      form. This is done to force the area under the distribution to
-      be 1, which is necessary. 
+      The integral and normalization explain the <m>\sqrt{2\pi}</m> in
+      the normal distribution, as well as the division by the standard
+      deviation in the general form. These divisions force the area
+      under the distribution to be 1, which is necessary for the
+      definition. 
     </p>
   </subsection>
   <subsection xml:id="subsection-identifying">
     <title>Identifying Points</title>
     <p>
       For hypothesis testing, I need two things from the sampling
-      distribution. First, I need to know what it looks like. The
+      distribution. First, I need to know its general shape. 
       Central Limit Theorem answers this, telling me that that
       sampling distribution will be a normal distribution, with a mean
       and a standard deviation calcluted from the sample data and the
@@ -157,7 +162,8 @@
       in the distribution.
     </p>
     <p>
-      There are two ways to do this, and both have been mentioned
+      There are two ways to do identify a point in a probability
+      distribution, and both have been mentioned
       already in previous sections. These are the <m>z</m>-score and
       the <m>p</m>-value. In this section, I'll go over some
       mathematical details of both. 
@@ -165,9 +171,9 @@
     <p>
       I'll start with <m>z</m>-scores. As defined before, a
       <m>z</m>-score is a measure of how far a point is away from the
-      mean, with the unit being standard deviation. A <m>z</m>-score
-      can be positibe or negative, since a point can be below or above
-      the mean.
+      mean, with the units of measurement being standard deviation. A
+      <m>z</m>-score can be positibe or negative, since a point can be
+      below or above the mean.
     </p>
     <p>
       The calculation of a <m>z</m>-score is, in fact, quite
@@ -176,17 +182,18 @@
       <md>
         z(x) = \frac{x-\mu}{\sigma}
       </md>
-      The numeratori here is the distance to the mean, again with
+      The numerator here is the distance to the mean, again with
       positive or negative values indicating above or below the mean.
       Then I want this distance to use the units of standard
-      deviation. Dividing by the standard deviation makes this true.
-      If I know the mean and standard deviation of a distribution,
-      then calculating a <m>z</m>-score is just a bit of arithmetic. 
+      deviation. Dividing by the standard deviation accomplishes this
+      goal.  If I know the mean and standard deviation of a
+      distribution, then calculating a <m>z</m>-score is just a bit of
+      arithmetic. 
     </p>
     <p>
       Typically, in a hypothesis test, <m>z</m>-score is calculated
       first, since it is just this arithmetic. Then, the
-      <m>z</m>-score can be use to calculation a <m>p</m>-value.
+      <m>z</m>-score can be use to calculate a <m>p</m>-value.
       Historically, this was done with pre-produced tables: you would
       take your <m>z</m>-score and look up thte matching
       <m>p</m>-value. However, since the advent of modern statistical
@@ -196,7 +203,7 @@
     <p>
       The <m>p</m>-value is a probability. The sampling distribution
       is a probability distribution. This all can be presented in the
-      mathematical language of probability distribution. In that
+      mathematical language of probability distributions. In that
       language, area is probability. The probability of a value in
       some range is the area under the curve for that range. Consider
       the situation in <xref ref="figure-area-p-value"/>, where I am
@@ -229,18 +236,19 @@
       curve past the point <m>x=15</m>. That small area, as a
       proportion of 1, will be my <m>p</m>-value. In mathematics, area
       under curves is an integral. Therefore, this is the formal
-      calculation for <m>p</m>-value of the point sample statistic
+      calculation for <m>p</m>-value of the sample statistic
       <m>a</m>, where <m>n(x)</m> is the normal sampling distribution.
       <md>
          p-\text{value} = \int_a^{\infty} n(x) dx
       </md>
       Formally, calculating <m>p</m>-value is calculating an integral.
-      Moreover, and integral of the normal distribution, which even
-      for calculus students is an inaccesible integral. This is why
-      tables were important historically: this integral isn't
-      accessible. For us, istead of tables we have software. The
-      important point of this outcomes is the connection of
-      <m>p</m>-value to areas to integrals, conceptually. 
+      Moreover, it is an integral of the normal distribution, which
+      even for calculus students is an inaccesible integral. This is
+      why tables were important historically: this integral isn't
+      accessible most of the time. For us, istead of tables we have
+      software. R will calculate the integrals for us. The important
+      point of this outcome is the connection of <m>p</m>-value to
+      areas to integrals, conceptually. 
     </p>
   </subsection>
   <subsection xml:id="sided-tests">
@@ -329,17 +337,17 @@
           In hypothesis testing, there are two kinds of tests using
           the normal distribution.
           <ul>
-            A <term>one-sided test</term> is a test that assume the
+            A <term>one-sided test</term> is a test that assumes the
             sample statistic must fall on one side of the mean. These
             are tests that use an alternative hypothesis with a
             one-directional inequality. They look at the area of one
             tail of the probability distrituion past the sample
-            statistic. 
+            statistic, either on the left or on the right. 
           </ul>
           <ul>
             A <term>two-sided test</term> is a test that does not
             assume anything about which side of the mean to find the
-            sample statistic. These are test that use an alternative
+            sample statistic. These are tests that use an alternative
             hypothesis with a simple negation of equality. They look
             at the area of both tails of the probability distribution
             outside of the sample statistic. 
@@ -353,7 +361,7 @@
       comes back, again, to judgement. 
     </p>
     <p>
-      Finally, one last important observation. The different between
+      Finally, one last important observation. The difference between
       one-sided tests and two-sided tests is whether or not to include
       the other tail. The normal distribution is symmetric: both tails
       have the same area. Therefore, the <m>p</m>-value for a
