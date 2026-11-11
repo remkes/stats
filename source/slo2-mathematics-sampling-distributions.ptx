@@ -251,7 +251,7 @@
       areas to integrals, conceptually. 
     </p>
   </subsection>
-  <subsection xml:id="sided-tests">
+  <subsection xml:id="subsection-sided-tests">
     <title>Sided Tests</title>
     <p>
       This is finally the place to discuss one of the subtleties of

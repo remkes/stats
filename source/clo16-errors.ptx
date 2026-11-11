@@ -1,7 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-errors" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Hypothesis Tests and Error Types</title>
   <p> 
-    Test
+    I have now developed two methods of inferential statistics:
+    hypothesis testing and confidence intervals. I also have developed
+    some mathematical theory from which I can calculate confidence
+    intervals, <m>z</m>-scores and <m>p</m>-values. In this section, I
+    want to step back a bit an talk about this whole process. I'll
+    introduce some important terminology and also talk about how
+    researchers make the important choice of a threshold of
+    significance. 
+  </p>
+  <p>
+    Hypothesis testing is about determining significance of a sample
+    and its sample statistic. This is probabilistic: we want something
+    to be true, but the best we can do is conclude that something is
+    likely. As we are dealing with probability, there is always the
+    potential for error: something unlikely can still happen. I want
+    to understand the details of these potential errors, so this is a
+    section about error. 
+  </p>
+  <p>
+    As mentioned before, all of this probability relies of having good
+    data in the first place. This section makes the same assumption
+    that we actually have good data. If the data is biased or
+    otherwise comprimised, then none of the mathematical discussion
+    helps at all. In this case, there are more fundamental problems
+    with the research study which would have to be solved before even
+    considering any of the current analysis.
+  </p>
+  <p>
+    Let me start with the big definition of this section. 
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The context of these error is hypothesis testing and
+        significance. In this context, there are two major kind of
+        error. 
+        <ul>
+          <li>
+            A <term>Type 1 Error</term> happens when we conclude that
+            our data is signficant and we reject the null hypothesis,
+            but in truth the null hypotheses is actually true in the
+            population. This is also called a <term>False
+            Positive</term>, since we have a positive result
+            (significance) but it is not a true result. 
+          </li>
+          <li>
+            A <term>Type 2 Error</term> happens when we conclude that
+            our data is not significant and we cannot reject the null
+            hypotehsis, but in truth the null hypothesis is actually
+            false in the population. This is also called a <term>False
+            Negative</term>, since we have a negative result (no
+            significane) but it is not a true result.
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+  <p>
+    A common way to explain these errors is in terms of criminal
+    trials. The setup is similar. There is a null hypothesis, which
+    is the default position: the defendant is inoccent. Some strong
+    evidence is needed to overturn this and convict. If the defendant
+    is actually innocent and found innocent, great. If the defendant
+    is actually guilty and found guilty, great. If the defendant is
+    wrongfully convicted, innocent but found guilty, that is a type 1
+    error, a false positive. If the defendant is guilty but found
+    innocent, that is a type 2 error, a false negative. 
+  </p>
+  <p>
+    Why go through the bother of classifying these errors? Well,
+    different errors have different risks associated with them. When
+    looking at a research study, you can ask yourself where the major
+    risks are.
+    <ul>
+      <li>
+        Sometimes, the false positive is a major risk. If you are
+        testing a medication that has significant side effects, then
+        having that medication prescirbed when it doesn't actully work
+        is a major risk: all those dangerous side effects would happen
+        with no justification or benefit. The false positive is the
+        greater risk, so you would want to minimize type 1 errors. 
+      </li>
+      <li>
+        Sometimes, the false negative is a major risk. If you are
+        testing a food addative that might cause cancer, a false
+        negative means that you think there is no cancer risk where
+        there is, in fact, a risk. You end up approving the additive
+        and causing a bunch of cancer cases<mdash/>obviously a very
+        bad outcome. In this study, you would want to minimize type 2
+        errors.
+      </li>
+    </ul>
+    So how do we manage this? How can we design our statistics to
+    favour a certain kind of errors? In hypothesis testing, we do have
+    one major choice to make: the threshold of significance. (Recall
+    we used the symbol <m>\alpha</m> for theshold of significance,
+    which we will do in this section as well. 
+  </p>
+  <p>
+    <m>\alpha = 0.05</m> is a standard: a middle of the road threshold
+    of significant which is frequently used.  What if we want to
+    specifically avoid type 1 errors? Well, type 1 is a false
+    positive: we find something significant but, in truth, there isn't
+    actually a significant result to find. To avoid this, we have to
+    make significance harder to justify. So we lower <m>\alpha</m>. Lower
+    <m>\alpha</m> means that the <m>p</m> value has to be even lower,
+    which is harder to accomplish. More samples will be rejected, and
+    we will have less change of calling something significant when it
+    actually isn't.
+  </p>
+  <p>
+    On the flip side, what if we want to avoid type 2 errors? Type 2
+    is a false negative: we find no significance, but there actually
+    is something significant to find. To avoid this, we have to make
+    significance easier to justify. So we raise <m>\alpha</m>. Higher
+    <m>\alpha</m> means that more <m>p</m>-values are treated as
+    significant, we accept more samples, and we are less like to miss
+    observing a real effect. 
+  </p>
+  <p>
+    All of this setting of threshold of significance happens without
+    actually knowing the truth of the population, of course. We never
+    know the truth of the population, we only even known our sample
+    and speculate about its meaning. This isn't about knowing truth;
+    it's about managing risk. What is more dangeous: a false negative
+    or a false positive? This is what every researcher has to consider
+    when setting a threshold of significance. 
+  </p>
+  <p>
+    In <xref ref="subsection-sided-tests"/>, I talked about one-sided
+    and two sided tests. At the end of that section, I made the
+    observation that moving from a one-sided to a two-sided test
+    doubles <m>p</m>-values. My discussion in this section is about
+    threshold of significant, so this effect of doubling is quite
+    relevant. Often one-sided or two-sided tests are indeed chosen
+    because of some reasonable intuitition or prediction in the data.
+    However, they also can be considered for their effect on errors. Let
+    me briefly summarize. 
+    <ul>
+      <li>
+        A one-sided test has a lower <m>p</m>-value: one half of that
+        of a two-sided test. A smaller <m>p</m>-value is good for
+        concluding significance. Therefore, a one-sided test may lead
+        to more false positives, more type 1 errors. 
+      </li>
+      <li>
+        A two=-sided test has a higher <m>p</m>-value: double that of
+        a one-sided test. A larger <m>p</m>-value is bad for
+        concluding significance. Therefore, a two-sided test may lead
+        to more false negative, more type 2 errors. 
+      </li>
+    </ul>
+  </p>
+  <p>
+    It is generally considered good practice to default to two-sided
+    tests. It is always possible that the assumption about the
+    direction of an effect is wrong: we try to see if a medication is
+    effect, but it turns out to be counter-effective. We assume
+    certain trees grow better in wetter soils, but it might turn out
+    that drier soils actually give better outcomes. 
+  </p>
+  <p>
+    Based on this argument, a one-sided test should only be justified
+    by a very strong rationale that the effect must only occur on one
+    side of the data. Without a strong rationale like this, two-sided
+    tests are the preferred method. 
+  </p>
+  <p>
+    Finally, let me cover one last influence on error: sample size. In
+    general, larger samples sizes are always preferred. They lead to more
+    precise statistics, smaller errors. You can see this very clearly
+    with the calculation for standard error. As a reminder, we've had
+    two calculations so far for standard error, one for hypothesis
+    testing and one for confidence intervals. Here are those two
+    formula for reference.
+    <md>
+      SE = \sqrt{P(1-P) \left( \frac{1}{n_1} + \frac{1}{n_2} \right)}
+    </md>
+    <md>
+      SE = \sqrt{\frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}} 
+    </md>
+    The important observation here is that the sample sizes,
+    <m>n_1</m> and <m>n_2</m>, are always in the denominator. We will
+    see many different standard error calculations in future sections,
+    but sample size will remain in the denominator. Let me run though
+    the chain of reasoning this produces. 
+    <ul>
+      <li>
+        The sample size is in the denominator. Therefore, a large
+        sample size is a large denominator.
+      </li>
+      <li>
+        Dividing by large number produces small numbers. Therefore, a
+        large sample size means a small standard error. 
+      </li>
+      <li>
+        A small standard error means a tightly clusted sampling
+        distribution. Since a <m>p</m>-value is determined by the are
+        of the sampling distribution out past a certain point, a
+        tightly clustered sampling distribution means smaller
+        <m>p</m>-value.
+      </li>
+      <li>
+        All together, larger sample sizes means smaller <m>p</m>-value
+        and, therefore, greater chance of significance, of rejecting
+        the null hypothesis and supporting the alternative hypothesis. 
+      </li>
+    </ul>
+    So larger sample sizes are more precise, lead to smaller
+    <m>p</m>-value and smaller confidence intervals. All of this, in
+    general, helps to reject a null hypothesis. Therefore, larger
+    sample sizes are particularly helpful for avoiding type 2 errors:
+    false negative. If you are worried about type 2 errors, then large
+    sample sizes are particularly helpful. 
+  </p>
+  <p>
+    Let me make one more observation about sample sizes here. The
+    standard error calculations, and therefore this whole logic about
+    significance and errors, depend on the sample size. They do not
+    depend on the population size at all. In fact, population size
+    never shows up anywhere in statistical calculation. If I have a
+    sample size of <m>1000</m> cases, that's all I need to know. The
+    population might be ten thousand total individuals, in which case
+    my cases represent <m>10\%</m> of the population. Or the
+    population might be ten miillion total individual, in which case
+    my cases represent <m>0.01\%</m> of the population. Intuitively,
+    it feels that measuing <m>10\%</m> of the population should be
+    more valuable than measuring <m>0.01\%</m> of the population. But
+    the mathematics doesn't care at all. The population size doesn't
+    matter to any of this disucssion. 
+  </p>
+  <p>
+    Finally, let me define one last term which is a useful term for
+    this discussion. 
+  </p>
+  <definition>
+    <statement>
+      <p>
+        A statistical test is called <term>powerful</term> if it will
+        often reject the null hypothesis. 
+      </p>
+    </statement>
+  </definition>
+  <p>
+    This is a bit vague, but you can think of a powerful test as a
+    test that will avoid type 2 errors. If you want to avoid type 2
+    errors, you want a more powerful test. If you want to avoid type 1
+    errors, you want a less powerful test. And, mostly importantly
+    here, large sample sizes increase the power of a test. 
   </p>
 </section>
