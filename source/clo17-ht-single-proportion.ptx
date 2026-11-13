@@ -2,6 +2,338 @@
 <section xml:id="section-ht-single-proportion" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Section Name</title>
   <p> 
-    Test
+    In <xref ref="chapter-hypothesis-setup"/>, I spent many sections
+    building up the ideas and definitions of hypothesis testing. In
+    those sections, we primarily focused on a difference of
+    proportions. There is good reason for this: a controlled trial is
+    always a difference in proportions and a controlled trial is one
+    of the most fundamental ways to design a research study. But there
+    are other types of statistics. We are now moving on to just a
+    single proportion instead of a difference between two proportions.
   </p>
-</section>
+  <p>
+    I've introduced the different kinds of sample statistic before,
+    but let me review this particular one. What kind of statistic is a
+    single proportion? Well, it is a proportion, a percentage, but
+    only one. We are asking about the value of a single percentage
+    observation. It is still a categorical variable with two options.
+    It's like a trial but without a control group: there is only the
+    treatment group. 
+  </p>
+  <p>
+    There is still a proportion: the cases still falling into one of
+    two categories in some categorical variable. Generically, I still
+    call these categories <sq>successful</sq> and
+    <sq>unsuccessful</sq>, though what that actually means depends a
+    great deal on the particular study. Many studies will have two
+    equally appealing outcomes, but we stil need a generic languag, so
+    we talk about success for this generic language. 
+  </p>
+  <p>
+    Here are some examples of research questions that lead to a single
+    proportion statistic. 
+    <ul>
+      <li>
+        How many canadians suppor the green party? There is only one
+        group: Canadians. There are two categories: support or do not
+        support. There is one percentage: what percentage support? As
+        phrased this way, <sq>success</sq> would be supporting the
+        green party, regardless of whether the researchers individual
+        political opinions actually favour green party policy. 
+      </li>
+      <li>
+        How often do we have snow in Septmeber in Edmonton? There is
+        one categories: years. There are two outcomes: snow or now
+        snow. There is one percentage: how many years have snow
+        sometime in September. A success is recording snow in
+        September, again regardless of whether or not we think snow in
+        September is a pleasant thing. 
+      </li>
+      <li>
+        How many restaurants in Edmonton have gluten-free options
+        clearly available on their menus? There is one group:
+        restaurants in Edmonton. There are two categories: glute free
+        options clearly available, or not clearly available. There is
+        one percetange: how many restaurants have this? A success is a
+        restaurant which has such options.
+      </li>
+    </ul>
+    Hopefully its clear from these examples that many reasonable
+    research questions result in a single proportion statistic. 
+  </p>
+  <p>
+    What would a hypothesis be for such a statistic. With difference in
+    proportions, there was a comparison of groups. The null hypothesis
+    was no difference between the group. Here, there is no second
+    group for comparsion, so a null hypothesis of zero makes no sense.
+    Instead, the null and alternative hypotheses are always about the
+    sample statistic meeting some threshold. Let me go through the
+    previous three examples again to give an idea of what this might
+    look like. 
+    <ul>
+      <li>
+        If previous polls showed <m>4.3\%</m> support for the green
+        party, the researchers might want to know if this support has
+        increased. A null hypothesis would be no increas, so <m>x \leq
+        0.043</m>. The alternative hypotheses to match would be that
+        support has increased: <m>x \gt 0.045</m>.
+      </li>
+      <li>
+        A climate change scientist might wonder if it snows less often
+        in September than before. If <m>27\%</m> of Septembers over a
+        particular historical span had seen snow, then the null
+        hypothesis would that the years in the dataset are just a
+        likely to have snow: <m>x \geq 0.027</m>. The alternative
+        hypothesis to match would be that the rate of snow has
+        actually decreased in recent years: <m>x \lt 0.027</m>. 
+      </li>
+      <li>
+        Maybe the city of Edmonton has a goal of having gluten free
+        options present in at least <m>50\%</m> of restaurants and the
+        researchers are wondering if the city has hit that goal. The
+        null hypothesis would be that they have not hit that goal: <m>
+        x \leq 0.05</m>, and the alternative hypothesis would be that
+        they have exceeded it: <m>x \gt 0.05</m>. 
+      </li>
+    </ul> 
+    In each case, there is some externally determined threshold that
+    the researchers care about: a historical level, a target or goal,
+    a safety threshold, some kind of set proportion that is important
+    for some reasons. 
+  </p>
+  <p>
+    Let me move on to a specific example which I will use to develop
+    the theory in this section. A survey of payday loan borrowers
+    asked <m>826</m> people is they supported better regulation on
+    payday loan lenders. <m>578</m> responded yes, which is
+    <m>70\%</m>. Our sample statistics is <m>70\%</m> or <m>0.70</m>.
+    As discussed before, the researchquestion for a single proportion
+    is always a threshold question. Here, say we want to know if the
+    population parameter (that is, the percentage of all possible
+    payday loan borrowers who would answer yes) is at least 65%.
+    That's a threshold. We can do hypothesis testing or build a
+    confidence interval to understand this threshold and answer the
+    question with some standard of confidence.
+  </p>
+  <p>
+    The threshold question gives a hypothesis: is the population
+    parameter above <m>65\%</m>?  The null hypothesis answers no: the
+    population parameter is <m>65\%</m> of less. The alternative
+    hypothesis says that the population parameter is indeed above
+    <m>65\%</m>. 
+  </p>
+  <p>
+    So we have our hypothesis question and our sample statistics. The
+    quesiton is the same as before: how unlikely is our sample
+    statistics to be a random outcome of the null hypothesis? If
+    likely, then it is not significant and we do not have evidence for
+    the alternative hypothesis. If unlikely, then we is significant,
+    we reject the null hypothesis and accept the alternative. 
+
+The setup for this is the same as before: we do randomizations and
+study probability to figure this out. I'll leave the randomization
+methods aside for now, but we still get a sampling distribution. Under
+reasonable conditions, the central limit theorem applies and the
+sampling distribution will be normal. The mean of the sampling
+distribution will be given by the null hypothesis: in this case, a
+mean of 0.65. Our sample statistics is 0.7. We want to know how far
+out this is in the sampling distribution: now unlikely this is. 
+
+SLIDE
+
+So we need, again, to understand the sampling distribution. We already
+have the mean, since that is given by the null hypothesis. We need the
+standard deviation in order to figure out how many standard deviations
+away we find our sample statistic, so we can use z-scores and
+percentiles to calculate its probability. 
+
+SLIDE
+
+For a difference in proprtions, this was the formula for standard
+error, the standard deviation of the sampling distribution. This has
+two proprotions and two sample sizes. However, now we only have one
+group. Happily for us, having one group just simplifies the standard
+error. The formula is just one half of this express, with only one
+porportion to worry about. We don't have any pooled proportion
+question anymore either, since there aren't two groups to pool
+together. 
+
+SLIDE
+
+Let me put the whole calculation together. I have a sample statistics:
+0.70. I have a null hypothesis which stipulates a mean of 0.65. I have
+a standard error calculated by this square root expression, which has
+the null hypothesis proportion and the sample size. I then have the
+z-score of the sample statistics, which tells me that is is 2.94
+standard deviations away from the mean. I can turn that into a
+percentile, which is 0.998 or 99.8th percentile. I can make a p-value
+by taking the difference from one, which gives me the probability that
+0.7 (or above) was randomly produced by the null hypothesis. This
+probability is 0.002, must less that 0.05, so the finding is
+signficant. I reject the null hypothesis and conlude that, by the
+evidence of this study, the population parameter is indeed above 65%. 
+
+Let me make the same note I did before. In the standard error, the
+sample size is in the denominator. That means that larger sample sizes
+mean smaller standard error, which mean larger z score, and
+percentiles closer to 1, and smaller p-value, and, finally, more
+likely to find significant. Larger sample sizes are more likely to
+produce significant results, mathematically, according to the
+probability theory. 
+
+SLIDE
+
+That's hypothesis testing. I can do the same thing for confidence
+intervals. The setup is very similar to what we did before, but let me
+go over it. Under reasonable conditions, I can assume the sampling
+distribution is normal as before. However, the sampling distributino
+for confidence intervals is difference. I don't have a null hypothesis
+anymore, I just have the sample statistic: 0.70. That is the mean of
+the sample distribution here. The standard error is the same formula,
+but now I am using the sample statistic as the mean, not another mean
+from a null hypothesis. Here, the standard error works out to 0.016.
+That's the standard deviation of this normal sampling distribution. 
+
+Then the range of the 95% confidence interval was given by this
+formula, which is still the same. I go out 1.96 standard deviations
+from the mean on either side. The numbers here work out to 0.669 to
+0.731. I am 95% confidence that the population parameter is between
+66.9& and 73.1%. This also matches the hypothesis test: I am 95%
+certain that the population parameter is above 0.65, since I am 95%
+certain that is lies in this range which does not include 0.65. 
+
+The number 1.96 is for the 95% confidence intervals. Other confidence
+intervals have other coefficients here, which I mentioned before. To
+change your standard of confidence, you just replace this 1.96 with
+the appropriate coefficient. 
+
+
+
+\begin{frame}
+  \frametitle{Single Proportions}
+  \begin{itemize}
+    \item[] 
+      One categorical variable.
+      \vspace{0.5cm}
+    \item[] 
+      Two categories. Interpreted as one success and one failure. 
+      \vspace{0.5cm}
+    \item[] 
+      How many Canadians support the green party?
+      \vspace{0.5cm}
+    \item[] 
+      How often do we have snow in September in Edmonton?
+      \vspace{0.5cm}
+    \item[] 
+      How many restaurants in Edmonton have gluten-free options
+      clearly available on their menus?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{An Example}
+  \begin{itemize}
+    \item[] 
+      Survey of payday loan borrowers. 
+      \vspace{0.5cm}
+    \item[] 
+      Question: do you support better regulation on payday loan
+      lenders?
+      \vspace{0.5cm}
+    \item[] 
+      826 Cases. Sample statistics: 70\% of these (578) answers
+      ``yes''. 
+      \vspace{0.5cm}
+    \item[] 
+      Question: is the population parameter greater than 65\%?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypothesis Test}
+  \begin{itemize}
+    \item[] 
+      Sample statistics: $\hat{p}= 0.70$
+      \vspace{0.5cm}
+    \item[] 
+      Null hypothesis: $p = 0.65$
+      \vspace{0.5cm}
+    \item[] 
+      Alternative hypothesis: $p > 0.65$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sampling Distribution}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        ytick=\empty,
+      ]
+      \addplot [
+        domain=0.58:0.72,
+        samples=200,
+      ]
+      {exp(-(x-0.65)^2 / (2*(0.017)^2)) / (sqrt(2*pi*(0.017)^2))};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sampling Distribution}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        ytick=\empty,
+      ]
+      \addplot [
+        domain=0.58:0.72,
+        samples=200,
+      ]
+      {exp(-(x-0.65)^2 / (2*(0.017)^2)) / (sqrt(2*pi*(0.017)^2))};
+    \end{axis}
+  \end{tikzpicture}
+  \begin{equation*}
+    \mu = 0.65 \hspace{2cm} \sigma = SE = ?
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Standard Error}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      SE & = & \sqrt{ \frac{p_1(1-p_1}{n_1} + \frac{p_2(1-p_2)}{n_2}
+      }\\[2em]
+      SE & = & \sqrt{ \frac{p(1-p)}{n}} 
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Calculating p-value}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      x & = & 0.70 \\[2em]
+      \mu & = & 0.65\\[2em]
+      SE & = & \frac{(0.65)(1-0.65)}{826} = 0.017\\[2em]
+      z(0.70) & = & 2.94 \\[2em]
+      \text{percentile} & = & 0.998 \\[2em]
+      p & = & 1 - 0.992 = 0.002 < 0.05 
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\begin{frame}
+  \frametitle{Calculating Confidence Intervals}
+  \begin{displaymath}
+    \begin{array}{rcl}
+      x & = & 0.70 \\[2em]
+      \mu & = & 0.75\\[2em]
+      SE & = & \frac{(0.75)(1-0.75)}{826} = 0.016\\[2em]
+      \text{95\% Interval} &  = & [\mu - 1.96(SE), \mu + 1.96(SE)] \\[2em]
+      \text{95\% Interval} &  = & [0.669,0.731] \\[2em]
+    \end{array}
+  \end{displaymath} 
+\end{frame}
+
+\end{document}

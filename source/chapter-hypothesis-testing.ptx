@@ -14,11 +14,13 @@
   </introduction>
 
   <xi:include href="clo17-ht-single-proportion.ptx" />
+  <!--
   <xi:include href="clo18-ht-chi-squared.ptx" />
   <xi:include href="slo5-mathematics-t-chi-squared.ptx" />
   <xi:include href="clo19-ht-single-mean.ptx" />
   <xi:include href="clo20-ht-difference-means.ptx" />
   <xi:include href="clo21-ht-anova.ptx" />
   <xi:include href="clo22-ht-linear.ptx" />
+  -->
 
 </chapter>
