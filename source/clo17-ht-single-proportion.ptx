@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-ht-single-proportion" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Single Proportions</title>
   <p> 
     In <xref ref="chapter-hypothesis-setup"/>, I spent many sections
     building up the ideas and definitions of hypothesis testing. In
@@ -129,211 +129,123 @@
     likely, then it is not significant and we do not have evidence for
     the alternative hypothesis. If unlikely, then we is significant,
     we reject the null hypothesis and accept the alternative. 
+  </p>
+  <p>
+    The setup for this is the same as before: we could do
+    randomizations and study probability to figure this out. Instead
+    of doing the randomizations, we rely on the theory of probability
+    to describe the sampling distribution. As before, under reasonable
+    conditions, the central limit theorem applies and the sampling
+    distribution will be normal. The mean of the sampling distribution
+    will be given by the null hypothesis. Before, that gave a mean of
+    zero, but our null hypothesis is now about meeting a threshold. In
+    this example, the sampling distribution has a mean of <m>0.65</m>.
+    Our sample statistics is <m>0.7</m>. We want to know how far out
+    this is in the sampling distribution: now unlikely this is. 
+  </p>
+  <p>
+    So we need, again, to understand the sampling distribution. We
+    already have the mean, since that is given by the null hypothesis.
+    We need the standard deviation in order to figure out how many
+    standard deviations away we find our sample statistic, so we can
+    use <m>z</m>-scores and calculate <m>p</m>-values. 
+  </p>
+  <p>
+    For a difference in proprtions, we had a specific formula for the
+    standard error when doing hypothesis testing.  However, now we
+    only have one group. Happily for us, having one group just
+    simplifies the standard error. Here is the formula for a single
+    proportion, where <m>n</m> is the number of cases and <m>p</m> is
+    the proportion dictated by the null hypothesis. 
+    <md>
+      SE = \sqrt{ \frac{p(1-p)}{n}} 
+    </md>
+    Putting the numbers in (<m>p = 0.65</m> and <m>n = 826</m>) gives
+    a standard error in this example of <m>SE = 0.017</m>. 
+  </p>
+  <p>
+    Let me put the whole calculation together now.
+    <ul>
+      <li>
+        I have a sample statistic: <m>0.70</m>. 
+      </li>
+      <li>
+        I have a null hypothesis which stipulates a mean of
+        <m>0.65</m>. 
+      </li>
+      <li>
+        I calculate the standard error of <m>0.017</m>
+      </li>
+      <li>
+        I calculate the <m>z</m>-score as before.
+        <md>
+          z = \frac{x - \mu}{\sigma} = \frac{0.70 - 0.65}{0.017} =
+          2.94. 
+        </md>
+        My sample statistics is almost three standard deviations away
+        from the mean of the sampling distribution.
+      </li>
+      <li>
+        I calculate a <m>p</m>-value, either using the <m>z</m>-score
+        or directly using integrals for areas under curves. In this
+        case, I get a <m>p</m>-value of <m>0.002</m>. I am doing a
+        one-sided test, since I am specifically asking about exceeding
+        a threshold. 
+      </li>
+      <li>
+        Under normal <m>\alpha = 0.05</m>, or even under a stricted
+        <m>\alpha = 0.01</m>, I reject the null hypothesis and
+        conclude that my sample statistic is statistically
+        significant. 
+      </li>
+    </ul>
+    At the end, by evidence of this study, the population parameter is
+    likely above <m>65\%</m>
+  </p>
+  <p>
+    Note again that the equation for standard error has the sample
+    size is in the denominator. That means that larger sample sizes
+    mean smaller standard error, which mean larger <m>z</m>-scores,
+    smaller <m>p</m>-values, and a higher rate of significance. Even
+    though the different in proportions between the sample and the
+    null hypothesis here was pretty small, the large number of cases,
+    <m>826</m>, means that that significant was easy to conclude. 
+  </p>
+  <p>
+    That's hypothesis testing. I can do the same thing for confidence
+    intervals. The setup is very similar to what we did before, but
+    let me go over it the steps. 
+    <ul>
+      <li>
+        Under reasonable conditions, I can assume the sampling
+        distribution is normal as before. 
+      </li>
+      <li>
+        For sampling distributions, the mean is set to the sample
+        statistic, <m>0.70</m>. 
+      </li>
+      <li>
+        Unlike different of proportion, the standard error calculation
+        for a single prorportion is the same for confidence intervals
+        as it was for hypothesis testing. I calculated it before:
+        <m>0.017</m>. 
+      </li>
+      <li>
+        To get a <m>95\%</m> confidence interval, I use the
+        coefficient <m>1.96</m>. I calculate <m>1.96</m> times the
+        standard error. I subtract that from the mean to get the lower
+        bound and add that to the mean to get the upper bound. The
+        result of these calculations is the interval
+        <m>[0.669,0.731]</m>. I can be <m>95%</m> confidence that the
+        population parameter is between <m>66.9\%</m> and
+        <m>73.1\%</m>. 
+      </li>
+      <li>
+        As before, if I wanted different percentages of confidence, I
+        would replace the coefficient <m>1.96</m> with another
+        coefficient and repeat the same calculation.
+      </li>
+    </ul>
+  </p>
+</section>
 
-The setup for this is the same as before: we do randomizations and
-study probability to figure this out. I'll leave the randomization
-methods aside for now, but we still get a sampling distribution. Under
-reasonable conditions, the central limit theorem applies and the
-sampling distribution will be normal. The mean of the sampling
-distribution will be given by the null hypothesis: in this case, a
-mean of 0.65. Our sample statistics is 0.7. We want to know how far
-out this is in the sampling distribution: now unlikely this is. 
-
-SLIDE
-
-So we need, again, to understand the sampling distribution. We already
-have the mean, since that is given by the null hypothesis. We need the
-standard deviation in order to figure out how many standard deviations
-away we find our sample statistic, so we can use z-scores and
-percentiles to calculate its probability. 
-
-SLIDE
-
-For a difference in proprtions, this was the formula for standard
-error, the standard deviation of the sampling distribution. This has
-two proprotions and two sample sizes. However, now we only have one
-group. Happily for us, having one group just simplifies the standard
-error. The formula is just one half of this express, with only one
-porportion to worry about. We don't have any pooled proportion
-question anymore either, since there aren't two groups to pool
-together. 
-
-SLIDE
-
-Let me put the whole calculation together. I have a sample statistics:
-0.70. I have a null hypothesis which stipulates a mean of 0.65. I have
-a standard error calculated by this square root expression, which has
-the null hypothesis proportion and the sample size. I then have the
-z-score of the sample statistics, which tells me that is is 2.94
-standard deviations away from the mean. I can turn that into a
-percentile, which is 0.998 or 99.8th percentile. I can make a p-value
-by taking the difference from one, which gives me the probability that
-0.7 (or above) was randomly produced by the null hypothesis. This
-probability is 0.002, must less that 0.05, so the finding is
-signficant. I reject the null hypothesis and conlude that, by the
-evidence of this study, the population parameter is indeed above 65%. 
-
-Let me make the same note I did before. In the standard error, the
-sample size is in the denominator. That means that larger sample sizes
-mean smaller standard error, which mean larger z score, and
-percentiles closer to 1, and smaller p-value, and, finally, more
-likely to find significant. Larger sample sizes are more likely to
-produce significant results, mathematically, according to the
-probability theory. 
-
-SLIDE
-
-That's hypothesis testing. I can do the same thing for confidence
-intervals. The setup is very similar to what we did before, but let me
-go over it. Under reasonable conditions, I can assume the sampling
-distribution is normal as before. However, the sampling distributino
-for confidence intervals is difference. I don't have a null hypothesis
-anymore, I just have the sample statistic: 0.70. That is the mean of
-the sample distribution here. The standard error is the same formula,
-but now I am using the sample statistic as the mean, not another mean
-from a null hypothesis. Here, the standard error works out to 0.016.
-That's the standard deviation of this normal sampling distribution. 
-
-Then the range of the 95% confidence interval was given by this
-formula, which is still the same. I go out 1.96 standard deviations
-from the mean on either side. The numbers here work out to 0.669 to
-0.731. I am 95% confidence that the population parameter is between
-66.9& and 73.1%. This also matches the hypothesis test: I am 95%
-certain that the population parameter is above 0.65, since I am 95%
-certain that is lies in this range which does not include 0.65. 
-
-The number 1.96 is for the 95% confidence intervals. Other confidence
-intervals have other coefficients here, which I mentioned before. To
-change your standard of confidence, you just replace this 1.96 with
-the appropriate coefficient. 
-
-
-
-\begin{frame}
-  \frametitle{Single Proportions}
-  \begin{itemize}
-    \item[] 
-      One categorical variable.
-      \vspace{0.5cm}
-    \item[] 
-      Two categories. Interpreted as one success and one failure. 
-      \vspace{0.5cm}
-    \item[] 
-      How many Canadians support the green party?
-      \vspace{0.5cm}
-    \item[] 
-      How often do we have snow in September in Edmonton?
-      \vspace{0.5cm}
-    \item[] 
-      How many restaurants in Edmonton have gluten-free options
-      clearly available on their menus?
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{An Example}
-  \begin{itemize}
-    \item[] 
-      Survey of payday loan borrowers. 
-      \vspace{0.5cm}
-    \item[] 
-      Question: do you support better regulation on payday loan
-      lenders?
-      \vspace{0.5cm}
-    \item[] 
-      826 Cases. Sample statistics: 70\% of these (578) answers
-      ``yes''. 
-      \vspace{0.5cm}
-    \item[] 
-      Question: is the population parameter greater than 65\%?
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Hypothesis Test}
-  \begin{itemize}
-    \item[] 
-      Sample statistics: $\hat{p}= 0.70$
-      \vspace{0.5cm}
-    \item[] 
-      Null hypothesis: $p = 0.65$
-      \vspace{0.5cm}
-    \item[] 
-      Alternative hypothesis: $p > 0.65$
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Sampling Distribution}
-  \centering
-  \begin{tikzpicture}
-    \begin{axis}[
-        ytick=\empty,
-      ]
-      \addplot [
-        domain=0.58:0.72,
-        samples=200,
-      ]
-      {exp(-(x-0.65)^2 / (2*(0.017)^2)) / (sqrt(2*pi*(0.017)^2))};
-    \end{axis}
-  \end{tikzpicture}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Sampling Distribution}
-  \centering
-  \begin{tikzpicture}
-    \begin{axis}[
-        ytick=\empty,
-      ]
-      \addplot [
-        domain=0.58:0.72,
-        samples=200,
-      ]
-      {exp(-(x-0.65)^2 / (2*(0.017)^2)) / (sqrt(2*pi*(0.017)^2))};
-    \end{axis}
-  \end{tikzpicture}
-  \begin{equation*}
-    \mu = 0.65 \hspace{2cm} \sigma = SE = ?
-  \end{equation*}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Standard Error}
-  \begin{displaymath}
-    \begin{array}{rcl}
-      SE & = & \sqrt{ \frac{p_1(1-p_1}{n_1} + \frac{p_2(1-p_2)}{n_2}
-      }\\[2em]
-      SE & = & \sqrt{ \frac{p(1-p)}{n}} 
-    \end{array}
-  \end{displaymath} 
-\end{frame}
-
-\begin{frame}
-  \frametitle{Calculating p-value}
-  \begin{displaymath}
-    \begin{array}{rcl}
-      x & = & 0.70 \\[2em]
-      \mu & = & 0.65\\[2em]
-      SE & = & \frac{(0.65)(1-0.65)}{826} = 0.017\\[2em]
-      z(0.70) & = & 2.94 \\[2em]
-      \text{percentile} & = & 0.998 \\[2em]
-      p & = & 1 - 0.992 = 0.002 < 0.05 
-    \end{array}
-  \end{displaymath} 
-\end{frame}
-
-\begin{frame}
-  \frametitle{Calculating Confidence Intervals}
-  \begin{displaymath}
-    \begin{array}{rcl}
-      x & = & 0.70 \\[2em]
-      \mu & = & 0.75\\[2em]
-      SE & = & \frac{(0.75)(1-0.75)}{826} = 0.016\\[2em]
-      \text{95\% Interval} &  = & [\mu - 1.96(SE), \mu + 1.96(SE)] \\[2em]
-      \text{95\% Interval} &  = & [0.669,0.731] \\[2em]
-    \end{array}
-  \end{displaymath} 
-\end{frame}
-
-\end{document}
