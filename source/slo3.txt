@@ -1,0 +1,120 @@
+ The normal distribution describes sampling distributions for single
+ proportions and differences in proportions. But other statistics
+ require other distributions. In this stretch outcomes, I want to go
+ over the mathematics of two other distributions: Chi^2 distribution
+ and Student's t-distribution.
+
+Probability distributions are mathematical functions. To define the
+Chi^2 distribution, we actually need to define a couple other function
+first. The first of these is pretty familiar to students of first-year
+calculation, but may be quite new to students without that experience.
+
+The letter e in mathematics often stands for a particular number,
+often called Euler's number.  It has this approximate
+value.2.71828\ldots This is used as a base for the most common
+exponential function in mathematics.  Like all exponential functions,
+this is just powers of the special number e.
+
+The second definition is more unusual. Even students of calculus may
+not have seen this function before. 
+
+The Gamma function is a function defined an integral.  Gamma is the
+upper-case greek letter gamma, hence the name. 
+
+Function defined by integrals are very strange beast, and I do not
+expect students to be comfortable with them. I won't ask you to work
+with this definition at all. However, the Gamma-function does have
+one very nice property. I need one more definition to state the
+property.
+
+Let n be a non-negative whole number. Then the factorial of n is the
+product of all whole numbers less than or equal to n. The notation for
+the factorial if n!. Here is a list of the first few factorials. 
+
+The factorial is a pretty common operation, particularly in
+probability. However, it is only defined for whole numbers.  There is
+no such thing as the factorial of, for example, \frac{1}{2}. This is
+where the Gamma-function comes it. It satisfies this very important
+property, for n \geq 1 a whole number. 
+
+The Gamma-function extends the factorial to numbers other than whole
+integers. 
+
+Now that I have these two other functions, I can define the
+Chi^2-distribution. Remember that there is a parameter called degrees
+of freedom. 
+
+The Chi^2-distribution with s degrees of freedom (where s is a positie
+whole numbers is defined by this expression.
+
+This is a pretty complicated function definition. It's construction is
+the product of a long history of probability theory, trying to
+understand variation in multiple categories.  We don't have the
+mathematical sophistication, nor time, to go into that history. My
+goal here is simply that you understand the pieces that go into this
+function.  
+
+In particular, the p-value of a Chi^2 statistic is, like all other
+p-value, the area under the curve of this function. If x is a Chi^2
+sample statistic, then the area under the curve is calculated by this
+integral.
+
+Again, I do not expect the class to work with or calculate these
+integrals, just to understnad the idea that an integral is measuring
+the area under a curve and, in probability theory, area is
+probability. 
+
+After the Chi^2 distribution, there is one more distribution that is
+useful for the hypothesis test that we are doing this course. This one
+also relies on the Gamma-function for its definition. It also has one
+parameter, which is called degrees of freedom. 
+
+The Student's t-distribution is a probability distribution defined by
+the following expression. It relies on two parameters. The first is a
+mean, \mu, which can be any real numbers. The second is a positive
+whole number s, called the degrees of freedom.
+
+Like the Chi^2 distribution, this is a very complicated mathematical
+function definition and I do not expect the class to be able to work
+with or calculate this function. Again, I want you to understand the
+pieces that go into the function, and the whole idea of probability
+distributions and area under curves. That said, I should say a few
+things about this distribution. 
+
+First, let me talk about the strange name. In what what is this a
+student's distribution? This distribution was developed by a
+statistician named William Gosset. He published articles in the early
+20th century on statistics, but decided, for whatever reason, to
+publish under the pseudonym Student. Therefore, this distribution that
+he developed was simply know as Student's distribution. This
+is strange and confusion, but we are now stuck with the name and it is
+used widely. 
+
+Next, unlike the Chi^2 distribution, Student's distribution has a
+mean. In fact, it is remarkably similar to the normal distribution.
+Look at graphs, it is actually pretty difficult, at a glance, to tell
+the difference between Student's distribution and the normal
+distribution. They both have very similar bell-shapes, with a peak at
+the mean and symmetrical tails. 
+
+That said, there are important differences. First, the normal
+distribution's second parameter is the standard deviation. The
+Student's distirbution's second parameter is this degrees of
+freedom. Standard deviation for the Student's distribution can be
+calculated, but it does not directly act at the paramger. 
+
+Second, there are subtle difference in shape. The most notable is that
+Student's distribution has a slightly wider shape, with slightly more
+area in the tails. This is particularly true for low values of the
+degrees of freedom parameter. As the degrees of freedom parameter
+grows, Student's distribution becomes more an more like a normal
+distribution with standard deviation 1. 
+
+In the mathematical theory of probability, it was discovered (By
+Gosset and other at the time) that the normal distribution was not
+quite the correct model for the probability of statistics involving
+means. Student's distribution was developed as an alternate that
+corrects the small faults of the normal distribution. We will use it
+for difference in means, single means, and ANOVA calculations. It
+turns out to be a very useful and very commonly used distribution in
+both probability and statistics. 

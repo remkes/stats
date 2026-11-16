@@ -184,8 +184,8 @@
     the disclosures and divide by the number of cases, and I get a
     general disclosure rate of <m>27.8\%</m>. Mutliplying by
     <m>73</m>, this means that if all is equal, there should be about
-    <m>22</m> disclosures in each of the three groups of <m>73</m>
-    cases. (Technically, <m>22.33</m> disclouse, which I will use
+    <m>20</m> disclosures in each of the three groups of <m>73</m>
+    cases. (Technically, <m>20.33</m> disclouse, which I will use
     later.) Similarly, I could calculate that there should be about
     <m>53</m> non-disclosure in each group of <m>73</m>.
   </p>
@@ -201,14 +201,14 @@
     To test the likeliness of our sample, I need a sample statistic.
     That's a bit tricky here, with multiple proportions. I want to
     measure how much my sample differs from the null hypothesis. I
-    have a baseline of <m>22.33</m> disclosures and <m>52.67</m>
+    have a baseline of <m>20.33</m> disclosures and <m>52.67</m>
     non-disclosures. I want to compare this baseline to my sample. I
     have six situations: three groups and two options for each group
     (disclose or not disclose). Each of these six situation is a
     proportion. For all of the six, I use the following formula to
     measure the difference between the sample outcome and the baseline
-    I just established. (In this formula, <m>x</m> is the proportion
-    from the sample and <m>b</m> is the baseline propotion from the
+    I just established. (In this formula, <m>x</m> is the count
+    from the sample and <m>b</m> is the baseline count from the
     null hypothesis.)
     <md>
       \frac{(x - b)^2}{b}  
@@ -217,7 +217,7 @@
     to measure the difference. Squaring the difference means that all
     differences are positive, which is again good since I'm not
     concern here about the direction of the difference. Then dividing
-    by the null hypothesis proportion scales this difference relative
+    by the null hypothesis count scales this difference relative
     to that base. 
   </p>
   <p>
