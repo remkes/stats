@@ -1,7 +1,376 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-ht-chi-squared" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>Multiple Proportions and <m>\Xi^2</m> Distributions</title>
   <p> 
-    Test
+    There are yet other types of statistics to test that I have not
+    already introduces. For categorical variables, where the
+    statistics are proportions, I've considered the difference in
+    proportions and a single proportion. You can think of these as
+    trials: a difference in proportion is for a controled trial, where
+    a control group is compared against a treatment group; and a
+    single proportion is trial without a control group where we
+    compare against a threshold.
+  </p>
+  <p>
+    But what if there are more than just two groups
+    in the trial? What if, for example, I wanted to study the rate of
+    high school graduation across several major Canadian cities. There
+    still is success and failre, graduatation and not graduation. But
+    instead of control and treatment, I now have many categories:
+    Montreal, Toronto, Winnipeg, Calgary, Edmonton, Vancouver, perhaps
+    more. This is the situation of multiple proportions. Each group
+    has a proportion, but there are more than two groups and I want to
+    compare them all. 
+  </p>
+  <p>
+    Even more, I could consider various level of education: high
+    school graduate, dipolma, degreee, graduate degrees, and then
+    compare these across the same list of cities. I would now get even
+    more proportions: each city will have a proportion for each level
+    of education, and I can compare all these against each other. 
+  </p>
+  <p>
+    In this context, I want to do hypothesis testing. But what even is
+    a hypothesis in this context? It's a bit tricky. Consider, first,
+    some example data about lizards that we used earlier in the term
+    in a class activity. 
+  </p>
+  <p>
+    This is data about where lizards were found resting. There were two
+    categorical variables, but each had three categories. Here is the
+    contingency table, to remind you. One variable is the habitat, and
+    one variable is the typical amount of shade in which the lizards
+    rested. 
+  </p>
+  <table xml:id="table-lizard-data">
+    <title>Lizard Location Data</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> </cell> 
+        <cell> Sun </cell> 
+        <cell> Partial Shade </cell> 
+        <cell> Shade </ceill>
+      </row>
+      <row>
+        <cell> Desert </cell> 
+        <cell> 16 </cell> 
+        <cell> 32 </cell> 
+        <cell> 71 </ceill>
+      </row>
+      <row>
+        <cell> Valley </cell> 
+        <cell> 42 </cell> 
+        <cell> 40 </cell> 
+        <cell> 24 </ceill>
+      </row>
+      <row>
+        <cell> Mountain </cell> 
+        <cell> 56 </cell> 
+        <cell> 36 </cell> 
+        <cell> 15 </ceill>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    There are nine total proportions here. For example, <m>51.9\%</m>
+    of the mountain habitat lizards were found resting in full sun,
+    and <m>37.5\%</m> of valley habitat lizards were found resting in
+    partial shade. I could compare two of these in a difference or
+    proportions, but I want to know about the difference across all
+    nine. I'm asking a general question here: how much does habitat
+    affect the choice of sun or shade in where the lizards rest? This
+    question includes, implicitly, all nine proportions. The answer
+    I'm looking for is, roughly, binary: either the habitat has a
+    strong effect or a negligible effect. This is a setup for
+    hypothesis test. 
+  </p>
+  <p>
+    The lizard data is a good demonstration of the research question,
+    but I want something a bit simpler to use as an example to develop
+    the theory. Here is a  study about consumer inquiry and purchasing
+    confidence. If you are purchasing something, particular outside of
+    a formal store (i.e. someplace like Facebook Marketplace), how can
+    you figure out if the item being sold is in good condition? In
+    particular, does the particular way in which you ask your
+    questions made a difference?
+  </p>
+  <p>
+    A study was setup were 219 participants were asked to sell a used
+    iPod which they knew had frozen twice in the past. The buyers got
+    to keep some of the sale price, so they were motivated to recover
+    decent value selling the iPod. (Forgive, again, the dated study. I
+    know iPod died as a thing years ago, but this was a study from a
+    good while back.  Work with me here!)
+  </p>
+  <p>
+    Unbeknownst to the sellers, the buyers were also part of the
+    study. They were instruced to ask questions to determine the
+    condition of the iPod. They were told to randomly choose between
+    these three questions
+    <ul>
+      <li>
+        What can you tell me about it?
+      </li>
+      <li>
+        It doesn't have any problems, does it?
+      </li>
+      <li>
+        What problems does it have?
+      </li>
+    </ul>
+  </p>
+  <p>
+    The idea here, psychologically, is that the first question seem
+    neutral, the second has an implicitly positive assumption that
+    there aren't problems, and the third has an implicitly negative
+    assumption, that there are problems. The research question is
+    this: do these assumptions, built into the question, have an
+    effect on the responses? The data is found in the following
+    contingency table. 
+  </p>
+  <table xml:id="table-marketplace-data">
+    <title>Sellers Responses</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> Question </cell>
+        <cell> Disclose </cell>
+        <cell> Hide </cell>
+        <cell> Total </cell>
+      </row>
+      <row>
+        <cell> Neutral </cell>
+        <cell> 2 </cell>
+        <cell> 71 </cell>
+        <cell> 73 </cell>
+      </row>
+      <row>
+        <cell> Positive </cell>
+        <cell> 23 </cell>
+        <cell> 50 </cell>
+        <cell> 73 </cell>
+      </row>
+      <row>
+        <cell> Negative </cell>
+        <cell> 36 </cell>
+        <cell> 37 </cell>
+        <cell> 73 </cell>
+      </row>
+      <row>
+        <cell> Total </cell>
+        <cell> 61 </cell>
+        <cell> 36 </cell>
+        <cell> 219 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    What does this data show us? Each of the questions was asked
+    exactly <m>73</m> times.  Only twice did the neutral question lead
+    to disclose of the potential freezing problems. The positive
+    assumption led to <m>23</m> disclosures and the negative
+    assumption led to <m>36</m> disclosures.
+  </p>
+  <p>
+    The research question here is this: does the form of the question
+    make a difference? But there are three options, not just two. How
+    do we do the stats to answer this question? We now want to know
+    not just was there a difference, but what difference is due to
+    which type of questions.
+  </p>
+  <p>
+    I want to do hypothesis testing, so I'm going to need some
+    baseline information in order to setup my null hypothesis. Let me
+    first look at how many disclosures there were in total. I add up
+    the disclosures and divide by the number of cases, and I get a
+    general disclosure rate of <m>27.8\%</m>. Mutliplying by
+    <m>73</m>, this means that if all is equal, there should be about
+    <m>22</m> disclosures in each of the three groups of <m>73</m>
+    cases. (Technically, <m>22.33</m> disclouse, which I will use
+    later.) Similarly, I could calculate that there should be about
+    <m>53</m> non-disclosure in each group of <m>73</m>.
+  </p>
+  <p>
+    The null hypothesis is that the questions make no difference at
+    all, that in the whole population, roughly <m>22</m> out of
+    <m>73</m> people would disclose and the difference between these
+    groups in this sample is just random. Again, I want to use
+    probability theory to ask how likely the sample is under this null
+    hypothesis. 
+  </p>
+  <p>
+    To test the likeliness of our sample, I need a sample statistic.
+    That's a bit tricky here, with multiple proportions. I want to
+    measure how much my sample differs from the null hypothesis. I
+    have a baseline of <m>22.33</m> disclosures and <m>52.67</m>
+    non-disclosures. I want to compare this baseline to my sample. I
+    have six situations: three groups and two options for each group
+    (disclose or not disclose). Each of these six situation is a
+    proportion. For all of the six, I use the following formula to
+    measure the difference between the sample outcome and the baseline
+    I just established. (In this formula, <m>x</m> is the proportion
+    from the sample and <m>b</m> is the baseline propotion from the
+    null hypothesis.)
+    <md>
+      \frac{(x - b)^2}{b}  
+    </md>
+    Why this formula? It is the difference, which is good since I want
+    to measure the difference. Squaring the difference means that all
+    differences are positive, which is again good since I'm not
+    concern here about the direction of the difference. Then dividing
+    by the null hypothesis proportion scales this difference relative
+    to that base. 
+  </p>
+  <p>
+    I can apply this formula to all six of the proportions in the
+    data. Here are those calculations.
+    <md>
+      <mrow>
+        \frac{(2 - 20.33)^2}{20.33} = 16.53
+      </mrow>
+      <mrow>
+        \frac{(23 - 20.33)^2}{20.33} = 0.35
+      </mrow>
+      <mrow>
+        \frac{(36 - 20.33)^2}{20.33} = 12.08 
+      </mrow>
+      <mrow>
+        \frac{(71 - 52.67)^2}{52.67} = 6.38
+      </mrow>
+      <mrow>
+        \frac{(50 - 52.67)^2}{52.67} = 0.14
+      </mrow>
+      <mrow>
+        \frac{(37 - 52.67)^2}{52.67} = 4.66
+      </mrow>
+    </md>
+    These are a measure of how much each proportion differs from the
+    null hypothesis baseline proportion. Then I add all these
+    together. 
+    <md>
+      \Chi^2 = 16.53 + 0.35 + 12.08 + 6.38 + 0.14 + 4.66 = 40.13
+    </md>
+    This is a <m>\Chi^2</m> statistic, using the greek letter
+    <sq>Chi</sq>. (This is not a roman <sq>X</sq>, even though it
+    looks almost identical.) It is the standard way to measure how
+    much a set of proportions (of any size) differs from a baseline
+    proportion. THis setup comes from probability theory and that
+    theory, for various mathematical reasons, has concluded that this
+    is the preferred measurement. We can all this the <term>total
+    variance</term> in the sample. 
+  </p>
+  <p>
+    This is the sample statistic. What do we do with it? How do we use
+    the <m>\Chi^2</m> to answer the hypothesis testing question?
+    As before, we can do a randomization process. In this case, the
+    null hypothesis is that all categories are equally likely. To
+    emulate that, we can just shuffle the data: take the 61 discloe
+    and the 18 hide and then just re-destribute them among the groups.
+    Then, each of these instances would have its own <m>\Chi^2</m> value
+    and I could calculate those, one by one. This would give me a
+    distribution, and then I could compare that dsitribution with the
+    sample statistic, to see how likely it is. This is the same
+    randomization process I used previously, just with more categories
+    to shuffle between.
+  </p>
+  <figure xml:id="figure-chi-squared-histogram">
+    <caption>Histogram of <m>\Chi^2</m> randomization</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}
+          \begin{axis}[
+            xlabel={$X^2$ test statistics of random samples},
+            ylabel={Count}
+          ]
+            \addplot+ [
+              hist={bins=5},
+              fill=orange,
+              draw=black,
+              mark=none
+            ]
+            table [y index=0] {../data/chisquared.csv};
+          \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    <xref ref="figure-chi-squared-histogram"/> is a histogram of a
+    bunch of randomizations of this data and their <m>\Chi^2</m> scores.
+    This is assuming the null hypothesis: that there is no difference
+    between groups. <m>\Chi^2 = 0</m> would recover this perfect
+    balance, but that basically never happens. Instead, almost all of
+    the sample have some variables, but most have a low <m>\Chi^2</m>.
+    The random samples are groups near 0 and they decay away.  Our
+    sample statistics had a <m>\Chi^2</m> of 40, which is way, way out
+    compared to these randomizations. Like, this means that something
+    significant is happening: these randomizations don't seem to have
+    any chance at all of producing a <m>\Chi^2</m> of 40. 
+  </p>
+  <p>
+    That would be doing the randomizations by hand. I don't want to do
+    that. I want to make use of the fact that many clever
+    mathematicians have build probability models so that I can just
+    calculate directly. Happily, this is true, but the models are now
+    different. This is no longer a normal distribution at all. The
+    previous histogram didn't look normal at all: it started with lots
+    of data and then decayed away only in the positive direction.
+    There were no negatives at all (indeed, <m>\Chi^2</m> is always a
+    positive number).
+  </p>
+  <p>
+    The theory here, then, it not based on normal distributions. It is
+    based on another set of mathematical functions, unsurprisingly
+    called <m>\Chi^2</m> distributions. The normal distributions
+    difference by mean and standard deviations. For <m>\Chi^2</m> there
+    is one parameter. This parameter is misleadingly called
+    <term>degrees of freedom</term>. <xref
+    ref="figure-eight-chi-squared"/> shows the graphs of the
+    <m>\Chi^2</m>-distribution where the degrees of freedom parameter
+    ranges from <m>1</m> to <m>8</m>. All of these distribution start
+    at a high value at zero and then decay away in the positive
+    direction. They don't exist at all below zero. 
+  </p>
+  <figure xml:id="figure-">
+    <caption>Caption</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}[domain=.001:15,samples=200,thick]
+          \clip (-0.2,-0.2) rectangle (20,7);
+          \foreach[count=\k,evaluate={\z=\k>2?"(0,0)--":"";\c=10*\k}] 
+            \g in {sqrt(pi),1,sqrt(pi)/2,1,3/4*sqrt(pi),2,15/8*sqrt(pi),6}
+              \draw[color=blue!\c!red,yscale=15] \z 
+                plot (\x,{exp(ln(\x/2)*\k/2-ln(\x)-\x/2-ln(\g))});
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    Like with normal distributions, understanding these mathematical
+    functions allows us to do the hypothesis test directly, without
+    having to do the randomizations ourselves. The central limit
+    theorem said that the sampling distribution for a difference of
+    proprotions (or a single proportion) is normal under
+    certain reasonable conditions. The same is true here: there are
+    conditions for the data to fit these distributions. I'm not going
+    to get into the details of those conditions<mdash/>a well designed
+    study with good data should satisfy, but you should be aware that
+    these conditions do exist. 
+  </p>
+  <p>
+    To use the theory, I need to know how to determine the degrees of
+    freedom parameter. We are dealing with a categorical variables
+    with multiple categories. This is actually pretty straightforant:
+    the number of categories is this degree of freedom. Specifically,
+    take the two cateogrical variables we have here. Take the number
+    of categories in the first varible, subtract one, then multiply by
+    the number of categories in the second variable, again subtrating
+    one.
+  </p>
+  <p>
+    In our cases, there were three categories of questions, so the
+    first calculation here is <m>3-1</m>, and two categories of
+    outcome, so <m>2-1</m> in the second calculation. The degree of
+    freedom we need for this particular <m>\Chi^2</m> process is
+    <m>2</m>. 
   </p>
 </section>
