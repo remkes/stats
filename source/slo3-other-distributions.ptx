@@ -7,19 +7,19 @@
       single proportions and differences in proportions. But other
       statistics require other distributions. In this stretch
       outcomes, I want to go over the mathematics of two other
-      distributions: <m>\Chi^2</m> distribution and Student's
+      distributions: <m>X^2</m> distribution and Student's
       <m>t</m>-distribution.
     </p>
   </introduction>
-  <subsection xml:id="chi-squared-distribution"/>
-    <title><m>Chi^2<m> Distribution</title>
+  <subsection xml:id="chi-squared-distribution">
+    <title><m>X^2</m> Distribution</title>
     <p>
       Probability distributions are mathematical functions. To define
-      the <m>\Chi^2</m> distribution, we actually need to define a
-      couple other function first. The first of these is pretty
-      familiar to students of first-year calculation, but may be quite
-      new to students without that experience. 
-    <p>
+      the <m>X^2</m> distribution, I first need two other definitions.
+      The first of these is pretty familiar to students of first-year
+      calculation, but may be quite new to students without that
+      experience. 
+    </p>
     <definition>
       <statement>
         <p>
@@ -28,7 +28,7 @@
           It has this approximate value.
           <md>
             e = 2.71828\ldots
-          <md>
+          </md>
           This is used as a base for the most common exponential
           function in mathematics.
           <md>
@@ -49,7 +49,7 @@
           The <term>Gamma function</term> is a function defined an
           integral.
           <md>
-            \Gamma(x) = \int_0^\infty t^{x-1} e^{-x} dx
+            \Gamma(x) = \int_0^\infty t^{x-1} e^{-x} dt
           </md>
           <m>\Gamma</m> is the upper-case greek letter gamma, hence
           the name. 
@@ -57,11 +57,12 @@
       </statement>
     </definition>
     <p>
-      Function defined by integrals are very strange beast, and I do
+      Functions defined by integrals are very strange beasts, and I do
       not expect students to be comfortable with them. I won't ask you
-      to work with this definition at all. However, the
-      <m>\Gamma</m>-function does have one very nice property. I need
-      one more definition to state the property. 
+      to work with this definition, but I do want you to be familiar
+      with the setup. Aside from its strange definition, 
+      <m>\Gamma</m>-function has one very nice property. I need
+      one more definition before I state the property. 
     </p>
     <definition>
       <statement>
@@ -69,7 +70,7 @@
           Let <m>n</m> be a non-negative whole number. Then the
           <term>factorial</term> of <m>n</m> is the product of all
           whole numbers less than or equal to <m>n</m>. The notation
-          for the factorial if <m>n!</m>. Here is a list
+          for the factorial is <m>n!</m>. Here is a list
           of the first few factorials. 
           <md>
             <mrow>  
@@ -108,18 +109,29 @@
         \Gamma(n) = (n-1)!
       </md>
       The <m>\Gamma</m>-function extends the factorial to numbers
-      other than whole integers. 
+      other than whole integers. It figures out what values to fit
+      between the factorials to make it all make sense. In particular,
+      let me show you one other value of the <m>\Gamma</m> function. 
+      <md>
+        \Gamma \left( \frac{1}{2} \right) = \sqrt{\pi}
+      </md>
+      If this is reminiscent of the discussion of the normal
+      distribution in the previous stretch outcome, then well done for
+      remembering. There are, again, strange square roots of
+      <m>\pi</m> running around here. I won't say anything more about
+      this, but do know that there is some lovely deep mathematics in
+      the background. 
     </p>
     <p>
       Now that I have these two other functions, I can define the
-      <m>\Chi^2</m>-distribution. Remember that there is a parameter
+      <m>X^2</m>-distribution. Remember that there is a parameter
       called degrees of freedom. 
     </p>
     <definition>
       <statement>
         <p>
-          The <m>\Chi^2</m>-distribution with <m>s</m> degrees of
-          freedom (where <m>s</m> is a positie whole numbers is
+          The <m>X^2</m>-distribution with <m>s</m> degrees of
+          freedom (where <m>s</m> is a positive whole number is
           defined by this expression.
           <md>
             f(x) = \frac{1}{2^{\frac{s}{2}} \Gamma \left( \frac{s}{2}
@@ -132,34 +144,37 @@
       This is a pretty complicated function definition. It's
       construction is the product of a long history of probability
       theory, trying to understand variation in multiple categories.
-      We don't have the mathematical sophistication, nor time, to go
-      into that history. My goal here is simply that you understand
+      We don't have the mathematical sophistication, nor the time, to
+      go into that history. My goal here is simply that you understand
       the pieces that go into this function.  
     </p>
     <p>
-      In particular, the <m>p</m>-value of a <m>\Chi^2</m> statistic
+      In particular, the <m>p</m>-value of a <m>X^2</m> statistic
       is, like all other <m>p</m>-value, the area under the curve of
-      this function. If <m>x</m> is a <m>\Chi^2</m> sample statistic,
+      this function. If <m>x</m> is a <m>X^2</m> sample statistic,
       then the area under the curve is calculated by this integral.
       <md>
-        p-\text{value} = \int_x^\infty \frac{1}{2^{\frac{s}{2}} \Gamma
+        p\text{-value} = \int_x^\infty \frac{1}{2^{\frac{s}{2}} \Gamma
         \left( \frac{s}{2} \right)} x^{\frac{s}{2} - 1}
         e^{\frac{x}{2}} dx
       </md>
       Again, I do not expect the class to work with or calculate these
-      integrals, just to understnad the idea that an integral is
+      integrals, just to understand the idea that an integral is
       measuring the area under a curve and, in probability theory,
-      area is probability. 
+      area is probability. And I want you to be aware that this
+      integral is the calculation that R is doing for us when we ask
+      it to calculate a <m>p</m>-value for a <m>X^2</m> statistic. 
     </p>
   </subsection>
-  <subsection xml:id="subsection-t-distribution"/>>
+  <subsection xml:id="subsection-t-distribution">
     <title>Student's <m>t</m>-distribution</title>
     <p>
-      After the <m>\Chi^2</m> distribution, there is one more
-      distribution that is useful for the hypothesis test that we are
+      After the <m>X^2</m> distribution, there is one more
+      distribution that is useful for the hypothesis tests that we are
       doing this course. This one also relies on the
-      <m>\Gamma</m>-function for its definition. It also has one
-      parameter, which is called degrees of freedom. 
+      <m>\Gamma</m> function for its definition. It has two
+      parameters, one of which is again called <sq>degrees of
+      freedom</sq>. 
     </p>
     <definition>
       <statement>
@@ -167,19 +182,19 @@
           The <term>Student's <m>t</m>-distribution</term> is a
           probability distribution defined by the following
           expression. It relies on two parameters. The first is a
-          mean, <m>\mu</m>, which can be any real numbers. The second
+          mean, <m>\mu</m>, which can be any real number. The second
           is a positive whole number <m>s</m>, called the degrees of
           freedom.
           <md>
             f(t) = \frac{\Gamma \left( \frac{s+1}{2} \right)}{\sqrt{\pi
             s} \Gamma \left( \frac{s}{2} \right)} \left( \frac{s +
             (t-\mu)^2}{s} \right)^{-\frac{s+1}{2}} 
-          <md>
+          </md>
         </p>
       </statement>
     </definition>
     <p>
-      Like the <m>\Chi^2</m> distribution, this is a very complicated
+      Like the <m>X^2</m> distribution, this is a very complicated
       mathematical function definition and I do not expect the class
       to be able to work with or calculate this function. Again, I
       want you to understand the pieces that go into the function, and
@@ -189,19 +204,19 @@
     </p>
     <p>
       First, let me talk about the strange name. In what what is this
-      a <sq>student's</sq> distribution? This distribution was
+      a <sq>Student's</sq> distribution? This distribution was
       developed by a statistician named William Gosset. He published
       articles in the early 20th century on statistics, but decided,
       for whatever reason, to publish under the pseudonym
       <sq>Student</sq>. Therefore, this distribution that he developed
-      was simply know as <sq>Student's</sq> distribution. This is
-      strange and confusion, but we are now stuck with the name and it
+      was simply know as <sq>Student's distribution</sq>. This is
+      strange and confusing, but we are now stuck with the name and it
       is used widely. 
     </p>
     <p>
-      Next, unlike the <m>\Chi^2</m> distribution, Student's
+      Next, unlike the <m>X^2</m> distribution, Student's
       distribution has a mean. In fact, it is remarkably similar to
-      the normal distribution. Look at graphs, it is actually pretty
+      the normal distribution. Looking at graphs, it is actually pretty
       difficult, at a glance, to tell the difference between Student's
       distribution and the normal distribution. They both have very
       similar bell-shapes, with a peak at the mean and symmetrical
@@ -212,7 +227,9 @@
       distribution's second parameter is the standard deviation. The
       Student's distirbution's second parameter is this <sq>degrees of
       freedom</sq>. Standard deviation for the Student's distribution
-      can be calculated, but it does not directly act at the paramger. 
+      can be calculated, but it does not directly act as the
+      parameter. There won't be any standard error calcluations for
+      this distribution. 
     </p>
     <p>
       Second, there are subtle difference in shape. The most notable
@@ -224,14 +241,48 @@
     </p>
     <p>
       In the mathematical theory of probability, it was discovered (By
-      Gosset and other at the time) that the normal distribution was
+      Gosset and others at the time) that the normal distribution was
       not quite the correct model for the probability of statistics
       involving means. Student's distribution was developed as an
       alternate that corrects the small faults of the normal
-      distribution. We will use it for difference in means, single
-      means, and ANOVA calculations. It turns out to be a very useful
-      and very commonly used distribution in both probability and
-      statistics. 
+      distribution. We will use it for difference in means and single
+      means. 
+    </p>
+  </subsection>
+  <subsection xml:id="subsection-f-distribution">
+    <title><m>F</m>-distributions</title>
+    <p> 
+      Finally, I want to just briefly mention one more distribution.
+      In the ANOVA test that we will do for multiple means, the sample
+      statistics is tested again something called an
+      <m>F</m>-distribution. I'm not even going to write this one
+      down. It has a similar form to <m>X^2</m>, but is substantially
+      more complicated again. Feel free to look up a description
+      somewhere if you feel like it. 
+    </p>
+    <p>
+      The <m>F</m>-distribution behaves like the <m>X^2</m>
+      distribution: it start at zero, usually starts as a high value,
+      and decays away. There are only right-tail one-sided tests.
+      Where <m>X^2</m> has one parameter, the <m>F</m>-distribution
+      has two parameters. Both are still called <sq>degrees of
+      freedom</sq>. 
+    </p>
+    <p>
+      We are just going to ask R to calculate <m>p</m>-value for the
+      <m>F</m>-distribution, knowing that R has to do a bunch of
+      complicated mathematics and integrals in the background for us. 
+    </p>
+    <p>
+      Hopefully, though, these stretch outcomes give you a glimpse
+      into the mathematics behind all these test. This is a rich and
+      complicated mathematics, full of interesting functions. We've
+      seen four distribution types: normal, <m>X^2</m>, Student's and
+      <m>F</m>-distribution. There are yet others built to model other
+      types of probability. One direction for future study in
+      statistics is to delve into these distributions and their
+      behaviours, in particular, the argument and proof of why they
+      act so perfectly to model all this probability. 
     </p>
   </subsection>
 </section>

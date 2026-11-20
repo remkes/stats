@@ -6,7 +6,7 @@
     hypothesis testing and confidence intervals. I also have developed
     some mathematical theory from which I can calculate confidence
     intervals, <m>z</m>-scores and <m>p</m>-values. In this section, I
-    want to step back a bit an talk about this whole process. I'll
+    want to step back a bit and talk about this whole process. I'll
     introduce some important terminology and also talk about how
     researchers make the important choice of a threshold of
     significance. 
@@ -35,9 +35,9 @@
   <definition>
     <statement>
       <p>
-        The context of these error is hypothesis testing and
+        The context of this definition is hypothesis testing and
         significance. In this context, there are two major kind of
-        error. 
+        errors. 
         <ul>
           <li>
             A <term>Type 1 Error</term> happens when we conclude that
@@ -53,7 +53,7 @@
             hypotehsis, but in truth the null hypothesis is actually
             false in the population. This is also called a <term>False
             Negative</term>, since we have a negative result (no
-            significane) but it is not a true result.
+            significacne) but it is not a true result.
           </li>
         </ul>
       </p>
@@ -63,18 +63,20 @@
     A common way to explain these errors is in terms of criminal
     trials. The setup is similar. There is a null hypothesis, which
     is the default position: the defendant is inoccent. Some strong
-    evidence is needed to overturn this and convict. If the defendant
-    is actually innocent and found innocent, great. If the defendant
-    is actually guilty and found guilty, great. If the defendant is
-    wrongfully convicted, innocent but found guilty, that is a type 1
-    error, a false positive. If the defendant is guilty but found
-    innocent, that is a type 2 error, a false negative. 
+    evidence is needed to overturn this hypothesis and convict.
+    (Beyond a reasonable doubt is the criminal trial's verion of a
+    threshold of significance.) If the defendant is actually innocent
+    and found innocent, great. If the defendant is actually guilty and
+    found guilty, great. If the defendant is wrongfully convicted,
+    innocent but found guilty, that is a type 1 error, a false
+    positive. If the defendant is guilty but found innocent, that is a
+    type 2 error, a false negative. 
   </p>
   <p>
-    Why go through the bother of classifying these errors? Well,
-    different errors have different risks associated with them. When
-    looking at a research study, you can ask yourself where the major
-    risks are.
+    Why go through the bother of classifying these errors? It's all
+    about managing risk. Different errors have different risks
+    associated with them. When looking at a research study, you can
+    ask yourself where the major risks are.
     <ul>
       <li>
         Sometimes, the false positive is a major risk. If you are
@@ -86,7 +88,7 @@
       </li>
       <li>
         Sometimes, the false negative is a major risk. If you are
-        testing a food addative that might cause cancer, a false
+        testing a food additive that might cause cancer, a false
         negative means that you think there is no cancer risk where
         there is, in fact, a risk. You end up approving the additive
         and causing a bunch of cancer cases<mdash/>obviously a very
@@ -98,33 +100,33 @@
     favour a certain kind of errors? In hypothesis testing, we do have
     one major choice to make: the threshold of significance. (Recall
     we used the symbol <m>\alpha</m> for theshold of significance,
-    which we will do in this section as well. 
+    which we will do in this section as well.)
   </p>
   <p>
     <m>\alpha = 0.05</m> is a standard: a middle of the road threshold
-    of significant which is frequently used.  What if we want to
-    specifically avoid type 1 errors? Well, type 1 is a false
+    of significance which is frequently used.  What if we want to
+    specifically avoid type 1 errors? Well, a type 1 error is a false
     positive: we find something significant but, in truth, there isn't
     actually a significant result to find. To avoid this, we have to
     make significance harder to justify. So we lower <m>\alpha</m>. Lower
     <m>\alpha</m> means that the <m>p</m> value has to be even lower,
     which is harder to accomplish. More samples will be rejected, and
-    we will have less change of calling something significant when it
+    we will have less chance of calling something significant when it
     actually isn't.
   </p>
   <p>
-    On the flip side, what if we want to avoid type 2 errors? Type 2
-    is a false negative: we find no significance, but there actually
-    is something significant to find. To avoid this, we have to make
-    significance easier to justify. So we raise <m>\alpha</m>. Higher
-    <m>\alpha</m> means that more <m>p</m>-values are treated as
-    significant, we accept more samples, and we are less like to miss
-    observing a real effect. 
+    On the flip side, what if we want to avoid type 2 errors? A type 2
+    error is a false negative: we find no significance, but there
+    actually is something significant to find. To avoid this, we have
+    to make significance easier to justify. So we raise <m>\alpha</m>.
+    Higher <m>\alpha</m> means that more <m>p</m>-values are treated
+    as significant, we accept more samples, and we are less like to
+    miss observing a real effect. 
   </p>
   <p>
     All of this setting of threshold of significance happens without
     actually knowing the truth of the population, of course. We never
-    know the truth of the population, we only even known our sample
+    know the truth of the population, we only ever know our sample
     and speculate about its meaning. This isn't about knowing truth;
     it's about managing risk. What is more dangeous: a false negative
     or a false positive? This is what every researcher has to consider
@@ -148,7 +150,7 @@
         to more false positives, more type 1 errors. 
       </li>
       <li>
-        A two=-sided test has a higher <m>p</m>-value: double that of
+        A two-sided test has a higher <m>p</m>-value: double that of
         a one-sided test. A larger <m>p</m>-value is bad for
         concluding significance. Therefore, a two-sided test may lead
         to more false negative, more type 2 errors. 
@@ -159,7 +161,7 @@
     It is generally considered good practice to default to two-sided
     tests. It is always possible that the assumption about the
     direction of an effect is wrong: we try to see if a medication is
-    effect, but it turns out to be counter-effective. We assume
+    effective, but it turns out to be counter-effective. We assume
     certain trees grow better in wetter soils, but it might turn out
     that drier soils actually give better outcomes. 
   </p>
@@ -194,7 +196,7 @@
         sample size is a large denominator.
       </li>
       <li>
-        Dividing by large number produces small numbers. Therefore, a
+        Dividing by large numbers produces small numbers. Therefore, a
         large sample size means a small standard error. 
       </li>
       <li>
@@ -214,7 +216,7 @@
     <m>p</m>-value and smaller confidence intervals. All of this, in
     general, helps to reject a null hypothesis. Therefore, larger
     sample sizes are particularly helpful for avoiding type 2 errors:
-    false negative. If you are worried about type 2 errors, then large
+    false negatives. If you are worried about type 2 errors, then large
     sample sizes are particularly helpful. 
   </p>
   <p>
@@ -225,9 +227,9 @@
     never shows up anywhere in statistical calculation. If I have a
     sample size of <m>1000</m> cases, that's all I need to know. The
     population might be ten thousand total individuals, in which case
-    my cases represent <m>10\%</m> of the population. Or the
-    population might be ten miillion total individual, in which case
-    my cases represent <m>0.01\%</m> of the population. Intuitively,
+    my sample represents <m>10\%</m> of the population. Or the
+    population might be ten miillion total individuals, in which case
+    my sample represents <m>0.01\%</m> of the population. Intuitively,
     it feels that measuing <m>10\%</m> of the population should be
     more valuable than measuring <m>0.01\%</m> of the population. But
     the mathematics doesn't care at all. The population size doesn't

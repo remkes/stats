@@ -19,7 +19,8 @@
     and a sample statistic and we want to know about the population
     parameter. But now, instead of using hypotheses, we take a
     different approach. Instead, I want to ask, mathematically: how
-    confidence I am in the sample statistic? How likely is it to be
+    confident I am in the sample statistic and its relation to the
+    population parameter? How likely is it to be
     close to the population paramater? Could I make a range around the
     sample statistic in which the population parameter might fall? If
     I can, such a range is called a confidence interval.
@@ -32,19 +33,19 @@
     for the Liberal party and <m>29\%</m> for the Conservative party,
     with other values for the remaining parties. When they reported
     this poll, it came with this caveat: the poll is expected to be
-    correct within plus of minus 3.1 percent, 19 times out of 20. If
+    correct within and error of  3.1 percent, 19 times out of 20. If
     you have ever interacted with opinion polls before, you've likely
     seen similar caveats. 
   </p>
   <p>
     This caveat is a confidence interval. It says that these pollsters
     are confidence that their numbers will be within <m>3.1\%</m> of
-    the actually population most of the time, with <m>19</m> times out
-    of <m>20</m> being their measure of most of the time. <m>19</m>
-    out of <m>20</m> is <m>95\%</m>, so they are <m>95\%</m>
-    confident.  This is a <m>95%</m> confidence interval. In the
-    actual population of all Canadian, the Liberal support should be
-    between <m>41.9\%</m> and <m>48.1\%</m>. 
+    the actually population's policital voting intentions most of the
+    time, with <m>19</m> times out of <m>20</m> being their measure of
+    most of the time. <m>19</m> out of <m>20</m> is <m>95\%</m>, so
+    they are <m>95\%</m> confident.  This is a <m>95\%</m> confidence
+    interval. In the actual population of all Canadians, the Liberal
+    support should be between <m>41.9\%</m> and <m>48.1\%</m>. 
   </p>
   <p>
     This is all probability. Saying <m>19</m> times out of <m>20</m>
@@ -53,9 +54,9 @@
     the time. 
   </p>
   <p>
-    This is what I want to formalize in this section. How did they
-    calculate this <m>\pm 3.1\%</m>? Why are they <m>95\%</m> confident
-    in this number?
+    The example for political polling demonstrates what I want to
+    formalize in this section. How did they calculate this <m>\pm
+    3.1\%</m>? Why are they <m>95\%</m> confident in this number?
   </p>
   <p>
     I'll work through an example and give the general structure along
@@ -103,16 +104,16 @@
     </tabular>
   </table>
   <p>
-    <xref ref="table-dvd-purchase"/> is the data for this study. Not
-    that there are 150 subject, 75 in each group, since we will need
-    that data for later. At a glance, more people in the treatment
+    <xref ref="table-dvd-purchase"/> is the data for this study. Note
+    that there are 150 subjecst, 75 in each group, since we will need
+    those numbers later. At a glance, more people in the treatment
     group chose not to purchase. So, at least in the sample, the
     different question had an effect. 
   </p>
   <p>
     To find a confidence interval, I start the same way: with the
     sample statistic. The sample statistic is a different
-    inproportion: the number of people in the treatment group who
+    of proportions: the number of people in the treatment group who
     chose not to purchase minute the number of people in the control
     group who chose not to purchse. From the table, I can calculate
     this. 
@@ -124,28 +125,28 @@
   <p>
     A hypothesis test would wonter if this sample statistic was
     significant. Now, instead, we want a confidence interval. What
-    does that mean? It means that around this <m>20</m> percentage points
-    difference, we want to know where the population parameter
-    actually lies.
-    That population parameter is stil a difference in proportions, but
-    it is unknown. We think this reminder of opportunity cost does affect
-    people's decision making, but we don't know by how much. The
-    sample statistic gives us a starting point. We make a range aroung 
-    the sample statistic: a confidence range. It might be pretty
-    close: we might be 95% confident that the population parameter is
-    between 0.190 and 0.210. If might be very precise, between 0.199
-    and 0.201. If might be less precise, between 0.150 and 0.250. It
-    might be quite wide, between 0 and 0.4, including the possibility
-    that there is no diffrence at all.
+    does that mean? It means that around this <m>20</m> percentage
+    points difference, we want to know where the population parameter
+    actually lies.  That population parameter is stil a difference in
+    proportions, but it is unknown. The researcher think this reminder
+    of opportunity cost does affect people's decision making, but they
+    don't know by how much. The sample statistic gives us a starting
+    point. We want to make a range aroung the sample statistic: a
+    confidence range. It might be pretty close: we might be 95%
+    confident that the population parameter is between 0.190 and
+    0.210. If might be very precise, between 0.199 and 0.201. If might
+    be less precise, between 0.150 and 0.250. It might be quite wide,
+    between 0 and 0.4, including the possibility that there is no
+    difference at all.
   </p>
   <p>
     I could run a randomization process here, as we did with
     hypothesis testing. But now that we've built up all this theory of
-    the normal distribution and <m>z</m>-score, it makes sense to use
+    the normal distributions and <m>z</m>-score, it makes sense to use
     that. Therefore, I'm going to make a new sampling distribution. 
     The central limit theorem will tell me that, under certain
-    reasonable condition, the sampling distribution is normal. This
-    makes all the mathematic here work: we can work with a normal
+    reasonable conditions, the sampling distribution is normal. This
+    makes all the mathematic reasonable: we can work with a normal
     distribution and its properties. 
   </p>
   <p>
@@ -164,13 +165,13 @@
     Then I need the standard error, the standard deviation of this
     sampling distribution. Let me first fill in a detail I omited from
     previous videos: how to calculate this for hypothesis testing. If
-    I was doing hypothesis testing for a different in proportion, I
-    calculate the stadard in several step. First I calculate the total
-    success proprotion, also called the <sq>pooled proportion</sq> in
-    some texts. This is the total number of successes divided by the
-    total number of cases. This study is counting <sq>not
-    purchasing</sq> as a success. From the table, here is the
-    calculation.
+    I was doing hypothesis testing for a difference in proportions, I
+    calculate the standard error in several step. First I calculate
+    the total success proprotion, also called the <sq>pooled
+    proportion</sq> in some texts. This is the total number of
+    successes divided by the total number of cases. This study is
+    counting <sq>not purchasing</sq> as a success. From the table,
+    here is the calculation.
     <md>
       P = \frac{19 + 34}{75 + 75} = \frac{53}{150} = 0.3533
     </md>
@@ -189,7 +190,7 @@
   </p>
   <p>
     For confidence intervals, due to some subtleties in the
-    mathematical modelling, there is a different standard error. There
+    mathematical theory, there is a different standard error. There
     is no need to calculate the proportion of total successes.
     Instead, using <m>p_1</m> as the proportion of success in the
     treatment group and <m>p_2</m> as the propostion of successes in
@@ -198,7 +199,7 @@
       SE = \sqrt{ \frac{p_1(1-p_1)}{n_1} + \frac{p_2(1-p_2)}{n_2}}
     </md>
     This is pretty similar to the previouis formula. The only
-    different is that the two cases are kept separate and not pooled
+    difference is that the two cases are kept separate and not pooled
     together.  In this case <m>p_1 = \frac{34}{75} = 0.453</m> and <m>
     p_2 = \frac{19}{75} = 0.253</m>. I can then put all the number in
     and calculate. 
@@ -210,7 +211,7 @@
     error, I know the sampling distribution entirely. 
   </p>
   <p>
-    Now how do I use this? Well, let me things about the normal
+    Now how do I use this? Well, let me think about the normal
     distribution again. My sample is in the middle of the normal
     distribution, and these randomly generated samples sptread out
     from the normal distribution. The big idea is this: the
@@ -316,5 +317,60 @@
       </li>
     </ul>
   </p>
+  <p>
+    Finally, let me also foramlize some of the language in a
+    definition.
+  </p>
+  <definition>
+    <statement>
+      <p>
+        The <term>confidence level</term> for a confidence interval is
+        the percentage value of the desired confidence. Often this is
+        <m>95\%</m>, but many other confidence levels can be
+        considered. 
+      </p>
+      <p>
+        For a given confidence level, I calculated a coefficient that
+        told me how many standard deviations out from the mean I
+        needed for the bounds of the interval. This coefficient is
+        called the <term>critical value</term>.
+      </p>
+    </statement>
+  </definition>
+  <note>
+    <statement>
+      <p>
+        If you really dig into the epistomology of it, there is some
+        difficult subtlety in the interpretation of the confidence
+        interval. I said, earlier in the section, that the poll
+        indicated that the population parameter would be in the
+        confidence interval <m>95\%</m> of the time. If you think
+        about this carefully, that doesn't necessary make sense. The
+        population parameter is an actual number, a fact, so you can
+        argue that applying a probability to it is meaningless. You
+        can't replace the population parameter multiple times and look
+        at the distribution: it's not a probability situation.
+      </p>
+      <p>
+        Speaking very technically, the confidence interval is a
+        measure of other possible samples. In the pure probability
+        theory, the <m>95\%</m> confidence interval only says that it
+        expect <m>95\%</m> of other samples (of the same sample size)
+        to produce statistics that are within the interval. It doesn't
+        formally say anything about the population parameter. 
+      </p>
+      <p>
+        All this subtlety aside, the general interpretation presented
+        in this argument still holds. When a political poll is
+        reports its confidence interval, it really is arguing that it
+        accurately captures the opinions of the electorate with a high
+        confidence. They are really saying that they think the real
+        population numbers are very likely within their interval. Even
+        if its not formally correct to use probability here, saying
+        <m>95\%</m> confident still makes a claim about the population
+        parameter. 
+      </p>
+    </statement>
+  </note>
 </section>
 

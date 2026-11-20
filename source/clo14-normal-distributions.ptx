@@ -27,7 +27,7 @@
         <m>\sigma</m> is the standard deviation, the normal
         distribution is the following function.
         <md>
-          p(x) = \frac{1}{\sigma\sqrt{2\pi}}
+          f(x) = \frac{1}{\sigma\sqrt{2\pi}}
           e^{\frac{-(x-\mu)^2}{2\sigma^2}}
         </md>
       </p>
@@ -57,7 +57,9 @@
     <xref ref="figure-normal-distribution1"/> shows a normal
     distribution: the familiar bell-shaped graph. The distribution in
     the figure has a mean of <m>\mu = 0</m> and a standard deviation
-    of <m>\sigma = 2</m>. 
+    of <m>\sigma = 2</m>. You can see, in the figure, that the bell is
+    centred at <m>x=0</m>. Most of the data is between <m>4</m> and
+    <m>-4</m>: within two standard deviations of the mean. 
   </p>
   <figure xml:id="figure-normal-distribution2">
     <caption>Three normal distributions</caption>
@@ -150,7 +152,7 @@
       </li>
       <li>
         Grade scores on exams tend to be normally distributed over a
-        population. (This tends to be only visibule in very large
+        population. (This tends to be only visible in very large
         sample sizes). 
       </li>
       <li>
@@ -168,18 +170,17 @@
     test-takers to ensure that a normal distribution results. 
   </p>
   <p>
-    Like the IQ situation, data can often be
-    <term>normalized</term>: scaled and ajusted to make sure its fits
-    a normal distribution. This is often done in testing, particularly
-    for very large tests like national standardized tests and
-    provincial graudation exams. Such grading of tests is called
-    <term>grading on a curve</term>, the <sq>curve</sq> being the bell
-    curve. Historically, this was quite common in many contexts,
-    including university classes. Over recent decades, this has become
-    a lot less common, since there are good reasons to expect classes
-    not to be normally distributed. I'm sure you can still find
-    university classes out there somewhere which are graded on a
-    curve, but you might have to look a while. 
+    Like the IQ situation, data can be forced into normality: scaled
+    and ajusted to make sure its fits a normal distribution. This is
+    often done in testing, particularly for very large tests like
+    national standardized tests and provincial graudation exams. Such
+    grading of tests is called <term>grading on a curve</term>, the
+    <sq>curve</sq> being the bell curve. Historically, this was quite
+    common in many contexts, including university classes. Over recent
+    decades, this has become a lot less common, since there are good
+    reasons to expect classes not to be normally distributed. I'm sure
+    you can still find university classes out there somewhere which
+    are graded on a curve, but you might have to look a while. 
   </p>
   <p>
     In general, the assumption of normality is a dangerous one. The
@@ -192,10 +193,10 @@
   </p>
   <p>
     All this discussion so far is about the use of the normal
-    distribution as a model relates to matching a normal distribution
+    distribution as a model: matching a normal distribution
     to a set of real word data. This is certainly useful in general,
     but it's not actually the purpose of introducting the normal
-    distribution at this point in the course.  For use, the normal
+    distribution at this point in the course.  For us, the normal
     distribution is useful because of how it relates to the sampling
     distribution defined in the previous section. There is a major
     result here, one of the most important pieces of mathematical
@@ -205,13 +206,26 @@
     <statement>
       <p>
         The <term>Central Limit Theorem</term> says the following:
-        under some technical continuous, the sampling distribution in
+        under some technical conditions, the sampling distribution in
         hypothesis testing will become closer and closer to a normal
         distribution as the number of randomly generated samples gets
         larger. 
       </p>
     </statement>
   </theorem>
+  <note>
+    <statement>
+      <p>
+        As with my definition of the sampling distribution, this is
+        not the most general version of the theorem. The Central Limit
+        Theorem applies to sampling distributions outside of the
+        context of hypothesis testing or calculating confidence
+        intervals. I'm leaving aside the more general version to just
+        state a version of the theorem that covers what we need in the
+        course. 
+      </p>
+    </statement>
+  </note>
   <p>
     This is a lovely result for us. We need to understand the sampling
     distribution to do hypothesis testing. The central limit theorem
@@ -225,20 +239,21 @@
     data or the population our sample is trying to understand. Our
     original data might even be about a categorical variable, which
     doesn't have a distribution at all. Even if it is numeric, our
-    original sample data, or the numeric variable in the whole
-    population, might have absolutely nothing to do with a normal
-    distribution. The central limit theorem (as we are using it) is
-    entirely about the <em>sampling distribution</em>. This is a very
-    key distinction. The sample statistics we get from randomly
-    generate samples, under the assumption of the null hypothesis, are
-    a numeric data set with one numeric variable. The distribution of
+    original sample data might have absolutely nothing to do with a normal
+    distribution. Likewise, the distribution of the data of the whole
+    population might look nothing at all like a normal distribution.
+    The central limit theorem (as we are using it) is entirely about
+    the <em>sampling distribution</em>. This is a very key
+    distinction. The sample statistics we get from randomly generated
+    samples, under the assumption of the null hypothesis, are a
+    numeric data set with one numeric variable. The distribution of
     this data will look more and more like a normal distribution the
     more random samples we generate. 
   </p>
   <p>
     The statement mentions conditions. What are these? Mathematically,
     this can get quite technical, but being a little bit informal,
-    these are the main idea of the condintuous.
+    these are the main idea of the conditions.
     <ul>
       <li>
         The randomization process that produces the samples need to be
@@ -259,7 +274,7 @@
     In the context of our hypothesis testing, we can basically always
     satisfy the first two conditions. If we are making random samples,
     we do want a real random process and we want each sample to be
-    drawn independently. For the third condition is a bit trickier. In
+    drawn independently. The third condition is a bit trickier. In
     our randomization for the sampling distribution, the size the
     random samples is the same as the size of our original data set.
     If our original sample was small, then we already have challenges.
@@ -269,9 +284,9 @@
   </p>
   <p>
     Now let's press on with actually using the central limit
-    theorem.to add to the problems of small sample sizes. 
-    In <xref ref="section-randomness"/>, we build a sampling
-    distribution by doing a simulation and then comparing the
+    theorem to add to the problems of small sample sizes. 
+    In <xref ref="section-randomness"/>, we built a sampling
+    distribution by doing a simulations and then comparing the
     simulation with our sample statistics. Now that we know the
     central limit theorem, we can assume that the sampling
     distribution is normal. But how do we calculate it?
@@ -321,14 +336,14 @@
     stretch outcome, but there are two steps.
     <ul>
       <li>
-        From the sample statistics and the standard error, we can
+        From the sample statistic and the standard error, we can
         calculate something called a <m>z</m>-score. A <m>z</m>-score
         tells where the sample statistic falls in the sampling
         distribution. It does this using the standard error: the
         <m>z</m>-score a multiple of the standard error and identifies
         how far the sample statistic is away from the mean using the
-        standard error as a unit. For example, a <m>z-</m>score of
-        <m>1.7</m> means that the sample statistics is eactly
+        standard error as a unit. For example, a <m>z</m>-score of
+        <m>1.7</m> means that the sample statistic is exactly
         <m>1.7</m> times the standard error away from the mean. A
         <m>z</m>-score can be positive or negative to indicate above
         or below the mean. 

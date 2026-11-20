@@ -4,7 +4,7 @@
   <p> 
     In <xref ref="chapter-hypothesis-setup"/>, I spent many sections
     building up the ideas and definitions of hypothesis testing. In
-    those sections, we primarily focused on a difference of
+    those sections, I primarily focused on a difference of
     proportions. There is good reason for this: a controlled trial is
     always a difference in proportions and a controlled trial is one
     of the most fundamental ways to design a research study. But there
@@ -26,24 +26,24 @@
     call these categories <sq>successful</sq> and
     <sq>unsuccessful</sq>, though what that actually means depends a
     great deal on the particular study. Many studies will have two
-    equally appealing outcomes, but we stil need a generic languag, so
-    we talk about success for this generic language. 
+    equally appealing outcomes, but we stil need a generic language, so
+    we talk about <sq>success</sq>.
   </p>
   <p>
     Here are some examples of research questions that lead to a single
     proportion statistic. 
     <ul>
       <li>
-        How many canadians suppor the green party? There is only one
+        How many canadians support the Green Party? There is only one
         group: Canadians. There are two categories: support or do not
         support. There is one percentage: what percentage support? As
         phrased this way, <sq>success</sq> would be supporting the
-        green party, regardless of whether the researchers individual
-        political opinions actually favour green party policy. 
+        Green Party, regardless of whether the researchers individual
+        political opinions actually favour Green Party policy. 
       </li>
       <li>
         How often do we have snow in Septmeber in Edmonton? There is
-        one categories: years. There are two outcomes: snow or now
+        only one group: years. There are two categories: snow or now
         snow. There is one percentage: how many years have snow
         sometime in September. A success is recording snow in
         September, again regardless of whether or not we think snow in
@@ -52,7 +52,7 @@
       <li>
         How many restaurants in Edmonton have gluten-free options
         clearly available on their menus? There is one group:
-        restaurants in Edmonton. There are two categories: glute free
+        restaurants in Edmonton. There are two categories: gluten-free
         options clearly available, or not clearly available. There is
         one percetange: how many restaurants have this? A success is a
         restaurant which has such options.
@@ -64,17 +64,17 @@
   <p>
     What would a hypothesis be for such a statistic. With difference in
     proportions, there was a comparison of groups. The null hypothesis
-    was no difference between the group. Here, there is no second
-    group for comparsion, so a null hypothesis of zero makes no sense.
-    Instead, the null and alternative hypotheses are always about the
-    sample statistic meeting some threshold. Let me go through the
-    previous three examples again to give an idea of what this might
-    look like. 
+    stated that there were no differences between the group. Here,
+    there is no second group for comparsion, so a null hypothesis of
+    zero makes no sense. Instead, the null and alternative hypotheses
+    are always about the ample statistic meeting some threshold. Let
+    me go through the previous three examples again to give an idea of
+    what this might look like. 
     <ul>
       <li>
-        If previous polls showed <m>4.3\%</m> support for the green
-        party, the researchers might want to know if this support has
-        increased. A null hypothesis would be no increas, so <m>x \leq
+        If previous polls showed <m>4.3\%</m> support for the Green
+        Party, the researchers might want to know if this support has
+        increased. A null hypothesis would be no increase, so <m>x \leq
         0.043</m>. The alternative hypotheses to match would be that
         support has increased: <m>x \gt 0.045</m>.
       </li>
@@ -82,7 +82,7 @@
         A climate change scientist might wonder if it snows less often
         in September than before. If <m>27\%</m> of Septembers over a
         particular historical span had seen snow, then the null
-        hypothesis would that the years in the dataset are just a
+        hypothesis would that the years in the dataset are just as
         likely to have snow: <m>x \geq 0.027</m>. The alternative
         hypothesis to match would be that the rate of snow has
         actually decreased in recent years: <m>x \lt 0.027</m>. 
@@ -92,14 +92,14 @@
         options present in at least <m>50\%</m> of restaurants and the
         researchers are wondering if the city has hit that goal. The
         null hypothesis would be that they have not hit that goal: <m>
-        x \leq 0.05</m>, and the alternative hypothesis would be that
-        they have exceeded it: <m>x \gt 0.05</m>. 
+        x \leq 0.50</m>, and the alternative hypothesis would be that
+        they have exceeded it: <m>x \gt 0.50</m>. 
       </li>
     </ul> 
     In each case, there is some externally determined threshold that
     the researchers care about: a historical level, a target or goal,
     a safety threshold, some kind of set proportion that is important
-    for some reasons. 
+    for some reason. 
   </p>
   <p>
     Let me move on to a specific example which I will use to develop
@@ -107,7 +107,7 @@
     asked <m>826</m> people is they supported better regulation on
     payday loan lenders. <m>578</m> responded yes, which is
     <m>70\%</m>. Our sample statistics is <m>70\%</m> or <m>0.70</m>.
-    As discussed before, the researchquestion for a single proportion
+    As discussed before, the research question for a single proportion
     is always a threshold question. Here, say we want to know if the
     population parameter (that is, the percentage of all possible
     payday loan borrowers who would answer yes) is at least 65%.
@@ -123,25 +123,26 @@
     <m>65\%</m>. 
   </p>
   <p>
-    So we have our hypothesis question and our sample statistics. The
+    So we have our hypothesis question and our sample statistic. The
     quesiton is the same as before: how unlikely is our sample
     statistics to be a random outcome of the null hypothesis? If
     likely, then it is not significant and we do not have evidence for
-    the alternative hypothesis. If unlikely, then we is significant,
+    the alternative hypothesis. If unlikely, then it is significant,
     we reject the null hypothesis and accept the alternative. 
   </p>
   <p>
     The setup for this is the same as before: we could do
-    randomizations and study probability to figure this out. Instead
+    randomizations and study probability. Instead
     of doing the randomizations, we rely on the theory of probability
     to describe the sampling distribution. As before, under reasonable
     conditions, the central limit theorem applies and the sampling
     distribution will be normal. The mean of the sampling distribution
-    will be given by the null hypothesis. Before, that gave a mean of
-    zero, but our null hypothesis is now about meeting a threshold. In
-    this example, the sampling distribution has a mean of <m>0.65</m>.
-    Our sample statistics is <m>0.7</m>. We want to know how far out
-    this is in the sampling distribution: now unlikely this is. 
+    will be given by the null hypothesis. In previous sections, the
+    null hypothesis produced a mean of zero, but our null hypothesis
+    is now about meeting a threshold. In this example, the sampling
+    distribution has a mean of <m>0.65</m>.  Our sample statistics is
+    <m>0.7</m>. We want to know how far out this is in the sampling
+    distribution: now unlikely this is. 
   </p>
   <p>
     So we need, again, to understand the sampling distribution. We
@@ -193,23 +194,23 @@
         a threshold. 
       </li>
       <li>
-        Under normal <m>\alpha = 0.05</m>, or even under a stricted
+        Under normal <m>\alpha = 0.05</m>, or even under a stricter
         <m>\alpha = 0.01</m>, I reject the null hypothesis and
         conclude that my sample statistic is statistically
         significant. 
       </li>
     </ul>
     At the end, by evidence of this study, the population parameter is
-    likely above <m>65\%</m>
+    likely above <m>65\%</m>.
   </p>
   <p>
     Note again that the equation for standard error has the sample
     size is in the denominator. That means that larger sample sizes
     mean smaller standard error, which mean larger <m>z</m>-scores,
     smaller <m>p</m>-values, and a higher rate of significance. Even
-    though the different in proportions between the sample and the
+    though the difference in proportions between the sample and the
     null hypothesis here was pretty small, the large number of cases,
-    <m>826</m>, means that that significant was easy to conclude. 
+    <m>826</m>, means that that significance was easy to conclude. 
   </p>
   <p>
     That's hypothesis testing. I can do the same thing for confidence
@@ -226,9 +227,12 @@
       </li>
       <li>
         Unlike different of proportion, the standard error calculation
-        for a single prorportion is the same for confidence intervals
-        as it was for hypothesis testing. I calculated it before:
-        <m>0.017</m>. 
+        for a single prorportion uses the same formula for confidence
+        intervals as it was for hypothesis testing. However, it uses
+        the sample statistic as the proportion, instead of the
+        proportion dictated by the null hypothesis. Putting in <m>p =
+        0.70</m> and <m>n - 826</m> into the formula gives a standard
+        error of <m>0.016</m>. 
       </li>
       <li>
         To get a <m>95\%</m> confidence interval, I use the
@@ -236,14 +240,14 @@
         standard error. I subtract that from the mean to get the lower
         bound and add that to the mean to get the upper bound. The
         result of these calculations is the interval
-        <m>[0.669,0.731]</m>. I can be <m>95%</m> confidence that the
+        <m>[0.669,0.731]</m>. I can be <m>95\%</m> confident that the
         population parameter is between <m>66.9\%</m> and
         <m>73.1\%</m>. 
       </li>
       <li>
-        As before, if I wanted different percentages of confidence, I
-        would replace the coefficient <m>1.96</m> with another
-        coefficient and repeat the same calculation.
+        As before, if I wanted different confidence level, I would
+        replace the critical value <m>1.96</m> with another critical
+        value and repeat the same calculation.
       </li>
     </ul>
   </p>
