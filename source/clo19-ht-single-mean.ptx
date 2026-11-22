@@ -1,7 +1,346 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xml:id="section-ht-single-mean" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section Name</title>
+  <title>A Single Mean</title>
   <p> 
-    Test
+    We've done three kinds of hypothesis test so far, but they have
+    all involved proportions. Now I want to move on to statistics
+    based on means. 
+  </p>
+  <p>
+    So what is this kind of statistics? Let me recap the kinds of
+    statistics we've seen so far in hypothesis testing and confidence
+    intervals. A difference in proportion is exemplified by a
+    controlled trial. An alternative hypothesis would be that vaccines
+    can prevent polio. There are two proportions: the infected
+    proportion of the control group and the infected proportion of the
+    control group. The sample statistics is the difference in
+    proportions. The null hypothesis is that there is no difference in
+    the population, but the alternative hypothesis says there is a
+    difference.
+  </p>
+  <p>
+    Then we moved on to single proportions. Still a categorical
+    variable, but no longer a treatment/control comparison. The
+    alternative hypothesis is usually a threshold: at least
+    <m>30\%</m> of the lodgepole pine trees in BC have been infected
+    by the mountain pine beetle. The null hypothesis is no longer
+    zero, but just the negation of the threshold. 
+  </p>
+  <p>
+    Finally, we did <m>X^2</m> statistics for multiple proportions.
+    This is again no longer a treatment/control comparison, but a
+    comparison of many different categorical categories. We wanted to
+    know if the categories in one variable substantially made a real
+    difference in the other variable, all across the various multiple
+    categories. The null hypotheses says that there is no variance:
+    that the first category doesn't really effect the second. The
+    alternative hypothesis is the opposite: the first category has an
+    effect. Since there are multiple categories, that effect may be
+    complicated, but the effect is present. 
+  </p>
+  <p>
+    These were all statistics involving categorical variables. In the
+    next three sections, we move on to numeric variables. We want to
+    repeat all three of these patterns: single, diffrence and
+    multiple, but now for means instead of proportions. The next three
+    sections cover these three situations. 
+  </p>
+  <p>
+    Though the approach to hypothesis testing is similar, working with
+    numerical data is different in some important ways. The data is a
+    bit more complicated than proportions. It's not just yes or no,
+    success or failure. Instead,
+    numeric variables take a whole range of values.  Therefore, the
+    population itself is a whole distribution, not just a single
+    percentage. We're trying to figure something out about a pretty
+    complicated situation. The population distribution is, like the
+    population parameter, the actual situation in the population. We
+    have no idea what this looks like: it could be some strange kind
+    of distribution, with peaks and valleys, patterns, whatever. There
+    is no guarantee that it is a normal distribution, or any other
+    kind as well. 
+  </p>
+  <p>
+    So how do we investigate it? We'll, we use the tools we have for
+    distributions. For now, I'll stick to two: mean and standard
+    deviations. All distributions (not just normal distributions) have
+    means and standard deviations. We'd like to use the sample to
+    determine something about the population mean and the population
+    standard deviation, with some confidence or by testing some
+    hypothesis. This is what we are trying to do.
+  </p>
+  <p>
+    Do be careful, now. This is a population distribution: it's how
+    that actual unknown entire population looks for a certain
+    variable. We'll be look at a sample and then looking at
+    randomization as before. This will create sampling distributions.
+    It's important to keep the difference in mind: there is a
+    population distribution and a sampling distribution, and they are
+    not at all the same.
+  </p>
+  <p>
+    I will start with a investigating single mean. I have a numeric
+    variable, and that is the only variable: there are no groups to
+    compare. The population has a distribution and I want to
+    investigate the mean of that distribution.  Since
+    there is no natural comparison, like with a single proportion, I
+    need a threshold. 
+  </p>
+  <p>
+    Again, I'll use an example to set this up. We'll talk about the
+    length of adult female blue whales. Say we managed to measure 20
+    such whales in the wild, and we got the data in The following
+    list.
+  </p>
+  <table xml:id="table-whale-data">
+    <title>Length Data for Blue Whales</title>
+    <tabular>
+      <row>
+        <cell> 24.3 </cell>
+        <cell> 20.1 </cell>
+        <cell> 25.4 </cell>
+        <cell> 25.1 </cell>
+        <cell> 19.3 </cell>
+      </row>
+      <row>
+        <cell> 21.9 </cell>
+        <cell> 22.9 </cell>
+        <cell> 26.7 </cell>
+        <cell> 19.3 </cell>
+        <cell> 24.7 </cell>
+      </row>
+      <row>
+        <cell> 25.3 </cell>
+        <cell> 23.8 </cell>
+        <cell> 23.9 </cell>
+        <cell> 24.1 </cell>
+        <cell> 24.9 </cell>
+      </row>
+      <row>
+        <cell> 22.0 </cell>
+        <cell> 22.1 </cell>
+        <cell> 21.9 </cell>
+        <cell> 24.9 </cell>
+        <cell> 25.1  </cell>
+      </row>
+    </tabular>
+  </table>
+  <p> 
+    This is our data set. We want to figure out what we can say about
+    the general female blue whale population based on this data.
+    We're going to need a sample statistic. From these twenty values,
+    I can calculate both the mean and the standard deviation. 
+    The mean is 23.385, which I will write as <m>\bar{x}</m> for the
+    rest of this section. The sample standard deviation is 2.116.
+  </p>
+  <p>
+    That's my sample statistic. What are my hypotheses? I need a
+    threshold. These particular researchers are interest in whether
+    this mean, in the population, exceeds 21 metres. With this
+    threshold, and the fact that the research question is about
+    exceeding the threshold, the null hypothesis would be that the
+    population mean is 21 metres or less. The alternative hypothesis
+    states that the population mean does exceed 21 metres. 
+  </p>
+  <p>
+    From the hypotheses, the process proceeds in the same way as
+    before. I would need a randomization procees assuing the null
+    hypothesis and, from that randomization process, I would calculate
+    a sample distribution. Again, we don't want to do this
+    randomization by hand: we want to rely on mathematical theory to
+    provide the sampling distribution. And again, under reasonable
+    condition, the central limit theorem will apply and the sampling
+    distribution should be normal.
+  </p>
+  <p>
+    I didn't talk that much about conditions for the central limit
+    theorem with proportions. By the design of the randomization
+    process, conditions were always satisfied other than sample size
+    and we already know that very small samples lead to a hose of
+    problems. However, there is a bit more to say with conditions for
+    means. Now the sample is a distribution of numbers, so that
+    analysis of distributions applies. In particular, I can identify
+    outliers. One of the conditions for the central limit theorem
+    applied to numerical variables is that the sample should avoid
+    outliers. Moreover, the smaller the sample, the more outliers
+    become a problem. For a large sample, only very extreme outliers
+    will cause the central limit theorem to fail. For small samples,
+    even modust outliers are a problem. 
+  </p>
+  <p>
+    In my example, the sample is small: only <m>20</m> whales. (This
+    is not surprising for this data, since finding and measuring
+    whales is a difficult thing to do.) The data points <m>19.3</m>
+    and <m>26.7</m> were the bottom and top of the range.  Looking at
+    the list of numbers, these are both close to other values. I can
+    pretty confidently say that these are not outliers, to my data
+    should satisfy the condition of the central limit theorem. 
+  </p>
+  <p>
+    So I should have a normal distribution for the sampling
+    distribution. Well, not quite. This worry about outliers, even
+    modest ones, inspires an adjustment to the mathematical theory.
+    For numeric data, the mathematicians have decided that another
+    type of distribution will better model the probability situation.
+    I've introduced this in <xref ref="subsection-t-distribution"/>:
+    the Student's <m>t</m>-distribution. This is very similar to the
+    normal distribution: it is unimodl and decays to both sides with
+    symmetric tails. The only main difference is the spread: Student's
+    distribution is a bit wider that the normal distribution. This
+    allows it to handle potential outliers more robustly. It's close
+    enough to the normal distribution to use with the central limit
+    theorem, but it hedges a bit and is less likely to fail with
+    difficult data. <xref ref="figure-distribution-comparison"/> shows
+    the comparison: the red curve is the normal distribution and the
+    three other curves are Student's distributions. You can see the
+    greater breadth, the larger tails, in Student's distribution.
+  </p>
+  <figure xml:id="figure-distribution-comparison">
+    <caption>Caption</caption>
+    <image width="80%">
+      <latex-image>
+        \begin{tikzpicture}[
+          declare function={gamma(\z)= 2.506628274631*sqrt(1/\z)+ 0.20888568*(1/\z)^(1.5)+ 0.00870357*(1/\z)^(2.5)- (174.2106599*(1/\z)^(3.5))/25920- (715.6423511*(1/\z)^(4.5))/1244160)*exp((-ln(1/\z)-1)*\z;},
+          declare function={student(\x,\n)= gamma((\n+1)/2.)/(sqrt(\n*pi) *gamma(\n/2.)) *((1+(\x*\x)/\n)^(-(\n+1)/2.));}
+        ]
+        \begin{axis}[
+          axis lines=left,
+          enlargelimits=upper,
+          samples=50
+          ]
+          \addplot [thick, smooth, blue, domain=-6:6] {student(x,1)}; 
+          \addplot [thick, smooth, green, domain=-6:6] {student(x,2)}; 
+          \addplot [thick, smooth, orange, domain=-6:6] {student(x,5)}; 
+          \addplot [thick, smooth, red, domain=-6:6] {student(x,100)}; 
+        \end{axis}
+        \end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+  <p>
+    For proportions, we needed to build the sampling distribution with
+    a mean and a standard deviation. Now we are going to use Student's
+    distribution. I has a mean, but its second paramnter is called
+    <sq>degrees of freedom</sq>, much like the
+    <m>X^2</m>-distribution. The degrees of freedom will determine the
+    shape of the curve around the mean. In the figure, the blue curve
+    has <m>1</m> degree of freedom, the green curve has <m>2</m>
+    degrees of freedom, and the orange curve has <m>5</m> degrees of
+    freedom. As mentioned in the stretch outcome section, as the
+    degrees of freedom parameter grows, Student's distribution become
+    almost identical to a normal distribution with standar deviation
+    <m>1</m>
+  </p>
+  <p>
+    How is this parameter determined? For a single mean, it's a very
+    easy bit of arithmetic. The degrees of freedom is simply one less
+    than the number of cases. Our data has twenty cases, so the degree
+    of freedom parameter is 19. 
+  </p>
+  <p>
+    Once I've built a t-distribution, the setup is still the same. I
+    want to talk about means and standard error, <m>z</m>-scores and
+    <m>p</m>-values. I want to figure out if a sample statistic is
+    within <m>95\%</m> of the data or not. I want to determine the
+    middle <m>95\%</m> of this for a confidence intervals.
+  </p> 
+  <p>
+    So what is the mathematics to do this? As before, the probability
+    theorists have studied Student's -distribution and produced
+    calculation techniques for us. Let me guide you through them.
+    First, for hypothesis testing an <m>p</m>-values. 
+    <ul>
+      <li>
+        I have a sample statistic for the mean: 23.385. 
+      </li>
+      <li>
+        I have the null hypothesis, that the population mean is 21
+        metres or less. 
+      </li>
+      <li>
+        I have the alternative hypothesis that the population mean is
+        more than 21 meters. 
+      </li>
+      <li>
+        I want the standard error. For a single mean, this is a pretty
+        straight forward calculation. The standard error is the
+        standard deviation of the sample divided by the square root of
+        the sample size. 
+        <md>
+          SE = \frac{\sigma}{\sqrt{n}}
+        </md>
+        Our sample has <m>20</m> cases and a standard deviation of
+        <m>2.116</m>
+        <md>
+          SE = \frac{2.116}{\sqrt{20}} = 0.473
+        </md>
+      </li>
+      <li>
+        I can calculate the equivalent of a  <m>z</m>-score again if I
+        wish. Since this is a <m>t</m>-distribution, the equivalent
+        calculation here is called a <m>t</m>-score. Here is the
+        calculation. 
+        <md>
+          z = \frac{\bar{x} - \mu}{SE} = \frac{23.385 -21}{0.473 =
+          5.042
+        </md>
+        My sample is a bit more than <m>5</m> standard deviations
+        above the mean. 
+      </li>
+      <li>
+        Then I calculate the <m>p</m>-value. Historical, again, this
+        was done from the <m>z</m>-score with tables for Student's
+        <m>t</m>-distribution. Now we have R to calculate
+        <m>p</m>-values direct as areas under the sampling
+        distribution. R tells me that the <m>p</m>-value is <m>p =
+        0.000367</m>. 
+      </li>
+      <li>
+        This <m>p</m>-value is lower than basically any reasonable
+        threshold of significance, I conclude that this statistic is
+        significant. It provides evidence that, in the population, the
+        mean length of a female adult blue whale is greater than 21
+        metres. 
+      </li>
+    </ul>
+  </p>
+  <p>
+    When we did hypothesis testing with normal distributions, we had
+    to worry about one and two sided tests. The same is true here. In
+    the example about blue whales, I only did a one-sided test.
+    However, two-sided tests are also possible. The process is the
+    same as before: if I want to make a one-sided test into a
+    two-sided test, I just double the p-value. Visually, I'm, looking
+    at both sides of the distibution, so the likeliness of being
+    somewhere in one of the two tails doubles. The unlikely range is
+    now only 2.5% of each side, not <m>5\%</m> of one tail. 
+  </p>
+  <p>
+    Finally, let me talk about confidence intervals. I have the same
+    starting information: the sample statistics, the degrees of
+    freedom and the standard error. The setup for confidence
+    intervals, as before, is an interval that starts below the sample
+    mean and end above it. The distance out is some number times the
+    standard error. For <m>95\%</m> for a normal distribution, this
+    critical value was
+    <m>1.96</m>, but that was for a normal distribution. The critical
+    values for the <m>t</m>-distribution are different. R tells me
+    that the appropriate critical value here is <m>2.09</m>. (It
+    should make sense that the critical values are larger for
+    Student's distribution since the tails are larger; I have to go
+    out farther to capture the same amount of area. 
+  </p>
+  <p>
+    Therefore, the confidence interval is the mean minus <m>2.09</m>
+    times the standard error to the mean plus <m>2.09</m> times the standard
+    error. In this case, it works out to <m>22.396</m> to
+    <m>24.374</m>.
+  </p>
+  <p>
+    What does this mean? It means based on this sample (and, as
+    always, assuming the study doesn't have any bias or confounding
+    variables) I am <m>95\%</m> confidend that the mean length of
+    adult female blue whales across the entire population is between
+    <m>22.396</m> and <m>24.374</m>. 
   </p>
 </section>
