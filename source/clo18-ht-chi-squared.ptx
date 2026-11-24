@@ -24,10 +24,11 @@
   </p>
   <p>
     Even more, I could consider various level of education: high
-    school graduate, dipolma, degreee, graduate degrees, and then
-    compare these across the same list of cities. I would now get even
-    more proportions: each city will have a proportion for each level
-    of education, and I can compare all these against each other. 
+    school graduate, diploma, undergraduate degree, graduate degrees,
+    and then compare these across the same list of cities. I would now
+    get even more proportions: each city will have a proportion for
+    each level of education, and I can compare all these against each
+    other. 
   </p>
   <p>
     In this context, I want to do hypothesis testing. But what even is
@@ -49,33 +50,77 @@
         <cell> </cell> 
         <cell> Sun </cell> 
         <cell> Partial Shade </cell> 
-        <cell> Shade </cell>
+        <cell> Shade </cell>5
+        <cell> Total </cell>5
       </row>
       <row>
         <cell> Desert </cell> 
         <cell> 16 </cell> 
         <cell> 32 </cell> 
         <cell> 71 </cell>
+        <cell> 119</cell>
       </row>
       <row>
         <cell> Valley </cell> 
         <cell> 42 </cell> 
         <cell> 40 </cell> 
         <cell> 24 </cell>
+        <cell> 106 </cell>
       </row>
       <row>
         <cell> Mountain </cell> 
         <cell> 56 </cell> 
         <cell> 36 </cell> 
         <cell> 15 </cell>
+        <cell> 105 </cell>
       </row>
     </tabular>
   </table>
   <p>
-    There are nine total proportions here. For example, <m>51.9\%</m>
-    of the mountain habitat lizards were found resting in full sun,
-    and <m>37.5\%</m> of valley habitat lizards were found resting in
-    partial shade. I could compare two of these in a difference or
+    There are nine total proportions here. For example, <m>52.3\%</m>
+    of the mountain habitat lizards were found resting in full sun; I
+    get this by dividing the number of sun-resting mountain-habitat
+    lizards by the total number of mountain-habitat lizards:
+    <m>\frac{56}{56+36+15}</m>, Simiarly, <m>37.7\%</m> of valley
+    habitat lizards were found resting in partial shade. I could
+    summarize this by writing this contingency table entirely in
+    proportions (where I am dividing by the habitat totals). 
+  </p>
+  <table xml:id="table-lizard-data-proportions">
+    <title>Lizard Location Data - Habitat Proportions</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> </cell> 
+        <cell> Sun </cell> 
+        <cell> Partial Shade </cell> 
+        <cell> Shade </cell>5
+        <cell> Total </cell>5
+      </row>
+      <row>
+        <cell> Desert </cell> 
+        <cell> 0.134 </cell> 
+        <cell> 0.269 </cell> 
+        <cell> 0.597 </cell>
+        <cell> 1.000 </cell>
+      </row>
+      <row>
+        <cell> Valley </cell> 
+        <cell> 0.396 </cell> 
+        <cell> 0.377 </cell> 
+        <cell> 0.226 </cell>
+        <cell> 1.000 </cell>
+      </row>
+      <row>
+        <cell> Mountain </cell> 
+        <cell> 0.523 </cell> 
+        <cell> 0.336 </cell> 
+        <cell> 0.140 </cell>
+        <cell> 1.000 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    I could compare any two of these proportions in a difference or
     proportions, but I want to know about the difference across all
     nine. I'm asking a general question here: how much does habitat
     affect the choice of sun or shade in where the lizards rest? This
@@ -87,20 +132,20 @@
   <p>
     The lizard data is a good demonstration of the research question,
     but I want something a bit simpler to use as an example to develop
-    the theory. Here is a  study about consumer inquiry and purchasing
-    confidence. If you are purchasing something, particularly outside of
-    a formal store (i.e. someplace like Facebook Marketplace), how can
-    you figure out if the item being sold is in good condition? In
-    particular, does the particular way in which you ask your
-    questions make a difference?
+    the theory. Consider is a  study about consumer inquiry and
+    purchasing confidence. If you are purchasing a device,
+    particularly outside of a formal store (i.e. someplace like
+    Facebook Marketplace), how can you figure out if the item being
+    sold is in good condition? In particular, does the particular way
+    in which you ask your questions make a difference?
   </p>
   <p>
-    A study was setup were 219 participants were asked to sell a used
-    iPod which they knew had frozen twice in the past. The buyers got
-    to keep some of the sale price, so they were motivated to recover
-    decent value selling the iPod. (Forgive me, again, the dated
-    study. I know iPod died as a thing years ago, but this was a study
-    from a good while back.  Work with me here!)
+    A study was conducted where 219 participants were asked to sell a
+    used iPod which they knew had frozen twice in the past. The buyers
+    got to keep some of the sale price, so they were motivated to
+    recover decent value selling the iPod. (Forgive me, again, the
+    dated study. I know iPod died as a thing years ago, but this was a
+    study from a good while back. Work with me here!)
   </p>
   <p>
     Unbeknownst to the sellers, the buyers were also part of the
@@ -129,7 +174,7 @@
     contingency table. 
   </p>
   <table xml:id="table-marketplace-data">
-    <title>Sellers Responses</title>
+    <title>Sellers' Responses</title>
     <tabular>
       <row bottom="medium">>
         <cell> Question </cell>
@@ -158,7 +203,7 @@
       <row>
         <cell> Total </cell>
         <cell> 61 </cell>
-        <cell> 36 </cell>
+        <cell> 158 </cell>
         <cell> 219 </cell>
       </row>
     </tabular>
@@ -191,29 +236,74 @@
     The null hypothesis is that the questions make no difference at
     all. In the whole population, roughly <m>22</m> out of
     <m>73</m> people would disclose and the difference between these
-    groups in this sample is just random variance. Again, I want to use
-    probability theory to ask how likely the sample is under this null
+    groups in this sample is just random variance. To visualize this,
+    I could re-create the table under the assumption of the null
     hypothesis.
+  </p>
+  <table xml:id="table-marketplace-data-null">
+    <title>Sellers' Responses - Null Hypothesis</title>
+    <tabular>
+      <row bottom="medium">>
+        <cell> Question </cell>
+        <cell> Disclose </cell>
+        <cell> Hide </cell>
+        <cell> Total </cell>
+      </row>
+      <row>
+        <cell> Neutral </cell>
+        <cell> 20 </cell>
+        <cell> 53 </cell>
+        <cell> 73 </cell>
+      </row>
+      <row>
+        <cell> Positive </cell>
+        <cell> 20 </cell>
+        <cell> 53 </cell>
+        <cell> 73 </cell>
+      </row>
+      <row>
+        <cell> Negative </cell>
+        <cell> 20 </cell>
+        <cell> 53 </cell>
+        <cell> 73 </cell>
+      </row>
+      <row>
+        <cell> Total </cell>
+        <cell> 60 </cell>
+        <cell> 159 </cell>
+        <cell> 219 </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>
+    The null-hypothesis table shows no variance. Obviously, my sample
+    data differs from this. To do hypothesis testing, I want to use
+    probability theory to ask how likely the sample is under this
+    null hypothesis.
   </p>
   <p>
     To test the likeliness of our sample, I need a sample statistic.
     That's a bit tricky here, with multiple proportions. I want to
     measure how much my sample differs from the null hypothesis. I
     have a baseline of <m>20.33</m> disclosures and <m>52.67</m>
-    non-disclosures. I want to compare this baseline to my sample. I
+    non-disclosures. (I'll use the decimals expansions here to avoid
+    rounding errors.) I want to compare this baseline to my sample. I
     have six situations: three groups and two options for each group
     (disclose or not disclose).  For all of the six, I use the
     following formula to measure the difference between the sample
-    outcome and the baseline I just established. (In this formula,
+    outcome and the baseline I just established. In this formula,
     <m>x</m> is the count from the sample and <m>b</m> is the baseline
-    count from the null hypothesis.)
+    count from the null hypothesis. You can think of <m>x</m> as the
+    entries from the first table, the actual sample, and <m>b</m> as
+    the entries from the second table, the null-hypothesis
+    assumptions. 
     <md>
       \frac{(x - b)^2}{b}  
     </md>
     Why this formula? It is the difference from the baselines, which
     is good since I want to measure that difference. Squaring the
     difference means that all differences are positive, which is again
-    good since I'm not concern here about the direction of the
+    good since I'm not concerned here about the direction of the
     difference. Then dividing by the null hypothesis count scales this
     difference relative to that base.
   </p>
@@ -240,9 +330,9 @@
         \frac{(37 - 52.67)^2}{52.67} = 4.66
       </mrow>
     </md>
-    These are a measure of how much each proportion differs from the
-    null hypothesis baseline proportion. Then I add all these
-    together. 
+    These six numbers are a measure of how much each proportion
+    differs from the null hypothesis baseline proportion. Then I add
+    all these together. 
     <md>
       X^2 = 16.53 + 0.35 + 12.08 + 6.38 + 0.14 + 4.66 = 40.13
     </md>
@@ -250,18 +340,19 @@
     <sq>Chi</sq>. (This is not a roman <sq>X</sq>, even though it
     looks identical.) It is the standard way to measure how
     much a set of proportions (of any size) differs from a baseline
-    proportion. THis setup comes from probability theory and that
+    proportion. This setup comes from probability theory and that
     theory, for various mathematical reasons, has concluded that this
     is the preferred measurement. We can call this sum the
     <term>variance</term> in the sample. 
   </p>
   <p>
-    This is the sample statistic. What do we do with it? How do we use
-    the <m>X^2</m> to answer the hypothesis testing question?
-    As before, we can do a randomization process. In this case, the
+    Now I have the sample statistic: <m>40.13</m>. What I we do with
+    it? How do we I the <m>X^2</m> statistic to answer the hypothesis
+    testing question?
+    As before, I could do a randomization process. In this case, the
     null hypothesis is that all categories are equally likely. To
     emulate that, we can just shuffle the data: take the 61
-    disclosures and the 18 failures to disclose and then just
+    disclosures and the 158 failures to disclose and then just
     re-destribute them among the groups. Then, each of these
     instances would have its own <m>X^2</m> value and I could
     calculate those, one by one. This would give me a distribution,
@@ -404,7 +495,7 @@
     This is assuming the null hypothesis: that there is no difference
     between groups. <m>X^2 = 0</m> would recover this perfect
     balance, but that basically never happens. Instead, almost all of
-    the samples have some variables, but most have a low <m>X^2</m>.
+    the samples have some variance, but most have a low <m>X^2</m>.
     The random samples are grouped near 0 and they decay away.  Our
     sample statistic had a <m>X^2</m> of 40, which is way, way out
     compared to these randomizations. Likely, this means that something
@@ -436,7 +527,7 @@
     the positive direction. They don't exist at all below zero. 
   </p>
   <figure xml:id="figure-eight-chi-squared">
-    <caption>Caption</caption>
+    <caption>Some <m>X^2</m> distributions</caption>
     <image width="80%">
       <latex-image>
         \begin{tikzpicture}[domain=.001:15,samples=200,thick]
@@ -469,7 +560,7 @@
     Specifically, take the two cateogrical variables we have here.
     Take the number of categories in the first varible, subtract one,
     then multiply by the number of categories in the second variable,
-    again subtrating one. If <m>c_1</m> and <m>c_2</m> are the number
+    again subtracting one. If <m>c_1</m> and <m>c_2</m> are the number
     of categories in the two variables, then the formula is this.
     <md>
       DF = (c_1 - 1)(c_2 - 1)
@@ -498,7 +589,7 @@
   <p>
     Finally, for <m>X^2</m> distribution, there is no worry about
     one-sided or two-sided tests. There is only ever a one-sided
-    testo of the right tail. The <m>X^2</m> distrbution starts at 0
+    test of the right tail. The <m>X^2</m> distrbution starts at 0
     and only proceeds in the positive direction. Points further out
     in the positive direction have greater variance. I only ever need
     the area of the right tail. 

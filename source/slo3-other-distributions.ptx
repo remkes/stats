@@ -17,7 +17,7 @@
       Probability distributions are mathematical functions. To define
       the <m>X^2</m> distribution, I first need two other definitions.
       The first of these is pretty familiar to students of first-year
-      calculation, but may be quite new to students without that
+      calculus, but may be quite new to students without that
       experience. 
     </p>
     <definition>
@@ -74,25 +74,25 @@
           of the first few factorials. 
           <md>
             <mrow>  
-              0! = 1
+              0! \amp = 1
             </mrow>
             <mrow>
-              1! = 1
+              1! \amp = 1
             </mrow>
             <mrow>
-              2! = 1 \cdot 2 = 2
+              2! \amp = 1 \cdot 2 = 2
             </mrow>
             <mrow>
-              3! = 1 \cdot 2 \dot 3 = 6 
+              3! \amp = 1 \cdot 2 \cdot 3 = 6 
             </mrow>
             <mrow>
-              4! = 1 \cdot 2 \cdot 3 \cdot 4 = 24 
+              4! \amp = 1 \cdot 2 \cdot 3 \cdot 4 = 24 
             </mrow>
             <mrow>
-              5! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120
+              5! \amp = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120
             </mrow>
             <mrow>
-              6! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 = 720
+              6! \amp = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 = 720
             </mrow>
           </md>
         </p>
@@ -155,8 +155,8 @@
       then the area under the curve is calculated by this integral.
       <md>
         p\text{-value} = \int_x^\infty \frac{1}{2^{\frac{s}{2}} \Gamma
-        \left( \frac{s}{2} \right)} x^{\frac{s}{2} - 1}
-        e^{\frac{x}{2}} dx
+        \left( \frac{s}{2} \right)} t^{\frac{s}{2} - 1}
+        e^{\frac{t}{2}} dt
       </md>
       Again, I do not expect the class to work with or calculate these
       integrals, just to understand the idea that an integral is
@@ -186,9 +186,9 @@
           is a positive whole number <m>s</m>, called the degrees of
           freedom.
           <md>
-            f(t) = \frac{\Gamma \left( \frac{s+1}{2} \right)}{\sqrt{\pi
+            f(x) = \frac{\Gamma \left( \frac{s+1}{2} \right)}{\sqrt{\pi
             s} \Gamma \left( \frac{s}{2} \right)} \left( \frac{s +
-            (t-\mu)^2}{s} \right)^{-\frac{s+1}{2}} 
+            (x-\mu)^2}{s} \right)^{-\frac{s+1}{2}} 
           </md>
         </p>
       </statement>
@@ -203,7 +203,7 @@
       distribution. 
     </p>
     <p>
-      First, let me talk about the strange name. In what what is this
+      First, let me talk about the strange name. In what way is this
       a <sq>Student's</sq> distribution? This distribution was
       developed by a statistician named William Gosset. He published
       articles in the early 20th century on statistics, but decided,
@@ -228,8 +228,9 @@
       Student's distirbution's second parameter is this <sq>degrees of
       freedom</sq>. Standard deviation for the Student's distribution
       can be calculated, but it does not directly act as the
-      parameter. There won't be any standard error calcluations for
-      this distribution. 
+      parameter. We will calculate standard deviation (standard error)
+      for the Student's <m>t</m>-distribution, but only after it has
+      been defined. 
     </p>
     <p>
       Second, there are subtle difference in shape. The most notable
@@ -254,7 +255,7 @@
     <p> 
       Finally, I want to just briefly mention one more distribution.
       In the ANOVA test that we will do for multiple means, the sample
-      statistics is tested again something called an
+      statistics is tested against something called an
       <m>F</m>-distribution. I'm not even going to write this one
       down. It has a similar form to <m>X^2</m>, but is substantially
       more complicated again. Feel free to look up a description
@@ -262,7 +263,7 @@
     </p>
     <p>
       The <m>F</m>-distribution behaves like the <m>X^2</m>
-      distribution: it start at zero, usually starts as a high value,
+      distribution: it starts at zero, usually starts as a high value,
       and decays away. There are only right-tail one-sided tests.
       Where <m>X^2</m> has one parameter, the <m>F</m>-distribution
       has two parameters. Both are still called <sq>degrees of
